@@ -1,0 +1,65 @@
+grammar org.xtext.Langage_while with org.eclipse.xtext.common.Terminals
+
+generate langage_while "http://www.xtext.org/Langage_while"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	Program;
+
+/* PROGRAM */
+Program : Function (CR Program)?;
+Function : 'function' LCs SYM ':' LCs Def;
+Def : 'read' LCs Input LCs
+		'%' Commands LCs
+		'%' 'write' LCs Output;
+Input : (VAR ',' LCs Input) | VAR;
+Output : (VAR ',' LCs Output) | VAR;
+
+
+/* COMMANDES SIMPLES ET COMPLEXES */
+Commands : Command (';' LCs Commands)?;
+Command : 'nop' | (Vars LCs ':=' LCs EXPRS) |
+		  'while' LCs EXPR LCs 'do' LCs Commands LCs 'od' |
+		  'for' LCs EXPR LCs 'do' LCs Commands LCs 'od' |
+		  'if' LCs EXPR LCs 'then' LCs Commands LCs ('else' LCs Commands LCs)? 'fi' |
+		  'foreach' LCs EXPR LCs 'in' LCs EXPR LCs 'do' LCs Commands LCs 'od';
+Vars : VAR (',' LCs Vars)?;
+EXPRS : EXPR (',' LCs EXPRS)?;
+
+
+/* EXPRESSIONS SIMPLES */
+EXPR : EXPRSIMPLE | EXPRAND;
+EXPRSIMPLE : ('nil' | VAR | SYM) |
+			 ('(' 'cons' LEXPR ')' | '(' 'list' LEXPR ')') |
+			 ('(' 'hd' LCs EXPR ')' | '(' 'tl' LCs EXPR ')') |
+			 ('(' SYM LEXPR ')');
+			 
+LEXPR : LCs EXPR LEXPR?;
+
+/* EXPRESSIONS LOGIQUES */
+EXPRAND: EXPROR (LCs 'and' LCs EXPRAND)?;
+EXPROR: EXPRNOT (LCs 'or' LCs EXPROR)?;
+EXPRNOT: ('not' LCs)? EXPREQ;
+EXPREQ: (EXPRSIMPLE LCs '=?' LCs EXPRSIMPLE) | ('('EXPR')');
+
+
+/* UNITES LEXICALES */ 
+Variable : VAR; 
+terminal VAR : ('A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF;
+
+Symboles: SYM;
+terminal SYM : ('a'..'z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF; 
+
+Confort : CONF; 
+terminal CONF :  (('-'|'+'|'.'|'/'|'_'|'&'|"->")('a'..'z'|'A'..'Z'|'0'..'9')+)*('?'|'!'); 
+
+//Ponctuation: PONCT;	
+//terminal PONCT : (','|';'|':'|'('|')'); 
+LCs : LC?;
+LC : SP|CR|TAB|LF; 
+terminal SP : ' '; 
+terminal CR : '\n'; 
+terminal TAB : '\t'; 
+terminal LF : '\r';
