@@ -8,7 +8,26 @@
   <genPackages prefix="Langage_while" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="while" ecorePackage="Langage_while.ecore#/">
     <genClasses ecoreClass="Langage_while.ecore#//Model">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Model/greetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/greetings"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/f"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/pp"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Function/nom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/d"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Def">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Def/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/o"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Input">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Input/in"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Output">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Output/o"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -21,57 +21,56 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final RuleCall cGreetingsProgramParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
 		
 		//Model:
-		//	greetings+=Greeting*;
+		//	greetings=Program;
 		@Override public ParserRule getRule() { return rule; }
 
-		//greetings+=Greeting*
+		//greetings=Program
 		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
 
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
-	}
-
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Greeting");
-		private final RuleCall cProgramParserRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//Greeting:
-		//	Program;
-		@Override public ParserRule getRule() { return rule; }
-
 		//Program
-		public RuleCall getProgramParserRuleCall() { return cProgramParserRuleCall; }
+		public RuleCall getGreetingsProgramParserRuleCall_0() { return cGreetingsProgramParserRuleCall_0; }
 	}
 
 	public class ProgramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Program");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cFunctionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cFAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cFFunctionParserRuleCall_0_0 = (RuleCall)cFAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final RuleCall cCRTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final RuleCall cProgramParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cPpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPpProgramParserRuleCall_1_1_0 = (RuleCall)cPpAssignment_1_1.eContents().get(0);
 		
-		/// * PROGRAM * / Program:
-		//	Function (CR Program)?;
+		/// * Intégrer def dans function pour l'interprétation du noeud
+		//	 * Identificateur LC
+		//	 * Donner des noms (command etc)
+		//	 * / / * PROGRAM * / Program:
+		//	f+=Function* (CR pp=Program)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//Function (CR Program)?
+		//f+=Function* (CR pp=Program)?
 		public Group getGroup() { return cGroup; }
 
-		//Function
-		public RuleCall getFunctionParserRuleCall_0() { return cFunctionParserRuleCall_0; }
+		//f+=Function*
+		public Assignment getFAssignment_0() { return cFAssignment_0; }
 
-		//(CR Program)?
+		//Function
+		public RuleCall getFFunctionParserRuleCall_0_0() { return cFFunctionParserRuleCall_0_0; }
+
+		//(CR pp=Program)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//CR
 		public RuleCall getCRTerminalRuleCall_1_0() { return cCRTerminalRuleCall_1_0; }
 
+		//pp=Program
+		public Assignment getPpAssignment_1_1() { return cPpAssignment_1_1; }
+
 		//Program
-		public RuleCall getProgramParserRuleCall_1_1() { return cProgramParserRuleCall_1_1; }
+		public RuleCall getPpProgramParserRuleCall_1_1_0() { return cPpProgramParserRuleCall_1_1_0; }
 	}
 
 	public class FunctionElements extends AbstractParserRuleElementFinder {
@@ -79,16 +78,18 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFunctionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cLCsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cSYMTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cNomAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNomSYMTerminalRuleCall_2_0 = (RuleCall)cNomAssignment_2.eContents().get(0);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final RuleCall cLCsParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		private final RuleCall cDefParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Assignment cDAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDDefParserRuleCall_5_0 = (RuleCall)cDAssignment_5.eContents().get(0);
 		
 		//Function:
-		//	"function" LCs SYM ":" LCs Def;
+		//	"function" LCs nom=SYM ":" LCs d=Def;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"function" LCs SYM ":" LCs Def
+		//"function" LCs nom=SYM ":" LCs d=Def
 		public Group getGroup() { return cGroup; }
 
 		//"function"
@@ -97,8 +98,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_1() { return cLCsParserRuleCall_1; }
 
+		//nom=SYM
+		public Assignment getNomAssignment_2() { return cNomAssignment_2; }
+
 		//SYM
-		public RuleCall getSYMTerminalRuleCall_2() { return cSYMTerminalRuleCall_2; }
+		public RuleCall getNomSYMTerminalRuleCall_2_0() { return cNomSYMTerminalRuleCall_2_0; }
 
 		//":"
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
@@ -106,8 +110,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_4() { return cLCsParserRuleCall_4; }
 
+		//d=Def
+		public Assignment getDAssignment_5() { return cDAssignment_5; }
+
 		//Def
-		public RuleCall getDefParserRuleCall_5() { return cDefParserRuleCall_5; }
+		public RuleCall getDDefParserRuleCall_5_0() { return cDDefParserRuleCall_5_0; }
 	}
 
 	public class DefElements extends AbstractParserRuleElementFinder {
@@ -115,21 +122,24 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cReadKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cLCsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cInputParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cInAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cInInputParserRuleCall_2_0 = (RuleCall)cInAssignment_2.eContents().get(0);
 		private final RuleCall cLCsParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Keyword cPercentSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cCommandsParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Assignment cCAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cCCommandsParserRuleCall_5_0 = (RuleCall)cCAssignment_5.eContents().get(0);
 		private final RuleCall cLCsParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		private final Keyword cPercentSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cWriteKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final RuleCall cLCsParserRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final RuleCall cOutputParserRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final Assignment cOAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cOOutputParserRuleCall_10_0 = (RuleCall)cOAssignment_10.eContents().get(0);
 		
 		//Def:
-		//	"read" LCs Input LCs "%" Commands LCs "%" "write" LCs Output;
+		//	"read" LCs in=Input LCs "%" c=Commands LCs "%" "write" LCs o=Output;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"read" LCs Input LCs "%" Commands LCs "%" "write" LCs Output
+		//"read" LCs in=Input LCs "%" c=Commands LCs "%" "write" LCs o=Output
 		public Group getGroup() { return cGroup; }
 
 		//"read"
@@ -138,8 +148,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_1() { return cLCsParserRuleCall_1; }
 
+		//in=Input
+		public Assignment getInAssignment_2() { return cInAssignment_2; }
+
 		//Input
-		public RuleCall getInputParserRuleCall_2() { return cInputParserRuleCall_2; }
+		public RuleCall getInInputParserRuleCall_2_0() { return cInInputParserRuleCall_2_0; }
 
 		//LCs
 		public RuleCall getLCsParserRuleCall_3() { return cLCsParserRuleCall_3; }
@@ -147,8 +160,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//"%"
 		public Keyword getPercentSignKeyword_4() { return cPercentSignKeyword_4; }
 
+		//c=Commands
+		public Assignment getCAssignment_5() { return cCAssignment_5; }
+
 		//Commands
-		public RuleCall getCommandsParserRuleCall_5() { return cCommandsParserRuleCall_5; }
+		public RuleCall getCCommandsParserRuleCall_5_0() { return cCCommandsParserRuleCall_5_0; }
 
 		//LCs
 		public RuleCall getLCsParserRuleCall_6() { return cLCsParserRuleCall_6; }
@@ -162,8 +178,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_9() { return cLCsParserRuleCall_9; }
 
+		//o=Output
+		public Assignment getOAssignment_10() { return cOAssignment_10; }
+
 		//Output
-		public RuleCall getOutputParserRuleCall_10() { return cOutputParserRuleCall_10; }
+		public RuleCall getOOutputParserRuleCall_10_0() { return cOOutputParserRuleCall_10_0; }
 	}
 
 	public class InputElements extends AbstractParserRuleElementFinder {
@@ -173,17 +192,18 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVARTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
 		private final Keyword cCommaKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final RuleCall cLCsParserRuleCall_0_2 = (RuleCall)cGroup_0.eContents().get(2);
-		private final RuleCall cInputParserRuleCall_0_3 = (RuleCall)cGroup_0.eContents().get(3);
+		private final Assignment cInAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cInInputParserRuleCall_0_3_0 = (RuleCall)cInAssignment_0_3.eContents().get(0);
 		private final RuleCall cVARTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Input:
-		//	VAR "," LCs Input | VAR;
+		//	VAR "," LCs in=Input | VAR;
 		@Override public ParserRule getRule() { return rule; }
 
-		//VAR "," LCs Input | VAR
+		//VAR "," LCs in=Input | VAR
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//VAR "," LCs Input
+		//VAR "," LCs in=Input
 		public Group getGroup_0() { return cGroup_0; }
 
 		//VAR
@@ -195,8 +215,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_0_2() { return cLCsParserRuleCall_0_2; }
 
+		//in=Input
+		public Assignment getInAssignment_0_3() { return cInAssignment_0_3; }
+
 		//Input
-		public RuleCall getInputParserRuleCall_0_3() { return cInputParserRuleCall_0_3; }
+		public RuleCall getInInputParserRuleCall_0_3_0() { return cInInputParserRuleCall_0_3_0; }
 
 		//VAR
 		public RuleCall getVARTerminalRuleCall_1() { return cVARTerminalRuleCall_1; }
@@ -209,17 +232,18 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVARTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
 		private final Keyword cCommaKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final RuleCall cLCsParserRuleCall_0_2 = (RuleCall)cGroup_0.eContents().get(2);
-		private final RuleCall cOutputParserRuleCall_0_3 = (RuleCall)cGroup_0.eContents().get(3);
+		private final Assignment cOAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cOOutputParserRuleCall_0_3_0 = (RuleCall)cOAssignment_0_3.eContents().get(0);
 		private final RuleCall cVARTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Output:
-		//	VAR "," LCs Output | VAR;
+		//	VAR "," LCs o=Output | VAR;
 		@Override public ParserRule getRule() { return rule; }
 
-		//VAR "," LCs Output | VAR
+		//VAR "," LCs o=Output | VAR
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//VAR "," LCs Output
+		//VAR "," LCs o=Output
 		public Group getGroup_0() { return cGroup_0; }
 
 		//VAR
@@ -231,8 +255,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getLCsParserRuleCall_0_2() { return cLCsParserRuleCall_0_2; }
 
+		//o=Output
+		public Assignment getOAssignment_0_3() { return cOAssignment_0_3; }
+
 		//Output
-		public RuleCall getOutputParserRuleCall_0_3() { return cOutputParserRuleCall_0_3; }
+		public RuleCall getOOutputParserRuleCall_0_3_0() { return cOOutputParserRuleCall_0_3_0; }
 
 		//VAR
 		public RuleCall getVARTerminalRuleCall_1() { return cVARTerminalRuleCall_1; }
@@ -996,7 +1023,6 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
 	private final ProgramElements pProgram;
 	private final FunctionElements pFunction;
 	private final DefElements pDef;
@@ -1036,7 +1062,6 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
 		this.pProgram = new ProgramElements();
 		this.pFunction = new FunctionElements();
 		this.pDef = new DefElements();
@@ -1095,7 +1120,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	greetings+=Greeting*;
+	//	greetings=Program;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -1104,18 +1129,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
-	//Greeting:
-	//	Program;
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
-	}
-	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
-	}
-
-	/// * PROGRAM * / Program:
-	//	Function (CR Program)?;
+	/// * Intégrer def dans function pour l'interprétation du noeud
+	//	 * Identificateur LC
+	//	 * Donner des noms (command etc)
+	//	 * / / * PROGRAM * / Program:
+	//	f+=Function* (CR pp=Program)?;
 	public ProgramElements getProgramAccess() {
 		return pProgram;
 	}
@@ -1125,7 +1143,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Function:
-	//	"function" LCs SYM ":" LCs Def;
+	//	"function" LCs nom=SYM ":" LCs d=Def;
 	public FunctionElements getFunctionAccess() {
 		return pFunction;
 	}
@@ -1135,7 +1153,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Def:
-	//	"read" LCs Input LCs "%" Commands LCs "%" "write" LCs Output;
+	//	"read" LCs in=Input LCs "%" c=Commands LCs "%" "write" LCs o=Output;
 	public DefElements getDefAccess() {
 		return pDef;
 	}
@@ -1145,7 +1163,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Input:
-	//	VAR "," LCs Input | VAR;
+	//	VAR "," LCs in=Input | VAR;
 	public InputElements getInputAccess() {
 		return pInput;
 	}
@@ -1155,7 +1173,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Output:
-	//	VAR "," LCs Output | VAR;
+	//	VAR "," LCs o=Output | VAR;
 	public OutputElements getOutputAccess() {
 		return pOutput;
 	}

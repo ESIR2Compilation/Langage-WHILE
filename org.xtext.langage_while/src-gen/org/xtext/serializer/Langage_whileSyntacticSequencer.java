@@ -26,9 +26,41 @@ public class Langage_whileSyntacticSequencer extends AbstractSyntacticSequencer 
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getCRRule())
+			return getCRToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getLCsRule())
+			return getLCsToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getVARRule())
+			return getVARToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal CR : '\n';
+	 */
+	protected String getCRToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "\n";
+	}
+	
+	/**
+	 * LCs : LC?;
+	 */
+	protected String getLCsToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * terminal VAR : ('A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF;
+	 */
+	protected String getVARToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "?";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

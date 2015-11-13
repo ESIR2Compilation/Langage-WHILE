@@ -11,41 +11,40 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.langage_while.Input;
 import org.xtext.langage_while.Langage_whilePackage;
-import org.xtext.langage_while.Model;
-import org.xtext.langage_while.Program;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Input</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.InputImpl#getIn <em>In</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class InputImpl extends MinimalEObjectImpl.Container implements Input
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference.
+   * The cached value of the '{@link #getIn() <em>In</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getIn()
    * @generated
    * @ordered
    */
-  protected Program greetings;
+  protected Input in;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected InputImpl()
   {
     super();
   }
@@ -58,7 +57,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return Langage_whilePackage.Literals.MODEL;
+    return Langage_whilePackage.Literals.INPUT;
   }
 
   /**
@@ -66,9 +65,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public Program getGreetings()
+  public Input getIn()
   {
-    return greetings;
+    return in;
   }
 
   /**
@@ -76,13 +75,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetGreetings(Program newGreetings, NotificationChain msgs)
+  public NotificationChain basicSetIn(Input newIn, NotificationChain msgs)
   {
-    Program oldGreetings = greetings;
-    greetings = newGreetings;
+    Input oldIn = in;
+    in = newIn;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.MODEL__GREETINGS, oldGreetings, newGreetings);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__IN, oldIn, newIn);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +92,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setGreetings(Program newGreetings)
+  public void setIn(Input newIn)
   {
-    if (newGreetings != greetings)
+    if (newIn != in)
     {
       NotificationChain msgs = null;
-      if (greetings != null)
-        msgs = ((InternalEObject)greetings).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.MODEL__GREETINGS, null, msgs);
-      if (newGreetings != null)
-        msgs = ((InternalEObject)newGreetings).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.MODEL__GREETINGS, null, msgs);
-      msgs = basicSetGreetings(newGreetings, msgs);
+      if (in != null)
+        msgs = ((InternalEObject)in).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.INPUT__IN, null, msgs);
+      if (newIn != null)
+        msgs = ((InternalEObject)newIn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.INPUT__IN, null, msgs);
+      msgs = basicSetIn(newIn, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.MODEL__GREETINGS, newGreetings, newGreetings));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__IN, newIn, newIn));
   }
 
   /**
@@ -119,8 +118,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return basicSetGreetings(null, msgs);
+      case Langage_whilePackage.INPUT__IN:
+        return basicSetIn(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +134,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return getGreetings();
+      case Langage_whilePackage.INPUT__IN:
+        return getIn();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +150,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        setGreetings((Program)newValue);
+      case Langage_whilePackage.INPUT__IN:
+        setIn((Input)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +167,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        setGreetings((Program)null);
+      case Langage_whilePackage.INPUT__IN:
+        setIn((Input)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,10 +184,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return greetings != null;
+      case Langage_whilePackage.INPUT__IN:
+        return in != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //InputImpl

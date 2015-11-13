@@ -65,6 +65,11 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
     switch (eClass.getClassifierID())
     {
       case Langage_whilePackage.MODEL: return createModel();
+      case Langage_whilePackage.PROGRAM: return createProgram();
+      case Langage_whilePackage.FUNCTION: return createFunction();
+      case Langage_whilePackage.DEF: return createDef();
+      case Langage_whilePackage.INPUT: return createInput();
+      case Langage_whilePackage.OUTPUT: return createOutput();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -79,6 +84,61 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Program createProgram()
+  {
+    ProgramImpl program = new ProgramImpl();
+    return program;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Function createFunction()
+  {
+    FunctionImpl function = new FunctionImpl();
+    return function;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Def createDef()
+  {
+    DefImpl def = new DefImpl();
+    return def;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Input createInput()
+  {
+    InputImpl input = new InputImpl();
+    return input;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Output createOutput()
+  {
+    OutputImpl output = new OutputImpl();
+    return output;
   }
 
   /**

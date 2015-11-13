@@ -3,19 +3,22 @@ grammar org.xtext.Langage_while with org.eclipse.xtext.common.Terminals
 generate langage_while "http://www.xtext.org/Langage_while"
 
 Model:
-	greetings+=Greeting*;
+	greetings=(Program);
 	
-Greeting:
-	Program;
+	/* Intégrer def dans function pour l'interprétation du noeud
+	 * Identificateur LC
+	 * Donner des noms (command etc)
+	 */
+
 
 /* PROGRAM */
-Program : Function (CR Program)?;
-Function : 'function' LCs SYM ':' LCs Def;
-Def : 'read' LCs Input LCs
-		'%' Commands LCs
-		'%' 'write' LCs Output;
-Input : (VAR ',' LCs Input) | VAR;
-Output : (VAR ',' LCs Output) | VAR;
+Program : (f+=Function)* (CR (pp=Program))?;
+Function : 'function' LCs (nom=SYM) ':' LCs d=Def;
+Def : 'read' LCs (in=Input) LCs
+		'%' c=Commands LCs
+		'%' 'write' LCs o=Output;
+Input : (VAR ',' LCs (in=Input)) | VAR;
+Output : (VAR ',' LCs (o=Output)) | VAR;
 
 
 /* COMMANDES SIMPLES ET COMPLEXES */

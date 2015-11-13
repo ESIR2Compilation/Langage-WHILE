@@ -2,8 +2,6 @@
  */
 package org.xtext.langage_while;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -25,19 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Greetings</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Greetings</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Greetings</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Greetings</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Greetings</em>' attribute list.
+   * @return the value of the '<em>Greetings</em>' containment reference.
+   * @see #setGreetings(Program)
    * @see org.xtext.langage_while.Langage_whilePackage#getModel_Greetings()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getGreetings();
+  Program getGreetings();
+
+  /**
+   * Sets the value of the '{@link org.xtext.langage_while.Model#getGreetings <em>Greetings</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Greetings</em>' containment reference.
+   * @see #getGreetings()
+   * @generated
+   */
+  void setGreetings(Program value);
 
 } // Model

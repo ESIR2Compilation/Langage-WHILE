@@ -6,6 +6,12 @@ package org.xtext.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.xtext.langage_while.Model
+import org.xtext.langage_while.Program
+import org.xtext.langage_while.Function
+import org.xtext.langage_while.Def
+import org.xtext.langage_while.Input
+import org.xtext.langage_while.Output
 
 /**
  * Generates code from your model files on save.
@@ -15,10 +21,50 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class Langage_whileGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+		for(e:resource.allContents.toIterable.filter(Model))
+		{
+			fsa.generateFile("PrettyPrinter.wh",
+				e.compile)
+		}
+		
 //		fsa.generateFile('greetings.txt', 'People to greet: ' + 
 //			resource.allContents
 //				.filter(typeof(Greeting))
 //				.map[name]
 //				.join(', '))
 	}
+	
+	def compile (Model e)
+	 '''
+	«e.greetings.compile»
+	'''
+	
+	def compile (Program p)
+	'''
+	«FOR f:p.f»
+	«f.compile»
+	«ENDFOR»
+	
+	'''
+	
+	def compile (Function f)
+	'''
+		function «f.nom»:
+		«f.d» 
+	'''
+	
+	def compile (Def d)
+	'''
+		read	«d.in»	% «d.c»	% write	«d.o»
+	'''
+	
+	def compile (Input l)
+	'''
+	Input «l.in»
+	'''
+	
+	def compile (Output O)
+	'''
+	VAR , LC «O.o» | VAR
+	'''
 }
