@@ -87,8 +87,13 @@ public class Langage_whileParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDefAccess().getInAssignment_2(), "rule__Def__InAssignment_2");
 					put(grammarAccess.getDefAccess().getCAssignment_5(), "rule__Def__CAssignment_5");
 					put(grammarAccess.getDefAccess().getOAssignment_10(), "rule__Def__OAssignment_10");
+					put(grammarAccess.getInputAccess().getVAssignment_0_0(), "rule__Input__VAssignment_0_0");
 					put(grammarAccess.getInputAccess().getInAssignment_0_3(), "rule__Input__InAssignment_0_3");
+					put(grammarAccess.getInputAccess().getYAssignment_1(), "rule__Input__YAssignment_1");
+					put(grammarAccess.getOutputAccess().getNAssignment_0_0(), "rule__Output__NAssignment_0_0");
 					put(grammarAccess.getOutputAccess().getOAssignment_0_3(), "rule__Output__OAssignment_0_3");
+					put(grammarAccess.getOutputAccess().getSAssignment_1(), "rule__Output__SAssignment_1");
+					put(grammarAccess.getVariableAccess().getNAssignment(), "rule__Variable__NAssignment");
 				}
 			};
 		}

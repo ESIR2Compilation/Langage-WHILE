@@ -105,6 +105,11 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
         return createOutputAdapter();
       }
       @Override
+      public Adapter caseVariable(Variable object)
+      {
+        return createVariableAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -212,6 +217,21 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOutputAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.langage_while.Variable
+   * @generated
+   */
+  public Adapter createVariableAdapter()
   {
     return null;
   }

@@ -24,10 +24,17 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/o"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Input">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Input/v"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Input/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Input/y"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Output/n"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Output/o"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Output/s"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Variable/n"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

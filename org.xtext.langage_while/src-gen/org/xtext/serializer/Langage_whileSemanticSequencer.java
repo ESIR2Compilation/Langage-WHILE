@@ -23,6 +23,7 @@ import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
 import org.xtext.langage_while.Program;
+import org.xtext.langage_while.Variable;
 import org.xtext.services.Langage_whileGrammarAccess;
 
 @SuppressWarnings("all")
@@ -51,6 +52,9 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case Langage_whilePackage.PROGRAM:
 				sequence_Program(context, (Program) semanticObject); 
+				return; 
+			case Langage_whilePackage.VARIABLE:
+				sequence_Variable(context, (Variable) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -99,7 +103,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     in=Input?
+	 *     ((v=VAR in=Input) | y=VAR)
 	 */
 	protected void sequence_Input(EObject context, Input semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -124,7 +128,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     o=Output?
+	 *     ((n=VAR o=Output) | s=VAR)
 	 */
 	protected void sequence_Output(EObject context, Output semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -137,5 +141,21 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	 */
 	protected void sequence_Program(EObject context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     n=VAR
+	 */
+	protected void sequence_Variable(EObject context, Variable semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.VARIABLE__N) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.VARIABLE__N));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVariableAccess().getNVARTerminalRuleCall_0(), semanticObject.getN());
+		feeder.finish();
 	}
 }

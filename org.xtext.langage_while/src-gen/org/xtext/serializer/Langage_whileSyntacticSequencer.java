@@ -30,8 +30,6 @@ public class Langage_whileSyntacticSequencer extends AbstractSyntacticSequencer 
 			return getCRToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getLCsRule())
 			return getLCsToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getVARRule())
-			return getVARToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -51,15 +49,6 @@ public class Langage_whileSyntacticSequencer extends AbstractSyntacticSequencer 
 		if (node != null)
 			return getTokenText(node);
 		return "";
-	}
-	
-	/**
-	 * terminal VAR : ('A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF;
-	 */
-	protected String getVARToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "?";
 	}
 	
 	@Override

@@ -70,6 +70,7 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
       case Langage_whilePackage.DEF: return createDef();
       case Langage_whilePackage.INPUT: return createInput();
       case Langage_whilePackage.OUTPUT: return createOutput();
+      case Langage_whilePackage.VARIABLE: return createVariable();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -139,6 +140,17 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
   {
     OutputImpl output = new OutputImpl();
     return output;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
   }
 
   /**

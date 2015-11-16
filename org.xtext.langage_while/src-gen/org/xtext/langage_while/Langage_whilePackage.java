@@ -215,13 +215,31 @@ public interface Langage_whilePackage extends EPackage
   int INPUT = 4;
 
   /**
+   * The feature id for the '<em><b>V</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT__V = 0;
+
+  /**
    * The feature id for the '<em><b>In</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INPUT__IN = 0;
+  int INPUT__IN = 1;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT__Y = 2;
 
   /**
    * The number of structural features of the '<em>Input</em>' class.
@@ -230,7 +248,7 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_FEATURE_COUNT = 1;
+  int INPUT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.OutputImpl <em>Output</em>}' class.
@@ -243,13 +261,31 @@ public interface Langage_whilePackage extends EPackage
   int OUTPUT = 5;
 
   /**
+   * The feature id for the '<em><b>N</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT__N = 0;
+
+  /**
    * The feature id for the '<em><b>O</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT__O = 0;
+  int OUTPUT__O = 1;
+
+  /**
+   * The feature id for the '<em><b>S</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT__S = 2;
 
   /**
    * The number of structural features of the '<em>Output</em>' class.
@@ -258,7 +294,35 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_FEATURE_COUNT = 1;
+  int OUTPUT_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.VariableImpl <em>Variable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.VariableImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVariable()
+   * @generated
+   */
+  int VARIABLE = 6;
+
+  /**
+   * The feature id for the '<em><b>N</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__N = 0;
+
+  /**
+   * The number of structural features of the '<em>Variable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_FEATURE_COUNT = 1;
 
 
   /**
@@ -400,6 +464,17 @@ public interface Langage_whilePackage extends EPackage
   EClass getInput();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Input#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>V</em>'.
+   * @see org.xtext.langage_while.Input#getV()
+   * @see #getInput()
+   * @generated
+   */
+  EAttribute getInput_V();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Input#getIn <em>In</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -409,6 +484,17 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    */
   EReference getInput_In();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Input#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see org.xtext.langage_while.Input#getY()
+   * @see #getInput()
+   * @generated
+   */
+  EAttribute getInput_Y();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.Output <em>Output</em>}'.
@@ -421,6 +507,17 @@ public interface Langage_whilePackage extends EPackage
   EClass getOutput();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Output#getN <em>N</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>N</em>'.
+   * @see org.xtext.langage_while.Output#getN()
+   * @see #getOutput()
+   * @generated
+   */
+  EAttribute getOutput_N();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Output#getO <em>O</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -430,6 +527,38 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    */
   EReference getOutput_O();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Output#getS <em>S</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>S</em>'.
+   * @see org.xtext.langage_while.Output#getS()
+   * @see #getOutput()
+   * @generated
+   */
+  EAttribute getOutput_S();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.langage_while.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable</em>'.
+   * @see org.xtext.langage_while.Variable
+   * @generated
+   */
+  EClass getVariable();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Variable#getN <em>N</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>N</em>'.
+   * @see org.xtext.langage_while.Variable#getN()
+   * @see #getVariable()
+   * @generated
+   */
+  EAttribute getVariable_N();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -569,12 +698,28 @@ public interface Langage_whilePackage extends EPackage
     EClass INPUT = eINSTANCE.getInput();
 
     /**
+     * The meta object literal for the '<em><b>V</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INPUT__V = eINSTANCE.getInput_V();
+
+    /**
      * The meta object literal for the '<em><b>In</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference INPUT__IN = eINSTANCE.getInput_In();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INPUT__Y = eINSTANCE.getInput_Y();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.OutputImpl <em>Output</em>}' class.
@@ -587,12 +732,46 @@ public interface Langage_whilePackage extends EPackage
     EClass OUTPUT = eINSTANCE.getOutput();
 
     /**
+     * The meta object literal for the '<em><b>N</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OUTPUT__N = eINSTANCE.getOutput_N();
+
+    /**
      * The meta object literal for the '<em><b>O</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference OUTPUT__O = eINSTANCE.getOutput_O();
+
+    /**
+     * The meta object literal for the '<em><b>S</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OUTPUT__S = eINSTANCE.getOutput_S();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.VariableImpl <em>Variable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.VariableImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVariable()
+     * @generated
+     */
+    EClass VARIABLE = eINSTANCE.getVariable();
+
+    /**
+     * The meta object literal for the '<em><b>N</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLE__N = eINSTANCE.getVariable_N();
 
   }
 

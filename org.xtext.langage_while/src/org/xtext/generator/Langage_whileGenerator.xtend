@@ -12,27 +12,31 @@ import org.xtext.langage_while.Function
 import org.xtext.langage_while.Def
 import org.xtext.langage_while.Input
 import org.xtext.langage_while.Output
-
+import org.xtext.langage_while.Variable
+import org.eclipse.xtext.naming.IQualifiedNameProvider
 /**
  * Generates code from your model files on save.
  * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
+  import com.google.inject.Inject
 class Langage_whileGenerator implements IGenerator {
 	
+	   @Inject extension IQualifiedNameProvider
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		for(e:resource.allContents.toIterable.filter(Model))
-		{
-			fsa.generateFile("PrettyPrinter.wh",
-				e.compile)
-		}
+    for(e: resource.allContents.toIterable.filter(Model)) {
+      fsa.generateFile(
+        e.fullyQualifiedName.toString("/") + ".whpp",
+        e.compile)
+    }
+  }
 		
 //		fsa.generateFile('greetings.txt', 'People to greet: ' + 
 //			resource.allContents
 //				.filter(typeof(Greeting))
 //				.map[name]
 //				.join(', '))
-	}
+	
 	
 	def compile (Model e)
 	 '''
@@ -43,28 +47,35 @@ class Langage_whileGenerator implements IGenerator {
 	'''
 	«FOR f:p.f»
 	«f.compile»
-	«ENDFOR»
+	«ENDFOR» «p.compile»
 	
 	'''
 	
 	def compile (Function f)
 	'''
-		function «f.nom»:
-		«f.d» 
+		function «f.nom»: «f.d» 
 	'''
 	
 	def compile (Def d)
 	'''
-		read	«d.in»	% «d.c»	% write	«d.o»
+		read	«d.in»	
+		% «d.c»	
+		% write	«d.o»
 	'''
 	
 	def compile (Input l)
 	'''
-	Input «l.in»
+	«l.v» , 	«l.in»
 	'''
 	
 	def compile (Output O)
 	'''
-	VAR , LC «O.o» | VAR
+	«O.n» ,		«O.o»
+	'''
+	
+	
+	def compile (Variable v)
+	'''
+	«v.n»
 	'''
 }

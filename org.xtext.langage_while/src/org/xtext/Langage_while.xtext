@@ -17,8 +17,8 @@ Function : 'function' LCs (nom=SYM) ':' LCs d=Def;
 Def : 'read' LCs (in=Input) LCs
 		'%' c=Commands LCs
 		'%' 'write' LCs o=Output;
-Input : (VAR ',' LCs (in=Input)) | VAR;
-Output : (VAR ',' LCs (o=Output)) | VAR;
+Input : (v=VAR ',' LCs (in=Input)) | y=VAR;
+Output : (n=VAR ',' LCs (o=Output)) | s=VAR;
 
 
 /* COMMANDES SIMPLES ET COMPLEXES */
@@ -49,7 +49,7 @@ EXPREQ: (EXPRSIMPLE LCs '=?' LCs EXPRSIMPLE) | ('('EXPR')');
 
 
 /* UNITES LEXICALES */ 
-Variable : VAR; 
+Variable : n=VAR; 
 terminal VAR : ('A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF;
 
 Symboles: SYM;

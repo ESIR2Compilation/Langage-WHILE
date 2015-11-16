@@ -405,11 +405,25 @@ ruleInput returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((this_VAR_0=RULE_VAR
-    { 
-    newLeafNode(this_VAR_0, grammarAccess.getInputAccess().getVARTerminalRuleCall_0_0()); 
-    }
-	otherlv_1=',' 
+(((
+(
+		lv_v_0_0=RULE_VAR
+		{
+			newLeafNode(lv_v_0_0, grammarAccess.getInputAccess().getVVARTerminalRuleCall_0_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInputRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"v",
+        		lv_v_0_0, 
+        		"VAR");
+	    }
+
+)
+)	otherlv_1=',' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getInputAccess().getCommaKeyword_0_1());
     }
@@ -443,11 +457,25 @@ ruleLCs
 
 )
 ))
-    |this_VAR_4=RULE_VAR
-    { 
-    newLeafNode(this_VAR_4, grammarAccess.getInputAccess().getVARTerminalRuleCall_1()); 
-    }
+    |(
+(
+		lv_y_4_0=RULE_VAR
+		{
+			newLeafNode(lv_y_4_0, grammarAccess.getInputAccess().getYVARTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInputRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"y",
+        		lv_y_4_0, 
+        		"VAR");
+	    }
+
 )
+))
 ;
 
 
@@ -468,11 +496,25 @@ ruleOutput returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((this_VAR_0=RULE_VAR
-    { 
-    newLeafNode(this_VAR_0, grammarAccess.getOutputAccess().getVARTerminalRuleCall_0_0()); 
-    }
-	otherlv_1=',' 
+(((
+(
+		lv_n_0_0=RULE_VAR
+		{
+			newLeafNode(lv_n_0_0, grammarAccess.getOutputAccess().getNVARTerminalRuleCall_0_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOutputRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"n",
+        		lv_n_0_0, 
+        		"VAR");
+	    }
+
+)
+)	otherlv_1=',' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getOutputAccess().getCommaKeyword_0_1());
     }
@@ -506,11 +548,25 @@ ruleLCs
 
 )
 ))
-    |this_VAR_4=RULE_VAR
-    { 
-    newLeafNode(this_VAR_4, grammarAccess.getOutputAccess().getVARTerminalRuleCall_1()); 
-    }
+    |(
+(
+		lv_s_4_0=RULE_VAR
+		{
+			newLeafNode(lv_s_4_0, grammarAccess.getOutputAccess().getSVARTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOutputRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"s",
+        		lv_s_4_0, 
+        		"VAR");
+	    }
+
 )
+))
 ;
 
 

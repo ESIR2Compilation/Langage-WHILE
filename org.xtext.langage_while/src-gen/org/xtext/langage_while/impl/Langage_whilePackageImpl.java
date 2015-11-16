@@ -17,6 +17,7 @@ import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
 import org.xtext.langage_while.Program;
+import org.xtext.langage_while.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,6 +68,13 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
    * @generated
    */
   private EClass outputEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass variableEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -266,9 +274,29 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getInput_V()
+  {
+    return (EAttribute)inputEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getInput_In()
   {
-    return (EReference)inputEClass.getEStructuralFeatures().get(0);
+    return (EReference)inputEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInput_Y()
+  {
+    return (EAttribute)inputEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -286,9 +314,49 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getOutput_N()
+  {
+    return (EAttribute)outputEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getOutput_O()
   {
-    return (EReference)outputEClass.getEStructuralFeatures().get(0);
+    return (EReference)outputEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getOutput_S()
+  {
+    return (EAttribute)outputEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVariable()
+  {
+    return variableEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVariable_N()
+  {
+    return (EAttribute)variableEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -338,10 +406,17 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
     createEReference(defEClass, DEF__O);
 
     inputEClass = createEClass(INPUT);
+    createEAttribute(inputEClass, INPUT__V);
     createEReference(inputEClass, INPUT__IN);
+    createEAttribute(inputEClass, INPUT__Y);
 
     outputEClass = createEClass(OUTPUT);
+    createEAttribute(outputEClass, OUTPUT__N);
     createEReference(outputEClass, OUTPUT__O);
+    createEAttribute(outputEClass, OUTPUT__S);
+
+    variableEClass = createEClass(VARIABLE);
+    createEAttribute(variableEClass, VARIABLE__N);
   }
 
   /**
@@ -392,10 +467,17 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
     initEReference(getDef_O(), this.getOutput(), null, "o", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInput_V(), ecorePackage.getEString(), "v", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInput_In(), this.getInput(), null, "in", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getInput_Y(), ecorePackage.getEString(), "y", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOutput_N(), ecorePackage.getEString(), "n", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOutput_O(), this.getOutput(), null, "o", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOutput_S(), ecorePackage.getEString(), "s", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVariable_N(), ecorePackage.getEString(), "n", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

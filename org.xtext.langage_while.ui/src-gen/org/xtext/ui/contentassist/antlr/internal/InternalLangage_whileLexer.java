@@ -700,11 +700,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5524:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5524:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5585:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5585:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('A','Z'); 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5524:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5585:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -754,11 +754,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SYM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5526:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5526:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5587:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5587:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('a','z'); 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5526:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5587:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -808,10 +808,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CONF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
             loop5:
             do {
                 int alt5=2;
@@ -824,9 +824,9 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    {
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
             	    int alt3=7;
             	    switch ( input.LA(1) ) {
             	    case '-':
@@ -881,49 +881,49 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    switch (alt3) {
             	        case 1 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:15: '-'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:15: '-'
             	            {
             	            match('-'); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:19: '+'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:19: '+'
             	            {
             	            match('+'); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:23: '.'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:23: '.'
             	            {
             	            match('.'); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:27: '/'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:27: '/'
             	            {
             	            match('/'); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:31: '_'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:31: '_'
             	            {
             	            match('_'); 
 
             	            }
             	            break;
             	        case 6 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:35: '&'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:35: '&'
             	            {
             	            match('&'); 
 
             	            }
             	            break;
             	        case 7 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:39: '->'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:39: '->'
             	            {
             	            match("->"); 
 
@@ -933,7 +933,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    }
 
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5528:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5589:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    int cnt4=0;
             	    loop4:
             	    do {
@@ -1005,8 +1005,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5530:9: ( ' ' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5530:11: ' '
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5591:9: ( ' ' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5591:11: ' '
             {
             match(' '); 
 
@@ -1025,8 +1025,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5532:9: ( '\\n' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5532:11: '\\n'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5593:9: ( '\\n' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5593:11: '\\n'
             {
             match('\n'); 
 
@@ -1045,8 +1045,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_TAB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5534:10: ( '\\t' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5534:12: '\\t'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5595:10: ( '\\t' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5595:12: '\\t'
             {
             match('\t'); 
 
@@ -1065,8 +1065,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_LF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5536:9: ( '\\r' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5536:11: '\\r'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5597:9: ( '\\r' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5597:11: '\\r'
             {
             match('\r'); 
 
@@ -1085,10 +1085,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5538:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5538:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5599:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5599:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5538:11: ( '^' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5599:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1097,7 +1097,7 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5538:11: '^'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5599:11: '^'
                     {
                     match('^'); 
 
@@ -1115,7 +1115,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5538:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5599:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -1164,10 +1164,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5540:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5540:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5540:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:12: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -1181,7 +1181,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5540:13: '0' .. '9'
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1213,10 +1213,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1234,10 +1234,10 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -1253,7 +1253,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:21: '\\\\' .
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1261,7 +1261,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1286,10 +1286,10 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1305,7 +1305,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:54: '\\\\' .
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1313,7 +1313,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5542:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5603:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1356,12 +1356,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5544:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5544:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5605:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5605:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5544:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5605:24: ( options {greedy=false; } : . )*
             loop12:
             do {
                 int alt12=2;
@@ -1386,7 +1386,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5544:52: .
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5605:52: .
             	    {
             	    matchAny(); 
 
@@ -1416,12 +1416,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -1434,7 +1434,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1454,7 +1454,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:40: ( ( '\\r' )? '\\n' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1463,9 +1463,9 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:41: ( '\\r' )?
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:41: ( '\\r' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -1474,7 +1474,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5546:41: '\\r'
+                            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5607:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1506,10 +1506,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5548:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5548:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5609:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5609:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5548:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5609:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt16=0;
             loop16:
             do {
@@ -1563,8 +1563,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5550:16: ( . )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5550:18: .
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5611:16: ( . )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5611:18: .
             {
             matchAny(); 
 

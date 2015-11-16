@@ -1,0 +1,36 @@
+function test1!:
+	read A!, B!
+	%if nil
+	then
+		A! := nil
+	else
+		A! := B!
+	fi
+	%write B!
+
+function deuxieme!:
+	read A!, B!
+	%while (tl B!) do
+		A! := B!
+	od
+	%write B!
+
+function troisieme!:
+	read A!
+	%if nil
+	then
+		nop
+	fi
+	%write A!
+
+function quatrieme?:
+	read A!
+	%foreach (hd Aa!) in (list A!)
+	do
+		if (cons troisieme! quatrieme?)
+		then
+			A! := A!
+		fi
+	od   
+
+	%write A!

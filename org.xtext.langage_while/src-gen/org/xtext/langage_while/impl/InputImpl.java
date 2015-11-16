@@ -21,7 +21,9 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.langage_while.impl.InputImpl#getV <em>V</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getIn <em>In</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.InputImpl#getY <em>Y</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,6 +31,26 @@ import org.xtext.langage_while.Langage_whilePackage;
  */
 public class InputImpl extends MinimalEObjectImpl.Container implements Input
 {
+  /**
+   * The default value of the '{@link #getV() <em>V</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV()
+   * @generated
+   * @ordered
+   */
+  protected static final String V_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getV() <em>V</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV()
+   * @generated
+   * @ordered
+   */
+  protected String v = V_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getIn() <em>In</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -38,6 +60,26 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * @ordered
    */
   protected Input in;
+
+  /**
+   * The default value of the '{@link #getY() <em>Y</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getY()
+   * @generated
+   * @ordered
+   */
+  protected static final String Y_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getY()
+   * @generated
+   * @ordered
+   */
+  protected String y = Y_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -58,6 +100,29 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   protected EClass eStaticClass()
   {
     return Langage_whilePackage.Literals.INPUT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getV()
+  {
+    return v;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setV(String newV)
+  {
+    String oldV = v;
+    v = newV;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__V, oldV, v));
   }
 
   /**
@@ -113,6 +178,29 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getY()
+  {
+    return y;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setY(String newY)
+  {
+    String oldY = y;
+    y = newY;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__Y, oldY, y));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -134,8 +222,12 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
+      case Langage_whilePackage.INPUT__V:
+        return getV();
       case Langage_whilePackage.INPUT__IN:
         return getIn();
+      case Langage_whilePackage.INPUT__Y:
+        return getY();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +242,14 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
+      case Langage_whilePackage.INPUT__V:
+        setV((String)newValue);
+        return;
       case Langage_whilePackage.INPUT__IN:
         setIn((Input)newValue);
+        return;
+      case Langage_whilePackage.INPUT__Y:
+        setY((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +265,14 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
+      case Langage_whilePackage.INPUT__V:
+        setV(V_EDEFAULT);
+        return;
       case Langage_whilePackage.INPUT__IN:
         setIn((Input)null);
+        return;
+      case Langage_whilePackage.INPUT__Y:
+        setY(Y_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +288,33 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
+      case Langage_whilePackage.INPUT__V:
+        return V_EDEFAULT == null ? v != null : !V_EDEFAULT.equals(v);
       case Langage_whilePackage.INPUT__IN:
         return in != null;
+      case Langage_whilePackage.INPUT__Y:
+        return Y_EDEFAULT == null ? y != null : !Y_EDEFAULT.equals(y);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (v: ");
+    result.append(v);
+    result.append(", y: ");
+    result.append(y);
+    result.append(')');
+    return result.toString();
   }
 
 } //InputImpl
