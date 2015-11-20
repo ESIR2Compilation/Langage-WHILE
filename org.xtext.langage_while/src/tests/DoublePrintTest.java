@@ -7,8 +7,8 @@ import java.io.FileInputStream;
 public class DoublePrintTest extends AbstractTest{
 	
 	public void tester() {
-		File f1 = prettyPrinting();
-		File f2 = prettyPrinting(); //TODO corriger 
+		File f1 = prettyPrinting("src/entries/", entry);
+		File f2 = prettyPrinting("src/outputs/", f1.getName());
 		FileInputStream lect1 = null;
 		FileInputStream lect2 = null;
 		BufferedInputStream bis1 = null;

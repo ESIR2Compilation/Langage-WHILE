@@ -12,6 +12,7 @@ public abstract class AbstractTest {
 	private Langage_whileGenerator generator;
 	protected static final String OK   = "[OK]    " + " ";
 	protected static final String FAIL = "[FAILED]" + " ";
+	protected static final String ND   = "[ND]    " + " ";
 	protected String rapport;
 	protected String entry;
 	protected boolean estValide;
@@ -50,11 +51,11 @@ public abstract class AbstractTest {
 
 	public void setEntry(String entry){
 		this.entry = entry;
-		rapport = "";
+		rapport = ND + getClass().getSimpleName() + " : Cette classe de test n'a pas encore été implémenté.";
 		estValide = false;
 	}
 	
-	public File prettyPrinting(){
-		return generator.generate(entry);
+	public File prettyPrinting(String path, String file){
+		return generator.generate(path, file);
 	}
 }

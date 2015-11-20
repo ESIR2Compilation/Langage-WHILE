@@ -3,49 +3,55 @@
  */
 package org.xtext.generator
 
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
-import org.xtext.langage_while.Model
-import org.xtext.langage_while.Program
-import org.xtext.langage_while.Function
-import org.xtext.langage_while.Def
-import org.xtext.langage_while.Input
-import org.xtext.langage_while.Output
-import org.xtext.langage_while.Variable
-import org.eclipse.xtext.naming.IQualifiedNameProvider
-/**
- * Generates code from your model files on save.
- * 
- * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
- */
-  import com.google.inject.Inject
-import org.xtext.Langage_whileStandaloneSetup
-import org.eclipse.xtext.resource.XtextResourceSet
-import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.util.EcoreUtil
-import java.io.FileWriter
+import com.google.inject.Inject
 import java.io.BufferedWriter
 import java.io.File
+import java.io.FileWriter
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
+import org.eclipse.xtext.naming.IQualifiedNameProvider
+import org.eclipse.xtext.resource.XtextResourceSet
+import org.xtext.Langage_whileStandaloneSetup
+import org.xtext.langage_while.Command
+import org.xtext.langage_while.Commands
+import org.xtext.langage_while.Def
+import org.xtext.langage_while.EXPR
+import org.xtext.langage_while.EXPRAND
+import org.xtext.langage_while.EXPREQ
+import org.xtext.langage_while.EXPRNOT
+import org.xtext.langage_while.EXPROR
+import org.xtext.langage_while.EXPRS
+import org.xtext.langage_while.EXPRSIMPLE
+import org.xtext.langage_while.Function
+import org.xtext.langage_while.Input
+import org.xtext.langage_while.LC
+import org.xtext.langage_while.LCs
+import org.xtext.langage_while.LEXPR
+import org.xtext.langage_while.Model
+import org.xtext.langage_while.Output
+import org.xtext.langage_while.Program
+import org.xtext.langage_while.Vars
 
 class Langage_whileGenerator implements IGenerator {
 	
 	
-	def public File generate(String file)
+	def public File generate(String path, String file)
 	{
 		val injector = new Langage_whileStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
-		val uri = URI.createURI("src/entries/" + file);
-		val xtextResource = resourceSet.getResource(uri, true);
-		EcoreUtil.resolveAll(xtextResource);
+		val uri = URI.createURI(path + file);
 		
-		//TODO supprimer l'extension précédente.
 		var pos = file.lastIndexOf(".");
 		var ext = file.substring(pos+1);
 		
 		if (!ext.equals("while"))
 			return null;
 			
+		val xtextResource = resourceSet.getResource(uri, true);
+		EcoreUtil.resolveAll(xtextResource);
 		var name = file.substring(0, pos);
 		var out = name + ".whpp"
 			
@@ -62,11 +68,14 @@ class Langage_whileGenerator implements IGenerator {
   		return null;
 	}
 	
-	   @Inject extension IQualifiedNameProvider
+	  @Inject extension IQualifiedNameProvider
+	
+	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-    for(e: resource.allContents.toIterable.filter(Model)) {
+    for(e: resource.allContents.toIterable.filter(typeof(Model))) {
       fsa.generateFile(
-        e.fullyQualifiedName.toString("/") + ".whpp",
+        //e.toString+
+        "test.whpp",
         e.compile)
     }
   }
@@ -78,44 +87,203 @@ class Langage_whileGenerator implements IGenerator {
 //				.join(', '))
 	
 	
-	def compile (Model e)
-	 '''
-	«e.greetings.compile»
+	def compile (Model l)
+	'''
+	«l.greetings.compile»
 	'''
 	
 	def compile (Program p)
 	'''
 	«FOR f:p.f»
 	«f.compile»
-	«ENDFOR» «p.compile»
+	«ENDFOR» 
+	«((p.u)+(p)) ?: ("")»
 	
 	'''
 	
 	def compile (Function f)
 	'''
-		function «f.nom»: «f.d» 
+		«"function " +f.nom + ":" + "
+" + f.d.compile
+		»
 	'''
 	
 	def compile (Def d)
 	'''
-		read	«d.in»	
-		% «d.c»	
-		% write	«d.o»
+		
+		
+		read «d.in.compile+"
+"» % «d.v.compile+"
+"» % write+  «d.o.compile»
 	'''
 	
 	def compile (Input l)
 	'''
-	«l.v» , 	«l.in»
+	«(l.y)  ?: ((l.v)+" , "+(l.in.compile))» 
+		'''
+	
+	
+	def compile (Commands n)
 	'''
+	«/*n.a.compile*/ "if "+ "nil" + " then " + " b!" + "
+
+	else" + "	A!=null" +" 
+
+	fi" +  (("; "  //n 
+	
+) ?: null) 
+	» 
+	''' 
+	
 	
 	def compile (Output O)
 	'''
-	«O.n» ,		«O.o»
+	«(O.s) ?:  ((O.n)+", "+(O.o.compile))»
+	'''
+	
+	def compile (Command c)  // a continuer
+	'''
+	« (("if "  + c.jj.compile+"
+" + "then "  + c.c2.compile + "
+"  )+ ((("else " + c.ff.compile + c.o.compile + c.dd.compile+ "
+")?:"") + "fi") ?:("") )
+	
+	?:
+	(((c.e.compile)+" := "+(c.n.compile))
+		
+		?:( ("while " + (c.ee.compile+"
+")  + "do " + (c.z.compile) + (c.k.compile+"
+")  + " od ")
+			
+			?: ( ("for " + c.hh.compile+"
+" + "do "  + c.c1.compile + " od")
+				
+				?: ( "nop"
+					
+					?: ("foreach " + c.wx.compile + "
+ in " + c.e1.compile  + " do "  + c.c3.compile  + " od"
+						
+					)
+				)
+			) 
+		)
+	
+	
+	
+	)
+	»
+	'''
+	
+	def compile (Vars v)
+	'''
+	«(v.a) + ((", "+(v)) ?: (""))»
+	'''
+	
+	def compile (EXPRS e)
+	'''
+	« e.f.compile + ( (", " + e.e2.compile) ?: ("") )
+	»
 	'''
 	
 	
-	def compile (Variable v)
+	
+	def compile (LEXPR l)
 	'''
-	«v.n»
-	'''
+	«("/t"+(l.n.compile)) ?:(l)»
+	'''	
+	
+	def compile (EXPR e)
+	'''nil
+	«
+	switch (e)
+	{
+	case e.e1!=null : e.e1.compile
+
+	case e.ex!=null : e.ex.compile
 }
+»
+	'''
+	
+	def compile (EXPRSIMPLE ex) // a revoir
+	'''
+	«"nil" 
+	?:( (ex.l) 
+		
+		?: ((ex.s)
+			 
+			?: ( ( "( cons" + ex.yy.compile + ")" )
+				
+				?: ( ("( hd " + ex.g.compile + ")")
+					
+					?: ( ("( list " + ex.b.compile)
+						
+						?: ( ("( tl " + ex.g.compile + ")")
+							
+							?: ("(" + ex.v + ex.w.compile + ")"
+								
+							)
+							
+						)
+						
+					) 
+					
+				)
+						
+			)
+			
+		) 
+		
+	)»
+	
+	
+
+	»
+	
+	
+	'''
+	
+	def compile (EXPRAND e)
+	'''
+	«(e.f.compile) + (( " and " + e.lc2.compile + e) ?: (""))
+	»
+	'''
+	
+	def compile (EXPROR e)
+	'''
+	«(e.e1.compile) + (( e.lc1.compile + " or " + e) ?: (""))
+	»
+	'''
+	def compile (EXPRNOT e)
+	'''
+	« (("not ") ?: ("")) + e.e1.compile
+	»
+	'''
+	
+	def compile (EXPREQ f)
+	'''
+	« (f.e1.compile +  " =? " + f.w.compile) ?: ("(" + f.ex.compile + ")")
+	»
+	'''
+	
+	def compile (LCs l)
+	'''
+	«(l.a.compile) ?: ("")
+	»
+	'''
+	
+	def compile (LC m)
+	'''
+	« (m.a)
+	?:( (m.z) 
+		?:( (m.e)
+			?: (m.r)
+			
+		)
+		
+	)
+	»
+	'''
+	////exprand, expror, exprnot, expreq
+	
+}
+

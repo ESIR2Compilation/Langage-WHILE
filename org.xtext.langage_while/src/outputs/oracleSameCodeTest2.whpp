@@ -1,4 +1,0 @@
-function test1!:
-	read A!
-	%A!, B! := A!
-	%write A!

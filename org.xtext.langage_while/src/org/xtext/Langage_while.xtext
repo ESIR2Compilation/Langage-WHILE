@@ -4,48 +4,51 @@ generate langage_while "http://www.xtext.org/Langage_while"
 
 Model:
 	greetings=(Program);
+
 	
+
 	/* Intégrer def dans function pour l'interprétation du noeud
-	 * Identificateur LC
-	 * Donner des noms (command etc)
-	 */
+	* Identificateur LC
+	* Donner des noms (command etc)
+	*/
 
 
 /* PROGRAM */
-Program : (f+=Function)* (CR (pp=Program))?;
-Function : 'function' LCs (nom=SYM) ':' LCs d=Def;
-Def : 'read' LCs (in=Input) LCs
-		'%' c=Commands LCs
-		'%' 'write' LCs o=Output;
-Input : (v=VAR ',' LCs (in=Input)) | y=VAR;
-Output : (n=VAR ',' LCs (o=Output)) | s=VAR;
+Program : (f+=Function)* (u=CR (pp=Program))?;
+Function : 'function' (n=LCs) (nom=SYM) ':' (t=LCs) (d=Def);
+Def : 'read' l=LCs (in=Input) z=LCs
+		'%' v=Commands s=LCs
+		'%' 'write' u=LCs o=Output;
+Input : ((v=VAR) ',' (z=LCs) (in=Output)) | (y=VAR);
+Output : (n=VAR ',' (q=LCs) (o=Input)) | s=VAR;
 
 
 /* COMMANDES SIMPLES ET COMPLEXES */
-Commands : Command (';' LCs Commands)?;
-Command : 'nop' | (Vars LCs ':=' LCs EXPRS) |
-		  'while' LCs EXPR LCs 'do' LCs Commands LCs 'od' |
-		  'for' LCs EXPR LCs 'do' LCs Commands LCs 'od' |
-		  'if' LCs EXPR LCs 'then' LCs Commands LCs ('else' LCs Commands LCs)? 'fi' |
-		  'foreach' LCs EXPR LCs 'in' LCs EXPR LCs 'do' LCs Commands LCs 'od';
-Vars : VAR (',' LCs Vars)?;
-EXPRS : EXPR (',' LCs EXPRS)?;
+Commands : (a=Command) (';' l=LCs s=Commands)?;
+
+Command : 'nop' | (e=Vars l=LCs ':=' c=LCs n=EXPRS) |
+		 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od' |
+		 'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od' |
+		 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi' |
+		 'foreach' sq=LCs wx=EXPR lc=LCs 'in' lc2=LCs e1=EXPR lc3=LCs 'do' lc4=LCs c3=Commands lc5=LCs 'od';
+Vars : (a=VAR) (',' (l=LCs) (u=Vars))?;
+EXPRS : f=EXPR (',' l=LCs e2=EXPRS)?;
 
 
 /* EXPRESSIONS SIMPLES */
-EXPR : EXPRSIMPLE | EXPRAND;
-EXPRSIMPLE : ('nil' | VAR | SYM) |
-			 ('(' 'cons' LEXPR ')' | '(' 'list' LEXPR ')') |
-			 ('(' 'hd' LCs EXPR ')' | '(' 'tl' LCs EXPR ')') |
-			 ('(' SYM LEXPR ')');
+EXPR : e1=EXPRSIMPLE | ex=EXPRAND;
+EXPRSIMPLE : (('nil') | l=VAR | s=SYM) |
+			('(' 'cons' yy=LEXPR ')') | ('(' 'list' b=LEXPR ')') |
+			('(' 'hd' u=LCs g=EXPR ')') | ('(' 'tl' LCs n=EXPR ')') |
+			('(' v=SYM w=LEXPR ')');
 			 
-LEXPR : LCs EXPR LEXPR?;
+LEXPR : (f=LCs) (n=EXPR) (t=LEXPR)?;
 
 /* EXPRESSIONS LOGIQUES */
-EXPRAND: EXPROR (LCs 'and' LCs EXPRAND)?;
-EXPROR: EXPRNOT (LCs 'or' LCs EXPROR)?;
-EXPRNOT: ('not' LCs)? EXPREQ;
-EXPREQ: (EXPRSIMPLE LCs '=?' LCs EXPRSIMPLE) | ('('EXPR')');
+EXPRAND: f=EXPROR (lc1=LCs 'and' lc2=LCs ee=EXPRAND)?;
+EXPROR: e1=EXPRNOT (lc1=LCs 'or' lc2=LCs e2=EXPROR)?;
+EXPRNOT: ('not' lc1=LCs)? e1=EXPREQ;
+EXPREQ: (e1=EXPRSIMPLE ccc=LCs '=?' lc2=LCs w=EXPRSIMPLE) | ('('ex=EXPR')');
 
 
 /* UNITES LEXICALES */ 
@@ -60,8 +63,8 @@ terminal CONF :  (('-'|'+'|'.'|'/'|'_'|'&'|"->")('a'..'z'|'A'..'Z'|'0'..'9')+)*(
 
 //Ponctuation: PONCT;	
 //terminal PONCT : (','|';'|':'|'('|')'); 
-LCs : LC?;
-LC : SP|CR|TAB|LF; 
+LCs : a=LC?;
+LC : a=SP|z=CR|e=TAB|r=LF; 
 terminal SP : ' '; 
 terminal CR : '\n'; 
 terminal TAB : '\t'; 

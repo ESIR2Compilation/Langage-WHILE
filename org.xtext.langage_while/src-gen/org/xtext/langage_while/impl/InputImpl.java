@@ -12,7 +12,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.langage_while.Input;
+import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
+import org.xtext.langage_while.Output;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +24,7 @@ import org.xtext.langage_while.Langage_whilePackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getV <em>V</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.InputImpl#getZ <em>Z</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getIn <em>In</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getY <em>Y</em>}</li>
  * </ul>
@@ -52,6 +55,16 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   protected String v = V_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getZ() <em>Z</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getZ()
+   * @generated
+   * @ordered
+   */
+  protected LCs z;
+
+  /**
    * The cached value of the '{@link #getIn() <em>In</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -59,7 +72,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * @generated
    * @ordered
    */
-  protected Input in;
+  protected Output in;
 
   /**
    * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -130,7 +143,55 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public Input getIn()
+  public LCs getZ()
+  {
+    return z;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetZ(LCs newZ, NotificationChain msgs)
+  {
+    LCs oldZ = z;
+    z = newZ;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__Z, oldZ, newZ);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setZ(LCs newZ)
+  {
+    if (newZ != z)
+    {
+      NotificationChain msgs = null;
+      if (z != null)
+        msgs = ((InternalEObject)z).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.INPUT__Z, null, msgs);
+      if (newZ != null)
+        msgs = ((InternalEObject)newZ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.INPUT__Z, null, msgs);
+      msgs = basicSetZ(newZ, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.INPUT__Z, newZ, newZ));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Output getIn()
   {
     return in;
   }
@@ -140,9 +201,9 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIn(Input newIn, NotificationChain msgs)
+  public NotificationChain basicSetIn(Output newIn, NotificationChain msgs)
   {
-    Input oldIn = in;
+    Output oldIn = in;
     in = newIn;
     if (eNotificationRequired())
     {
@@ -157,7 +218,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIn(Input newIn)
+  public void setIn(Output newIn)
   {
     if (newIn != in)
     {
@@ -206,6 +267,8 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
   {
     switch (featureID)
     {
+      case Langage_whilePackage.INPUT__Z:
+        return basicSetZ(null, msgs);
       case Langage_whilePackage.INPUT__IN:
         return basicSetIn(null, msgs);
     }
@@ -224,6 +287,8 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
     {
       case Langage_whilePackage.INPUT__V:
         return getV();
+      case Langage_whilePackage.INPUT__Z:
+        return getZ();
       case Langage_whilePackage.INPUT__IN:
         return getIn();
       case Langage_whilePackage.INPUT__Y:
@@ -245,8 +310,11 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
       case Langage_whilePackage.INPUT__V:
         setV((String)newValue);
         return;
+      case Langage_whilePackage.INPUT__Z:
+        setZ((LCs)newValue);
+        return;
       case Langage_whilePackage.INPUT__IN:
-        setIn((Input)newValue);
+        setIn((Output)newValue);
         return;
       case Langage_whilePackage.INPUT__Y:
         setY((String)newValue);
@@ -268,8 +336,11 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
       case Langage_whilePackage.INPUT__V:
         setV(V_EDEFAULT);
         return;
+      case Langage_whilePackage.INPUT__Z:
+        setZ((LCs)null);
+        return;
       case Langage_whilePackage.INPUT__IN:
-        setIn((Input)null);
+        setIn((Output)null);
         return;
       case Langage_whilePackage.INPUT__Y:
         setY(Y_EDEFAULT);
@@ -290,6 +361,8 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
     {
       case Langage_whilePackage.INPUT__V:
         return V_EDEFAULT == null ? v != null : !V_EDEFAULT.equals(v);
+      case Langage_whilePackage.INPUT__Z:
+        return z != null;
       case Langage_whilePackage.INPUT__IN:
         return in != null;
       case Langage_whilePackage.INPUT__Y:

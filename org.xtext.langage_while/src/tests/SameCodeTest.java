@@ -1,7 +1,6 @@
 package tests;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -34,7 +33,7 @@ public class SameCodeTest extends AbstractTest{
 		}
 		
 		contentEntry = st.toString();
-		File file = prettyPrinting();
+		prettyPrinting("src/entries/", entry);
 		
 		try {
 			int pos = entry.lastIndexOf(".");

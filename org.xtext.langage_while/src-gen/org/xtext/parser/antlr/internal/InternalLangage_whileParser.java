@@ -22,14 +22,14 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SYM", "RULE_VAR", "RULE_SP", "RULE_CR", "RULE_TAB", "RULE_LF", "RULE_CONF", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'function'", "':'", "'read'", "'%'", "'write'", "','", "';'", "'nop'", "':='", "'while'", "'do'", "'od'", "'for'", "'if'", "'then'", "'else'", "'fi'", "'foreach'", "'in'", "'nil'", "'('", "'cons'", "')'", "'list'", "'hd'", "'tl'", "'and'", "'or'", "'not'", "'=?'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_CR", "RULE_SYM", "RULE_VAR", "RULE_SP", "RULE_TAB", "RULE_LF", "RULE_CONF", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'function'", "':'", "'read'", "'%'", "'write'", "','", "';'", "'nop'", "':='", "'while'", "'do'", "'od'", "'for'", "'if'", "'then'", "'else'", "'fi'", "'foreach'", "'in'", "'nil'", "'('", "'cons'", "')'", "'list'", "'hd'", "'tl'", "'and'", "'or'", "'not'", "'=?'"
     };
     public static final int RULE_LF=9;
-    public static final int RULE_CR=7;
+    public static final int RULE_CR=4;
     public static final int RULE_TAB=8;
     public static final int T__19=19;
     public static final int T__18=18;
-    public static final int RULE_SP=6;
+    public static final int RULE_SP=7;
     public static final int RULE_ID=11;
     public static final int RULE_CONF=10;
     public static final int T__26=26;
@@ -57,7 +57,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_SYM=4;
+    public static final int RULE_SYM=5;
     public static final int RULE_WS=16;
     public static final int RULE_ANY_OTHER=17;
     public static final int T__44=44;
@@ -68,7 +68,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
-    public static final int RULE_VAR=5;
+    public static final int RULE_VAR=6;
 
     // delegates
     // delegators
@@ -262,10 +262,11 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProgram"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:121:1: ruleProgram returns [EObject current=null] : ( ( (lv_f_0_0= ruleFunction ) ) ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )? ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:121:1: ruleProgram returns [EObject current=null] : ( ( (lv_f_0_0= ruleFunction ) )* ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )? ) ;
     public final EObject ruleProgram() throws RecognitionException {
         EObject current = null;
 
+        Token lv_u_1_0=null;
         EObject lv_f_0_0 = null;
 
         EObject lv_pp_2_0 = null;
@@ -274,90 +275,118 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:124:28: ( ( ( (lv_f_0_0= ruleFunction ) ) ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:1: ( ( (lv_f_0_0= ruleFunction ) ) ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:124:28: ( ( ( (lv_f_0_0= ruleFunction ) )* ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:1: ( ( (lv_f_0_0= ruleFunction ) )* ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:1: ( ( (lv_f_0_0= ruleFunction ) ) ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:2: ( (lv_f_0_0= ruleFunction ) ) ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:1: ( ( (lv_f_0_0= ruleFunction ) )* ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:2: ( (lv_f_0_0= ruleFunction ) )* ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )?
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:2: ( (lv_f_0_0= ruleFunction ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:126:1: (lv_f_0_0= ruleFunction )
-            {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:126:1: (lv_f_0_0= ruleFunction )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:127:3: lv_f_0_0= ruleFunction
-            {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getProgramAccess().getFFunctionParserRuleCall_0_0()); 
-              	    
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:125:2: ( (lv_f_0_0= ruleFunction ) )*
+            loop1:
+            do {
+                int alt1=2;
+                int LA1_0 = input.LA(1);
+
+                if ( (LA1_0==18) ) {
+                    alt1=1;
+                }
+
+
+                switch (alt1) {
+            	case 1 :
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:126:1: (lv_f_0_0= ruleFunction )
+            	    {
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:126:1: (lv_f_0_0= ruleFunction )
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:127:3: lv_f_0_0= ruleFunction
+            	    {
+            	    if ( state.backtracking==0 ) {
+            	       
+            	      	        newCompositeNode(grammarAccess.getProgramAccess().getFFunctionParserRuleCall_0_0()); 
+            	      	    
+            	    }
+            	    pushFollow(FOLLOW_ruleFunction_in_ruleProgram227);
+            	    lv_f_0_0=ruleFunction();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      	        if (current==null) {
+            	      	            current = createModelElementForParent(grammarAccess.getProgramRule());
+            	      	        }
+            	             		add(
+            	             			current, 
+            	             			"f",
+            	              		lv_f_0_0, 
+            	              		"Function");
+            	      	        afterParserOrEnumRuleCall();
+            	      	    
+            	    }
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop1;
+                }
+            } while (true);
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:143:3: ( ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) ) )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==RULE_CR) ) {
+                alt2=1;
             }
-            pushFollow(FOLLOW_ruleFunction_in_ruleProgram227);
-            lv_f_0_0=ruleFunction();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getProgramRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"f",
-                      		lv_f_0_0, 
-                      		"Function");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
-
-            }
-
-
-            }
-
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:143:2: ( ruleLCs ( (lv_pp_2_0= ruleProgram ) ) )?
-            int alt1=2;
-            int LA1_0 = input.LA(1);
-
-            if ( ((LA1_0>=RULE_SP && LA1_0<=RULE_LF)||LA1_0==18) ) {
-                alt1=1;
-            }
-            switch (alt1) {
+            switch (alt2) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:144:2: ruleLCs ( (lv_pp_2_0= ruleProgram ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:143:4: ( (lv_u_1_0= RULE_CR ) ) ( (lv_pp_2_0= ruleProgram ) )
                     {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:143:4: ( (lv_u_1_0= RULE_CR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:144:1: (lv_u_1_0= RULE_CR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:144:1: (lv_u_1_0= RULE_CR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:145:3: lv_u_1_0= RULE_CR
+                    {
+                    lv_u_1_0=(Token)match(input,RULE_CR,FOLLOW_RULE_CR_in_ruleProgram246); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
-                       
-                      	  /* */ 
-                      	
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getProgramAccess().getLCsParserRuleCall_1_0()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleProgram247);
-                    ruleLCs();
 
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+                      			newLeafNode(lv_u_1_0, grammarAccess.getProgramAccess().getUCRTerminalRuleCall_1_0_0()); 
+                      		
                     }
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:154:1: ( (lv_pp_2_0= ruleProgram ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:155:1: (lv_pp_2_0= ruleProgram )
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getProgramRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"u",
+                              		lv_u_1_0, 
+                              		"CR");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:161:2: ( (lv_pp_2_0= ruleProgram ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:162:1: (lv_pp_2_0= ruleProgram )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:155:1: (lv_pp_2_0= ruleProgram )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:156:3: lv_pp_2_0= ruleProgram
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:162:1: (lv_pp_2_0= ruleProgram )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:163:3: lv_pp_2_0= ruleProgram
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getProgramAccess().getPpProgramParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleProgram_in_ruleProgram267);
+                    pushFollow(FOLLOW_ruleProgram_in_ruleProgram272);
                     lv_pp_2_0=ruleProgram();
 
                     state._fsp--;
@@ -410,7 +439,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunction"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:180:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:187:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
     public final EObject entryRuleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -418,13 +447,13 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:181:2: (iv_ruleFunction= ruleFunction EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:182:2: iv_ruleFunction= ruleFunction EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:188:2: (iv_ruleFunction= ruleFunction EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:189:2: iv_ruleFunction= ruleFunction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFunctionRule()); 
             }
-            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction305);
+            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction310);
             iv_ruleFunction=ruleFunction();
 
             state._fsp--;
@@ -432,7 +461,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFunction; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction315); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction320); if (state.failed) return current;
 
             }
 
@@ -450,58 +479,77 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunction"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:189:1: ruleFunction returns [EObject current=null] : (otherlv_0= 'function' ruleLCs ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ruleLCs ( (lv_d_5_0= ruleDef ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:196:1: ruleFunction returns [EObject current=null] : (otherlv_0= 'function' ( (lv_n_1_0= ruleLCs ) ) ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ( (lv_t_4_0= ruleLCs ) ) ( (lv_d_5_0= ruleDef ) ) ) ;
     public final EObject ruleFunction() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_nom_2_0=null;
         Token otherlv_3=null;
+        EObject lv_n_1_0 = null;
+
+        EObject lv_t_4_0 = null;
+
         EObject lv_d_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:192:28: ( (otherlv_0= 'function' ruleLCs ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ruleLCs ( (lv_d_5_0= ruleDef ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:193:1: (otherlv_0= 'function' ruleLCs ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ruleLCs ( (lv_d_5_0= ruleDef ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:199:28: ( (otherlv_0= 'function' ( (lv_n_1_0= ruleLCs ) ) ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ( (lv_t_4_0= ruleLCs ) ) ( (lv_d_5_0= ruleDef ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:200:1: (otherlv_0= 'function' ( (lv_n_1_0= ruleLCs ) ) ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ( (lv_t_4_0= ruleLCs ) ) ( (lv_d_5_0= ruleDef ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:193:1: (otherlv_0= 'function' ruleLCs ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ruleLCs ( (lv_d_5_0= ruleDef ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:193:3: otherlv_0= 'function' ruleLCs ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ruleLCs ( (lv_d_5_0= ruleDef ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:200:1: (otherlv_0= 'function' ( (lv_n_1_0= ruleLCs ) ) ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ( (lv_t_4_0= ruleLCs ) ) ( (lv_d_5_0= ruleDef ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:200:3: otherlv_0= 'function' ( (lv_n_1_0= ruleLCs ) ) ( (lv_nom_2_0= RULE_SYM ) ) otherlv_3= ':' ( (lv_t_4_0= ruleLCs ) ) ( (lv_d_5_0= ruleDef ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleFunction352); if (state.failed) return current;
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleFunction357); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getFunctionAccess().getFunctionKeyword_0());
                   
             }
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:204:1: ( (lv_n_1_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:205:1: (lv_n_1_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:205:1: (lv_n_1_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:206:3: lv_n_1_0= ruleLCs
+            {
             if ( state.backtracking==0 ) {
                
-              	  /* */ 
-              	
+              	        newCompositeNode(grammarAccess.getFunctionAccess().getNLCsParserRuleCall_1_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getFunctionAccess().getLCsParserRuleCall_1()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleFunction371);
-            ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleFunction378);
+            lv_n_1_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getFunctionRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"n",
+                      		lv_n_1_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:208:1: ( (lv_nom_2_0= RULE_SYM ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:209:1: (lv_nom_2_0= RULE_SYM )
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:222:2: ( (lv_nom_2_0= RULE_SYM ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:223:1: (lv_nom_2_0= RULE_SYM )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:209:1: (lv_nom_2_0= RULE_SYM )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:210:3: lv_nom_2_0= RULE_SYM
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:223:1: (lv_nom_2_0= RULE_SYM )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:224:3: lv_nom_2_0= RULE_SYM
             {
-            lv_nom_2_0=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleFunction387); if (state.failed) return current;
+            lv_nom_2_0=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleFunction395); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_nom_2_0, grammarAccess.getFunctionAccess().getNomSYMTerminalRuleCall_2_0()); 
@@ -525,44 +573,59 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleFunction404); if (state.failed) return current;
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleFunction412); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getFunctionAccess().getColonKeyword_3());
                   
             }
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:244:1: ( (lv_t_4_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:245:1: (lv_t_4_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:245:1: (lv_t_4_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:246:3: lv_t_4_0= ruleLCs
+            {
             if ( state.backtracking==0 ) {
                
-              	  /* */ 
-              	
+              	        newCompositeNode(grammarAccess.getFunctionAccess().getTLCsParserRuleCall_4_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getFunctionAccess().getLCsParserRuleCall_4()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleFunction423);
-            ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleFunction433);
+            lv_t_4_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getFunctionRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"t",
+                      		lv_t_4_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:241:1: ( (lv_d_5_0= ruleDef ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:242:1: (lv_d_5_0= ruleDef )
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:262:2: ( (lv_d_5_0= ruleDef ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:263:1: (lv_d_5_0= ruleDef )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:242:1: (lv_d_5_0= ruleDef )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:243:3: lv_d_5_0= ruleDef
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:263:1: (lv_d_5_0= ruleDef )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:264:3: lv_d_5_0= ruleDef
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getFunctionAccess().getDDefParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleDef_in_ruleFunction443);
+            pushFollow(FOLLOW_ruleDef_in_ruleFunction454);
             lv_d_5_0=ruleDef();
 
             state._fsp--;
@@ -609,7 +672,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDef"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:267:1: entryRuleDef returns [EObject current=null] : iv_ruleDef= ruleDef EOF ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:288:1: entryRuleDef returns [EObject current=null] : iv_ruleDef= ruleDef EOF ;
     public final EObject entryRuleDef() throws RecognitionException {
         EObject current = null;
 
@@ -617,13 +680,13 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:268:2: (iv_ruleDef= ruleDef EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:269:2: iv_ruleDef= ruleDef EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:289:2: (iv_ruleDef= ruleDef EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:290:2: iv_ruleDef= ruleDef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDefRule()); 
             }
-            pushFollow(FOLLOW_ruleDef_in_entryRuleDef479);
+            pushFollow(FOLLOW_ruleDef_in_entryRuleDef490);
             iv_ruleDef=ruleDef();
 
             state._fsp--;
@@ -631,7 +694,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleDef; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDef489); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDef500); if (state.failed) return current;
 
             }
 
@@ -649,7 +712,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDef"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:276:1: ruleDef returns [EObject current=null] : (otherlv_0= 'read' ruleLCs ( (lv_in_2_0= ruleInput ) ) ruleLCs otherlv_4= '%' ( (lv_c_5_0= ruleCommands ) ) ruleLCs otherlv_7= '%' otherlv_8= 'write' ruleLCs ( (lv_o_10_0= ruleOutput ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:297:1: ruleDef returns [EObject current=null] : (otherlv_0= 'read' ( (lv_l_1_0= ruleLCs ) ) ( (lv_in_2_0= ruleInput ) ) ( (lv_z_3_0= ruleLCs ) ) otherlv_4= '%' ( (lv_v_5_0= ruleCommands ) ) ( (lv_s_6_0= ruleLCs ) ) otherlv_7= '%' otherlv_8= 'write' ( (lv_u_9_0= ruleLCs ) ) ( (lv_o_10_0= ruleOutput ) ) ) ;
     public final EObject ruleDef() throws RecognitionException {
         EObject current = null;
 
@@ -657,9 +720,17 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_7=null;
         Token otherlv_8=null;
+        EObject lv_l_1_0 = null;
+
         EObject lv_in_2_0 = null;
 
-        AntlrDatatypeRuleToken lv_c_5_0 = null;
+        EObject lv_z_3_0 = null;
+
+        EObject lv_v_5_0 = null;
+
+        EObject lv_s_6_0 = null;
+
+        EObject lv_u_9_0 = null;
 
         EObject lv_o_10_0 = null;
 
@@ -667,50 +738,65 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:279:28: ( (otherlv_0= 'read' ruleLCs ( (lv_in_2_0= ruleInput ) ) ruleLCs otherlv_4= '%' ( (lv_c_5_0= ruleCommands ) ) ruleLCs otherlv_7= '%' otherlv_8= 'write' ruleLCs ( (lv_o_10_0= ruleOutput ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:280:1: (otherlv_0= 'read' ruleLCs ( (lv_in_2_0= ruleInput ) ) ruleLCs otherlv_4= '%' ( (lv_c_5_0= ruleCommands ) ) ruleLCs otherlv_7= '%' otherlv_8= 'write' ruleLCs ( (lv_o_10_0= ruleOutput ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:300:28: ( (otherlv_0= 'read' ( (lv_l_1_0= ruleLCs ) ) ( (lv_in_2_0= ruleInput ) ) ( (lv_z_3_0= ruleLCs ) ) otherlv_4= '%' ( (lv_v_5_0= ruleCommands ) ) ( (lv_s_6_0= ruleLCs ) ) otherlv_7= '%' otherlv_8= 'write' ( (lv_u_9_0= ruleLCs ) ) ( (lv_o_10_0= ruleOutput ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:301:1: (otherlv_0= 'read' ( (lv_l_1_0= ruleLCs ) ) ( (lv_in_2_0= ruleInput ) ) ( (lv_z_3_0= ruleLCs ) ) otherlv_4= '%' ( (lv_v_5_0= ruleCommands ) ) ( (lv_s_6_0= ruleLCs ) ) otherlv_7= '%' otherlv_8= 'write' ( (lv_u_9_0= ruleLCs ) ) ( (lv_o_10_0= ruleOutput ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:280:1: (otherlv_0= 'read' ruleLCs ( (lv_in_2_0= ruleInput ) ) ruleLCs otherlv_4= '%' ( (lv_c_5_0= ruleCommands ) ) ruleLCs otherlv_7= '%' otherlv_8= 'write' ruleLCs ( (lv_o_10_0= ruleOutput ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:280:3: otherlv_0= 'read' ruleLCs ( (lv_in_2_0= ruleInput ) ) ruleLCs otherlv_4= '%' ( (lv_c_5_0= ruleCommands ) ) ruleLCs otherlv_7= '%' otherlv_8= 'write' ruleLCs ( (lv_o_10_0= ruleOutput ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:301:1: (otherlv_0= 'read' ( (lv_l_1_0= ruleLCs ) ) ( (lv_in_2_0= ruleInput ) ) ( (lv_z_3_0= ruleLCs ) ) otherlv_4= '%' ( (lv_v_5_0= ruleCommands ) ) ( (lv_s_6_0= ruleLCs ) ) otherlv_7= '%' otherlv_8= 'write' ( (lv_u_9_0= ruleLCs ) ) ( (lv_o_10_0= ruleOutput ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:301:3: otherlv_0= 'read' ( (lv_l_1_0= ruleLCs ) ) ( (lv_in_2_0= ruleInput ) ) ( (lv_z_3_0= ruleLCs ) ) otherlv_4= '%' ( (lv_v_5_0= ruleCommands ) ) ( (lv_s_6_0= ruleLCs ) ) otherlv_7= '%' otherlv_8= 'write' ( (lv_u_9_0= ruleLCs ) ) ( (lv_o_10_0= ruleOutput ) )
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleDef526); if (state.failed) return current;
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleDef537); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getDefAccess().getReadKeyword_0());
                   
             }
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:305:1: ( (lv_l_1_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:306:1: (lv_l_1_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:306:1: (lv_l_1_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:307:3: lv_l_1_0= ruleLCs
+            {
             if ( state.backtracking==0 ) {
                
-              	  /* */ 
-              	
+              	        newCompositeNode(grammarAccess.getDefAccess().getLLCsParserRuleCall_1_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getDefAccess().getLCsParserRuleCall_1()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleDef545);
-            ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleDef558);
+            lv_l_1_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getDefRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"l",
+                      		lv_l_1_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:295:1: ( (lv_in_2_0= ruleInput ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:296:1: (lv_in_2_0= ruleInput )
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:323:2: ( (lv_in_2_0= ruleInput ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:324:1: (lv_in_2_0= ruleInput )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:296:1: (lv_in_2_0= ruleInput )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:297:3: lv_in_2_0= ruleInput
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:324:1: (lv_in_2_0= ruleInput )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:325:3: lv_in_2_0= ruleInput
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getDefAccess().getInInputParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleInput_in_ruleDef565);
+            pushFollow(FOLLOW_ruleInput_in_ruleDef579);
             lv_in_2_0=ruleInput();
 
             state._fsp--;
@@ -734,45 +820,19 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
             }
 
-            if ( state.backtracking==0 ) {
-               
-              	  /* */ 
-              	
-            }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getDefAccess().getLCsParserRuleCall_3()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleDef584);
-            ruleLCs();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleDef595); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_4, grammarAccess.getDefAccess().getPercentSignKeyword_4());
-                  
-            }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:328:1: ( (lv_c_5_0= ruleCommands ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:329:1: (lv_c_5_0= ruleCommands )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:341:2: ( (lv_z_3_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:342:1: (lv_z_3_0= ruleLCs )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:329:1: (lv_c_5_0= ruleCommands )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:330:3: lv_c_5_0= ruleCommands
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:342:1: (lv_z_3_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:343:3: lv_z_3_0= ruleLCs
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getDefAccess().getCCommandsParserRuleCall_5_0()); 
+              	        newCompositeNode(grammarAccess.getDefAccess().getZLCsParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleCommands_in_ruleDef616);
-            lv_c_5_0=ruleCommands();
+            pushFollow(FOLLOW_ruleLCs_in_ruleDef600);
+            lv_z_3_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
@@ -783,8 +843,49 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
               	        }
                      		set(
                      			current, 
-                     			"c",
-                      		lv_c_5_0, 
+                     			"z",
+                      		lv_z_3_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleDef612); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_4, grammarAccess.getDefAccess().getPercentSignKeyword_4());
+                  
+            }
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:363:1: ( (lv_v_5_0= ruleCommands ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:364:1: (lv_v_5_0= ruleCommands )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:364:1: (lv_v_5_0= ruleCommands )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:365:3: lv_v_5_0= ruleCommands
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getDefAccess().getVCommandsParserRuleCall_5_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleCommands_in_ruleDef633);
+            lv_v_5_0=ruleCommands();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getDefRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"v",
+                      		lv_v_5_0, 
                       		"Commands");
               	        afterParserOrEnumRuleCall();
               	    
@@ -795,70 +896,100 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
             }
 
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:381:2: ( (lv_s_6_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:382:1: (lv_s_6_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:382:1: (lv_s_6_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:383:3: lv_s_6_0= ruleLCs
+            {
             if ( state.backtracking==0 ) {
                
-              	  /* */ 
-              	
+              	        newCompositeNode(grammarAccess.getDefAccess().getSLCsParserRuleCall_6_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getDefAccess().getLCsParserRuleCall_6()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleDef635);
-            ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleDef654);
+            lv_s_6_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getDefRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"s",
+                      		lv_s_6_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleDef646); if (state.failed) return current;
+
+            }
+
+
+            }
+
+            otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleDef666); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getDefAccess().getPercentSignKeyword_7());
                   
             }
-            otherlv_8=(Token)match(input,22,FOLLOW_22_in_ruleDef658); if (state.failed) return current;
+            otherlv_8=(Token)match(input,22,FOLLOW_22_in_ruleDef678); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_8, grammarAccess.getDefAccess().getWriteKeyword_8());
                   
             }
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:407:1: ( (lv_u_9_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:408:1: (lv_u_9_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:408:1: (lv_u_9_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:409:3: lv_u_9_0= ruleLCs
+            {
             if ( state.backtracking==0 ) {
                
-              	  /* */ 
-              	
+              	        newCompositeNode(grammarAccess.getDefAccess().getULCsParserRuleCall_9_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getDefAccess().getLCsParserRuleCall_9()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleLCs_in_ruleDef677);
-            ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleDef699);
+            lv_u_9_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getDefRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"u",
+                      		lv_u_9_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:376:1: ( (lv_o_10_0= ruleOutput ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:377:1: (lv_o_10_0= ruleOutput )
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:425:2: ( (lv_o_10_0= ruleOutput ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:426:1: (lv_o_10_0= ruleOutput )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:377:1: (lv_o_10_0= ruleOutput )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:378:3: lv_o_10_0= ruleOutput
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:426:1: (lv_o_10_0= ruleOutput )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:427:3: lv_o_10_0= ruleOutput
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getDefAccess().getOOutputParserRuleCall_10_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleOutput_in_ruleDef697);
+            pushFollow(FOLLOW_ruleOutput_in_ruleDef720);
             lv_o_10_0=ruleOutput();
 
             state._fsp--;
@@ -905,7 +1036,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:402:1: entryRuleInput returns [EObject current=null] : iv_ruleInput= ruleInput EOF ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:451:1: entryRuleInput returns [EObject current=null] : iv_ruleInput= ruleInput EOF ;
     public final EObject entryRuleInput() throws RecognitionException {
         EObject current = null;
 
@@ -913,13 +1044,13 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:403:2: (iv_ruleInput= ruleInput EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:404:2: iv_ruleInput= ruleInput EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:452:2: (iv_ruleInput= ruleInput EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:453:2: iv_ruleInput= ruleInput EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInputRule()); 
             }
-            pushFollow(FOLLOW_ruleInput_in_entryRuleInput733);
+            pushFollow(FOLLOW_ruleInput_in_entryRuleInput756);
             iv_ruleInput=ruleInput();
 
             state._fsp--;
@@ -927,7 +1058,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleInput; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInput743); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInput766); if (state.failed) return current;
 
             }
 
@@ -945,39 +1076,41 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:411:1: ruleInput returns [EObject current=null] : ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:460:1: ruleInput returns [EObject current=null] : ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) ;
     public final EObject ruleInput() throws RecognitionException {
         EObject current = null;
 
         Token lv_v_0_0=null;
         Token otherlv_1=null;
         Token lv_y_4_0=null;
+        EObject lv_z_2_0 = null;
+
         EObject lv_in_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:414:28: ( ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:463:28: ( ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA2_0==RULE_VAR) ) {
-                int LA2_1 = input.LA(2);
+            if ( (LA3_0==RULE_VAR) ) {
+                int LA3_1 = input.LA(2);
 
-                if ( (LA2_1==23) ) {
-                    alt2=1;
+                if ( (LA3_1==23) ) {
+                    alt3=1;
                 }
-                else if ( (LA2_1==EOF||(LA2_1>=RULE_SP && LA2_1<=RULE_LF)||LA2_1==21) ) {
-                    alt2=2;
+                else if ( (LA3_1==EOF||LA3_1==RULE_CR||(LA3_1>=RULE_SP && LA3_1<=RULE_LF)||LA3_1==18||LA3_1==21) ) {
+                    alt3=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 2, 1, input);
+                        new NoViableAltException("", 3, 1, input);
 
                     throw nvae;
                 }
@@ -985,24 +1118,24 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt2) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:3: ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_in_3_0= ruleInput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:3: ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:415:3: ( (lv_v_0_0= RULE_VAR ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:416:1: (lv_v_0_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:3: ( (lv_v_0_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:465:1: (lv_v_0_0= RULE_VAR )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:416:1: (lv_v_0_0= RULE_VAR )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:417:3: lv_v_0_0= RULE_VAR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:465:1: (lv_v_0_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:466:3: lv_v_0_0= RULE_VAR
                     {
-                    lv_v_0_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleInput786); if (state.failed) return current;
+                    lv_v_0_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleInput809); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_v_0_0, grammarAccess.getInputAccess().getVVARTerminalRuleCall_0_0_0()); 
@@ -1026,45 +1159,60 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleInput803); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleInput826); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getInputAccess().getCommaKeyword_0_1());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:486:1: ( (lv_z_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:487:1: (lv_z_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:487:1: (lv_z_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:488:3: lv_z_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                      	  /* */ 
-                      	
+                      	        newCompositeNode(grammarAccess.getInputAccess().getZLCsParserRuleCall_0_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getInputAccess().getLCsParserRuleCall_0_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleInput822);
-                    ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleInput847);
+                    lv_z_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getInputRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"z",
+                              		lv_z_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:448:1: ( (lv_in_3_0= ruleInput ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:449:1: (lv_in_3_0= ruleInput )
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:504:2: ( (lv_in_3_0= ruleOutput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleOutput )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:449:1: (lv_in_3_0= ruleInput )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:450:3: lv_in_3_0= ruleInput
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleOutput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:3: lv_in_3_0= ruleOutput
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); 
+                      	        newCompositeNode(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleInput_in_ruleInput842);
-                    lv_in_3_0=ruleInput();
+                    pushFollow(FOLLOW_ruleOutput_in_ruleInput868);
+                    lv_in_3_0=ruleOutput();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -1077,7 +1225,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"in",
                               		lv_in_3_0, 
-                              		"Input");
+                              		"Output");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -1094,15 +1242,15 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:467:6: ( (lv_y_4_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:523:6: ( (lv_y_4_0= RULE_VAR ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:467:6: ( (lv_y_4_0= RULE_VAR ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:468:1: (lv_y_4_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:523:6: ( (lv_y_4_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:524:1: (lv_y_4_0= RULE_VAR )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:468:1: (lv_y_4_0= RULE_VAR )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:469:3: lv_y_4_0= RULE_VAR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:524:1: (lv_y_4_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:525:3: lv_y_4_0= RULE_VAR
                     {
-                    lv_y_4_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleInput866); if (state.failed) return current;
+                    lv_y_4_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleInput892); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_y_4_0, grammarAccess.getInputAccess().getYVARTerminalRuleCall_1_0()); 
@@ -1152,7 +1300,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOutput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:493:1: entryRuleOutput returns [EObject current=null] : iv_ruleOutput= ruleOutput EOF ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:549:1: entryRuleOutput returns [EObject current=null] : iv_ruleOutput= ruleOutput EOF ;
     public final EObject entryRuleOutput() throws RecognitionException {
         EObject current = null;
 
@@ -1160,13 +1308,13 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:494:2: (iv_ruleOutput= ruleOutput EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:495:2: iv_ruleOutput= ruleOutput EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:550:2: (iv_ruleOutput= ruleOutput EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:551:2: iv_ruleOutput= ruleOutput EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOutputRule()); 
             }
-            pushFollow(FOLLOW_ruleOutput_in_entryRuleOutput907);
+            pushFollow(FOLLOW_ruleOutput_in_entryRuleOutput933);
             iv_ruleOutput=ruleOutput();
 
             state._fsp--;
@@ -1174,7 +1322,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleOutput; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOutput917); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOutput943); if (state.failed) return current;
 
             }
 
@@ -1192,39 +1340,41 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOutput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:502:1: ruleOutput returns [EObject current=null] : ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:558:1: ruleOutput returns [EObject current=null] : ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) ;
     public final EObject ruleOutput() throws RecognitionException {
         EObject current = null;
 
         Token lv_n_0_0=null;
         Token otherlv_1=null;
         Token lv_s_4_0=null;
+        EObject lv_q_2_0 = null;
+
         EObject lv_o_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:28: ( ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:561:28: ( ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==RULE_VAR) ) {
-                int LA3_1 = input.LA(2);
+            if ( (LA4_0==RULE_VAR) ) {
+                int LA4_1 = input.LA(2);
 
-                if ( (LA3_1==23) ) {
-                    alt3=1;
+                if ( (LA4_1==23) ) {
+                    alt4=1;
                 }
-                else if ( (LA3_1==EOF||(LA3_1>=RULE_SP && LA3_1<=RULE_LF)||LA3_1==18) ) {
-                    alt3=2;
+                else if ( (LA4_1==EOF||LA4_1==RULE_CR||(LA4_1>=RULE_SP && LA4_1<=RULE_LF)||LA4_1==18||LA4_1==21) ) {
+                    alt4=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 3, 1, input);
+                        new NoViableAltException("", 4, 1, input);
 
                     throw nvae;
                 }
@@ -1232,24 +1382,24 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:3: ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ruleLCs ( (lv_o_3_0= ruleOutput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:3: ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:3: ( (lv_n_0_0= RULE_VAR ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:507:1: (lv_n_0_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:3: ( (lv_n_0_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:563:1: (lv_n_0_0= RULE_VAR )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:507:1: (lv_n_0_0= RULE_VAR )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:508:3: lv_n_0_0= RULE_VAR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:563:1: (lv_n_0_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:564:3: lv_n_0_0= RULE_VAR
                     {
-                    lv_n_0_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleOutput960); if (state.failed) return current;
+                    lv_n_0_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleOutput986); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_n_0_0, grammarAccess.getOutputAccess().getNVARTerminalRuleCall_0_0_0()); 
@@ -1273,45 +1423,60 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleOutput977); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleOutput1003); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getOutputAccess().getCommaKeyword_0_1());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:584:1: ( (lv_q_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:585:1: (lv_q_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:585:1: (lv_q_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:586:3: lv_q_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                      	  /* */ 
-                      	
+                      	        newCompositeNode(grammarAccess.getOutputAccess().getQLCsParserRuleCall_0_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getOutputAccess().getLCsParserRuleCall_0_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleOutput996);
-                    ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleOutput1024);
+                    lv_q_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getOutputRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"q",
+                              		lv_q_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:539:1: ( (lv_o_3_0= ruleOutput ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:540:1: (lv_o_3_0= ruleOutput )
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:602:2: ( (lv_o_3_0= ruleInput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleInput )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:540:1: (lv_o_3_0= ruleOutput )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:541:3: lv_o_3_0= ruleOutput
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleInput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:604:3: lv_o_3_0= ruleInput
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); 
+                      	        newCompositeNode(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleOutput_in_ruleOutput1016);
-                    lv_o_3_0=ruleOutput();
+                    pushFollow(FOLLOW_ruleInput_in_ruleOutput1045);
+                    lv_o_3_0=ruleInput();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -1324,7 +1489,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"o",
                               		lv_o_3_0, 
-                              		"Output");
+                              		"Input");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -1341,15 +1506,15 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:558:6: ( (lv_s_4_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:621:6: ( (lv_s_4_0= RULE_VAR ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:558:6: ( (lv_s_4_0= RULE_VAR ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:559:1: (lv_s_4_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:621:6: ( (lv_s_4_0= RULE_VAR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:622:1: (lv_s_4_0= RULE_VAR )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:559:1: (lv_s_4_0= RULE_VAR )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:560:3: lv_s_4_0= RULE_VAR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:622:1: (lv_s_4_0= RULE_VAR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:623:3: lv_s_4_0= RULE_VAR
                     {
-                    lv_s_4_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleOutput1040); if (state.failed) return current;
+                    lv_s_4_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleOutput1069); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_s_4_0, grammarAccess.getOutputAccess().getSVARTerminalRuleCall_1_0()); 
@@ -1399,29 +1564,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCommands"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:584:1: entryRuleCommands returns [String current=null] : iv_ruleCommands= ruleCommands EOF ;
-    public final String entryRuleCommands() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:647:1: entryRuleCommands returns [EObject current=null] : iv_ruleCommands= ruleCommands EOF ;
+    public final EObject entryRuleCommands() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleCommands = null;
+        EObject iv_ruleCommands = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:585:2: (iv_ruleCommands= ruleCommands EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:586:2: iv_ruleCommands= ruleCommands EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:648:2: (iv_ruleCommands= ruleCommands EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:649:2: iv_ruleCommands= ruleCommands EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCommandsRule()); 
             }
-            pushFollow(FOLLOW_ruleCommands_in_entryRuleCommands1082);
+            pushFollow(FOLLOW_ruleCommands_in_entryRuleCommands1110);
             iv_ruleCommands=ruleCommands();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleCommands.getText(); 
+               current =iv_ruleCommands; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCommands1093); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCommands1120); if (state.failed) return current;
 
             }
 
@@ -1439,105 +1604,149 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCommands"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:593:1: ruleCommands returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Command_0= ruleCommand (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )? ) ;
-    public final AntlrDatatypeRuleToken ruleCommands() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:656:1: ruleCommands returns [EObject current=null] : ( ( (lv_a_0_0= ruleCommand ) ) (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )? ) ;
+    public final EObject ruleCommands() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Command_0 = null;
+        Token otherlv_1=null;
+        EObject lv_a_0_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_2 = null;
+        EObject lv_l_2_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_3 = null;
+        EObject lv_s_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:596:28: ( (this_Command_0= ruleCommand (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:597:1: (this_Command_0= ruleCommand (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:659:28: ( ( ( (lv_a_0_0= ruleCommand ) ) (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:660:1: ( ( (lv_a_0_0= ruleCommand ) ) (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:597:1: (this_Command_0= ruleCommand (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:598:5: this_Command_0= ruleCommand (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:660:1: ( ( (lv_a_0_0= ruleCommand ) ) (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:660:2: ( (lv_a_0_0= ruleCommand ) ) (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )?
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:660:2: ( (lv_a_0_0= ruleCommand ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:661:1: (lv_a_0_0= ruleCommand )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:661:1: (lv_a_0_0= ruleCommand )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:662:3: lv_a_0_0= ruleCommand
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getCommandsAccess().getCommandParserRuleCall_0()); 
-                  
+              	        newCompositeNode(grammarAccess.getCommandsAccess().getACommandParserRuleCall_0_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleCommand_in_ruleCommands1140);
-            this_Command_0=ruleCommand();
+            pushFollow(FOLLOW_ruleCommand_in_ruleCommands1166);
+            lv_a_0_0=ruleCommand();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_Command_0);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getCommandsRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"a",
+                      		lv_a_0_0, 
+                      		"Command");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:608:1: (kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==24) ) {
-                alt4=1;
             }
-            switch (alt4) {
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:678:2: (otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==24) ) {
+                alt5=1;
+            }
+            switch (alt5) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:609:2: kw= ';' this_LCs_2= ruleLCs this_Commands_3= ruleCommands
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:678:4: otherlv_1= ';' ( (lv_l_2_0= ruleLCs ) ) ( (lv_s_3_0= ruleCommands ) )
                     {
-                    kw=(Token)match(input,24,FOLLOW_24_in_ruleCommands1159); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleCommands1179); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandsAccess().getSemicolonKeyword_1_0()); 
+                          	newLeafNode(otherlv_1, grammarAccess.getCommandsAccess().getSemicolonKeyword_1_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:682:1: ( (lv_l_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:683:1: (lv_l_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:683:1: (lv_l_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:684:3: lv_l_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandsAccess().getLCsParserRuleCall_1_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandsAccess().getLLCsParserRuleCall_1_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommands1181);
-                    this_LCs_2=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommands1200);
+                    lv_l_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_2);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandsRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"l",
+                              		lv_l_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:700:2: ( (lv_s_3_0= ruleCommands ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:701:1: (lv_s_3_0= ruleCommands )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:701:1: (lv_s_3_0= ruleCommands )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:702:3: lv_s_3_0= ruleCommands
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandsAccess().getSCommandsParserRuleCall_1_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandsAccess().getCommandsParserRuleCall_1_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleCommands_in_ruleCommands1208);
-                    this_Commands_3=ruleCommands();
+                    pushFollow(FOLLOW_ruleCommands_in_ruleCommands1221);
+                    lv_s_3_0=ruleCommands();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Commands_3);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandsRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"s",
+                              		lv_s_3_0, 
+                              		"Commands");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
@@ -1567,29 +1776,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCommand"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:644:1: entryRuleCommand returns [String current=null] : iv_ruleCommand= ruleCommand EOF ;
-    public final String entryRuleCommand() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:726:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
+    public final EObject entryRuleCommand() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleCommand = null;
+        EObject iv_ruleCommand = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:645:2: (iv_ruleCommand= ruleCommand EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:646:2: iv_ruleCommand= ruleCommand EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:727:2: (iv_ruleCommand= ruleCommand EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:728:2: iv_ruleCommand= ruleCommand EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCommandRule()); 
             }
-            pushFollow(FOLLOW_ruleCommand_in_entryRuleCommand1256);
+            pushFollow(FOLLOW_ruleCommand_in_entryRuleCommand1259);
             iv_ruleCommand=ruleCommand();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleCommand.getText(); 
+               current =iv_ruleCommand; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCommand1267); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCommand1269); if (state.failed) return current;
 
             }
 
@@ -1607,234 +1816,307 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCommand"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:653:1: ruleCommand returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'nop' | (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS ) | (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' ) | (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' ) | (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' ) | (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' ) ) ;
-    public final AntlrDatatypeRuleToken ruleCommand() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:735:1: ruleCommand returns [EObject current=null] : (otherlv_0= 'nop' | ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) ) | (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' ) | (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' ) | (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' ) | (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' ) ) ;
+    public final EObject ruleCommand() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Vars_1 = null;
+        Token otherlv_0=null;
+        Token otherlv_3=null;
+        Token otherlv_6=null;
+        Token otherlv_10=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
+        Token otherlv_19=null;
+        Token otherlv_23=null;
+        Token otherlv_24=null;
+        Token otherlv_28=null;
+        Token otherlv_32=null;
+        Token otherlv_36=null;
+        Token otherlv_37=null;
+        Token otherlv_41=null;
+        Token otherlv_45=null;
+        Token otherlv_49=null;
+        EObject lv_e_1_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_2 = null;
+        EObject lv_l_2_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_4 = null;
+        EObject lv_c_4_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPRS_5 = null;
+        EObject lv_n_5_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_7 = null;
+        EObject lv_ll_7_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_8 = null;
+        EObject lv_ee_8_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_9 = null;
+        EObject lv_cc_9_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_11 = null;
+        EObject lv_z_11_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_12 = null;
+        EObject lv_k_12_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_13 = null;
+        EObject lv_lc_13_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_16 = null;
+        EObject lv_cc_16_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_17 = null;
+        EObject lv_hh_17_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_18 = null;
+        EObject lv_tt_18_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_20 = null;
+        EObject lv_vv_20_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_21 = null;
+        EObject lv_c1_21_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_22 = null;
+        EObject lv_ss_22_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_25 = null;
+        EObject lv_mm_25_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_26 = null;
+        EObject lv_jj_26_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_27 = null;
+        EObject lv_kk_27_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_29 = null;
+        EObject lv_hg_29_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_30 = null;
+        EObject lv_c2_30_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_31 = null;
+        EObject lv_gg_31_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_33 = null;
+        EObject lv_ff_33_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_34 = null;
+        EObject lv_o_34_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_35 = null;
+        EObject lv_dd_35_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_38 = null;
+        EObject lv_sq_38_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_39 = null;
+        EObject lv_wx_39_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_40 = null;
+        EObject lv_lc_40_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_42 = null;
+        EObject lv_lc2_42_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_43 = null;
+        EObject lv_e1_43_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_44 = null;
+        EObject lv_lc3_44_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_46 = null;
+        EObject lv_lc4_46_0 = null;
 
-        AntlrDatatypeRuleToken this_Commands_47 = null;
+        EObject lv_c3_47_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_48 = null;
+        EObject lv_lc5_48_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:656:28: ( (kw= 'nop' | (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS ) | (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' ) | (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' ) | (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' ) | (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:657:1: (kw= 'nop' | (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS ) | (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' ) | (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' ) | (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' ) | (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:738:28: ( (otherlv_0= 'nop' | ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) ) | (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' ) | (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' ) | (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' ) | (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:739:1: (otherlv_0= 'nop' | ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) ) | (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' ) | (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' ) | (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' ) | (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:657:1: (kw= 'nop' | (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS ) | (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' ) | (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' ) | (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' ) | (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' ) )
-            int alt6=6;
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:739:1: (otherlv_0= 'nop' | ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) ) | (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' ) | (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' ) | (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' ) | (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' ) )
+            int alt7=6;
             switch ( input.LA(1) ) {
             case 25:
                 {
-                alt6=1;
+                alt7=1;
                 }
                 break;
             case RULE_VAR:
                 {
-                alt6=2;
+                alt7=2;
                 }
                 break;
             case 27:
                 {
-                alt6=3;
+                alt7=3;
                 }
                 break;
             case 30:
                 {
-                alt6=4;
+                alt7=4;
                 }
                 break;
             case 31:
                 {
-                alt6=5;
+                alt7=5;
                 }
                 break;
             case 35:
                 {
-                alt6=6;
+                alt7=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:658:2: kw= 'nop'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:739:3: otherlv_0= 'nop'
                     {
-                    kw=(Token)match(input,25,FOLLOW_25_in_ruleCommand1305); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleCommand1306); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getNopKeyword_0()); 
+                          	newLeafNode(otherlv_0, grammarAccess.getCommandAccess().getNopKeyword_0());
                           
                     }
 
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:664:6: (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:744:6: ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:664:6: (this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:665:5: this_Vars_1= ruleVars this_LCs_2= ruleLCs kw= ':=' this_LCs_4= ruleLCs this_EXPRS_5= ruleEXPRS
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:744:6: ( ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:744:7: ( (lv_e_1_0= ruleVars ) ) ( (lv_l_2_0= ruleLCs ) ) otherlv_3= ':=' ( (lv_c_4_0= ruleLCs ) ) ( (lv_n_5_0= ruleEXPRS ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:744:7: ( (lv_e_1_0= ruleVars ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:745:1: (lv_e_1_0= ruleVars )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:745:1: (lv_e_1_0= ruleVars )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:746:3: lv_e_1_0= ruleVars
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getVarsParserRuleCall_1_0()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getEVarsParserRuleCall_1_0_0()); 
+                      	    
                     }
                     pushFollow(FOLLOW_ruleVars_in_ruleCommand1334);
-                    this_Vars_1=ruleVars();
+                    lv_e_1_0=ruleVars();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Vars_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e",
+                              		lv_e_1_0, 
+                              		"Vars");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:762:2: ( (lv_l_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:763:1: (lv_l_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:763:1: (lv_l_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:764:3: lv_l_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLLCsParserRuleCall_1_1_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_1_1()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1361);
-                    this_LCs_2=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1355);
+                    lv_l_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_2);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"l",
+                              		lv_l_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,26,FOLLOW_26_in_ruleCommand1379); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleCommand1367); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getColonEqualsSignKeyword_1_2()); 
+                          	newLeafNode(otherlv_3, grammarAccess.getCommandAccess().getColonEqualsSignKeyword_1_2());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:784:1: ( (lv_c_4_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:785:1: (lv_c_4_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:785:1: (lv_c_4_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:786:3: lv_c_4_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_1_3()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getCLCsParserRuleCall_1_3_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1401);
-                    this_LCs_4=ruleLCs();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      		current.merge(this_LCs_4);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRSParserRuleCall_1_4()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPRS_in_ruleCommand1428);
-                    this_EXPRS_5=ruleEXPRS();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1388);
+                    lv_c_4_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRS_5);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"c",
+                              		lv_c_4_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:802:2: ( (lv_n_5_0= ruleEXPRS ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:803:1: (lv_n_5_0= ruleEXPRS )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:803:1: (lv_n_5_0= ruleEXPRS )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:804:3: lv_n_5_0= ruleEXPRS
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getNEXPRSParserRuleCall_1_4_0()); 
+                      	    
                     }
+                    pushFollow(FOLLOW_ruleEXPRS_in_ruleCommand1409);
+                    lv_n_5_0=ruleEXPRS();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"n",
+                              		lv_n_5_0, 
+                              		"EXPRS");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
 
@@ -1842,150 +2124,237 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:715:6: (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:821:6: (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:715:6: (kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:716:2: kw= 'while' this_LCs_7= ruleLCs this_EXPR_8= ruleEXPR this_LCs_9= ruleLCs kw= 'do' this_LCs_11= ruleLCs this_Commands_12= ruleCommands this_LCs_13= ruleLCs kw= 'od'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:821:6: (otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:821:8: otherlv_6= 'while' ( (lv_ll_7_0= ruleLCs ) ) ( (lv_ee_8_0= ruleEXPR ) ) ( (lv_cc_9_0= ruleLCs ) ) otherlv_10= 'do' ( (lv_z_11_0= ruleLCs ) ) ( (lv_k_12_0= ruleCommands ) ) ( (lv_lc_13_0= ruleLCs ) ) otherlv_14= 'od'
                     {
-                    kw=(Token)match(input,27,FOLLOW_27_in_ruleCommand1454); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleCommand1429); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getWhileKeyword_2_0()); 
+                          	newLeafNode(otherlv_6, grammarAccess.getCommandAccess().getWhileKeyword_2_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:825:1: ( (lv_ll_7_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:826:1: (lv_ll_7_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:826:1: (lv_ll_7_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:827:3: lv_ll_7_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_2_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLlLCsParserRuleCall_2_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1476);
-                    this_LCs_7=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1450);
+                    lv_ll_7_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_7);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ll",
+                              		lv_ll_7_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:843:2: ( (lv_ee_8_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:844:1: (lv_ee_8_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:844:1: (lv_ee_8_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:845:3: lv_ee_8_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getEeEXPRParserRuleCall_2_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRParserRuleCall_2_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1503);
-                    this_EXPR_8=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1471);
+                    lv_ee_8_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_8);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ee",
+                              		lv_ee_8_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:861:2: ( (lv_cc_9_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:862:1: (lv_cc_9_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:862:1: (lv_cc_9_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:863:3: lv_cc_9_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getCcLCsParserRuleCall_2_3_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_2_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1530);
-                    this_LCs_9=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1492);
+                    lv_cc_9_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_9);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"cc",
+                              		lv_cc_9_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,28,FOLLOW_28_in_ruleCommand1548); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_10=(Token)match(input,28,FOLLOW_28_in_ruleCommand1504); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getDoKeyword_2_4()); 
+                          	newLeafNode(otherlv_10, grammarAccess.getCommandAccess().getDoKeyword_2_4());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:883:1: ( (lv_z_11_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:884:1: (lv_z_11_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:884:1: (lv_z_11_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:885:3: lv_z_11_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_2_5()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getZLCsParserRuleCall_2_5_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1570);
-                    this_LCs_11=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1525);
+                    lv_z_11_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_11);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"z",
+                              		lv_z_11_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:901:2: ( (lv_k_12_0= ruleCommands ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:902:1: (lv_k_12_0= ruleCommands )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:902:1: (lv_k_12_0= ruleCommands )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:903:3: lv_k_12_0= ruleCommands
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getKCommandsParserRuleCall_2_6_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getCommandsParserRuleCall_2_6()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand1597);
-                    this_Commands_12=ruleCommands();
+                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand1546);
+                    lv_k_12_0=ruleCommands();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Commands_12);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"k",
+                              		lv_k_12_0, 
+                              		"Commands");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:919:2: ( (lv_lc_13_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:920:1: (lv_lc_13_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:920:1: (lv_lc_13_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:921:3: lv_lc_13_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLcLCsParserRuleCall_2_7_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_2_7()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1624);
-                    this_LCs_13=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1567);
+                    lv_lc_13_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_13);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc",
+                              		lv_lc_13_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleCommand1642); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_14=(Token)match(input,29,FOLLOW_29_in_ruleCommand1579); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getOdKeyword_2_8()); 
+                          	newLeafNode(otherlv_14, grammarAccess.getCommandAccess().getOdKeyword_2_8());
                           
                     }
 
@@ -1995,150 +2364,237 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:800:6: (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:942:6: (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:800:6: (kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:801:2: kw= 'for' this_LCs_16= ruleLCs this_EXPR_17= ruleEXPR this_LCs_18= ruleLCs kw= 'do' this_LCs_20= ruleLCs this_Commands_21= ruleCommands this_LCs_22= ruleLCs kw= 'od'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:942:6: (otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:942:8: otherlv_15= 'for' ( (lv_cc_16_0= ruleLCs ) ) ( (lv_hh_17_0= ruleEXPR ) ) ( (lv_tt_18_0= ruleLCs ) ) otherlv_19= 'do' ( (lv_vv_20_0= ruleLCs ) ) ( (lv_c1_21_0= ruleCommands ) ) ( (lv_ss_22_0= ruleLCs ) ) otherlv_23= 'od'
                     {
-                    kw=(Token)match(input,30,FOLLOW_30_in_ruleCommand1663); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,30,FOLLOW_30_in_ruleCommand1599); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getForKeyword_3_0()); 
+                          	newLeafNode(otherlv_15, grammarAccess.getCommandAccess().getForKeyword_3_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:946:1: ( (lv_cc_16_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:947:1: (lv_cc_16_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:947:1: (lv_cc_16_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:948:3: lv_cc_16_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_3_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getCcLCsParserRuleCall_3_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1685);
-                    this_LCs_16=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1620);
+                    lv_cc_16_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_16);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"cc",
+                              		lv_cc_16_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:964:2: ( (lv_hh_17_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:965:1: (lv_hh_17_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:965:1: (lv_hh_17_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:966:3: lv_hh_17_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getHhEXPRParserRuleCall_3_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRParserRuleCall_3_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1712);
-                    this_EXPR_17=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1641);
+                    lv_hh_17_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_17);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"hh",
+                              		lv_hh_17_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:982:2: ( (lv_tt_18_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:983:1: (lv_tt_18_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:983:1: (lv_tt_18_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:984:3: lv_tt_18_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getTtLCsParserRuleCall_3_3_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_3_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1739);
-                    this_LCs_18=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1662);
+                    lv_tt_18_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_18);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"tt",
+                              		lv_tt_18_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,28,FOLLOW_28_in_ruleCommand1757); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_19=(Token)match(input,28,FOLLOW_28_in_ruleCommand1674); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getDoKeyword_3_4()); 
+                          	newLeafNode(otherlv_19, grammarAccess.getCommandAccess().getDoKeyword_3_4());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1004:1: ( (lv_vv_20_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1005:1: (lv_vv_20_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1005:1: (lv_vv_20_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1006:3: lv_vv_20_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_3_5()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getVvLCsParserRuleCall_3_5_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1779);
-                    this_LCs_20=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1695);
+                    lv_vv_20_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_20);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"vv",
+                              		lv_vv_20_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1022:2: ( (lv_c1_21_0= ruleCommands ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1023:1: (lv_c1_21_0= ruleCommands )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1023:1: (lv_c1_21_0= ruleCommands )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1024:3: lv_c1_21_0= ruleCommands
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getC1CommandsParserRuleCall_3_6_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getCommandsParserRuleCall_3_6()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand1806);
-                    this_Commands_21=ruleCommands();
+                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand1716);
+                    lv_c1_21_0=ruleCommands();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Commands_21);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"c1",
+                              		lv_c1_21_0, 
+                              		"Commands");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1040:2: ( (lv_ss_22_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1041:1: (lv_ss_22_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1041:1: (lv_ss_22_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1042:3: lv_ss_22_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getSsLCsParserRuleCall_3_7_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_3_7()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1833);
-                    this_LCs_22=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1737);
+                    lv_ss_22_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_22);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ss",
+                              		lv_ss_22_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleCommand1851); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_23=(Token)match(input,29,FOLLOW_29_in_ruleCommand1749); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getOdKeyword_3_8()); 
+                          	newLeafNode(otherlv_23, grammarAccess.getCommandAccess().getOdKeyword_3_8());
                           
                     }
 
@@ -2148,234 +2604,365 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:885:6: (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1063:6: (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:885:6: (kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:886:2: kw= 'if' this_LCs_25= ruleLCs this_EXPR_26= ruleEXPR this_LCs_27= ruleLCs kw= 'then' this_LCs_29= ruleLCs this_Commands_30= ruleCommands this_LCs_31= ruleLCs (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )? kw= 'fi'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1063:6: (otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1063:8: otherlv_24= 'if' ( (lv_mm_25_0= ruleLCs ) ) ( (lv_jj_26_0= ruleEXPR ) ) ( (lv_kk_27_0= ruleLCs ) ) otherlv_28= 'then' ( (lv_hg_29_0= ruleLCs ) ) ( (lv_c2_30_0= ruleCommands ) ) ( (lv_gg_31_0= ruleLCs ) ) (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )? otherlv_36= 'fi'
                     {
-                    kw=(Token)match(input,31,FOLLOW_31_in_ruleCommand1872); if (state.failed) return current;
+                    otherlv_24=(Token)match(input,31,FOLLOW_31_in_ruleCommand1769); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getIfKeyword_4_0()); 
+                          	newLeafNode(otherlv_24, grammarAccess.getCommandAccess().getIfKeyword_4_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1067:1: ( (lv_mm_25_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1068:1: (lv_mm_25_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1068:1: (lv_mm_25_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1069:3: lv_mm_25_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getMmLCsParserRuleCall_4_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1894);
-                    this_LCs_25=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1790);
+                    lv_mm_25_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_25);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"mm",
+                              		lv_mm_25_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1085:2: ( (lv_jj_26_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1086:1: (lv_jj_26_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1086:1: (lv_jj_26_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1087:3: lv_jj_26_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getJjEXPRParserRuleCall_4_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRParserRuleCall_4_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1921);
-                    this_EXPR_26=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand1811);
+                    lv_jj_26_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_26);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"jj",
+                              		lv_jj_26_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1103:2: ( (lv_kk_27_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1104:1: (lv_kk_27_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1104:1: (lv_kk_27_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1105:3: lv_kk_27_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getKkLCsParserRuleCall_4_3_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1948);
-                    this_LCs_27=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1832);
+                    lv_kk_27_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_27);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"kk",
+                              		lv_kk_27_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,32,FOLLOW_32_in_ruleCommand1966); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_28=(Token)match(input,32,FOLLOW_32_in_ruleCommand1844); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getThenKeyword_4_4()); 
+                          	newLeafNode(otherlv_28, grammarAccess.getCommandAccess().getThenKeyword_4_4());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1125:1: ( (lv_hg_29_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1126:1: (lv_hg_29_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1126:1: (lv_hg_29_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1127:3: lv_hg_29_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_5()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getHgLCsParserRuleCall_4_5_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1988);
-                    this_LCs_29=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1865);
+                    lv_hg_29_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_29);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"hg",
+                              		lv_hg_29_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1143:2: ( (lv_c2_30_0= ruleCommands ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1144:1: (lv_c2_30_0= ruleCommands )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1144:1: (lv_c2_30_0= ruleCommands )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1145:3: lv_c2_30_0= ruleCommands
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getC2CommandsParserRuleCall_4_6_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getCommandsParserRuleCall_4_6()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand2015);
-                    this_Commands_30=ruleCommands();
+                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand1886);
+                    lv_c2_30_0=ruleCommands();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Commands_30);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"c2",
+                              		lv_c2_30_0, 
+                              		"Commands");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1161:2: ( (lv_gg_31_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1162:1: (lv_gg_31_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1162:1: (lv_gg_31_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1163:3: lv_gg_31_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getGgLCsParserRuleCall_4_7_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_7()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2042);
-                    this_LCs_31=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand1907);
+                    lv_gg_31_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_31);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"gg",
+                              		lv_gg_31_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:963:1: (kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs )?
-                    int alt5=2;
-                    int LA5_0 = input.LA(1);
 
-                    if ( (LA5_0==33) ) {
-                        alt5=1;
                     }
-                    switch (alt5) {
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1179:2: (otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) ) )?
+                    int alt6=2;
+                    int LA6_0 = input.LA(1);
+
+                    if ( (LA6_0==33) ) {
+                        alt6=1;
+                    }
+                    switch (alt6) {
                         case 1 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:964:2: kw= 'else' this_LCs_33= ruleLCs this_Commands_34= ruleCommands this_LCs_35= ruleLCs
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1179:4: otherlv_32= 'else' ( (lv_ff_33_0= ruleLCs ) ) ( (lv_o_34_0= ruleCommands ) ) ( (lv_dd_35_0= ruleLCs ) )
                             {
-                            kw=(Token)match(input,33,FOLLOW_33_in_ruleCommand2061); if (state.failed) return current;
+                            otherlv_32=(Token)match(input,33,FOLLOW_33_in_ruleCommand1920); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getCommandAccess().getElseKeyword_4_8_0()); 
+                                  	newLeafNode(otherlv_32, grammarAccess.getCommandAccess().getElseKeyword_4_8_0());
                                   
                             }
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1183:1: ( (lv_ff_33_0= ruleLCs ) )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1184:1: (lv_ff_33_0= ruleLCs )
+                            {
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1184:1: (lv_ff_33_0= ruleLCs )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1185:3: lv_ff_33_0= ruleLCs
+                            {
                             if ( state.backtracking==0 ) {
                                
-                                      newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_8_1()); 
-                                  
+                              	        newCompositeNode(grammarAccess.getCommandAccess().getFfLCsParserRuleCall_4_8_1_0()); 
+                              	    
                             }
-                            pushFollow(FOLLOW_ruleLCs_in_ruleCommand2083);
-                            this_LCs_33=ruleLCs();
+                            pushFollow(FOLLOW_ruleLCs_in_ruleCommand1941);
+                            lv_ff_33_0=ruleLCs();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              		current.merge(this_LCs_33);
-                                  
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"ff",
+                                      		lv_ff_33_0, 
+                                      		"LCs");
+                              	        afterParserOrEnumRuleCall();
+                              	    
                             }
+
+                            }
+
+
+                            }
+
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1201:2: ( (lv_o_34_0= ruleCommands ) )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1202:1: (lv_o_34_0= ruleCommands )
+                            {
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1202:1: (lv_o_34_0= ruleCommands )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1203:3: lv_o_34_0= ruleCommands
+                            {
                             if ( state.backtracking==0 ) {
                                
-                                      afterParserOrEnumRuleCall();
-                                  
+                              	        newCompositeNode(grammarAccess.getCommandAccess().getOCommandsParserRuleCall_4_8_2_0()); 
+                              	    
                             }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getCommandAccess().getCommandsParserRuleCall_4_8_2()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleCommands_in_ruleCommand2110);
-                            this_Commands_34=ruleCommands();
+                            pushFollow(FOLLOW_ruleCommands_in_ruleCommand1962);
+                            lv_o_34_0=ruleCommands();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              		current.merge(this_Commands_34);
-                                  
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"o",
+                                      		lv_o_34_0, 
+                                      		"Commands");
+                              	        afterParserOrEnumRuleCall();
+                              	    
                             }
+
+                            }
+
+
+                            }
+
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1219:2: ( (lv_dd_35_0= ruleLCs ) )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1220:1: (lv_dd_35_0= ruleLCs )
+                            {
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1220:1: (lv_dd_35_0= ruleLCs )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1221:3: lv_dd_35_0= ruleLCs
+                            {
                             if ( state.backtracking==0 ) {
                                
-                                      afterParserOrEnumRuleCall();
-                                  
+                              	        newCompositeNode(grammarAccess.getCommandAccess().getDdLCsParserRuleCall_4_8_3_0()); 
+                              	    
                             }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_4_8_3()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleLCs_in_ruleCommand2137);
-                            this_LCs_35=ruleLCs();
+                            pushFollow(FOLLOW_ruleLCs_in_ruleCommand1983);
+                            lv_dd_35_0=ruleLCs();
 
                             state._fsp--;
                             if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              		current.merge(this_LCs_35);
-                                  
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"dd",
+                                      		lv_dd_35_0, 
+                                      		"LCs");
+                              	        afterParserOrEnumRuleCall();
+                              	    
                             }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
+
                             }
+
+
+                            }
+
 
                             }
                             break;
 
                     }
 
-                    kw=(Token)match(input,34,FOLLOW_34_in_ruleCommand2157); if (state.failed) return current;
+                    otherlv_36=(Token)match(input,34,FOLLOW_34_in_ruleCommand1997); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getFiKeyword_4_9()); 
+                          	newLeafNode(otherlv_36, grammarAccess.getCommandAccess().getFiKeyword_4_9());
                           
                     }
 
@@ -2385,217 +2972,348 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1009:6: (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1242:6: (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1009:6: (kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1010:2: kw= 'foreach' this_LCs_38= ruleLCs this_EXPR_39= ruleEXPR this_LCs_40= ruleLCs kw= 'in' this_LCs_42= ruleLCs this_EXPR_43= ruleEXPR this_LCs_44= ruleLCs kw= 'do' this_LCs_46= ruleLCs this_Commands_47= ruleCommands this_LCs_48= ruleLCs kw= 'od'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1242:6: (otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1242:8: otherlv_37= 'foreach' ( (lv_sq_38_0= ruleLCs ) ) ( (lv_wx_39_0= ruleEXPR ) ) ( (lv_lc_40_0= ruleLCs ) ) otherlv_41= 'in' ( (lv_lc2_42_0= ruleLCs ) ) ( (lv_e1_43_0= ruleEXPR ) ) ( (lv_lc3_44_0= ruleLCs ) ) otherlv_45= 'do' ( (lv_lc4_46_0= ruleLCs ) ) ( (lv_c3_47_0= ruleCommands ) ) ( (lv_lc5_48_0= ruleLCs ) ) otherlv_49= 'od'
                     {
-                    kw=(Token)match(input,35,FOLLOW_35_in_ruleCommand2178); if (state.failed) return current;
+                    otherlv_37=(Token)match(input,35,FOLLOW_35_in_ruleCommand2017); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getForeachKeyword_5_0()); 
+                          	newLeafNode(otherlv_37, grammarAccess.getCommandAccess().getForeachKeyword_5_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1246:1: ( (lv_sq_38_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1247:1: (lv_sq_38_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1247:1: (lv_sq_38_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1248:3: lv_sq_38_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getSqLCsParserRuleCall_5_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2200);
-                    this_LCs_38=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2038);
+                    lv_sq_38_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_38);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"sq",
+                              		lv_sq_38_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1264:2: ( (lv_wx_39_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1265:1: (lv_wx_39_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1265:1: (lv_wx_39_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1266:3: lv_wx_39_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getWxEXPRParserRuleCall_5_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRParserRuleCall_5_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand2227);
-                    this_EXPR_39=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand2059);
+                    lv_wx_39_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_39);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"wx",
+                              		lv_wx_39_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1282:2: ( (lv_lc_40_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1283:1: (lv_lc_40_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1283:1: (lv_lc_40_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1284:3: lv_lc_40_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLcLCsParserRuleCall_5_3_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2254);
-                    this_LCs_40=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2080);
+                    lv_lc_40_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_40);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc",
+                              		lv_lc_40_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,36,FOLLOW_36_in_ruleCommand2272); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_41=(Token)match(input,36,FOLLOW_36_in_ruleCommand2092); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getInKeyword_5_4()); 
+                          	newLeafNode(otherlv_41, grammarAccess.getCommandAccess().getInKeyword_5_4());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1304:1: ( (lv_lc2_42_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1305:1: (lv_lc2_42_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1305:1: (lv_lc2_42_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1306:3: lv_lc2_42_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_5()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLc2LCsParserRuleCall_5_5_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2294);
-                    this_LCs_42=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2113);
+                    lv_lc2_42_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_42);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc2",
+                              		lv_lc2_42_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1322:2: ( (lv_e1_43_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1323:1: (lv_e1_43_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1323:1: (lv_e1_43_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1324:3: lv_e1_43_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getE1EXPRParserRuleCall_5_6_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getEXPRParserRuleCall_5_6()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand2321);
-                    this_EXPR_43=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleCommand2134);
+                    lv_e1_43_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_43);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e1",
+                              		lv_e1_43_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1340:2: ( (lv_lc3_44_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1341:1: (lv_lc3_44_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1341:1: (lv_lc3_44_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1342:3: lv_lc3_44_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLc3LCsParserRuleCall_5_7_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_7()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2348);
-                    this_LCs_44=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2155);
+                    lv_lc3_44_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_44);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc3",
+                              		lv_lc3_44_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,28,FOLLOW_28_in_ruleCommand2366); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_45=(Token)match(input,28,FOLLOW_28_in_ruleCommand2167); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getDoKeyword_5_8()); 
+                          	newLeafNode(otherlv_45, grammarAccess.getCommandAccess().getDoKeyword_5_8());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1362:1: ( (lv_lc4_46_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1363:1: (lv_lc4_46_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1363:1: (lv_lc4_46_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1364:3: lv_lc4_46_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_9()); 
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLc4LCsParserRuleCall_5_9_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2388);
-                    this_LCs_46=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2188);
+                    lv_lc4_46_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_46);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc4",
+                              		lv_lc4_46_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1380:2: ( (lv_c3_47_0= ruleCommands ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1381:1: (lv_c3_47_0= ruleCommands )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1381:1: (lv_c3_47_0= ruleCommands )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1382:3: lv_c3_47_0= ruleCommands
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getC3CommandsParserRuleCall_5_10_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getCommandsParserRuleCall_5_10()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand2415);
-                    this_Commands_47=ruleCommands();
+                    pushFollow(FOLLOW_ruleCommands_in_ruleCommand2209);
+                    lv_c3_47_0=ruleCommands();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Commands_47);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"c3",
+                              		lv_c3_47_0, 
+                              		"Commands");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1398:2: ( (lv_lc5_48_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1399:1: (lv_lc5_48_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1399:1: (lv_lc5_48_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1400:3: lv_lc5_48_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getCommandAccess().getLc5LCsParserRuleCall_5_11_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getCommandAccess().getLCsParserRuleCall_5_11()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2442);
-                    this_LCs_48=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleCommand2230);
+                    lv_lc5_48_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_48);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getCommandRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc5",
+                              		lv_lc5_48_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleCommand2460); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_49=(Token)match(input,29,FOLLOW_29_in_ruleCommand2242); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCommandAccess().getOdKeyword_5_12()); 
+                          	newLeafNode(otherlv_49, grammarAccess.getCommandAccess().getOdKeyword_5_12());
                           
                     }
 
@@ -2627,29 +3345,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVars"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1140:1: entryRuleVars returns [String current=null] : iv_ruleVars= ruleVars EOF ;
-    public final String entryRuleVars() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1428:1: entryRuleVars returns [EObject current=null] : iv_ruleVars= ruleVars EOF ;
+    public final EObject entryRuleVars() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleVars = null;
+        EObject iv_ruleVars = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1141:2: (iv_ruleVars= ruleVars EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1142:2: iv_ruleVars= ruleVars EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1429:2: (iv_ruleVars= ruleVars EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1430:2: iv_ruleVars= ruleVars EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarsRule()); 
             }
-            pushFollow(FOLLOW_ruleVars_in_entryRuleVars2502);
+            pushFollow(FOLLOW_ruleVars_in_entryRuleVars2279);
             iv_ruleVars=ruleVars();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleVars.getText(); 
+               current =iv_ruleVars; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVars2513); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVars2289); if (state.failed) return current;
 
             }
 
@@ -2667,95 +3385,143 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVars"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1149:1: ruleVars returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_VAR_0= RULE_VAR (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )? ) ;
-    public final AntlrDatatypeRuleToken ruleVars() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1437:1: ruleVars returns [EObject current=null] : ( ( (lv_a_0_0= RULE_VAR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )? ) ;
+    public final EObject ruleVars() throws RecognitionException {
+        EObject current = null;
 
-        Token this_VAR_0=null;
-        Token kw=null;
-        AntlrDatatypeRuleToken this_LCs_2 = null;
+        Token lv_a_0_0=null;
+        Token otherlv_1=null;
+        EObject lv_l_2_0 = null;
 
-        AntlrDatatypeRuleToken this_Vars_3 = null;
+        EObject lv_u_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1152:28: ( (this_VAR_0= RULE_VAR (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1153:1: (this_VAR_0= RULE_VAR (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1440:28: ( ( ( (lv_a_0_0= RULE_VAR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1441:1: ( ( (lv_a_0_0= RULE_VAR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1153:1: (this_VAR_0= RULE_VAR (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1153:6: this_VAR_0= RULE_VAR (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1441:1: ( ( (lv_a_0_0= RULE_VAR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1441:2: ( (lv_a_0_0= RULE_VAR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )?
             {
-            this_VAR_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleVars2553); if (state.failed) return current;
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1441:2: ( (lv_a_0_0= RULE_VAR ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1442:1: (lv_a_0_0= RULE_VAR )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1442:1: (lv_a_0_0= RULE_VAR )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1443:3: lv_a_0_0= RULE_VAR
+            {
+            lv_a_0_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleVars2331); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_VAR_0);
-                  
+              			newLeafNode(lv_a_0_0, grammarAccess.getVarsAccess().getAVARTerminalRuleCall_0_0()); 
+              		
             }
             if ( state.backtracking==0 ) {
-               
-                  newLeafNode(this_VAR_0, grammarAccess.getVarsAccess().getVARTerminalRuleCall_0()); 
-                  
-            }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1160:1: (kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==23) ) {
-                alt7=1;
+              	        if (current==null) {
+              	            current = createModelElement(grammarAccess.getVarsRule());
+              	        }
+                     		setWithLastConsumed(
+                     			current, 
+                     			"a",
+                      		lv_a_0_0, 
+                      		"VAR");
+              	    
             }
-            switch (alt7) {
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1459:2: (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) ) )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==23) ) {
+                alt8=1;
+            }
+            switch (alt8) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1161:2: kw= ',' this_LCs_2= ruleLCs this_Vars_3= ruleVars
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1459:4: otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_u_3_0= ruleVars ) )
                     {
-                    kw=(Token)match(input,23,FOLLOW_23_in_ruleVars2572); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleVars2349); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getVarsAccess().getCommaKeyword_1_0()); 
+                          	newLeafNode(otherlv_1, grammarAccess.getVarsAccess().getCommaKeyword_1_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1463:1: ( (lv_l_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1464:1: (lv_l_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1464:1: (lv_l_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1465:3: lv_l_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getVarsAccess().getLCsParserRuleCall_1_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getVarsAccess().getLLCsParserRuleCall_1_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleVars2594);
-                    this_LCs_2=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleVars2370);
+                    lv_l_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_2);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getVarsRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"l",
+                              		lv_l_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1481:2: ( (lv_u_3_0= ruleVars ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1482:1: (lv_u_3_0= ruleVars )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1482:1: (lv_u_3_0= ruleVars )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1483:3: lv_u_3_0= ruleVars
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getVarsAccess().getUVarsParserRuleCall_1_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getVarsAccess().getVarsParserRuleCall_1_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleVars_in_ruleVars2621);
-                    this_Vars_3=ruleVars();
+                    pushFollow(FOLLOW_ruleVars_in_ruleVars2391);
+                    lv_u_3_0=ruleVars();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_Vars_3);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getVarsRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"u",
+                              		lv_u_3_0, 
+                              		"Vars");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
@@ -2785,29 +3551,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPRS"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1196:1: entryRuleEXPRS returns [String current=null] : iv_ruleEXPRS= ruleEXPRS EOF ;
-    public final String entryRuleEXPRS() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1507:1: entryRuleEXPRS returns [EObject current=null] : iv_ruleEXPRS= ruleEXPRS EOF ;
+    public final EObject entryRuleEXPRS() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPRS = null;
+        EObject iv_ruleEXPRS = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1197:2: (iv_ruleEXPRS= ruleEXPRS EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1198:2: iv_ruleEXPRS= ruleEXPRS EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1508:2: (iv_ruleEXPRS= ruleEXPRS EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1509:2: iv_ruleEXPRS= ruleEXPRS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRSRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPRS_in_entryRuleEXPRS2669);
+            pushFollow(FOLLOW_ruleEXPRS_in_entryRuleEXPRS2429);
             iv_ruleEXPRS=ruleEXPRS();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPRS.getText(); 
+               current =iv_ruleEXPRS; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRS2680); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRS2439); if (state.failed) return current;
 
             }
 
@@ -2825,105 +3591,149 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPRS"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1205:1: ruleEXPRS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EXPR_0= ruleEXPR (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )? ) ;
-    public final AntlrDatatypeRuleToken ruleEXPRS() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1516:1: ruleEXPRS returns [EObject current=null] : ( ( (lv_f_0_0= ruleEXPR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )? ) ;
+    public final EObject ruleEXPRS() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_EXPR_0 = null;
+        Token otherlv_1=null;
+        EObject lv_f_0_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_2 = null;
+        EObject lv_l_2_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPRS_3 = null;
+        EObject lv_e2_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1208:28: ( (this_EXPR_0= ruleEXPR (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1209:1: (this_EXPR_0= ruleEXPR (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1519:28: ( ( ( (lv_f_0_0= ruleEXPR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1520:1: ( ( (lv_f_0_0= ruleEXPR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1209:1: (this_EXPR_0= ruleEXPR (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1210:5: this_EXPR_0= ruleEXPR (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1520:1: ( ( (lv_f_0_0= ruleEXPR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1520:2: ( (lv_f_0_0= ruleEXPR ) ) (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )?
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1520:2: ( (lv_f_0_0= ruleEXPR ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1521:1: (lv_f_0_0= ruleEXPR )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1521:1: (lv_f_0_0= ruleEXPR )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1522:3: lv_f_0_0= ruleEXPR
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getEXPRSAccess().getEXPRParserRuleCall_0()); 
-                  
+              	        newCompositeNode(grammarAccess.getEXPRSAccess().getFEXPRParserRuleCall_0_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRS2727);
-            this_EXPR_0=ruleEXPR();
+            pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRS2485);
+            lv_f_0_0=ruleEXPR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_EXPR_0);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getEXPRSRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"f",
+                      		lv_f_0_0, 
+                      		"EXPR");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1220:1: (kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==23) ) {
-                alt8=1;
             }
-            switch (alt8) {
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1538:2: (otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) ) )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==23) ) {
+                alt9=1;
+            }
+            switch (alt9) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1221:2: kw= ',' this_LCs_2= ruleLCs this_EXPRS_3= ruleEXPRS
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1538:4: otherlv_1= ',' ( (lv_l_2_0= ruleLCs ) ) ( (lv_e2_3_0= ruleEXPRS ) )
                     {
-                    kw=(Token)match(input,23,FOLLOW_23_in_ruleEXPRS2746); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleEXPRS2498); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRSAccess().getCommaKeyword_1_0()); 
+                          	newLeafNode(otherlv_1, grammarAccess.getEXPRSAccess().getCommaKeyword_1_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1542:1: ( (lv_l_2_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1543:1: (lv_l_2_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1543:1: (lv_l_2_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1544:3: lv_l_2_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRSAccess().getLCsParserRuleCall_1_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRSAccess().getLLCsParserRuleCall_1_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRS2768);
-                    this_LCs_2=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRS2519);
+                    lv_l_2_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_2);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"l",
+                              		lv_l_2_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1560:2: ( (lv_e2_3_0= ruleEXPRS ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1561:1: (lv_e2_3_0= ruleEXPRS )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1561:1: (lv_e2_3_0= ruleEXPRS )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1562:3: lv_e2_3_0= ruleEXPRS
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRSAccess().getE2EXPRSParserRuleCall_1_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPRSAccess().getEXPRSParserRuleCall_1_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPRS_in_ruleEXPRS2795);
-                    this_EXPRS_3=ruleEXPRS();
+                    pushFollow(FOLLOW_ruleEXPRS_in_ruleEXPRS2540);
+                    lv_e2_3_0=ruleEXPRS();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRS_3);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e2",
+                              		lv_e2_3_0, 
+                              		"EXPRS");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
@@ -2953,29 +3763,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1256:1: entryRuleEXPR returns [String current=null] : iv_ruleEXPR= ruleEXPR EOF ;
-    public final String entryRuleEXPR() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1586:1: entryRuleEXPR returns [EObject current=null] : iv_ruleEXPR= ruleEXPR EOF ;
+    public final EObject entryRuleEXPR() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPR = null;
+        EObject iv_ruleEXPR = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1257:2: (iv_ruleEXPR= ruleEXPR EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1258:2: iv_ruleEXPR= ruleEXPR EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1587:2: (iv_ruleEXPR= ruleEXPR EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1588:2: iv_ruleEXPR= ruleEXPR EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPR_in_entryRuleEXPR2843);
+            pushFollow(FOLLOW_ruleEXPR_in_entryRuleEXPR2578);
             iv_ruleEXPR=ruleEXPR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPR.getText(); 
+               current =iv_ruleEXPR; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPR2854); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPR2588); if (state.failed) return current;
 
             }
 
@@ -2993,38 +3803,38 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1265:1: ruleEXPR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EXPRSIMPLE_0= ruleEXPRSIMPLE | this_EXPRAND_1= ruleEXPRAND ) ;
-    public final AntlrDatatypeRuleToken ruleEXPR() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1595:1: ruleEXPR returns [EObject current=null] : ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) | ( (lv_ex_1_0= ruleEXPRAND ) ) ) ;
+    public final EObject ruleEXPR() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_EXPRSIMPLE_0 = null;
+        EObject lv_e1_0_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPRAND_1 = null;
+        EObject lv_ex_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1268:28: ( (this_EXPRSIMPLE_0= ruleEXPRSIMPLE | this_EXPRAND_1= ruleEXPRAND ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1269:1: (this_EXPRSIMPLE_0= ruleEXPRSIMPLE | this_EXPRAND_1= ruleEXPRAND )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1598:28: ( ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) | ( (lv_ex_1_0= ruleEXPRAND ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:1: ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) | ( (lv_ex_1_0= ruleEXPRAND ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1269:1: (this_EXPRSIMPLE_0= ruleEXPRSIMPLE | this_EXPRAND_1= ruleEXPRAND )
-            int alt9=2;
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:1: ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) | ( (lv_ex_1_0= ruleEXPRAND ) ) )
+            int alt10=2;
             switch ( input.LA(1) ) {
             case 37:
                 {
-                int LA9_1 = input.LA(2);
+                int LA10_1 = input.LA(2);
 
-                if ( (synpred13_InternalLangage_while()) ) {
-                    alt9=1;
+                if ( (synpred14_InternalLangage_while()) ) {
+                    alt10=1;
                 }
                 else if ( (true) ) {
-                    alt9=2;
+                    alt10=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 9, 1, input);
+                        new NoViableAltException("", 10, 1, input);
 
                     throw nvae;
                 }
@@ -3032,18 +3842,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 break;
             case RULE_VAR:
                 {
-                int LA9_2 = input.LA(2);
+                int LA10_2 = input.LA(2);
 
-                if ( (synpred13_InternalLangage_while()) ) {
-                    alt9=1;
+                if ( (synpred14_InternalLangage_while()) ) {
+                    alt10=1;
                 }
                 else if ( (true) ) {
-                    alt9=2;
+                    alt10=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 9, 2, input);
+                        new NoViableAltException("", 10, 2, input);
 
                     throw nvae;
                 }
@@ -3051,18 +3861,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 break;
             case RULE_SYM:
                 {
-                int LA9_3 = input.LA(2);
+                int LA10_3 = input.LA(2);
 
-                if ( (synpred13_InternalLangage_while()) ) {
-                    alt9=1;
+                if ( (synpred14_InternalLangage_while()) ) {
+                    alt10=1;
                 }
                 else if ( (true) ) {
-                    alt9=2;
+                    alt10=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 9, 3, input);
+                        new NoViableAltException("", 10, 3, input);
 
                     throw nvae;
                 }
@@ -3070,18 +3880,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 break;
             case 38:
                 {
-                int LA9_4 = input.LA(2);
+                int LA10_4 = input.LA(2);
 
-                if ( (synpred13_InternalLangage_while()) ) {
-                    alt9=1;
+                if ( (synpred14_InternalLangage_while()) ) {
+                    alt10=1;
                 }
                 else if ( (true) ) {
-                    alt9=2;
+                    alt10=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 9, 4, input);
+                        new NoViableAltException("", 10, 4, input);
 
                     throw nvae;
                 }
@@ -3089,67 +3899,97 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 break;
             case 46:
                 {
-                alt9=2;
+                alt10=2;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1270:5: this_EXPRSIMPLE_0= ruleEXPRSIMPLE
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:2: ( (lv_e1_0_0= ruleEXPRSIMPLE ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:2: ( (lv_e1_0_0= ruleEXPRSIMPLE ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1600:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1600:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1601:3: lv_e1_0_0= ruleEXPRSIMPLE
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRAccess().getEXPRSIMPLEParserRuleCall_0()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRAccess().getE1EXPRSIMPLEParserRuleCall_0_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPR2901);
-                    this_EXPRSIMPLE_0=ruleEXPRSIMPLE();
+                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPR2634);
+                    lv_e1_0_0=ruleEXPRSIMPLE();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRSIMPLE_0);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e1",
+                              		lv_e1_0_0, 
+                              		"EXPRSIMPLE");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1282:5: this_EXPRAND_1= ruleEXPRAND
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1618:6: ( (lv_ex_1_0= ruleEXPRAND ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1618:6: ( (lv_ex_1_0= ruleEXPRAND ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1619:1: (lv_ex_1_0= ruleEXPRAND )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1619:1: (lv_ex_1_0= ruleEXPRAND )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1620:3: lv_ex_1_0= ruleEXPRAND
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRAccess().getEXPRANDParserRuleCall_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRAccess().getExEXPRANDParserRuleCall_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleEXPRAND_in_ruleEXPR2934);
-                    this_EXPRAND_1=ruleEXPRAND();
+                    pushFollow(FOLLOW_ruleEXPRAND_in_ruleEXPR2661);
+                    lv_ex_1_0=ruleEXPRAND();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRAND_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ex",
+                              		lv_ex_1_0, 
+                              		"EXPRAND");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
@@ -3176,29 +4016,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPRSIMPLE"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1300:1: entryRuleEXPRSIMPLE returns [String current=null] : iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF ;
-    public final String entryRuleEXPRSIMPLE() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1644:1: entryRuleEXPRSIMPLE returns [EObject current=null] : iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF ;
+    public final EObject entryRuleEXPRSIMPLE() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPRSIMPLE = null;
+        EObject iv_ruleEXPRSIMPLE = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1301:2: (iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1302:2: iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1645:2: (iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1646:2: iv_ruleEXPRSIMPLE= ruleEXPRSIMPLE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRSIMPLERule()); 
             }
-            pushFollow(FOLLOW_ruleEXPRSIMPLE_in_entryRuleEXPRSIMPLE2980);
+            pushFollow(FOLLOW_ruleEXPRSIMPLE_in_entryRuleEXPRSIMPLE2697);
             iv_ruleEXPRSIMPLE=ruleEXPRSIMPLE();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPRSIMPLE.getText(); 
+               current =iv_ruleEXPRSIMPLE; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRSIMPLE2991); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRSIMPLE2707); if (state.failed) return current;
 
             }
 
@@ -3216,65 +4056,87 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPRSIMPLE"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1309:1: ruleEXPRSIMPLE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM ) | ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) ) | ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) ) | (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' ) ) ;
-    public final AntlrDatatypeRuleToken ruleEXPRSIMPLE() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1653:1: ruleEXPRSIMPLE returns [EObject current=null] : ( (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) ) | (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' ) | (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' ) | (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' ) | (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' ) | (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' ) ) ;
+    public final EObject ruleEXPRSIMPLE() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        Token this_VAR_1=null;
-        Token this_SYM_2=null;
-        Token this_SYM_22=null;
-        AntlrDatatypeRuleToken this_LEXPR_5 = null;
+        Token otherlv_0=null;
+        Token lv_l_1_0=null;
+        Token lv_s_2_0=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        Token otherlv_15=null;
+        Token otherlv_16=null;
+        Token otherlv_17=null;
+        Token otherlv_20=null;
+        Token otherlv_21=null;
+        Token lv_v_22_0=null;
+        Token otherlv_24=null;
+        EObject lv_yy_5_0 = null;
 
-        AntlrDatatypeRuleToken this_LEXPR_9 = null;
+        EObject lv_b_9_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_13 = null;
+        EObject lv_u_13_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_14 = null;
+        EObject lv_g_14_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_18 = null;
+        EObject this_LCs_18 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_19 = null;
+        EObject lv_n_19_0 = null;
 
-        AntlrDatatypeRuleToken this_LEXPR_23 = null;
+        EObject lv_w_23_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1312:28: ( ( (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM ) | ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) ) | ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) ) | (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1313:1: ( (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM ) | ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) ) | ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) ) | (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1656:28: ( ( (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) ) | (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' ) | (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' ) | (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' ) | (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' ) | (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1657:1: ( (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) ) | (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' ) | (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' ) | (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' ) | (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' ) | (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1313:1: ( (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM ) | ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) ) | ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) ) | (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' ) )
-            int alt13=4;
-            int LA13_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1657:1: ( (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) ) | (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' ) | (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' ) | (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' ) | (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' ) | (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' ) )
+            int alt12=6;
+            int LA12_0 = input.LA(1);
 
-            if ( ((LA13_0>=RULE_SYM && LA13_0<=RULE_VAR)||LA13_0==37) ) {
-                alt13=1;
+            if ( ((LA12_0>=RULE_SYM && LA12_0<=RULE_VAR)||LA12_0==37) ) {
+                alt12=1;
             }
-            else if ( (LA13_0==38) ) {
+            else if ( (LA12_0==38) ) {
                 switch ( input.LA(2) ) {
                 case 39:
-                case 41:
                     {
-                    alt13=2;
+                    alt12=2;
                     }
                     break;
                 case 42:
+                    {
+                    alt12=4;
+                    }
+                    break;
                 case 43:
                     {
-                    alt13=3;
+                    alt12=5;
                     }
                     break;
                 case RULE_SYM:
                     {
-                    alt13=4;
+                    alt12=6;
+                    }
+                    break;
+                case 41:
+                    {
+                    alt12=3;
                     }
                     break;
                 default:
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 13, 2, input);
+                        new NoViableAltException("", 12, 2, input);
 
                     throw nvae;
                 }
@@ -3283,85 +4145,122 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1313:2: (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1657:2: (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1313:2: (kw= 'nil' | this_VAR_1= RULE_VAR | this_SYM_2= RULE_SYM )
-                    int alt10=3;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1657:2: (otherlv_0= 'nil' | ( (lv_l_1_0= RULE_VAR ) ) | ( (lv_s_2_0= RULE_SYM ) ) )
+                    int alt11=3;
                     switch ( input.LA(1) ) {
                     case 37:
                         {
-                        alt10=1;
+                        alt11=1;
                         }
                         break;
                     case RULE_VAR:
                         {
-                        alt10=2;
+                        alt11=2;
                         }
                         break;
                     case RULE_SYM:
                         {
-                        alt10=3;
+                        alt11=3;
                         }
                         break;
                     default:
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 10, 0, input);
+                            new NoViableAltException("", 11, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt10) {
+                    switch (alt11) {
                         case 1 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1314:2: kw= 'nil'
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1657:4: otherlv_0= 'nil'
                             {
-                            kw=(Token)match(input,37,FOLLOW_37_in_ruleEXPRSIMPLE3030); if (state.failed) return current;
+                            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleEXPRSIMPLE2745); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getNilKeyword_0_0()); 
+                                  	newLeafNode(otherlv_0, grammarAccess.getEXPRSIMPLEAccess().getNilKeyword_0_0());
                                   
                             }
 
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1320:10: this_VAR_1= RULE_VAR
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1662:6: ( (lv_l_1_0= RULE_VAR ) )
                             {
-                            this_VAR_1=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleEXPRSIMPLE3051); if (state.failed) return current;
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1662:6: ( (lv_l_1_0= RULE_VAR ) )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1663:1: (lv_l_1_0= RULE_VAR )
+                            {
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1663:1: (lv_l_1_0= RULE_VAR )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1664:3: lv_l_1_0= RULE_VAR
+                            {
+                            lv_l_1_0=(Token)match(input,RULE_VAR,FOLLOW_RULE_VAR_in_ruleEXPRSIMPLE2768); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              		current.merge(this_VAR_1);
-                                  
+                              			newLeafNode(lv_l_1_0, grammarAccess.getEXPRSIMPLEAccess().getLVARTerminalRuleCall_0_1_0()); 
+                              		
                             }
                             if ( state.backtracking==0 ) {
-                               
-                                  newLeafNode(this_VAR_1, grammarAccess.getEXPRSIMPLEAccess().getVARTerminalRuleCall_0_1()); 
-                                  
+
+                              	        if (current==null) {
+                              	            current = createModelElement(grammarAccess.getEXPRSIMPLERule());
+                              	        }
+                                     		setWithLastConsumed(
+                                     			current, 
+                                     			"l",
+                                      		lv_l_1_0, 
+                                      		"VAR");
+                              	    
                             }
+
+                            }
+
+
+                            }
+
 
                             }
                             break;
                         case 3 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1328:10: this_SYM_2= RULE_SYM
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1681:6: ( (lv_s_2_0= RULE_SYM ) )
                             {
-                            this_SYM_2=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3077); if (state.failed) return current;
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1681:6: ( (lv_s_2_0= RULE_SYM ) )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1682:1: (lv_s_2_0= RULE_SYM )
+                            {
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1682:1: (lv_s_2_0= RULE_SYM )
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1683:3: lv_s_2_0= RULE_SYM
+                            {
+                            lv_s_2_0=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE2796); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              		current.merge(this_SYM_2);
-                                  
+                              			newLeafNode(lv_s_2_0, grammarAccess.getEXPRSIMPLEAccess().getSSYMTerminalRuleCall_0_2_0()); 
+                              		
                             }
                             if ( state.backtracking==0 ) {
-                               
-                                  newLeafNode(this_SYM_2, grammarAccess.getEXPRSIMPLEAccess().getSYMTerminalRuleCall_0_2()); 
-                                  
+
+                              	        if (current==null) {
+                              	            current = createModelElement(grammarAccess.getEXPRSIMPLERule());
+                              	        }
+                                     		setWithLastConsumed(
+                                     			current, 
+                                     			"s",
+                                      		lv_s_2_0, 
+                                      		"SYM");
+                              	    
                             }
+
+                            }
+
+
+                            }
+
 
                             }
                             break;
@@ -3372,143 +4271,64 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1336:6: ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1700:6: (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1336:6: ( (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' ) | (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' ) )
-                    int alt11=2;
-                    int LA11_0 = input.LA(1);
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1700:6: (otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1700:8: otherlv_3= '(' otherlv_4= 'cons' ( (lv_yy_5_0= ruleLEXPR ) ) otherlv_6= ')'
+                    {
+                    otherlv_3=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE2821); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                    if ( (LA11_0==38) ) {
-                        int LA11_1 = input.LA(2);
-
-                        if ( (LA11_1==39) ) {
-                            alt11=1;
-                        }
-                        else if ( (LA11_1==41) ) {
-                            alt11=2;
-                        }
-                        else {
-                            if (state.backtracking>0) {state.failed=true; return current;}
-                            NoViableAltException nvae =
-                                new NoViableAltException("", 11, 1, input);
-
-                            throw nvae;
-                        }
+                          	newLeafNode(otherlv_3, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_1_0());
+                          
                     }
-                    else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 11, 0, input);
+                    otherlv_4=(Token)match(input,39,FOLLOW_39_in_ruleEXPRSIMPLE2833); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                        throw nvae;
+                          	newLeafNode(otherlv_4, grammarAccess.getEXPRSIMPLEAccess().getConsKeyword_1_1());
+                          
                     }
-                    switch (alt11) {
-                        case 1 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1336:7: (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' )
-                            {
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1336:7: (kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')' )
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1337:2: kw= '(' kw= 'cons' this_LEXPR_5= ruleLEXPR kw= ')'
-                            {
-                            kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3104); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1708:1: ( (lv_yy_5_0= ruleLEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1709:1: (lv_yy_5_0= ruleLEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1709:1: (lv_yy_5_0= ruleLEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1710:3: lv_yy_5_0= ruleLEXPR
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getYyLEXPRParserRuleCall_1_2_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE2854);
+                    lv_yy_5_0=ruleLEXPR();
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_1_0_0()); 
-                                  
-                            }
-                            kw=(Token)match(input,39,FOLLOW_39_in_ruleEXPRSIMPLE3117); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getConsKeyword_1_0_1()); 
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLEXPRParserRuleCall_1_0_2()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3139);
-                            this_LEXPR_5=ruleLEXPR();
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"yy",
+                              		lv_yy_5_0, 
+                              		"LEXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
 
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_LEXPR_5);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3157); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_1_0_3()); 
-                                  
-                            }
-
-                            }
+                    }
 
 
-                            }
-                            break;
-                        case 2 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1366:6: (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' )
-                            {
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1366:6: (kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')' )
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1367:2: kw= '(' kw= 'list' this_LEXPR_9= ruleLEXPR kw= ')'
-                            {
-                            kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3178); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    }
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_1_1_0()); 
-                                  
-                            }
-                            kw=(Token)match(input,41,FOLLOW_41_in_ruleEXPRSIMPLE3191); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    otherlv_6=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE2866); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getListKeyword_1_1_1()); 
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLEXPRParserRuleCall_1_1_2()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3213);
-                            this_LEXPR_9=ruleLEXPR();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_LEXPR_9);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3231); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_1_1_3()); 
-                                  
-                            }
-
-                            }
-
-
-                            }
-                            break;
+                          	newLeafNode(otherlv_6, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_1_3());
+                          
+                    }
 
                     }
 
@@ -3516,183 +4336,64 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1396:6: ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1731:6: (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1396:6: ( (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' ) | (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' ) )
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1731:6: (otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1731:8: otherlv_7= '(' otherlv_8= 'list' ( (lv_b_9_0= ruleLEXPR ) ) otherlv_10= ')'
+                    {
+                    otherlv_7=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE2886); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                    if ( (LA12_0==38) ) {
-                        int LA12_1 = input.LA(2);
-
-                        if ( (LA12_1==42) ) {
-                            alt12=1;
-                        }
-                        else if ( (LA12_1==43) ) {
-                            alt12=2;
-                        }
-                        else {
-                            if (state.backtracking>0) {state.failed=true; return current;}
-                            NoViableAltException nvae =
-                                new NoViableAltException("", 12, 1, input);
-
-                            throw nvae;
-                        }
+                          	newLeafNode(otherlv_7, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_2_0());
+                          
                     }
-                    else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 12, 0, input);
+                    otherlv_8=(Token)match(input,41,FOLLOW_41_in_ruleEXPRSIMPLE2898); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                        throw nvae;
+                          	newLeafNode(otherlv_8, grammarAccess.getEXPRSIMPLEAccess().getListKeyword_2_1());
+                          
                     }
-                    switch (alt12) {
-                        case 1 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1396:7: (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' )
-                            {
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1396:7: (kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')' )
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1397:2: kw= '(' kw= 'hd' this_LCs_13= ruleLCs this_EXPR_14= ruleEXPR kw= ')'
-                            {
-                            kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3254); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1739:1: ( (lv_b_9_0= ruleLEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1740:1: (lv_b_9_0= ruleLEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1740:1: (lv_b_9_0= ruleLEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1741:3: lv_b_9_0= ruleLEXPR
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getBLEXPRParserRuleCall_2_2_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE2919);
+                    lv_b_9_0=ruleLEXPR();
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_2_0_0()); 
-                                  
-                            }
-                            kw=(Token)match(input,42,FOLLOW_42_in_ruleEXPRSIMPLE3267); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getHdKeyword_2_0_1()); 
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLCsParserRuleCall_2_0_2()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3289);
-                            this_LCs_13=ruleLCs();
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"b",
+                              		lv_b_9_0, 
+                              		"LEXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
 
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_LCs_13);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getEXPRParserRuleCall_2_0_3()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3316);
-                            this_EXPR_14=ruleEXPR();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_EXPR_14);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3334); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_2_0_4()); 
-                                  
-                            }
-
-                            }
+                    }
 
 
-                            }
-                            break;
-                        case 2 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1437:6: (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' )
-                            {
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1437:6: (kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')' )
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1438:2: kw= '(' kw= 'tl' this_LCs_18= ruleLCs this_EXPR_19= ruleEXPR kw= ')'
-                            {
-                            kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3355); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    }
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_2_1_0()); 
-                                  
-                            }
-                            kw=(Token)match(input,43,FOLLOW_43_in_ruleEXPRSIMPLE3368); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
+                    otherlv_10=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE2931); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getTlKeyword_2_1_1()); 
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLCsParserRuleCall_2_1_2()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3390);
-                            this_LCs_18=ruleLCs();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_LCs_18);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getEXPRParserRuleCall_2_1_3()); 
-                                  
-                            }
-                            pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3417);
-                            this_EXPR_19=ruleEXPR();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		current.merge(this_EXPR_19);
-                                  
-                            }
-                            if ( state.backtracking==0 ) {
-                               
-                                      afterParserOrEnumRuleCall();
-                                  
-                            }
-                            kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3435); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                      current.merge(kw);
-                                      newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_2_1_4()); 
-                                  
-                            }
-
-                            }
-
-
-                            }
-                            break;
+                          	newLeafNode(otherlv_10, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_2_3());
+                          
+                    }
 
                     }
 
@@ -3700,54 +4401,272 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1478:6: (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1762:6: (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1478:6: (kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1479:2: kw= '(' this_SYM_22= RULE_SYM this_LEXPR_23= ruleLEXPR kw= ')'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1762:6: (otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1762:8: otherlv_11= '(' otherlv_12= 'hd' ( (lv_u_13_0= ruleLCs ) ) ( (lv_g_14_0= ruleEXPR ) ) otherlv_15= ')'
                     {
-                    kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3457); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE2951); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_3_0()); 
+                          	newLeafNode(otherlv_11, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_3_0());
                           
                     }
-                    this_SYM_22=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3472); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,42,FOLLOW_42_in_ruleEXPRSIMPLE2963); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_SYM_22);
+                          	newLeafNode(otherlv_12, grammarAccess.getEXPRSIMPLEAccess().getHdKeyword_3_1());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1770:1: ( (lv_u_13_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1771:1: (lv_u_13_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1771:1: (lv_u_13_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1772:3: lv_u_13_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_SYM_22, grammarAccess.getEXPRSIMPLEAccess().getSYMTerminalRuleCall_3_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getULCsParserRuleCall_3_2_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLEXPRParserRuleCall_3_2()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3499);
-                    this_LEXPR_23=ruleLEXPR();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRSIMPLE2984);
+                    lv_u_13_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LEXPR_23);
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"u",
+                              		lv_u_13_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1788:2: ( (lv_g_14_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1789:1: (lv_g_14_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1789:1: (lv_g_14_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1790:3: lv_g_14_0= ruleEXPR
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getGEXPRParserRuleCall_3_3_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3005);
+                    lv_g_14_0=ruleEXPR();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"g",
+                              		lv_g_14_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_15=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3017); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_15, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_3_4());
+                          
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1811:6: (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1811:6: (otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1811:8: otherlv_16= '(' otherlv_17= 'tl' this_LCs_18= ruleLCs ( (lv_n_19_0= ruleEXPR ) ) otherlv_20= ')'
+                    {
+                    otherlv_16=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3037); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_16, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_4_0());
+                          
+                    }
+                    otherlv_17=(Token)match(input,43,FOLLOW_43_in_ruleEXPRSIMPLE3049); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_17, grammarAccess.getEXPRSIMPLEAccess().getTlKeyword_4_1());
                           
                     }
                     if ( state.backtracking==0 ) {
                        
+                      	  /* */ 
+                      	
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getLCsParserRuleCall_4_2()); 
+                          
+                    }
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3074);
+                    this_LCs_18=ruleLCs();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              current = this_LCs_18; 
                               afterParserOrEnumRuleCall();
                           
                     }
-                    kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3517); if (state.failed) return current;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1831:1: ( (lv_n_19_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1832:1: (lv_n_19_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1832:1: (lv_n_19_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1833:3: lv_n_19_0= ruleEXPR
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getNEXPRParserRuleCall_4_3_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3094);
+                    lv_n_19_0=ruleEXPR();
+
+                    state._fsp--;
+                    if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_3_3()); 
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"n",
+                              		lv_n_19_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_20=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3106); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_20, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_4_4());
+                          
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1854:6: (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1854:6: (otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1854:8: otherlv_21= '(' ( (lv_v_22_0= RULE_SYM ) ) ( (lv_w_23_0= ruleLEXPR ) ) otherlv_24= ')'
+                    {
+                    otherlv_21=(Token)match(input,38,FOLLOW_38_in_ruleEXPRSIMPLE3126); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_21, grammarAccess.getEXPRSIMPLEAccess().getLeftParenthesisKeyword_5_0());
+                          
+                    }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1858:1: ( (lv_v_22_0= RULE_SYM ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1859:1: (lv_v_22_0= RULE_SYM )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1859:1: (lv_v_22_0= RULE_SYM )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1860:3: lv_v_22_0= RULE_SYM
+                    {
+                    lv_v_22_0=(Token)match(input,RULE_SYM,FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3143); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			newLeafNode(lv_v_22_0, grammarAccess.getEXPRSIMPLEAccess().getVSYMTerminalRuleCall_5_1_0()); 
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"v",
+                              		lv_v_22_0, 
+                              		"SYM");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1876:2: ( (lv_w_23_0= ruleLEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1877:1: (lv_w_23_0= ruleLEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1877:1: (lv_w_23_0= ruleLEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1878:3: lv_w_23_0= ruleLEXPR
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getEXPRSIMPLEAccess().getWLEXPRParserRuleCall_5_2_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3169);
+                    lv_w_23_0=ruleLEXPR();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRSIMPLERule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"w",
+                              		lv_w_23_0, 
+                              		"LEXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_24=(Token)match(input,40,FOLLOW_40_in_ruleEXPRSIMPLE3181); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_24, grammarAccess.getEXPRSIMPLEAccess().getRightParenthesisKeyword_5_3());
                           
                     }
 
@@ -3779,29 +4698,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLEXPR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1516:1: entryRuleLEXPR returns [String current=null] : iv_ruleLEXPR= ruleLEXPR EOF ;
-    public final String entryRuleLEXPR() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1906:1: entryRuleLEXPR returns [EObject current=null] : iv_ruleLEXPR= ruleLEXPR EOF ;
+    public final EObject entryRuleLEXPR() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleLEXPR = null;
+        EObject iv_ruleLEXPR = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1517:2: (iv_ruleLEXPR= ruleLEXPR EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1518:2: iv_ruleLEXPR= ruleLEXPR EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1907:2: (iv_ruleLEXPR= ruleLEXPR EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1908:2: iv_ruleLEXPR= ruleLEXPR EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLEXPRRule()); 
             }
-            pushFollow(FOLLOW_ruleLEXPR_in_entryRuleLEXPR3559);
+            pushFollow(FOLLOW_ruleLEXPR_in_entryRuleLEXPR3218);
             iv_ruleLEXPR=ruleLEXPR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleLEXPR.getText(); 
+               current =iv_ruleLEXPR; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLEXPR3570); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLEXPR3228); if (state.failed) return current;
 
             }
 
@@ -3819,97 +4738,136 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLEXPR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1525:1: ruleLEXPR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LCs_0= ruleLCs this_EXPR_1= ruleEXPR (this_LEXPR_2= ruleLEXPR )? ) ;
-    public final AntlrDatatypeRuleToken ruleLEXPR() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1915:1: ruleLEXPR returns [EObject current=null] : ( ( (lv_f_0_0= ruleLCs ) ) ( (lv_n_1_0= ruleEXPR ) ) ( (lv_t_2_0= ruleLEXPR ) )? ) ;
+    public final EObject ruleLEXPR() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_LCs_0 = null;
+        EObject lv_f_0_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_1 = null;
+        EObject lv_n_1_0 = null;
 
-        AntlrDatatypeRuleToken this_LEXPR_2 = null;
+        EObject lv_t_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1528:28: ( (this_LCs_0= ruleLCs this_EXPR_1= ruleEXPR (this_LEXPR_2= ruleLEXPR )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1529:1: (this_LCs_0= ruleLCs this_EXPR_1= ruleEXPR (this_LEXPR_2= ruleLEXPR )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1918:28: ( ( ( (lv_f_0_0= ruleLCs ) ) ( (lv_n_1_0= ruleEXPR ) ) ( (lv_t_2_0= ruleLEXPR ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1919:1: ( ( (lv_f_0_0= ruleLCs ) ) ( (lv_n_1_0= ruleEXPR ) ) ( (lv_t_2_0= ruleLEXPR ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1529:1: (this_LCs_0= ruleLCs this_EXPR_1= ruleEXPR (this_LEXPR_2= ruleLEXPR )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1530:5: this_LCs_0= ruleLCs this_EXPR_1= ruleEXPR (this_LEXPR_2= ruleLEXPR )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1919:1: ( ( (lv_f_0_0= ruleLCs ) ) ( (lv_n_1_0= ruleEXPR ) ) ( (lv_t_2_0= ruleLEXPR ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1919:2: ( (lv_f_0_0= ruleLCs ) ) ( (lv_n_1_0= ruleEXPR ) ) ( (lv_t_2_0= ruleLEXPR ) )?
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1919:2: ( (lv_f_0_0= ruleLCs ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1920:1: (lv_f_0_0= ruleLCs )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1920:1: (lv_f_0_0= ruleLCs )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1921:3: lv_f_0_0= ruleLCs
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getLEXPRAccess().getLCsParserRuleCall_0()); 
-                  
+              	        newCompositeNode(grammarAccess.getLEXPRAccess().getFLCsParserRuleCall_0_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleLCs_in_ruleLEXPR3617);
-            this_LCs_0=ruleLCs();
+            pushFollow(FOLLOW_ruleLCs_in_ruleLEXPR3274);
+            lv_f_0_0=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_LCs_0);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getLEXPRRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"f",
+                      		lv_f_0_0, 
+                      		"LCs");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
+
+            }
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1937:2: ( (lv_n_1_0= ruleEXPR ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1938:1: (lv_n_1_0= ruleEXPR )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1938:1: (lv_n_1_0= ruleEXPR )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1939:3: lv_n_1_0= ruleEXPR
+            {
             if ( state.backtracking==0 ) {
                
-                      afterParserOrEnumRuleCall();
-                  
+              	        newCompositeNode(grammarAccess.getLEXPRAccess().getNEXPRParserRuleCall_1_0()); 
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getLEXPRAccess().getEXPRParserRuleCall_1()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleEXPR_in_ruleLEXPR3644);
-            this_EXPR_1=ruleEXPR();
+            pushFollow(FOLLOW_ruleEXPR_in_ruleLEXPR3295);
+            lv_n_1_0=ruleEXPR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_EXPR_1);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getLEXPRRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"n",
+                      		lv_n_1_0, 
+                      		"EXPR");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1551:1: (this_LEXPR_2= ruleLEXPR )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
 
-            if ( ((LA14_0>=RULE_SYM && LA14_0<=RULE_LF)||(LA14_0>=37 && LA14_0<=38)||LA14_0==46) ) {
-                alt14=1;
             }
-            switch (alt14) {
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1955:2: ( (lv_t_2_0= ruleLEXPR ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
+
+            if ( ((LA13_0>=RULE_CR && LA13_0<=RULE_LF)||(LA13_0>=37 && LA13_0<=38)||LA13_0==46) ) {
+                alt13=1;
+            }
+            switch (alt13) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1552:5: this_LEXPR_2= ruleLEXPR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1956:1: (lv_t_2_0= ruleLEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1956:1: (lv_t_2_0= ruleLEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1957:3: lv_t_2_0= ruleLEXPR
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getLEXPRAccess().getLEXPRParserRuleCall_2()); 
-                          
+                      	        newCompositeNode(grammarAccess.getLEXPRAccess().getTLEXPRParserRuleCall_2_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLEXPR_in_ruleLEXPR3672);
-                    this_LEXPR_2=ruleLEXPR();
+                    pushFollow(FOLLOW_ruleLEXPR_in_ruleLEXPR3316);
+                    lv_t_2_0=ruleLEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LEXPR_2);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getLEXPRRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"t",
+                              		lv_t_2_0, 
+                              		"LEXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
 
                     }
                     break;
@@ -3939,29 +4897,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPRAND"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1570:1: entryRuleEXPRAND returns [String current=null] : iv_ruleEXPRAND= ruleEXPRAND EOF ;
-    public final String entryRuleEXPRAND() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1981:1: entryRuleEXPRAND returns [EObject current=null] : iv_ruleEXPRAND= ruleEXPRAND EOF ;
+    public final EObject entryRuleEXPRAND() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPRAND = null;
+        EObject iv_ruleEXPRAND = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1571:2: (iv_ruleEXPRAND= ruleEXPRAND EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1572:2: iv_ruleEXPRAND= ruleEXPRAND EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1982:2: (iv_ruleEXPRAND= ruleEXPRAND EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1983:2: iv_ruleEXPRAND= ruleEXPRAND EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRANDRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPRAND_in_entryRuleEXPRAND3720);
+            pushFollow(FOLLOW_ruleEXPRAND_in_entryRuleEXPRAND3353);
             iv_ruleEXPRAND=ruleEXPRAND();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPRAND.getText(); 
+               current =iv_ruleEXPRAND; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRAND3731); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRAND3363); if (state.failed) return current;
 
             }
 
@@ -3979,166 +4937,225 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPRAND"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1579:1: ruleEXPRAND returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EXPROR_0= ruleEXPROR (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )? ) ;
-    public final AntlrDatatypeRuleToken ruleEXPRAND() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1990:1: ruleEXPRAND returns [EObject current=null] : ( ( (lv_f_0_0= ruleEXPROR ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )? ) ;
+    public final EObject ruleEXPRAND() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_EXPROR_0 = null;
+        Token otherlv_2=null;
+        EObject lv_f_0_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_1 = null;
+        EObject lv_lc1_1_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_3 = null;
+        EObject lv_lc2_3_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPRAND_4 = null;
+        EObject lv_ee_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1582:28: ( (this_EXPROR_0= ruleEXPROR (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1583:1: (this_EXPROR_0= ruleEXPROR (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1993:28: ( ( ( (lv_f_0_0= ruleEXPROR ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1994:1: ( ( (lv_f_0_0= ruleEXPROR ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1583:1: (this_EXPROR_0= ruleEXPROR (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1584:5: this_EXPROR_0= ruleEXPROR (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1994:1: ( ( (lv_f_0_0= ruleEXPROR ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1994:2: ( (lv_f_0_0= ruleEXPROR ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )?
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1994:2: ( (lv_f_0_0= ruleEXPROR ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1995:1: (lv_f_0_0= ruleEXPROR )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1995:1: (lv_f_0_0= ruleEXPROR )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1996:3: lv_f_0_0= ruleEXPROR
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getEXPRANDAccess().getEXPRORParserRuleCall_0()); 
-                  
+              	        newCompositeNode(grammarAccess.getEXPRANDAccess().getFEXPRORParserRuleCall_0_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleEXPROR_in_ruleEXPRAND3778);
-            this_EXPROR_0=ruleEXPROR();
+            pushFollow(FOLLOW_ruleEXPROR_in_ruleEXPRAND3409);
+            lv_f_0_0=ruleEXPROR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_EXPROR_0);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getEXPRANDRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"f",
+                      		lv_f_0_0, 
+                      		"EXPROR");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1594:1: (this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND )?
-            int alt15=2;
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2012:2: ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) ) )?
+            int alt14=2;
             switch ( input.LA(1) ) {
                 case RULE_SP:
                     {
-                    int LA15_1 = input.LA(2);
+                    int LA14_1 = input.LA(2);
 
-                    if ( (LA15_1==44) ) {
-                        alt15=1;
+                    if ( (LA14_1==44) ) {
+                        alt14=1;
                     }
                     }
                     break;
                 case RULE_CR:
                     {
-                    int LA15_2 = input.LA(2);
+                    int LA14_2 = input.LA(2);
 
-                    if ( (LA15_2==44) ) {
-                        alt15=1;
+                    if ( (LA14_2==44) ) {
+                        alt14=1;
                     }
                     }
                     break;
                 case RULE_TAB:
                     {
-                    int LA15_3 = input.LA(2);
+                    int LA14_3 = input.LA(2);
 
-                    if ( (LA15_3==44) ) {
-                        alt15=1;
+                    if ( (LA14_3==44) ) {
+                        alt14=1;
                     }
                     }
                     break;
                 case RULE_LF:
                     {
-                    int LA15_4 = input.LA(2);
+                    int LA14_4 = input.LA(2);
 
-                    if ( (LA15_4==44) ) {
-                        alt15=1;
+                    if ( (LA14_4==44) ) {
+                        alt14=1;
                     }
                     }
                     break;
                 case 44:
                     {
-                    alt15=1;
+                    alt14=1;
                     }
                     break;
             }
 
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1595:5: this_LCs_1= ruleLCs kw= 'and' this_LCs_3= ruleLCs this_EXPRAND_4= ruleEXPRAND
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2012:3: ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'and' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_ee_4_0= ruleEXPRAND ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2012:3: ( (lv_lc1_1_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2013:1: (lv_lc1_1_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2013:1: (lv_lc1_1_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2014:3: lv_lc1_1_0= ruleLCs
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRANDAccess().getLCsParserRuleCall_1_0()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRANDAccess().getLc1LCsParserRuleCall_1_0_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRAND3806);
-                    this_LCs_1=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRAND3431);
+                    lv_lc1_1_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRANDRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc1",
+                              		lv_lc1_1_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,44,FOLLOW_44_in_ruleEXPRAND3824); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleEXPRAND3443); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRANDAccess().getAndKeyword_1_1()); 
+                          	newLeafNode(otherlv_2, grammarAccess.getEXPRANDAccess().getAndKeyword_1_1());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2034:1: ( (lv_lc2_3_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2035:1: (lv_lc2_3_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2035:1: (lv_lc2_3_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2036:3: lv_lc2_3_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRANDAccess().getLCsParserRuleCall_1_2()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRANDAccess().getLc2LCsParserRuleCall_1_2_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRAND3846);
-                    this_LCs_3=ruleLCs();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      		current.merge(this_LCs_3);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPRANDAccess().getEXPRANDParserRuleCall_1_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPRAND_in_ruleEXPRAND3873);
-                    this_EXPRAND_4=ruleEXPRAND();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRAND3464);
+                    lv_lc2_3_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRAND_4);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRANDRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc2",
+                              		lv_lc2_3_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2052:2: ( (lv_ee_4_0= ruleEXPRAND ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2053:1: (lv_ee_4_0= ruleEXPRAND )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2053:1: (lv_ee_4_0= ruleEXPRAND )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2054:3: lv_ee_4_0= ruleEXPRAND
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRANDAccess().getEeEXPRANDParserRuleCall_1_3_0()); 
+                      	    
                     }
+                    pushFollow(FOLLOW_ruleEXPRAND_in_ruleEXPRAND3485);
+                    lv_ee_4_0=ruleEXPRAND();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRANDRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ee",
+                              		lv_ee_4_0, 
+                              		"EXPRAND");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -4168,29 +5185,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPROR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1641:1: entryRuleEXPROR returns [String current=null] : iv_ruleEXPROR= ruleEXPROR EOF ;
-    public final String entryRuleEXPROR() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2078:1: entryRuleEXPROR returns [EObject current=null] : iv_ruleEXPROR= ruleEXPROR EOF ;
+    public final EObject entryRuleEXPROR() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPROR = null;
+        EObject iv_ruleEXPROR = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1642:2: (iv_ruleEXPROR= ruleEXPROR EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1643:2: iv_ruleEXPROR= ruleEXPROR EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2079:2: (iv_ruleEXPROR= ruleEXPROR EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2080:2: iv_ruleEXPROR= ruleEXPROR EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRORRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPROR_in_entryRuleEXPROR3921);
+            pushFollow(FOLLOW_ruleEXPROR_in_entryRuleEXPROR3523);
             iv_ruleEXPROR=ruleEXPROR();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPROR.getText(); 
+               current =iv_ruleEXPROR; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPROR3932); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPROR3533); if (state.failed) return current;
 
             }
 
@@ -4208,166 +5225,225 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPROR"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1650:1: ruleEXPROR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EXPRNOT_0= ruleEXPRNOT (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )? ) ;
-    public final AntlrDatatypeRuleToken ruleEXPROR() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2087:1: ruleEXPROR returns [EObject current=null] : ( ( (lv_e1_0_0= ruleEXPRNOT ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )? ) ;
+    public final EObject ruleEXPROR() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_EXPRNOT_0 = null;
+        Token otherlv_2=null;
+        EObject lv_e1_0_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_1 = null;
+        EObject lv_lc1_1_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_3 = null;
+        EObject lv_lc2_3_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPROR_4 = null;
+        EObject lv_e2_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1653:28: ( (this_EXPRNOT_0= ruleEXPRNOT (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )? ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1654:1: (this_EXPRNOT_0= ruleEXPRNOT (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2090:28: ( ( ( (lv_e1_0_0= ruleEXPRNOT ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )? ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2091:1: ( ( (lv_e1_0_0= ruleEXPRNOT ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )? )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1654:1: (this_EXPRNOT_0= ruleEXPRNOT (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1655:5: this_EXPRNOT_0= ruleEXPRNOT (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2091:1: ( ( (lv_e1_0_0= ruleEXPRNOT ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2091:2: ( (lv_e1_0_0= ruleEXPRNOT ) ) ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )?
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2091:2: ( (lv_e1_0_0= ruleEXPRNOT ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2092:1: (lv_e1_0_0= ruleEXPRNOT )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2092:1: (lv_e1_0_0= ruleEXPRNOT )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2093:3: lv_e1_0_0= ruleEXPRNOT
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getEXPRORAccess().getEXPRNOTParserRuleCall_0()); 
-                  
+              	        newCompositeNode(grammarAccess.getEXPRORAccess().getE1EXPRNOTParserRuleCall_0_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleEXPRNOT_in_ruleEXPROR3979);
-            this_EXPRNOT_0=ruleEXPRNOT();
+            pushFollow(FOLLOW_ruleEXPRNOT_in_ruleEXPROR3579);
+            lv_e1_0_0=ruleEXPRNOT();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_EXPRNOT_0);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getEXPRORRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"e1",
+                      		lv_e1_0_0, 
+                      		"EXPRNOT");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
             }
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1665:1: (this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR )?
-            int alt16=2;
+
+
+            }
+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2109:2: ( ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) ) )?
+            int alt15=2;
             switch ( input.LA(1) ) {
                 case RULE_SP:
                     {
-                    int LA16_1 = input.LA(2);
+                    int LA15_1 = input.LA(2);
 
-                    if ( (LA16_1==45) ) {
-                        alt16=1;
+                    if ( (LA15_1==45) ) {
+                        alt15=1;
                     }
                     }
                     break;
                 case RULE_CR:
                     {
-                    int LA16_2 = input.LA(2);
+                    int LA15_2 = input.LA(2);
 
-                    if ( (LA16_2==45) ) {
-                        alt16=1;
+                    if ( (LA15_2==45) ) {
+                        alt15=1;
                     }
                     }
                     break;
                 case RULE_TAB:
                     {
-                    int LA16_3 = input.LA(2);
+                    int LA15_3 = input.LA(2);
 
-                    if ( (LA16_3==45) ) {
-                        alt16=1;
+                    if ( (LA15_3==45) ) {
+                        alt15=1;
                     }
                     }
                     break;
                 case RULE_LF:
                     {
-                    int LA16_4 = input.LA(2);
+                    int LA15_4 = input.LA(2);
 
-                    if ( (LA16_4==45) ) {
-                        alt16=1;
+                    if ( (LA15_4==45) ) {
+                        alt15=1;
                     }
                     }
                     break;
                 case 45:
                     {
-                    alt16=1;
+                    alt15=1;
                     }
                     break;
             }
 
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1666:5: this_LCs_1= ruleLCs kw= 'or' this_LCs_3= ruleLCs this_EXPROR_4= ruleEXPROR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2109:3: ( (lv_lc1_1_0= ruleLCs ) ) otherlv_2= 'or' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_e2_4_0= ruleEXPROR ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2109:3: ( (lv_lc1_1_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2110:1: (lv_lc1_1_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2110:1: (lv_lc1_1_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2111:3: lv_lc1_1_0= ruleLCs
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRORAccess().getLCsParserRuleCall_1_0()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRORAccess().getLc1LCsParserRuleCall_1_0_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPROR4007);
-                    this_LCs_1=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPROR3601);
+                    lv_lc1_1_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRORRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc1",
+                              		lv_lc1_1_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,45,FOLLOW_45_in_ruleEXPROR4025); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_2=(Token)match(input,45,FOLLOW_45_in_ruleEXPROR3613); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRORAccess().getOrKeyword_1_1()); 
+                          	newLeafNode(otherlv_2, grammarAccess.getEXPRORAccess().getOrKeyword_1_1());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2131:1: ( (lv_lc2_3_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2132:1: (lv_lc2_3_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2132:1: (lv_lc2_3_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2133:3: lv_lc2_3_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRORAccess().getLCsParserRuleCall_1_2()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRORAccess().getLc2LCsParserRuleCall_1_2_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPROR4047);
-                    this_LCs_3=ruleLCs();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      		current.merge(this_LCs_3);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPRORAccess().getEXPRORParserRuleCall_1_3()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPROR_in_ruleEXPROR4074);
-                    this_EXPROR_4=ruleEXPROR();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPROR3634);
+                    lv_lc2_3_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPROR_4);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRORRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc2",
+                              		lv_lc2_3_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2149:2: ( (lv_e2_4_0= ruleEXPROR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2150:1: (lv_e2_4_0= ruleEXPROR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2150:1: (lv_e2_4_0= ruleEXPROR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2151:3: lv_e2_4_0= ruleEXPROR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRORAccess().getE2EXPRORParserRuleCall_1_3_0()); 
+                      	    
                     }
+                    pushFollow(FOLLOW_ruleEXPROR_in_ruleEXPROR3655);
+                    lv_e2_4_0=ruleEXPROR();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRORRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e2",
+                              		lv_e2_4_0, 
+                              		"EXPROR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -4397,29 +5473,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPRNOT"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1712:1: entryRuleEXPRNOT returns [String current=null] : iv_ruleEXPRNOT= ruleEXPRNOT EOF ;
-    public final String entryRuleEXPRNOT() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2175:1: entryRuleEXPRNOT returns [EObject current=null] : iv_ruleEXPRNOT= ruleEXPRNOT EOF ;
+    public final EObject entryRuleEXPRNOT() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPRNOT = null;
+        EObject iv_ruleEXPRNOT = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1713:2: (iv_ruleEXPRNOT= ruleEXPRNOT EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1714:2: iv_ruleEXPRNOT= ruleEXPRNOT EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2176:2: (iv_ruleEXPRNOT= ruleEXPRNOT EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2177:2: iv_ruleEXPRNOT= ruleEXPRNOT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPRNOTRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPRNOT_in_entryRuleEXPRNOT4122);
+            pushFollow(FOLLOW_ruleEXPRNOT_in_entryRuleEXPRNOT3693);
             iv_ruleEXPRNOT=ruleEXPRNOT();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPRNOT.getText(); 
+               current =iv_ruleEXPRNOT; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRNOT4133); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPRNOT3703); if (state.failed) return current;
 
             }
 
@@ -4437,89 +5513,118 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPRNOT"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1721:1: ruleEXPRNOT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= 'not' this_LCs_1= ruleLCs )? this_EXPREQ_2= ruleEXPREQ ) ;
-    public final AntlrDatatypeRuleToken ruleEXPRNOT() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2184:1: ruleEXPRNOT returns [EObject current=null] : ( (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )? ( (lv_e1_2_0= ruleEXPREQ ) ) ) ;
+    public final EObject ruleEXPRNOT() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_LCs_1 = null;
+        Token otherlv_0=null;
+        EObject lv_lc1_1_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPREQ_2 = null;
+        EObject lv_e1_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1724:28: ( ( (kw= 'not' this_LCs_1= ruleLCs )? this_EXPREQ_2= ruleEXPREQ ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1725:1: ( (kw= 'not' this_LCs_1= ruleLCs )? this_EXPREQ_2= ruleEXPREQ )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2187:28: ( ( (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )? ( (lv_e1_2_0= ruleEXPREQ ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2188:1: ( (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )? ( (lv_e1_2_0= ruleEXPREQ ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1725:1: ( (kw= 'not' this_LCs_1= ruleLCs )? this_EXPREQ_2= ruleEXPREQ )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1725:2: (kw= 'not' this_LCs_1= ruleLCs )? this_EXPREQ_2= ruleEXPREQ
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2188:1: ( (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )? ( (lv_e1_2_0= ruleEXPREQ ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2188:2: (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )? ( (lv_e1_2_0= ruleEXPREQ ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1725:2: (kw= 'not' this_LCs_1= ruleLCs )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2188:2: (otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==46) ) {
-                alt17=1;
+            if ( (LA16_0==46) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1726:2: kw= 'not' this_LCs_1= ruleLCs
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2188:4: otherlv_0= 'not' ( (lv_lc1_1_0= ruleLCs ) )
                     {
-                    kw=(Token)match(input,46,FOLLOW_46_in_ruleEXPRNOT4172); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleEXPRNOT3741); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPRNOTAccess().getNotKeyword_0_0()); 
+                          	newLeafNode(otherlv_0, grammarAccess.getEXPRNOTAccess().getNotKeyword_0_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2192:1: ( (lv_lc1_1_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2193:1: (lv_lc1_1_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2193:1: (lv_lc1_1_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2194:3: lv_lc1_1_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPRNOTAccess().getLCsParserRuleCall_0_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPRNOTAccess().getLc1LCsParserRuleCall_0_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRNOT4194);
-                    this_LCs_1=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPRNOT3762);
+                    lv_lc1_1_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPRNOTRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc1",
+                              		lv_lc1_1_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
+
+                    }
+
 
                     }
                     break;
 
             }
 
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2210:4: ( (lv_e1_2_0= ruleEXPREQ ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2211:1: (lv_e1_2_0= ruleEXPREQ )
+            {
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2211:1: (lv_e1_2_0= ruleEXPREQ )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2212:3: lv_e1_2_0= ruleEXPREQ
+            {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getEXPRNOTAccess().getEXPREQParserRuleCall_1()); 
-                  
+              	        newCompositeNode(grammarAccess.getEXPRNOTAccess().getE1EXPREQParserRuleCall_1_0()); 
+              	    
             }
-            pushFollow(FOLLOW_ruleEXPREQ_in_ruleEXPRNOT4223);
-            this_EXPREQ_2=ruleEXPREQ();
+            pushFollow(FOLLOW_ruleEXPREQ_in_ruleEXPRNOT3785);
+            lv_e1_2_0=ruleEXPREQ();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_EXPREQ_2);
-                  
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getEXPRNOTRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"e1",
+                      		lv_e1_2_0, 
+                      		"EXPREQ");
+              	        afterParserOrEnumRuleCall();
+              	    
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+
             }
+
+
+            }
+
 
             }
 
@@ -4543,29 +5648,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEXPREQ"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1761:1: entryRuleEXPREQ returns [String current=null] : iv_ruleEXPREQ= ruleEXPREQ EOF ;
-    public final String entryRuleEXPREQ() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2236:1: entryRuleEXPREQ returns [EObject current=null] : iv_ruleEXPREQ= ruleEXPREQ EOF ;
+    public final EObject entryRuleEXPREQ() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEXPREQ = null;
+        EObject iv_ruleEXPREQ = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1762:2: (iv_ruleEXPREQ= ruleEXPREQ EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1763:2: iv_ruleEXPREQ= ruleEXPREQ EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2237:2: (iv_ruleEXPREQ= ruleEXPREQ EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2238:2: iv_ruleEXPREQ= ruleEXPREQ EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEXPREQRule()); 
             }
-            pushFollow(FOLLOW_ruleEXPREQ_in_entryRuleEXPREQ4269);
+            pushFollow(FOLLOW_ruleEXPREQ_in_entryRuleEXPREQ3821);
             iv_ruleEXPREQ=ruleEXPREQ();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleEXPREQ.getText(); 
+               current =iv_ruleEXPREQ; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPREQ4280); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEXPREQ3831); if (state.failed) return current;
 
             }
 
@@ -4583,51 +5688,45 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEXPREQ"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1770:1: ruleEXPREQ returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE ) | (kw= '(' this_EXPR_6= ruleEXPR kw= ')' ) ) ;
-    public final AntlrDatatypeRuleToken ruleEXPREQ() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2245:1: ruleEXPREQ returns [EObject current=null] : ( ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) ) | (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' ) ) ;
+    public final EObject ruleEXPREQ() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_EXPRSIMPLE_0 = null;
+        Token otherlv_2=null;
+        Token otherlv_5=null;
+        Token otherlv_7=null;
+        EObject lv_e1_0_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_1 = null;
+        EObject lv_ccc_1_0 = null;
 
-        AntlrDatatypeRuleToken this_LCs_3 = null;
+        EObject lv_lc2_3_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPRSIMPLE_4 = null;
+        EObject lv_w_4_0 = null;
 
-        AntlrDatatypeRuleToken this_EXPR_6 = null;
+        EObject lv_ex_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1773:28: ( ( (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE ) | (kw= '(' this_EXPR_6= ruleEXPR kw= ')' ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1774:1: ( (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE ) | (kw= '(' this_EXPR_6= ruleEXPR kw= ')' ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2248:28: ( ( ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) ) | (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:1: ( ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) ) | (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1774:1: ( (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE ) | (kw= '(' this_EXPR_6= ruleEXPR kw= ')' ) )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:1: ( ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) ) | (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' ) )
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( ((LA18_0>=RULE_SYM && LA18_0<=RULE_VAR)||LA18_0==37) ) {
-                alt18=1;
+            if ( ((LA17_0>=RULE_SYM && LA17_0<=RULE_VAR)||LA17_0==37) ) {
+                alt17=1;
             }
-            else if ( (LA18_0==38) ) {
+            else if ( (LA17_0==38) ) {
                 switch ( input.LA(2) ) {
                 case 39:
                 case 41:
                 case 42:
                 case 43:
                     {
-                    alt18=1;
-                    }
-                    break;
-                case RULE_VAR:
-                case 37:
-                case 38:
-                case 46:
-                    {
-                    alt18=2;
+                    alt17=1;
                     }
                     break;
                 case RULE_SYM:
@@ -4635,18 +5734,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     switch ( input.LA(3) ) {
                     case RULE_SP:
                         {
-                        int LA18_5 = input.LA(4);
+                        int LA17_5 = input.LA(4);
 
-                        if ( ((LA18_5>=RULE_SYM && LA18_5<=RULE_VAR)||(LA18_5>=37 && LA18_5<=38)||LA18_5==46) ) {
-                            alt18=1;
+                        if ( (LA17_5==47) ) {
+                            alt17=2;
                         }
-                        else if ( (LA18_5==47) ) {
-                            alt18=2;
+                        else if ( ((LA17_5>=RULE_SYM && LA17_5<=RULE_VAR)||(LA17_5>=37 && LA17_5<=38)||LA17_5==46) ) {
+                            alt17=1;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 5, input);
+                                new NoViableAltException("", 17, 5, input);
 
                             throw nvae;
                         }
@@ -4654,18 +5753,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                         break;
                     case RULE_CR:
                         {
-                        int LA18_6 = input.LA(4);
+                        int LA17_6 = input.LA(4);
 
-                        if ( ((LA18_6>=RULE_SYM && LA18_6<=RULE_VAR)||(LA18_6>=37 && LA18_6<=38)||LA18_6==46) ) {
-                            alt18=1;
+                        if ( ((LA17_6>=RULE_SYM && LA17_6<=RULE_VAR)||(LA17_6>=37 && LA17_6<=38)||LA17_6==46) ) {
+                            alt17=1;
                         }
-                        else if ( (LA18_6==47) ) {
-                            alt18=2;
+                        else if ( (LA17_6==47) ) {
+                            alt17=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 6, input);
+                                new NoViableAltException("", 17, 6, input);
 
                             throw nvae;
                         }
@@ -4673,18 +5772,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                         break;
                     case RULE_TAB:
                         {
-                        int LA18_7 = input.LA(4);
+                        int LA17_7 = input.LA(4);
 
-                        if ( ((LA18_7>=RULE_SYM && LA18_7<=RULE_VAR)||(LA18_7>=37 && LA18_7<=38)||LA18_7==46) ) {
-                            alt18=1;
+                        if ( (LA17_7==47) ) {
+                            alt17=2;
                         }
-                        else if ( (LA18_7==47) ) {
-                            alt18=2;
+                        else if ( ((LA17_7>=RULE_SYM && LA17_7<=RULE_VAR)||(LA17_7>=37 && LA17_7<=38)||LA17_7==46) ) {
+                            alt17=1;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 7, input);
+                                new NoViableAltException("", 17, 7, input);
 
                             throw nvae;
                         }
@@ -4692,18 +5791,18 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                         break;
                     case RULE_LF:
                         {
-                        int LA18_8 = input.LA(4);
+                        int LA17_8 = input.LA(4);
 
-                        if ( ((LA18_8>=RULE_SYM && LA18_8<=RULE_VAR)||(LA18_8>=37 && LA18_8<=38)||LA18_8==46) ) {
-                            alt18=1;
+                        if ( ((LA17_8>=RULE_SYM && LA17_8<=RULE_VAR)||(LA17_8>=37 && LA17_8<=38)||LA17_8==46) ) {
+                            alt17=1;
                         }
-                        else if ( (LA18_8==47) ) {
-                            alt18=2;
+                        else if ( (LA17_8==47) ) {
+                            alt17=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
-                                new NoViableAltException("", 18, 8, input);
+                                new NoViableAltException("", 17, 8, input);
 
                             throw nvae;
                         }
@@ -4712,7 +5811,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     case 40:
                     case 47:
                         {
-                        alt18=2;
+                        alt17=2;
                         }
                         break;
                     case RULE_SYM:
@@ -4721,23 +5820,31 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     case 38:
                     case 46:
                         {
-                        alt18=1;
+                        alt17=1;
                         }
                         break;
                     default:
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 18, 4, input);
+                            new NoViableAltException("", 17, 3, input);
 
                         throw nvae;
                     }
 
                     }
                     break;
+                case RULE_VAR:
+                case 37:
+                case 38:
+                case 46:
+                    {
+                    alt17=2;
+                    }
+                    break;
                 default:
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 2, input);
+                        new NoViableAltException("", 17, 2, input);
 
                     throw nvae;
                 }
@@ -4746,104 +5853,163 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1774:2: (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:2: ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1774:2: (this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1775:5: this_EXPRSIMPLE_0= ruleEXPRSIMPLE this_LCs_1= ruleLCs kw= '=?' this_LCs_3= ruleLCs this_EXPRSIMPLE_4= ruleEXPRSIMPLE
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:2: ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:3: ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) ( (lv_ccc_1_0= ruleLCs ) ) otherlv_2= '=?' ( (lv_lc2_3_0= ruleLCs ) ) ( (lv_w_4_0= ruleEXPRSIMPLE ) )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2249:3: ( (lv_e1_0_0= ruleEXPRSIMPLE ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2250:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2250:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2251:3: lv_e1_0_0= ruleEXPRSIMPLE
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPREQAccess().getEXPRSIMPLEParserRuleCall_0_0()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPREQAccess().getE1EXPRSIMPLEParserRuleCall_0_0_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ4328);
-                    this_EXPRSIMPLE_0=ruleEXPRSIMPLE();
+                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ3878);
+                    lv_e1_0_0=ruleEXPRSIMPLE();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRSIMPLE_0);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPREQRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"e1",
+                              		lv_e1_0_0, 
+                              		"EXPRSIMPLE");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2267:2: ( (lv_ccc_1_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2268:1: (lv_ccc_1_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2268:1: (lv_ccc_1_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2269:3: lv_ccc_1_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getEXPREQAccess().getCccLCsParserRuleCall_0_1_0()); 
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPREQAccess().getLCsParserRuleCall_0_1()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPREQ4355);
-                    this_LCs_1=ruleLCs();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPREQ3899);
+                    lv_ccc_1_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LCs_1);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPREQRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ccc",
+                              		lv_ccc_1_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,47,FOLLOW_47_in_ruleEXPREQ4373); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_2=(Token)match(input,47,FOLLOW_47_in_ruleEXPREQ3911); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPREQAccess().getEqualsSignQuestionMarkKeyword_0_2()); 
+                          	newLeafNode(otherlv_2, grammarAccess.getEXPREQAccess().getEqualsSignQuestionMarkKeyword_0_2());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2289:1: ( (lv_lc2_3_0= ruleLCs ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2290:1: (lv_lc2_3_0= ruleLCs )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2290:1: (lv_lc2_3_0= ruleLCs )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2291:3: lv_lc2_3_0= ruleLCs
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPREQAccess().getLCsParserRuleCall_0_3()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPREQAccess().getLc2LCsParserRuleCall_0_3_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPREQ4395);
-                    this_LCs_3=ruleLCs();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      		current.merge(this_LCs_3);
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getEXPREQAccess().getEXPRSIMPLEParserRuleCall_0_4()); 
-                          
-                    }
-                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ4422);
-                    this_EXPRSIMPLE_4=ruleEXPRSIMPLE();
+                    pushFollow(FOLLOW_ruleLCs_in_ruleEXPREQ3932);
+                    lv_lc2_3_0=ruleLCs();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPRSIMPLE_4);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPREQRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"lc2",
+                              		lv_lc2_3_0, 
+                              		"LCs");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2307:2: ( (lv_w_4_0= ruleEXPRSIMPLE ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2308:1: (lv_w_4_0= ruleEXPRSIMPLE )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2308:1: (lv_w_4_0= ruleEXPRSIMPLE )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2309:3: lv_w_4_0= ruleEXPRSIMPLE
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              afterParserOrEnumRuleCall();
-                          
+                      	        newCompositeNode(grammarAccess.getEXPREQAccess().getWEXPRSIMPLEParserRuleCall_0_4_0()); 
+                      	    
                     }
+                    pushFollow(FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ3953);
+                    lv_w_4_0=ruleEXPRSIMPLE();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPREQRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"w",
+                              		lv_w_4_0, 
+                              		"EXPRSIMPLE");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
 
@@ -4851,43 +6017,56 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1825:6: (kw= '(' this_EXPR_6= ruleEXPR kw= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2326:6: (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1825:6: (kw= '(' this_EXPR_6= ruleEXPR kw= ')' )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1826:2: kw= '(' this_EXPR_6= ruleEXPR kw= ')'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2326:6: (otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')' )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2326:8: otherlv_5= '(' ( (lv_ex_6_0= ruleEXPR ) ) otherlv_7= ')'
                     {
-                    kw=(Token)match(input,38,FOLLOW_38_in_ruleEXPREQ4448); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,38,FOLLOW_38_in_ruleEXPREQ3973); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPREQAccess().getLeftParenthesisKeyword_1_0()); 
+                          	newLeafNode(otherlv_5, grammarAccess.getEXPREQAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2330:1: ( (lv_ex_6_0= ruleEXPR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2331:1: (lv_ex_6_0= ruleEXPR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2331:1: (lv_ex_6_0= ruleEXPR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2332:3: lv_ex_6_0= ruleEXPR
+                    {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getEXPREQAccess().getEXPRParserRuleCall_1_1()); 
-                          
+                      	        newCompositeNode(grammarAccess.getEXPREQAccess().getExEXPRParserRuleCall_1_1_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleEXPR_in_ruleEXPREQ4470);
-                    this_EXPR_6=ruleEXPR();
+                    pushFollow(FOLLOW_ruleEXPR_in_ruleEXPREQ3994);
+                    lv_ex_6_0=ruleEXPR();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_EXPR_6);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getEXPREQRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ex",
+                              		lv_ex_6_0, 
+                              		"EXPR");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
-                    kw=(Token)match(input,40,FOLLOW_40_in_ruleEXPREQ4488); if (state.failed) return current;
+
+
+                    }
+
+                    otherlv_7=(Token)match(input,40,FOLLOW_40_in_ruleEXPREQ4006); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getEXPREQAccess().getRightParenthesisKeyword_1_2()); 
+                          	newLeafNode(otherlv_7, grammarAccess.getEXPREQAccess().getRightParenthesisKeyword_1_2());
                           
                     }
 
@@ -4919,29 +6098,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLCs"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1862:1: entryRuleLCs returns [String current=null] : iv_ruleLCs= ruleLCs EOF ;
-    public final String entryRuleLCs() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2366:1: entryRuleLCs returns [EObject current=null] : iv_ruleLCs= ruleLCs EOF ;
+    public final EObject entryRuleLCs() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleLCs = null;
+        EObject iv_ruleLCs = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1863:2: (iv_ruleLCs= ruleLCs EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1864:2: iv_ruleLCs= ruleLCs EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2367:2: (iv_ruleLCs= ruleLCs EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2368:2: iv_ruleLCs= ruleLCs EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLCsRule()); 
             }
-            pushFollow(FOLLOW_ruleLCs_in_entryRuleLCs4536);
+            pushFollow(FOLLOW_ruleLCs_in_entryRuleLCs4049);
             iv_ruleLCs=ruleLCs();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleLCs.getText(); 
+               current =iv_ruleLCs; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLCs4547); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLCs4059); if (state.failed) return current;
 
             }
 
@@ -4959,50 +6138,59 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLCs"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1871:1: ruleLCs returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LC_0= ruleLC )? ;
-    public final AntlrDatatypeRuleToken ruleLCs() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2375:1: ruleLCs returns [EObject current=null] : ( (lv_a_0_0= ruleLC ) )? ;
+    public final EObject ruleLCs() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_LC_0 = null;
+        EObject lv_a_0_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1874:28: ( (this_LC_0= ruleLC )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1875:1: (this_LC_0= ruleLC )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2378:28: ( ( (lv_a_0_0= ruleLC ) )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2379:1: ( (lv_a_0_0= ruleLC ) )?
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1875:1: (this_LC_0= ruleLC )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2379:1: ( (lv_a_0_0= ruleLC ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( ((LA19_0>=RULE_SP && LA19_0<=RULE_LF)) ) {
-                alt19=1;
+            if ( (LA18_0==RULE_CR||(LA18_0>=RULE_SP && LA18_0<=RULE_LF)) ) {
+                alt18=1;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1876:5: this_LC_0= ruleLC
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2380:1: (lv_a_0_0= ruleLC )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2380:1: (lv_a_0_0= ruleLC )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2381:3: lv_a_0_0= ruleLC
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getLCsAccess().getLCParserRuleCall()); 
-                          
+                      	        newCompositeNode(grammarAccess.getLCsAccess().getALCParserRuleCall_0()); 
+                      	    
                     }
-                    pushFollow(FOLLOW_ruleLC_in_ruleLCs4594);
-                    this_LC_0=ruleLC();
+                    pushFollow(FOLLOW_ruleLC_in_ruleLCs4104);
+                    lv_a_0_0=ruleLC();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LC_0);
-                          
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getLCsRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"a",
+                              		lv_a_0_0, 
+                              		"LC");
+                      	        afterParserOrEnumRuleCall();
+                      	    
                     }
-                    if ( state.backtracking==0 ) {
-                       
-                              afterParserOrEnumRuleCall();
-                          
+
                     }
+
 
                     }
                     break;
@@ -5029,29 +6217,29 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLC"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1894:1: entryRuleLC returns [String current=null] : iv_ruleLC= ruleLC EOF ;
-    public final String entryRuleLC() throws RecognitionException {
-        String current = null;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2405:1: entryRuleLC returns [EObject current=null] : iv_ruleLC= ruleLC EOF ;
+    public final EObject entryRuleLC() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleLC = null;
+        EObject iv_ruleLC = null;
 
 
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1895:2: (iv_ruleLC= ruleLC EOF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1896:2: iv_ruleLC= ruleLC EOF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2406:2: (iv_ruleLC= ruleLC EOF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2407:2: iv_ruleLC= ruleLC EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLCRule()); 
             }
-            pushFollow(FOLLOW_ruleLC_in_entryRuleLC4641);
+            pushFollow(FOLLOW_ruleLC_in_entryRuleLC4140);
             iv_ruleLC=ruleLC();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleLC.getText(); 
+               current =iv_ruleLC; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLC4652); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLC4150); if (state.failed) return current;
 
             }
 
@@ -5069,118 +6257,194 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLC"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1903:1: ruleLC returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SP_0= RULE_SP | this_CR_1= RULE_CR | this_TAB_2= RULE_TAB | this_LF_3= RULE_LF ) ;
-    public final AntlrDatatypeRuleToken ruleLC() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2414:1: ruleLC returns [EObject current=null] : ( ( (lv_a_0_0= RULE_SP ) ) | ( (lv_z_1_0= RULE_CR ) ) | ( (lv_e_2_0= RULE_TAB ) ) | ( (lv_r_3_0= RULE_LF ) ) ) ;
+    public final EObject ruleLC() throws RecognitionException {
+        EObject current = null;
 
-        Token this_SP_0=null;
-        Token this_CR_1=null;
-        Token this_TAB_2=null;
-        Token this_LF_3=null;
+        Token lv_a_0_0=null;
+        Token lv_z_1_0=null;
+        Token lv_e_2_0=null;
+        Token lv_r_3_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1906:28: ( (this_SP_0= RULE_SP | this_CR_1= RULE_CR | this_TAB_2= RULE_TAB | this_LF_3= RULE_LF ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1907:1: (this_SP_0= RULE_SP | this_CR_1= RULE_CR | this_TAB_2= RULE_TAB | this_LF_3= RULE_LF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2417:28: ( ( ( (lv_a_0_0= RULE_SP ) ) | ( (lv_z_1_0= RULE_CR ) ) | ( (lv_e_2_0= RULE_TAB ) ) | ( (lv_r_3_0= RULE_LF ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2418:1: ( ( (lv_a_0_0= RULE_SP ) ) | ( (lv_z_1_0= RULE_CR ) ) | ( (lv_e_2_0= RULE_TAB ) ) | ( (lv_r_3_0= RULE_LF ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1907:1: (this_SP_0= RULE_SP | this_CR_1= RULE_CR | this_TAB_2= RULE_TAB | this_LF_3= RULE_LF )
-            int alt20=4;
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2418:1: ( ( (lv_a_0_0= RULE_SP ) ) | ( (lv_z_1_0= RULE_CR ) ) | ( (lv_e_2_0= RULE_TAB ) ) | ( (lv_r_3_0= RULE_LF ) ) )
+            int alt19=4;
             switch ( input.LA(1) ) {
             case RULE_SP:
                 {
-                alt20=1;
+                alt19=1;
                 }
                 break;
             case RULE_CR:
                 {
-                alt20=2;
+                alt19=2;
                 }
                 break;
             case RULE_TAB:
                 {
-                alt20=3;
+                alt19=3;
                 }
                 break;
             case RULE_LF:
                 {
-                alt20=4;
+                alt19=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1907:6: this_SP_0= RULE_SP
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2418:2: ( (lv_a_0_0= RULE_SP ) )
                     {
-                    this_SP_0=(Token)match(input,RULE_SP,FOLLOW_RULE_SP_in_ruleLC4692); if (state.failed) return current;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2418:2: ( (lv_a_0_0= RULE_SP ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2419:1: (lv_a_0_0= RULE_SP )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2419:1: (lv_a_0_0= RULE_SP )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2420:3: lv_a_0_0= RULE_SP
+                    {
+                    lv_a_0_0=(Token)match(input,RULE_SP,FOLLOW_RULE_SP_in_ruleLC4192); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_SP_0);
-                          
+                      			newLeafNode(lv_a_0_0, grammarAccess.getLCAccess().getASPTerminalRuleCall_0_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_SP_0, grammarAccess.getLCAccess().getSPTerminalRuleCall_0()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLCRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"a",
+                              		lv_a_0_0, 
+                              		"SP");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1915:10: this_CR_1= RULE_CR
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2437:6: ( (lv_z_1_0= RULE_CR ) )
                     {
-                    this_CR_1=(Token)match(input,RULE_CR,FOLLOW_RULE_CR_in_ruleLC4718); if (state.failed) return current;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2437:6: ( (lv_z_1_0= RULE_CR ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2438:1: (lv_z_1_0= RULE_CR )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2438:1: (lv_z_1_0= RULE_CR )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2439:3: lv_z_1_0= RULE_CR
+                    {
+                    lv_z_1_0=(Token)match(input,RULE_CR,FOLLOW_RULE_CR_in_ruleLC4220); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_CR_1);
-                          
+                      			newLeafNode(lv_z_1_0, grammarAccess.getLCAccess().getZCRTerminalRuleCall_1_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_CR_1, grammarAccess.getLCAccess().getCRTerminalRuleCall_1()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLCRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"z",
+                              		lv_z_1_0, 
+                              		"CR");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1923:10: this_TAB_2= RULE_TAB
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2456:6: ( (lv_e_2_0= RULE_TAB ) )
                     {
-                    this_TAB_2=(Token)match(input,RULE_TAB,FOLLOW_RULE_TAB_in_ruleLC4744); if (state.failed) return current;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2456:6: ( (lv_e_2_0= RULE_TAB ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2457:1: (lv_e_2_0= RULE_TAB )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2457:1: (lv_e_2_0= RULE_TAB )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2458:3: lv_e_2_0= RULE_TAB
+                    {
+                    lv_e_2_0=(Token)match(input,RULE_TAB,FOLLOW_RULE_TAB_in_ruleLC4248); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_TAB_2);
-                          
+                      			newLeafNode(lv_e_2_0, grammarAccess.getLCAccess().getETABTerminalRuleCall_2_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_TAB_2, grammarAccess.getLCAccess().getTABTerminalRuleCall_2()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLCRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"e",
+                              		lv_e_2_0, 
+                              		"TAB");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1931:10: this_LF_3= RULE_LF
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2475:6: ( (lv_r_3_0= RULE_LF ) )
                     {
-                    this_LF_3=(Token)match(input,RULE_LF,FOLLOW_RULE_LF_in_ruleLC4770); if (state.failed) return current;
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2475:6: ( (lv_r_3_0= RULE_LF ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2476:1: (lv_r_3_0= RULE_LF )
+                    {
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2476:1: (lv_r_3_0= RULE_LF )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2477:3: lv_r_3_0= RULE_LF
+                    {
+                    lv_r_3_0=(Token)match(input,RULE_LF,FOLLOW_RULE_LF_in_ruleLC4276); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_LF_3);
-                          
+                      			newLeafNode(lv_r_3_0, grammarAccess.getLCAccess().getRLFTerminalRuleCall_3_0()); 
+                      		
                     }
                     if ( state.backtracking==0 ) {
-                       
-                          newLeafNode(this_LF_3, grammarAccess.getLCAccess().getLFTerminalRuleCall_3()); 
-                          
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getLCRule());
+                      	        }
+                             		setWithLastConsumed(
+                             			current, 
+                             			"r",
+                              		lv_r_3_0, 
+                              		"LF");
+                      	    
                     }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -5205,36 +6469,48 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleLC"
 
-    // $ANTLR start synpred13_InternalLangage_while
-    public final void synpred13_InternalLangage_while_fragment() throws RecognitionException {   
-        AntlrDatatypeRuleToken this_EXPRSIMPLE_0 = null;
+    // $ANTLR start synpred14_InternalLangage_while
+    public final void synpred14_InternalLangage_while_fragment() throws RecognitionException {   
+        EObject lv_e1_0_0 = null;
 
 
-        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1270:5: (this_EXPRSIMPLE_0= ruleEXPRSIMPLE )
-        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1270:5: this_EXPRSIMPLE_0= ruleEXPRSIMPLE
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:2: ( ( (lv_e1_0_0= ruleEXPRSIMPLE ) ) )
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:2: ( (lv_e1_0_0= ruleEXPRSIMPLE ) )
+        {
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1599:2: ( (lv_e1_0_0= ruleEXPRSIMPLE ) )
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1600:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+        {
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1600:1: (lv_e1_0_0= ruleEXPRSIMPLE )
+        // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:1601:3: lv_e1_0_0= ruleEXPRSIMPLE
         {
         if ( state.backtracking==0 ) {
            
-                  newCompositeNode(grammarAccess.getEXPRAccess().getEXPRSIMPLEParserRuleCall_0()); 
-              
+          	        newCompositeNode(grammarAccess.getEXPRAccess().getE1EXPRSIMPLEParserRuleCall_0_0()); 
+          	    
         }
-        pushFollow(FOLLOW_ruleEXPRSIMPLE_in_synpred13_InternalLangage_while2901);
-        this_EXPRSIMPLE_0=ruleEXPRSIMPLE();
+        pushFollow(FOLLOW_ruleEXPRSIMPLE_in_synpred14_InternalLangage_while2634);
+        lv_e1_0_0=ruleEXPRSIMPLE();
 
         state._fsp--;
         if (state.failed) return ;
 
         }
+
+
+        }
+
+
+        }
     }
-    // $ANTLR end synpred13_InternalLangage_while
+    // $ANTLR end synpred14_InternalLangage_while
 
     // Delegated rules
 
-    public final boolean synpred13_InternalLangage_while() {
+    public final boolean synpred14_InternalLangage_while() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred13_InternalLangage_while_fragment(); // can never throw exception
+            synpred14_InternalLangage_while_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -5253,188 +6529,188 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleProgram_in_ruleModel136 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleProgram_in_entryRuleProgram171 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleProgram181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunction_in_ruleProgram227 = new BitSet(new long[]{0x00000000000403C2L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleProgram247 = new BitSet(new long[]{0x00000000000403C0L});
-    public static final BitSet FOLLOW_ruleProgram_in_ruleProgram267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction305 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunction315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleFunction352 = new BitSet(new long[]{0x00000000000003D0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleFunction371 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_SYM_in_ruleFunction387 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleFunction404 = new BitSet(new long[]{0x00000000001003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleFunction423 = new BitSet(new long[]{0x00000000001003C0L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleFunction443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDef_in_entryRuleDef479 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDef489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleDef526 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleDef545 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleInput_in_ruleDef565 = new BitSet(new long[]{0x00000000002003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleDef584 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDef595 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleDef616 = new BitSet(new long[]{0x00000000002003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleDef635 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDef646 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleDef658 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleDef677 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleOutput_in_ruleDef697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInput_in_entryRuleInput733 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInput743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleInput786 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleInput803 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleInput822 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleInput_in_ruleInput842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleInput866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOutput_in_entryRuleOutput907 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOutput917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput960 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleOutput977 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleOutput996 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleOutput_in_ruleOutput1016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommands_in_entryRuleCommands1082 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCommands1093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommand_in_ruleCommands1140 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleCommands1159 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommands1181 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommands1208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommand_in_entryRuleCommand1256 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCommand1267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleCommand1305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVars_in_ruleCommand1334 = new BitSet(new long[]{0x00000000040003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1361 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleCommand1379 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1401 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPRS_in_ruleCommand1428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleCommand1454 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1476 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1503 = new BitSet(new long[]{0x00000000100003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1530 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCommand1548 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1570 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1597 = new BitSet(new long[]{0x00000000200003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1624 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleCommand1642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleCommand1663 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1685 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1712 = new BitSet(new long[]{0x00000000100003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1739 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCommand1757 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1779 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1806 = new BitSet(new long[]{0x00000000200003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1833 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleCommand1851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleCommand1872 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1894 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1921 = new BitSet(new long[]{0x00000001000003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1948 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleCommand1966 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1988 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand2015 = new BitSet(new long[]{0x00000006000003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2042 = new BitSet(new long[]{0x0000000600000000L});
-    public static final BitSet FOLLOW_33_in_ruleCommand2061 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2083 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand2110 = new BitSet(new long[]{0x00000004000003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2137 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleCommand2157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleCommand2178 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2200 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand2227 = new BitSet(new long[]{0x00000010000003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2254 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleCommand2272 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2294 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand2321 = new BitSet(new long[]{0x00000000100003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2348 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCommand2366 = new BitSet(new long[]{0x00000008CA0003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2388 = new BitSet(new long[]{0x00000008CA000020L});
-    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand2415 = new BitSet(new long[]{0x00000000200003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2442 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleCommand2460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVars_in_entryRuleVars2502 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVars2513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleVars2553 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleVars2572 = new BitSet(new long[]{0x00000000000003E0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleVars2594 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleVars_in_ruleVars2621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRS_in_entryRuleEXPRS2669 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRS2680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRS2727 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleEXPRS2746 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRS2768 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPRS_in_ruleEXPRS2795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPR_in_entryRuleEXPR2843 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPR2854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPR2901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRAND_in_ruleEXPR2934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_entryRuleEXPRSIMPLE2980 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRSIMPLE2991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleEXPRSIMPLE3030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VAR_in_ruleEXPRSIMPLE3051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3104 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleEXPRSIMPLE3117 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3139 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3178 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleEXPRSIMPLE3191 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3213 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3254 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleEXPRSIMPLE3267 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3289 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3316 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3355 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_ruleEXPRSIMPLE3368 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3390 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3417 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3457 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3472 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3499 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLEXPR_in_entryRuleLEXPR3559 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLEXPR3570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleLEXPR3617 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleLEXPR3644 = new BitSet(new long[]{0x00004060000003F2L});
-    public static final BitSet FOLLOW_ruleLEXPR_in_ruleLEXPR3672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRAND_in_entryRuleEXPRAND3720 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRAND3731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPROR_in_ruleEXPRAND3778 = new BitSet(new long[]{0x00001000000003C2L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRAND3806 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_ruleEXPRAND3824 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRAND3846 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPRAND_in_ruleEXPRAND3873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPROR_in_entryRuleEXPROR3921 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPROR3932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRNOT_in_ruleEXPROR3979 = new BitSet(new long[]{0x00002000000003C2L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPROR4007 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_45_in_ruleEXPROR4025 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPROR4047 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPROR_in_ruleEXPROR4074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRNOT_in_entryRuleEXPRNOT4122 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRNOT4133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleEXPRNOT4172 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRNOT4194 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPREQ_in_ruleEXPRNOT4223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPREQ_in_entryRuleEXPREQ4269 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEXPREQ4280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ4328 = new BitSet(new long[]{0x00008000000003C0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPREQ4355 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_ruleEXPREQ4373 = new BitSet(new long[]{0x00000060000003F0L});
-    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPREQ4395 = new BitSet(new long[]{0x0000006000000030L});
-    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ4422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEXPREQ4448 = new BitSet(new long[]{0x00004060000003F0L});
-    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPREQ4470 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleEXPREQ4488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLCs_in_entryRuleLCs4536 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLCs4547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLC_in_ruleLCs4594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLC_in_entryRuleLC4641 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLC4652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SP_in_ruleLC4692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CR_in_ruleLC4718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_TAB_in_ruleLC4744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LF_in_ruleLC4770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_synpred13_InternalLangage_while2901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunction_in_ruleProgram227 = new BitSet(new long[]{0x0000000000040012L});
+    public static final BitSet FOLLOW_RULE_CR_in_ruleProgram246 = new BitSet(new long[]{0x0000000000040010L});
+    public static final BitSet FOLLOW_ruleProgram_in_ruleProgram272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction310 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunction320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleFunction357 = new BitSet(new long[]{0x00000000000003B0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleFunction378 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_SYM_in_ruleFunction395 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleFunction412 = new BitSet(new long[]{0x0000000000100390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleFunction433 = new BitSet(new long[]{0x0000000000100390L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleFunction454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDef_in_entryRuleDef490 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDef500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleDef537 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleDef558 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleInput_in_ruleDef579 = new BitSet(new long[]{0x0000000000200390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleDef600 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleDef612 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleDef633 = new BitSet(new long[]{0x0000000000200390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleDef654 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleDef666 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleDef678 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleDef699 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleOutput_in_ruleDef720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInput_in_entryRuleInput756 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInput766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleInput809 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleInput826 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleInput847 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleOutput_in_ruleInput868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleInput892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOutput_in_entryRuleOutput933 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOutput943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput986 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleOutput1003 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleOutput1024 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleInput_in_ruleOutput1045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput1069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommands_in_entryRuleCommands1110 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCommands1120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommand_in_ruleCommands1166 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_ruleCommands1179 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommands1200 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommands1221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommand_in_entryRuleCommand1259 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCommand1269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleCommand1306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVars_in_ruleCommand1334 = new BitSet(new long[]{0x0000000004000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1355 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleCommand1367 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1388 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPRS_in_ruleCommand1409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleCommand1429 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1450 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1471 = new BitSet(new long[]{0x0000000010000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1492 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCommand1504 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1525 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1546 = new BitSet(new long[]{0x0000000020000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1567 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleCommand1579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleCommand1599 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1620 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1641 = new BitSet(new long[]{0x0000000010000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1662 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCommand1674 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1695 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1716 = new BitSet(new long[]{0x0000000020000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1737 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleCommand1749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleCommand1769 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1790 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand1811 = new BitSet(new long[]{0x0000000100000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1832 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleCommand1844 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1865 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1886 = new BitSet(new long[]{0x0000000600000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1907 = new BitSet(new long[]{0x0000000600000000L});
+    public static final BitSet FOLLOW_33_in_ruleCommand1920 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1941 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand1962 = new BitSet(new long[]{0x0000000400000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand1983 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleCommand1997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleCommand2017 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2038 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand2059 = new BitSet(new long[]{0x0000001000000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2080 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleCommand2092 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2113 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleCommand2134 = new BitSet(new long[]{0x0000000010000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2155 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCommand2167 = new BitSet(new long[]{0x00000008CA0003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2188 = new BitSet(new long[]{0x00000008CA000040L});
+    public static final BitSet FOLLOW_ruleCommands_in_ruleCommand2209 = new BitSet(new long[]{0x0000000020000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleCommand2230 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleCommand2242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVars_in_entryRuleVars2279 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVars2289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleVars2331 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleVars2349 = new BitSet(new long[]{0x00000000000003D0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleVars2370 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleVars_in_ruleVars2391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRS_in_entryRuleEXPRS2429 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRS2439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRS2485 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleEXPRS2498 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRS2519 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPRS_in_ruleEXPRS2540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPR_in_entryRuleEXPR2578 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPR2588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPR2634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRAND_in_ruleEXPR2661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_entryRuleEXPRSIMPLE2697 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRSIMPLE2707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleEXPRSIMPLE2745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VAR_in_ruleEXPRSIMPLE2768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE2796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE2821 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleEXPRSIMPLE2833 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE2854 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE2866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE2886 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEXPRSIMPLE2898 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE2919 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE2931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE2951 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_ruleEXPRSIMPLE2963 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRSIMPLE2984 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3005 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3037 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_ruleEXPRSIMPLE3049 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRSIMPLE3074 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPRSIMPLE3094 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPRSIMPLE3126 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_SYM_in_ruleEXPRSIMPLE3143 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLEXPR_in_ruleEXPRSIMPLE3169 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPRSIMPLE3181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLEXPR_in_entryRuleLEXPR3218 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLEXPR3228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleLEXPR3274 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleLEXPR3295 = new BitSet(new long[]{0x00004060000003F2L});
+    public static final BitSet FOLLOW_ruleLEXPR_in_ruleLEXPR3316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRAND_in_entryRuleEXPRAND3353 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRAND3363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPROR_in_ruleEXPRAND3409 = new BitSet(new long[]{0x0000100000000392L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRAND3431 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_ruleEXPRAND3443 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRAND3464 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPRAND_in_ruleEXPRAND3485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPROR_in_entryRuleEXPROR3523 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPROR3533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRNOT_in_ruleEXPROR3579 = new BitSet(new long[]{0x0000200000000392L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPROR3601 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_45_in_ruleEXPROR3613 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPROR3634 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPROR_in_ruleEXPROR3655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRNOT_in_entryRuleEXPRNOT3693 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPRNOT3703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleEXPRNOT3741 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPRNOT3762 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPREQ_in_ruleEXPRNOT3785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPREQ_in_entryRuleEXPREQ3821 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEXPREQ3831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ3878 = new BitSet(new long[]{0x0000800000000390L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPREQ3899 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_ruleEXPREQ3911 = new BitSet(new long[]{0x00000060000003F0L});
+    public static final BitSet FOLLOW_ruleLCs_in_ruleEXPREQ3932 = new BitSet(new long[]{0x0000006000000060L});
+    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_ruleEXPREQ3953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleEXPREQ3973 = new BitSet(new long[]{0x00004060000003F0L});
+    public static final BitSet FOLLOW_ruleEXPR_in_ruleEXPREQ3994 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEXPREQ4006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLCs_in_entryRuleLCs4049 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLCs4059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLC_in_ruleLCs4104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLC_in_entryRuleLC4140 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLC4150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SP_in_ruleLC4192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CR_in_ruleLC4220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_TAB_in_ruleLC4248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LF_in_ruleLC4276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEXPRSIMPLE_in_synpred14_InternalLangage_while2634 = new BitSet(new long[]{0x0000000000000002L});
 
 }

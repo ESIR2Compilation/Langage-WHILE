@@ -10,7 +10,7 @@ public class BadFormatTest extends AbstractTest{
 		if (pos > -1) {
 			String ext = entry.substring(pos+1);
 			if(ext.equals(EXTENSION)) {
-				if (prettyPrinting() != null) {
+				if (prettyPrinting("src/entries/", entry) != null) {
 					this.rapport = OK + getClass().getSimpleName() + " : le fichier est de bonne extension et a ete prety_printe(extension = ."+EXTENSION+")";
 					estValide = true;
 				}
@@ -21,7 +21,7 @@ public class BadFormatTest extends AbstractTest{
 
 			}
 			else {
-				if (prettyPrinting() != null) {
+				if (prettyPrinting("src/entries/", entry) != null) {
 					this.rapport = FAIL + getClass().getSimpleName() + " : le fichier ne correspond pas au format de fichier attendu, extension attendu = ."+EXTENSION+" et extension reussi = ."+ext;
 					estValide = false;
 				}
@@ -33,7 +33,7 @@ public class BadFormatTest extends AbstractTest{
 
 		} 
 		else {
-			if (prettyPrinting() != null) {
+			if (prettyPrinting("src/entries/", entry) != null) {
 				this.rapport = FAIL + getClass().getSimpleName() + " : un fichier sans extension a ete pretty printe";
 				estValide = false;
 			}

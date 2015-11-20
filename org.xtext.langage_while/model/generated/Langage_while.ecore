@@ -6,31 +6,154 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//Function"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" upperBound="-1" eType="#//Function"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="u" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pp" eType="#//Program"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="d" eType="#//Def" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Def">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="in" eType="#//Input" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="z" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="#//Output" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="v" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="in" eType="#//Input" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="z" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="in" eType="#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Output">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="n" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="#//Output" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="q" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Commands">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s" eType="#//Commands"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//Vars" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//EXPRS" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ll" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ee" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cc" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="z" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="k" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hh" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tt" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vv" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c1" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ss" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mm" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jj" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kk" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hg" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c2" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gg" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ff" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dd" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sq" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wx" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc2" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc3" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc4" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c3" eType="#//Commands"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc5" eType="#//LCs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vars">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="a" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//Vars" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPRS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e2" eType="#//EXPRS" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPRSIMPLE"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ex" eType="#//EXPRAND"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPRSIMPLE">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="yy" eType="#//LEXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//LEXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="w" eType="#//LEXPR" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LEXPR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//LEXPR" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPRAND">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//EXPROR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc1" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc2" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ee" eType="#//EXPRAND"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPROR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPRNOT"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc1" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc2" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e2" eType="#//EXPROR" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPRNOT">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc1" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPREQ" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EXPREQ">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPRSIMPLE"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ccc" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc2" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="w" eType="#//EXPRSIMPLE"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ex" eType="#//EXPR" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="n" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LCs" eSuperTypes="#//EXPRSIMPLE">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//LC" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="a" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="e" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

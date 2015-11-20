@@ -26,19 +26,9 @@ public class Langage_whileSyntacticSequencer extends AbstractSyntacticSequencer 
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getLCsRule())
-			return getLCsToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * LCs : LC?;
-	 */
-	protected String getLCsToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

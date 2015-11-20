@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.langage_while.Input#getV <em>V</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Input#getZ <em>Z</em>}</li>
  *   <li>{@link org.xtext.langage_while.Input#getIn <em>In</em>}</li>
  *   <li>{@link org.xtext.langage_while.Input#getY <em>Y</em>}</li>
  * </ul>
@@ -51,6 +52,32 @@ public interface Input extends EObject
   void setV(String value);
 
   /**
+   * Returns the value of the '<em><b>Z</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Z</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Z</em>' containment reference.
+   * @see #setZ(LCs)
+   * @see org.xtext.langage_while.Langage_whilePackage#getInput_Z()
+   * @model containment="true"
+   * @generated
+   */
+  LCs getZ();
+
+  /**
+   * Sets the value of the '{@link org.xtext.langage_while.Input#getZ <em>Z</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Z</em>' containment reference.
+   * @see #getZ()
+   * @generated
+   */
+  void setZ(LCs value);
+
+  /**
    * Returns the value of the '<em><b>In</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -59,12 +86,12 @@ public interface Input extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>In</em>' containment reference.
-   * @see #setIn(Input)
+   * @see #setIn(Output)
    * @see org.xtext.langage_while.Langage_whilePackage#getInput_In()
    * @model containment="true"
    * @generated
    */
-  Input getIn();
+  Output getIn();
 
   /**
    * Sets the value of the '{@link org.xtext.langage_while.Input#getIn <em>In</em>}' containment reference.
@@ -74,7 +101,7 @@ public interface Input extends EObject
    * @see #getIn()
    * @generated
    */
-  void setIn(Input value);
+  void setIn(Output value);
 
   /**
    * Returns the value of the '<em><b>Y</b></em>' attribute.

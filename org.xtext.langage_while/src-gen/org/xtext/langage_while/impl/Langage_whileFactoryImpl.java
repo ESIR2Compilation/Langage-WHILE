@@ -70,7 +70,20 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
       case Langage_whilePackage.DEF: return createDef();
       case Langage_whilePackage.INPUT: return createInput();
       case Langage_whilePackage.OUTPUT: return createOutput();
+      case Langage_whilePackage.COMMANDS: return createCommands();
+      case Langage_whilePackage.COMMAND: return createCommand();
+      case Langage_whilePackage.VARS: return createVars();
+      case Langage_whilePackage.EXPRS: return createEXPRS();
+      case Langage_whilePackage.EXPR: return createEXPR();
+      case Langage_whilePackage.EXPRSIMPLE: return createEXPRSIMPLE();
+      case Langage_whilePackage.LEXPR: return createLEXPR();
+      case Langage_whilePackage.EXPRAND: return createEXPRAND();
+      case Langage_whilePackage.EXPROR: return createEXPROR();
+      case Langage_whilePackage.EXPRNOT: return createEXPRNOT();
+      case Langage_whilePackage.EXPREQ: return createEXPREQ();
       case Langage_whilePackage.VARIABLE: return createVariable();
+      case Langage_whilePackage.LCS: return createLCs();
+      case Langage_whilePackage.LC: return createLC();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -147,10 +160,153 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
+  public Commands createCommands()
+  {
+    CommandsImpl commands = new CommandsImpl();
+    return commands;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Command createCommand()
+  {
+    CommandImpl command = new CommandImpl();
+    return command;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Vars createVars()
+  {
+    VarsImpl vars = new VarsImpl();
+    return vars;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPRS createEXPRS()
+  {
+    EXPRSImpl exprs = new EXPRSImpl();
+    return exprs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPR createEXPR()
+  {
+    EXPRImpl expr = new EXPRImpl();
+    return expr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPRSIMPLE createEXPRSIMPLE()
+  {
+    EXPRSIMPLEImpl exprsimple = new EXPRSIMPLEImpl();
+    return exprsimple;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LEXPR createLEXPR()
+  {
+    LEXPRImpl lexpr = new LEXPRImpl();
+    return lexpr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPRAND createEXPRAND()
+  {
+    EXPRANDImpl exprand = new EXPRANDImpl();
+    return exprand;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPROR createEXPROR()
+  {
+    EXPRORImpl expror = new EXPRORImpl();
+    return expror;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPRNOT createEXPRNOT()
+  {
+    EXPRNOTImpl exprnot = new EXPRNOTImpl();
+    return exprnot;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPREQ createEXPREQ()
+  {
+    EXPREQImpl expreq = new EXPREQImpl();
+    return expreq;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Variable createVariable()
   {
     VariableImpl variable = new VariableImpl();
     return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LCs createLCs()
+  {
+    LCsImpl lCs = new LCsImpl();
+    return lCs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LC createLC()
+  {
+    LCImpl lc = new LCImpl();
+    return lc;
   }
 
   /**

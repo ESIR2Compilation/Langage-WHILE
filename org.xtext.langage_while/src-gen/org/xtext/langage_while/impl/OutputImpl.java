@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.langage_while.Input;
+import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Output;
 
@@ -22,6 +24,7 @@ import org.xtext.langage_while.Output;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getN <em>N</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getQ <em>Q</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getO <em>O</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getS <em>S</em>}</li>
  * </ul>
@@ -52,6 +55,16 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   protected String n = N_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getQ() <em>Q</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getQ()
+   * @generated
+   * @ordered
+   */
+  protected LCs q;
+
+  /**
    * The cached value of the '{@link #getO() <em>O</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -59,7 +72,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * @generated
    * @ordered
    */
-  protected Output o;
+  protected Input o;
 
   /**
    * The default value of the '{@link #getS() <em>S</em>}' attribute.
@@ -130,7 +143,55 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public Output getO()
+  public LCs getQ()
+  {
+    return q;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetQ(LCs newQ, NotificationChain msgs)
+  {
+    LCs oldQ = q;
+    q = newQ;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__Q, oldQ, newQ);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setQ(LCs newQ)
+  {
+    if (newQ != q)
+    {
+      NotificationChain msgs = null;
+      if (q != null)
+        msgs = ((InternalEObject)q).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__Q, null, msgs);
+      if (newQ != null)
+        msgs = ((InternalEObject)newQ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__Q, null, msgs);
+      msgs = basicSetQ(newQ, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__Q, newQ, newQ));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Input getO()
   {
     return o;
   }
@@ -140,9 +201,9 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetO(Output newO, NotificationChain msgs)
+  public NotificationChain basicSetO(Input newO, NotificationChain msgs)
   {
-    Output oldO = o;
+    Input oldO = o;
     o = newO;
     if (eNotificationRequired())
     {
@@ -157,7 +218,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setO(Output newO)
+  public void setO(Input newO)
   {
     if (newO != o)
     {
@@ -206,6 +267,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   {
     switch (featureID)
     {
+      case Langage_whilePackage.OUTPUT__Q:
+        return basicSetQ(null, msgs);
       case Langage_whilePackage.OUTPUT__O:
         return basicSetO(null, msgs);
     }
@@ -224,6 +287,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
     {
       case Langage_whilePackage.OUTPUT__N:
         return getN();
+      case Langage_whilePackage.OUTPUT__Q:
+        return getQ();
       case Langage_whilePackage.OUTPUT__O:
         return getO();
       case Langage_whilePackage.OUTPUT__S:
@@ -245,8 +310,11 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
       case Langage_whilePackage.OUTPUT__N:
         setN((String)newValue);
         return;
+      case Langage_whilePackage.OUTPUT__Q:
+        setQ((LCs)newValue);
+        return;
       case Langage_whilePackage.OUTPUT__O:
-        setO((Output)newValue);
+        setO((Input)newValue);
         return;
       case Langage_whilePackage.OUTPUT__S:
         setS((String)newValue);
@@ -268,8 +336,11 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
       case Langage_whilePackage.OUTPUT__N:
         setN(N_EDEFAULT);
         return;
+      case Langage_whilePackage.OUTPUT__Q:
+        setQ((LCs)null);
+        return;
       case Langage_whilePackage.OUTPUT__O:
-        setO((Output)null);
+        setO((Input)null);
         return;
       case Langage_whilePackage.OUTPUT__S:
         setS(S_EDEFAULT);
@@ -290,6 +361,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
     {
       case Langage_whilePackage.OUTPUT__N:
         return N_EDEFAULT == null ? n != null : !N_EDEFAULT.equals(n);
+      case Langage_whilePackage.OUTPUT__Q:
+        return q != null;
       case Langage_whilePackage.OUTPUT__O:
         return o != null;
       case Langage_whilePackage.OUTPUT__S:

@@ -1,5 +1,0 @@
-20 nov. 2015 10:05:27 - Pretty Printing
-[OK]     BadFormatTest : le fichier n'est pas de bonne extension et a ete rejete par le pretty printer (extension = .txt)
-[FAILED] SameCodeTest : Erreur lors de la lecture de oracleBadFormatTest2.whpp
-[FAILED] BeautifulPrintTest : Erreur lors de la lecture de oracleBadFormatTest2.whpp
-[FAILED] DoublePrintTest test de DoublePrint �chou� sur l'entree oracleBadFormatTest2.txt

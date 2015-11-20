@@ -62,6 +62,7 @@ public class Testeur {
 				test.setEntry(file);
 				//Appliquer les tests concernes
 				test.tester();
+				
 				String rapport = test.genererRapport();
 
 				if (option == DETAILED)
@@ -72,6 +73,8 @@ public class Testeur {
 					if (option == COUNT)
 						count++;
 				}
+				if (test instanceof BadFormatTest && test.prettyPrinting("src/entries/", file) == null)
+					break;
 			}
 
 			if (option == COUNT)

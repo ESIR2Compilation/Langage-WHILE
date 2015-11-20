@@ -77,6 +77,105 @@ public interface Langage_whileFactory extends EFactory
   Output createOutput();
 
   /**
+   * Returns a new object of class '<em>Commands</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Commands</em>'.
+   * @generated
+   */
+  Commands createCommands();
+
+  /**
+   * Returns a new object of class '<em>Command</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Command</em>'.
+   * @generated
+   */
+  Command createCommand();
+
+  /**
+   * Returns a new object of class '<em>Vars</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vars</em>'.
+   * @generated
+   */
+  Vars createVars();
+
+  /**
+   * Returns a new object of class '<em>EXPRS</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPRS</em>'.
+   * @generated
+   */
+  EXPRS createEXPRS();
+
+  /**
+   * Returns a new object of class '<em>EXPR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPR</em>'.
+   * @generated
+   */
+  EXPR createEXPR();
+
+  /**
+   * Returns a new object of class '<em>EXPRSIMPLE</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPRSIMPLE</em>'.
+   * @generated
+   */
+  EXPRSIMPLE createEXPRSIMPLE();
+
+  /**
+   * Returns a new object of class '<em>LEXPR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LEXPR</em>'.
+   * @generated
+   */
+  LEXPR createLEXPR();
+
+  /**
+   * Returns a new object of class '<em>EXPRAND</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPRAND</em>'.
+   * @generated
+   */
+  EXPRAND createEXPRAND();
+
+  /**
+   * Returns a new object of class '<em>EXPROR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPROR</em>'.
+   * @generated
+   */
+  EXPROR createEXPROR();
+
+  /**
+   * Returns a new object of class '<em>EXPRNOT</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPRNOT</em>'.
+   * @generated
+   */
+  EXPRNOT createEXPRNOT();
+
+  /**
+   * Returns a new object of class '<em>EXPREQ</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EXPREQ</em>'.
+   * @generated
+   */
+  EXPREQ createEXPREQ();
+
+  /**
    * Returns a new object of class '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -84,6 +183,24 @@ public interface Langage_whileFactory extends EFactory
    * @generated
    */
   Variable createVariable();
+
+  /**
+   * Returns a new object of class '<em>LCs</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LCs</em>'.
+   * @generated
+   */
+  LCs createLCs();
+
+  /**
+   * Returns a new object of class '<em>LC</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LC</em>'.
+   * @generated
+   */
+  LC createLC();
 
   /**
    * Returns the package supported by this factory.
