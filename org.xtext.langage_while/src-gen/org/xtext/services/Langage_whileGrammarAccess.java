@@ -40,7 +40,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cFFunctionParserRuleCall_0_0 = (RuleCall)cFAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final RuleCall cCRTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final RuleCall cLCsParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
 		private final Assignment cPpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cPpProgramParserRuleCall_1_1_0 = (RuleCall)cPpAssignment_1_1.eContents().get(0);
 		
@@ -48,23 +48,23 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//	 * Identificateur LC
 		//	 * Donner des noms (command etc)
 		//	 * / / * PROGRAM * / Program:
-		//	f+=Function* (CR pp=Program)?;
+		//	f=Function (LCs pp=Program)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//f+=Function* (CR pp=Program)?
+		//f=Function (LCs pp=Program)?
 		public Group getGroup() { return cGroup; }
 
-		//f+=Function*
+		//f=Function
 		public Assignment getFAssignment_0() { return cFAssignment_0; }
 
 		//Function
 		public RuleCall getFFunctionParserRuleCall_0_0() { return cFFunctionParserRuleCall_0_0; }
 
-		//(CR pp=Program)?
+		//(LCs pp=Program)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//CR
-		public RuleCall getCRTerminalRuleCall_1_0() { return cCRTerminalRuleCall_1_0; }
+		//LCs
+		public RuleCall getLCsParserRuleCall_1_0() { return cLCsParserRuleCall_1_0; }
 
 		//pp=Program
 		public Assignment getPpAssignment_1_1() { return cPpAssignment_1_1; }
@@ -1153,7 +1153,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	//	 * Identificateur LC
 	//	 * Donner des noms (command etc)
 	//	 * / / * PROGRAM * / Program:
-	//	f+=Function* (CR pp=Program)?;
+	//	f=Function (LCs pp=Program)?;
 	public ProgramElements getProgramAccess() {
 		return pProgram;
 	}

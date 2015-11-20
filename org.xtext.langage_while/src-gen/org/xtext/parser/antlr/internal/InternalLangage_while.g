@@ -131,7 +131,7 @@ ruleProgram returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getProgramRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"f",
         		lv_f_0_0, 
@@ -140,9 +140,16 @@ ruleProgram returns [EObject current=null]
 	    }
 
 )
-)*(this_CR_1=RULE_CR
+)(
+	{ 
+	  /* */ 
+	}
     { 
-    newLeafNode(this_CR_1, grammarAccess.getProgramAccess().getCRTerminalRuleCall_1_0()); 
+        newCompositeNode(grammarAccess.getProgramAccess().getLCsParserRuleCall_1_0()); 
+    }
+ruleLCs
+    { 
+        afterParserOrEnumRuleCall();
     }
 (
 (

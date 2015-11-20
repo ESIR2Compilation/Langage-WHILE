@@ -2,21 +2,14 @@
  */
 package org.xtext.langage_while.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.langage_while.Function;
 import org.xtext.langage_while.Langage_whilePackage;
@@ -39,14 +32,14 @@ import org.xtext.langage_while.Program;
 public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 {
   /**
-   * The cached value of the '{@link #getF() <em>F</em>}' containment reference list.
+   * The cached value of the '{@link #getF() <em>F</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getF()
    * @generated
    * @ordered
    */
-  protected EList<Function> f;
+  protected Function f;
 
   /**
    * The cached value of the '{@link #getPp() <em>Pp</em>}' containment reference.
@@ -84,13 +77,47 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Function> getF()
+  public Function getF()
   {
-    if (f == null)
-    {
-      f = new EObjectContainmentEList<Function>(Function.class, this, Langage_whilePackage.PROGRAM__F);
-    }
     return f;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetF(Function newF, NotificationChain msgs)
+  {
+    Function oldF = f;
+    f = newF;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.PROGRAM__F, oldF, newF);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setF(Function newF)
+  {
+    if (newF != f)
+    {
+      NotificationChain msgs = null;
+      if (f != null)
+        msgs = ((InternalEObject)f).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.PROGRAM__F, null, msgs);
+      if (newF != null)
+        msgs = ((InternalEObject)newF).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.PROGRAM__F, null, msgs);
+      msgs = basicSetF(newF, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.PROGRAM__F, newF, newF));
   }
 
   /**
@@ -152,7 +179,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case Langage_whilePackage.PROGRAM__F:
-        return ((InternalEList<?>)getF()).basicRemove(otherEnd, msgs);
+        return basicSetF(null, msgs);
       case Langage_whilePackage.PROGRAM__PP:
         return basicSetPp(null, msgs);
     }
@@ -182,15 +209,13 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case Langage_whilePackage.PROGRAM__F:
-        getF().clear();
-        getF().addAll((Collection<? extends Function>)newValue);
+        setF((Function)newValue);
         return;
       case Langage_whilePackage.PROGRAM__PP:
         setPp((Program)newValue);
@@ -210,7 +235,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case Langage_whilePackage.PROGRAM__F:
-        getF().clear();
+        setF((Function)null);
         return;
       case Langage_whilePackage.PROGRAM__PP:
         setPp((Program)null);
@@ -230,7 +255,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case Langage_whilePackage.PROGRAM__F:
-        return f != null && !f.isEmpty();
+        return f != null;
       case Langage_whilePackage.PROGRAM__PP:
         return pp != null;
     }

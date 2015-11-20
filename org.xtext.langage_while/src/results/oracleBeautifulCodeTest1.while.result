@@ -1,0 +1,5 @@
+20 nov. 2015 09:44:41 - Pretty Printing
+[FAILED] BadFormatTest : le fichier est de bonne extension et n'a pas  �t� pretty print�(extension = .while)
+[OK]     SameCodeTest : Le pretty printing r�utilise exactement le m�me nombre de terme employ� dans le fichier d'entr�e.
+[OK]     BeautifulPrintTest
+[FAILED] DoublePrintTest test de DoublePrint �chou� sur l'entr�e oracleBeautifulCodeTest1.while

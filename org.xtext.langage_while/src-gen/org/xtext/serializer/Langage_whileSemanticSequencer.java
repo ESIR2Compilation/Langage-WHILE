@@ -137,7 +137,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (f+=Function* pp=Program?)
+	 *     (f=Function pp=Program?)
 	 */
 	protected void sequence_Program(EObject context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

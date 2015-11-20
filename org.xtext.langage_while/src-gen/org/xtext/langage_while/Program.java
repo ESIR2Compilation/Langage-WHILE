@@ -2,8 +2,6 @@
  */
 package org.xtext.langage_while;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -26,20 +24,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Program extends EObject
 {
   /**
-   * Returns the value of the '<em><b>F</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.langage_while.Function}.
+   * Returns the value of the '<em><b>F</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>F</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>F</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>F</em>' containment reference list.
+   * @return the value of the '<em>F</em>' containment reference.
+   * @see #setF(Function)
    * @see org.xtext.langage_while.Langage_whilePackage#getProgram_F()
    * @model containment="true"
    * @generated
    */
-  EList<Function> getF();
+  Function getF();
+
+  /**
+   * Sets the value of the '{@link org.xtext.langage_while.Program#getF <em>F</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>F</em>' containment reference.
+   * @see #getF()
+   * @generated
+   */
+  void setF(Function value);
 
   /**
    * Returns the value of the '<em><b>Pp</b></em>' containment reference.

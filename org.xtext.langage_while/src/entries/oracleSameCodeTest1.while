@@ -1,0 +1,4 @@
+function test1!:
+	read A!
+	%A! := A!
+	%write A!
