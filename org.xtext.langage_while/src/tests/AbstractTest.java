@@ -1,17 +1,24 @@
 package tests;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.xtext.generator.Langage_whileGenerator;
+
 public abstract class AbstractTest {
 
+	private Langage_whileGenerator generator;
 	protected static final String OK   = "[OK]    " + " ";
 	protected static final String FAIL = "[FAILED]" + " ";
 	protected String rapport;
 	protected String entry;
 	protected boolean estValide;
 
+	public AbstractTest(){
+		generator = new Langage_whileGenerator();
+	}
 	/**
 	 * @return Le resultat du test
 	 */
@@ -45,5 +52,9 @@ public abstract class AbstractTest {
 		this.entry = entry;
 		rapport = "";
 		estValide = false;
+	}
+	
+	public File prettyPrinting(){
+		return generator.generate(entry);
 	}
 }

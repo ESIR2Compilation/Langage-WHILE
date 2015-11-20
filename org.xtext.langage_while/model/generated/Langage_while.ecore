@@ -6,7 +6,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="f" upperBound="-1" eType="#//Function"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//Function"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pp" eType="#//Program"
         containment="true"/>

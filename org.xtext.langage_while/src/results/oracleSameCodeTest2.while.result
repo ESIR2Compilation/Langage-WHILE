@@ -1,5 +1,5 @@
-20 nov. 2015 09:44:41 - Pretty Printing
-[FAILED] BadFormatTest : le fichier est de bonne extension et n'a pas  �t� pretty print�(extension = .while)
+20 nov. 2015 10:05:27 - Pretty Printing
+[FAILED] BadFormatTest : le fichier est de bonne extension et n'a pas  ete pretty printe(extension = .while)
 [FAILED] SameCodeTest : Perte ou ajout de terme - autre que la mise en page dans le pretty printing.
 [OK]     BeautifulPrintTest
-[FAILED] DoublePrintTest test de DoublePrint �chou� sur l'entr�e oracleSameCodeTest2.while
+[FAILED] DoublePrintTest test de DoublePrint �chou� sur l'entree oracleSameCodeTest2.while

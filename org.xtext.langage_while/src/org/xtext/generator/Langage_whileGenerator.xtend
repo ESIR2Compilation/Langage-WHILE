@@ -20,7 +20,47 @@ import org.eclipse.xtext.naming.IQualifiedNameProvider
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
   import com.google.inject.Inject
+import org.xtext.Langage_whileStandaloneSetup
+import org.eclipse.xtext.resource.XtextResourceSet
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.util.EcoreUtil
+import java.io.FileWriter
+import java.io.BufferedWriter
+import java.io.File
+
 class Langage_whileGenerator implements IGenerator {
+	
+	
+	def public File generate(String file)
+	{
+		val injector = new Langage_whileStandaloneSetup().createInjectorAndDoEMFRegistration();
+		val resourceSet = injector.getInstance(XtextResourceSet);
+		val uri = URI.createURI("src/entries/" + file);
+		val xtextResource = resourceSet.getResource(uri, true);
+		EcoreUtil.resolveAll(xtextResource);
+		
+		//TODO supprimer l'extension précédente.
+		var pos = file.lastIndexOf(".");
+		var ext = file.substring(pos+1);
+		
+		if (!ext.equals("while"))
+			return null;
+			
+		var name = file.substring(0, pos);
+		var out = name + ".whpp"
+			
+		try{
+  			val fstream = new FileWriter("src/outputs/" + out);
+  			val buff = new BufferedWriter(fstream);
+  			for(p: xtextResource.allContents.toIterable.filter(Program))
+				buff.write(p.compile().toString);
+  			buff.close();
+  			return new File("src/outputs/" + out);
+  		}catch (Exception e){
+  			e.printStackTrace();
+  		}
+  		return null;
+	}
 	
 	   @Inject extension IQualifiedNameProvider
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
