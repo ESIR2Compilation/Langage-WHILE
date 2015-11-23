@@ -5,6 +5,11 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * Cette classe permet de comparer si un fichier pretty printé n'a pas eu des ajouts
+ * ou au contraire des pertes d'informations, hors caractère blanc (tabulation, retour
+ * à la ligne, espace, etc).
+ */
 public class SameCodeTest extends AbstractTest{
 
 	private static final String EXTENSION = "whpp";
@@ -33,7 +38,6 @@ public class SameCodeTest extends AbstractTest{
 		}
 		
 		contentEntry = st.toString();
-		prettyPrinting("src/entries/", entry);
 		
 		try {
 			int pos = entry.lastIndexOf(".");

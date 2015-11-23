@@ -4,6 +4,11 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
+/**
+ * Prend en paramètre un fichier .while. La classe print l'entrée, puis reprint le printé.
+ * Cette classe vient ensuite comparer les deux fichiers pretty printé, et vérifie qu'ils sont
+ * exacts au caractère près.
+ */
 public class DoublePrintTest extends AbstractTest{
 	
 	public void tester() {
