@@ -114,7 +114,7 @@ class Langage_whileGenerator implements IGenerator {
 		
 		read «d.in.compile+"
 "» % «d.v.compile+"
-"» % write+  «d.o.compile»
+"» % write  «d.o.compile»
 	'''
 	
 	def compile (Input l)

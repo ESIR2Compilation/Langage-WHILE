@@ -1,0 +1,14 @@
+function test1!:
+
+
+read A! 
+
+ % if nil then  b!
+
+	else	A!=null 
+
+	fi;  
+
+ % write  A!
+nullorg.xtext.langage_while.impl.ProgramImpl@c80397 (u: null)
+
