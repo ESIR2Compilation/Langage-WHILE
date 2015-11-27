@@ -73,7 +73,8 @@ public class Testeur {
 					if (option == COUNT)
 						count++;
 				}
-				if (test instanceof BadFormatTest && test.prettyPrinting("src/entries/", file) == null)
+				
+				if (test instanceof BadFormatTest && ((BadFormatTest) test).getFile() == null)
 					break;
 			}
 

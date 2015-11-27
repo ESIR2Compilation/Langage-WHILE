@@ -1,5 +1,7 @@
 package tests;
 
+import java.io.File;
+
 /**
  * Prend en paramètre un fichier .while. La classe vérifie si l'extension est du format
  * while ou whpp.
@@ -8,6 +10,7 @@ public class BadFormatTest extends AbstractTest{
 
 	private static final String EXTENSION = "while";
 	private static final String EXTENSION2 = "whpp";
+	private File file = null;
 
 	@Override
 	public void tester() {
@@ -15,7 +18,8 @@ public class BadFormatTest extends AbstractTest{
 		if (pos > -1) {
 			String ext = entry.substring(pos+1);
 			if(ext.equals(EXTENSION) || ext.equals(EXTENSION2)) {
-				if (prettyPrinting("src/entries/", entry) != null) {
+				file = prettyPrinting("src/entries/", entry);
+				if (file != null) {
 					this.rapport = OK + getClass().getSimpleName() + " : le fichier est de bonne extension et a ete pretty printe(extension = ."+EXTENSION+" ou ." + EXTENSION2 + ")";
 					estValide = true;
 				}
@@ -26,7 +30,8 @@ public class BadFormatTest extends AbstractTest{
 
 			}
 			else {
-				if (prettyPrinting("src/entries/", entry) != null) {
+				file = prettyPrinting("src/entries/", entry);
+				if (file != null) {
 					this.rapport = FAIL + getClass().getSimpleName() + " : le fichier ne correspond pas au format de fichier attendu, extension attendu = ."+EXTENSION+" ou ." + EXTENSION2 + " et extension reussi = ."+ext;
 					estValide = false;
 				}
@@ -38,7 +43,8 @@ public class BadFormatTest extends AbstractTest{
 
 		} 
 		else {
-			if (prettyPrinting("src/entries/", entry) != null) {
+			file = prettyPrinting("src/entries/", entry);
+			if (file != null) {
 				this.rapport = FAIL + getClass().getSimpleName() + " : un fichier sans extension a ete pretty printe";
 				estValide = false;
 			}
@@ -47,6 +53,10 @@ public class BadFormatTest extends AbstractTest{
 				estValide = true;
 			}
 		}
+	}
+	
+	public File getFile(){
+		return file;
 	}
 }
 

@@ -46,16 +46,20 @@ class Langage_whileGenerator implements IGenerator {
 		
 		var pos = file.lastIndexOf(".");
 		var ext = file.substring(pos+1);
-		
-		if (!ext.equals("while"))
+		//TODO
+		if (! ext.equals("while"))
 			return null;
 			
 		val xtextResource = resourceSet.getResource(uri, true);
 		EcoreUtil.resolveAll(xtextResource);
 		var name = file.substring(0, pos);
-		var out = name + ".whpp"
+		var out = name;
+		if (path.equals("src/outputs/"))
+			out += "1";
+		out += ".whpp";
 			
 		try{
+			
   			val fstream = new FileWriter("src/outputs/" + out);
   			val buff = new BufferedWriter(fstream);
   			for(p: xtextResource.allContents.toIterable.filter(Program))
