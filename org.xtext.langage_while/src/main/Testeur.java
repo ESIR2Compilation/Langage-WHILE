@@ -47,7 +47,7 @@ public class Testeur {
 
 	// Application des tests
 	public void testerPrettyPrinter(){
-		
+
 		tests.clear();
 		tests.add(new BadFormatTest());
 		tests.add(new SameCodeTest());
@@ -64,7 +64,7 @@ public class Testeur {
 				test.setEntry(file);
 				//Appliquer les tests concernes
 				test.tester();
-				
+
 				String rapport = test.genererRapport();
 
 				if (option == DETAILED)
@@ -75,7 +75,7 @@ public class Testeur {
 					if (option == COUNT)
 						count++;
 				}
-				
+
 				if (test instanceof BadFormatTest && ((BadFormatTest) test).getFile() == null)
 					break;
 			}
@@ -85,10 +85,11 @@ public class Testeur {
 			else
 				System.out.println();
 		}
-		
+
 		System.out.println("========== StressTest ==========");
 		AbstractTest stressTest = new StressTest();
 		stressTest.tester();
+		System.out.println(stressTest.genererRapport());
 	}
 
 	public void reinitialiserRapport(String entry, String label){
@@ -105,12 +106,12 @@ public class Testeur {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 
 	public static void main(String[] args) {
 		Testeur testeur = new Testeur(Testeur.DETAILED);
 		testeur.testerPrettyPrinter();
-	
+
 	}
 }
