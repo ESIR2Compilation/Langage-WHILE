@@ -1,4 +1,6 @@
 package main;
+import org.xtext.langage_while.*;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,6 +10,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import tabSymb.TableSymbole;
 import tests.AbstractTest;
 import tests.BadFormatTest;
 import tests.BeautifulPrintTest;
@@ -46,6 +49,7 @@ public class Testeur {
 
 	// Application des tests
 	public void testerPrettyPrinter(){
+		
 		tests.clear();
 		tests.add(new BadFormatTest());
 		tests.add(new SameCodeTest());
@@ -99,9 +103,12 @@ public class Testeur {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	public static void main(String[] args) {
 		Testeur testeur = new Testeur(Testeur.DETAILED);
 		testeur.testerPrettyPrinter();
+	
 	}
 }
