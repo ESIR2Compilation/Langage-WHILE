@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.Input;
 import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Output;
@@ -72,7 +71,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * @generated
    * @ordered
    */
-  protected Input o;
+  protected Output o;
 
   /**
    * The default value of the '{@link #getS() <em>S</em>}' attribute.
@@ -191,7 +190,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public Input getO()
+  public Output getO()
   {
     return o;
   }
@@ -201,9 +200,9 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetO(Input newO, NotificationChain msgs)
+  public NotificationChain basicSetO(Output newO, NotificationChain msgs)
   {
-    Input oldO = o;
+    Output oldO = o;
     o = newO;
     if (eNotificationRequired())
     {
@@ -218,7 +217,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setO(Input newO)
+  public void setO(Output newO)
   {
     if (newO != o)
     {
@@ -314,7 +313,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
         setQ((LCs)newValue);
         return;
       case Langage_whilePackage.OUTPUT__O:
-        setO((Input)newValue);
+        setO((Output)newValue);
         return;
       case Langage_whilePackage.OUTPUT__S:
         setS((String)newValue);
@@ -340,7 +339,7 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
         setQ((LCs)null);
         return;
       case Langage_whilePackage.OUTPUT__O:
-        setO((Input)null);
+        setO((Output)null);
         return;
       case Langage_whilePackage.OUTPUT__S:
         setS(S_EDEFAULT);

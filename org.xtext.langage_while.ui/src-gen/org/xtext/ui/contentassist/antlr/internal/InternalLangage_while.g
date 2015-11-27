@@ -5599,8 +5599,8 @@ rule__Input__InAssignment_0_3
     }
 :
 (
-{ before(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); }
-	ruleOutput{ after(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); }
+{ before(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); }
+	ruleInput{ after(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); }
 )
 
 ;
@@ -5659,8 +5659,8 @@ rule__Output__OAssignment_0_3
     }
 :
 (
-{ before(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); }
-	ruleInput{ after(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); }
+{ before(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); }
+	ruleOutput{ after(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); }
 )
 
 ;

@@ -1076,7 +1076,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:460:1: ruleInput returns [EObject current=null] : ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:460:1: ruleInput returns [EObject current=null] : ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) ;
     public final EObject ruleInput() throws RecognitionException {
         EObject current = null;
 
@@ -1091,10 +1091,10 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:463:28: ( ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:463:28: ( ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:1: ( ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) ) | ( (lv_y_4_0= RULE_VAR ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1104,7 +1104,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 if ( (LA3_1==23) ) {
                     alt3=1;
                 }
-                else if ( (LA3_1==EOF||LA3_1==RULE_CR||(LA3_1>=RULE_SP && LA3_1<=RULE_LF)||LA3_1==18||LA3_1==21) ) {
+                else if ( (LA3_1==EOF||LA3_1==RULE_CR||(LA3_1>=RULE_SP && LA3_1<=RULE_LF)||LA3_1==21) ) {
                     alt3=2;
                 }
                 else {
@@ -1124,10 +1124,10 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:3: ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleOutput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:2: ( ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:3: ( (lv_v_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_z_2_0= ruleLCs ) ) ( (lv_in_3_0= ruleInput ) )
                     {
                     // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:464:3: ( (lv_v_0_0= RULE_VAR ) )
                     // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:465:1: (lv_v_0_0= RULE_VAR )
@@ -1200,19 +1200,19 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:504:2: ( (lv_in_3_0= ruleOutput ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleOutput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:504:2: ( (lv_in_3_0= ruleInput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleInput )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleOutput )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:3: lv_in_3_0= ruleOutput
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:505:1: (lv_in_3_0= ruleInput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:506:3: lv_in_3_0= ruleInput
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); 
+                      	        newCompositeNode(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleOutput_in_ruleInput868);
-                    lv_in_3_0=ruleOutput();
+                    pushFollow(FOLLOW_ruleInput_in_ruleInput868);
+                    lv_in_3_0=ruleInput();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -1225,7 +1225,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"in",
                               		lv_in_3_0, 
-                              		"Output");
+                              		"Input");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -1340,7 +1340,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOutput"
-    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:558:1: ruleOutput returns [EObject current=null] : ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) ;
+    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:558:1: ruleOutput returns [EObject current=null] : ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) ;
     public final EObject ruleOutput() throws RecognitionException {
         EObject current = null;
 
@@ -1355,10 +1355,10 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:561:28: ( ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:561:28: ( ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:1: ( ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) ) | ( (lv_s_4_0= RULE_VAR ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1368,7 +1368,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                 if ( (LA4_1==23) ) {
                     alt4=1;
                 }
-                else if ( (LA4_1==EOF||LA4_1==RULE_CR||(LA4_1>=RULE_SP && LA4_1<=RULE_LF)||LA4_1==18||LA4_1==21) ) {
+                else if ( (LA4_1==EOF||LA4_1==RULE_CR||LA4_1==18) ) {
                     alt4=2;
                 }
                 else {
@@ -1388,10 +1388,10 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:3: ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleInput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:2: ( ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:3: ( (lv_n_0_0= RULE_VAR ) ) otherlv_1= ',' ( (lv_q_2_0= ruleLCs ) ) ( (lv_o_3_0= ruleOutput ) )
                     {
                     // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:562:3: ( (lv_n_0_0= RULE_VAR ) )
                     // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:563:1: (lv_n_0_0= RULE_VAR )
@@ -1464,19 +1464,19 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:602:2: ( (lv_o_3_0= ruleInput ) )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleInput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:602:2: ( (lv_o_3_0= ruleOutput ) )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleOutput )
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleInput )
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:604:3: lv_o_3_0= ruleInput
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:603:1: (lv_o_3_0= ruleOutput )
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:604:3: lv_o_3_0= ruleOutput
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); 
+                      	        newCompositeNode(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleInput_in_ruleOutput1045);
-                    lv_o_3_0=ruleInput();
+                    pushFollow(FOLLOW_ruleOutput_in_ruleOutput1045);
+                    lv_o_3_0=ruleOutput();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -1489,7 +1489,7 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"o",
                               		lv_o_3_0, 
-                              		"Input");
+                              		"Output");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -6558,14 +6558,14 @@ public class InternalLangage_whileParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_VAR_in_ruleInput809 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_23_in_ruleInput826 = new BitSet(new long[]{0x00000000000003D0L});
     public static final BitSet FOLLOW_ruleLCs_in_ruleInput847 = new BitSet(new long[]{0x00000000000003D0L});
-    public static final BitSet FOLLOW_ruleOutput_in_ruleInput868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInput_in_ruleInput868 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_ruleInput892 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOutput_in_entryRuleOutput933 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOutput943 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput986 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_23_in_ruleOutput1003 = new BitSet(new long[]{0x00000000000003D0L});
     public static final BitSet FOLLOW_ruleLCs_in_ruleOutput1024 = new BitSet(new long[]{0x00000000000003D0L});
-    public static final BitSet FOLLOW_ruleInput_in_ruleOutput1045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOutput_in_ruleOutput1045 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_ruleOutput1069 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCommands_in_entryRuleCommands1110 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCommands1120 = new BitSet(new long[]{0x0000000000000002L});

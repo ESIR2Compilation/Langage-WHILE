@@ -19,8 +19,8 @@ Function : 'function' (n=LCs) (nom=SYM) ':' (t=LCs) (d=Def);
 Def : 'read' l=LCs (in=Input) z=LCs
 		'%' v=Commands s=LCs
 		'%' 'write' u=LCs o=Output;
-Input : ((v=VAR) ',' (z=LCs) (in=Output)) | (y=VAR);
-Output : (n=VAR ',' (q=LCs) (o=Input)) | s=VAR;
+Input : ((v=VAR) ',' (z=LCs) (in=Input)) | (y=VAR);
+Output : (n=VAR ',' (q=LCs) (o=Output)) | s=VAR;
 
 
 /* COMMANDES SIMPLES ET COMPLEXES */

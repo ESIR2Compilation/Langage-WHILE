@@ -1751,7 +1751,7 @@ public class InternalLangage_whileParser extends AbstractInternalContentAssistPa
                 if ( (LA2_1==25) ) {
                     alt2=1;
                 }
-                else if ( (LA2_1==EOF||LA2_1==RULE_CR||(LA2_1>=RULE_SP && LA2_1<=RULE_LF)||LA2_1==20||LA2_1==23) ) {
+                else if ( (LA2_1==EOF||LA2_1==RULE_CR||(LA2_1>=RULE_SP && LA2_1<=RULE_LF)||LA2_1==23) ) {
                     alt2=2;
                 }
                 else {
@@ -1862,7 +1862,7 @@ public class InternalLangage_whileParser extends AbstractInternalContentAssistPa
                 if ( (LA3_1==25) ) {
                     alt3=1;
                 }
-                else if ( (LA3_1==EOF||LA3_1==RULE_CR||(LA3_1>=RULE_SP && LA3_1<=RULE_LF)||LA3_1==20||LA3_1==23) ) {
+                else if ( (LA3_1==EOF||LA3_1==RULE_CR||LA3_1==20) ) {
                     alt3=2;
                 }
                 else {
@@ -16074,28 +16074,28 @@ public class InternalLangage_whileParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Input__InAssignment_0_3"
-    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5596:1: rule__Input__InAssignment_0_3 : ( ruleOutput ) ;
+    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5596:1: rule__Input__InAssignment_0_3 : ( ruleInput ) ;
     public final void rule__Input__InAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5600:1: ( ( ruleOutput ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:1: ( ruleOutput )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5600:1: ( ( ruleInput ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:1: ( ruleInput )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:1: ( ruleOutput )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5602:1: ruleOutput
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5601:1: ( ruleInput )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5602:1: ruleInput
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); 
+               before(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); 
             }
-            pushFollow(FOLLOW_ruleOutput_in_rule__Input__InAssignment_0_311234);
-            ruleOutput();
+            pushFollow(FOLLOW_ruleInput_in_rule__Input__InAssignment_0_311234);
+            ruleInput();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); 
+               after(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); 
             }
 
             }
@@ -16246,28 +16246,28 @@ public class InternalLangage_whileParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Output__OAssignment_0_3"
-    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5656:1: rule__Output__OAssignment_0_3 : ( ruleInput ) ;
+    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5656:1: rule__Output__OAssignment_0_3 : ( ruleOutput ) ;
     public final void rule__Output__OAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5660:1: ( ( ruleInput ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5661:1: ( ruleInput )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5660:1: ( ( ruleOutput ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5661:1: ( ruleOutput )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5661:1: ( ruleInput )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5662:1: ruleInput
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5661:1: ( ruleOutput )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:5662:1: ruleOutput
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); 
+               before(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); 
             }
-            pushFollow(FOLLOW_ruleInput_in_rule__Output__OAssignment_0_311358);
-            ruleInput();
+            pushFollow(FOLLOW_ruleOutput_in_rule__Output__OAssignment_0_311358);
+            ruleOutput();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); 
+               after(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); 
             }
 
             }
@@ -20355,11 +20355,11 @@ public class InternalLangage_whileParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_ruleOutput_in_rule__Def__OAssignment_1011141 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_rule__Input__VAssignment_0_011172 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLCs_in_rule__Input__ZAssignment_0_211203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOutput_in_rule__Input__InAssignment_0_311234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInput_in_rule__Input__InAssignment_0_311234 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_rule__Input__YAssignment_111265 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_rule__Output__NAssignment_0_011296 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLCs_in_rule__Output__QAssignment_0_211327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInput_in_rule__Output__OAssignment_0_311358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOutput_in_rule__Output__OAssignment_0_311358 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_VAR_in_rule__Output__SAssignment_111389 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCommand_in_rule__Commands__AAssignment_011420 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLCs_in_rule__Commands__LAssignment_1_111451 = new BitSet(new long[]{0x0000000000000002L});

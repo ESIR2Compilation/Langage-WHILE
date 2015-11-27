@@ -86,12 +86,12 @@ public interface Input extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>In</em>' containment reference.
-   * @see #setIn(Output)
+   * @see #setIn(Input)
    * @see org.xtext.langage_while.Langage_whilePackage#getInput_In()
    * @model containment="true"
    * @generated
    */
-  Output getIn();
+  Input getIn();
 
   /**
    * Sets the value of the '{@link org.xtext.langage_while.Input#getIn <em>In</em>}' containment reference.
@@ -101,7 +101,7 @@ public interface Input extends EObject
    * @see #getIn()
    * @generated
    */
-  void setIn(Output value);
+  void setIn(Input value);
 
   /**
    * Returns the value of the '<em><b>Y</b></em>' attribute.

@@ -14,8 +14,8 @@ public class ValeurFonction {
 	}
 	
 	public ValeurFonction(){
-		nbInput = -1;
-		nbOutput = -1;
+		nbInput = 0;
+		nbOutput = 0;
 		internString = "";
 	}
 

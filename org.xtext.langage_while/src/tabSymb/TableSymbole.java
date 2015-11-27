@@ -108,7 +108,7 @@ public class TableSymbole {
 		for(int i = 0; i < StringCharre.length; i++){
 			if((StringCharre[i] == '>') | (StringCharre[i] == '+') | (StringCharre[i] == '.')  | (StringCharre[i] == '/') | 
 				(StringCharre[i] == '?') | (StringCharre[i] == '&') | (StringCharre[i] == '?') | (StringCharre[i] == '!')){
-				sbuff.append("-"+(int)StringCharre[i]);
+				sbuff.append("-"+StringCharre[i]);
 			}else{
 				sbuff.append(StringCharre[i]);
 			}

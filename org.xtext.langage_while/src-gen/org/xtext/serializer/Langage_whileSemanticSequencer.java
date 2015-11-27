@@ -316,7 +316,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     ((v=VAR z=LCs in=Output) | y=VAR)
+	 *     ((v=VAR z=LCs in=Input) | y=VAR)
 	 */
 	protected void sequence_Input(EObject context, Input semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -368,7 +368,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     ((n=VAR q=LCs o=Input) | s=VAR)
+	 *     ((n=VAR q=LCs o=Output) | s=VAR)
 	 */
 	protected void sequence_Output(EObject context, Output semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

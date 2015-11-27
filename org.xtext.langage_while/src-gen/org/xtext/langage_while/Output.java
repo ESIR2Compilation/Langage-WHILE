@@ -86,12 +86,12 @@ public interface Output extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>O</em>' containment reference.
-   * @see #setO(Input)
+   * @see #setO(Output)
    * @see org.xtext.langage_while.Langage_whilePackage#getOutput_O()
    * @model containment="true"
    * @generated
    */
-  Input getO();
+  Output getO();
 
   /**
    * Sets the value of the '{@link org.xtext.langage_while.Output#getO <em>O</em>}' containment reference.
@@ -101,7 +101,7 @@ public interface Output extends EObject
    * @see #getO()
    * @generated
    */
-  void setO(Input value);
+  void setO(Output value);
 
   /**
    * Returns the value of the '<em><b>S</b></em>' attribute.

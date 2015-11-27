@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.xtext.langage_while.Input;
 import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
-import org.xtext.langage_while.Output;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,7 +71,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * @generated
    * @ordered
    */
-  protected Output in;
+  protected Input in;
 
   /**
    * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -191,7 +190,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public Output getIn()
+  public Input getIn()
   {
     return in;
   }
@@ -201,9 +200,9 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIn(Output newIn, NotificationChain msgs)
+  public NotificationChain basicSetIn(Input newIn, NotificationChain msgs)
   {
-    Output oldIn = in;
+    Input oldIn = in;
     in = newIn;
     if (eNotificationRequired())
     {
@@ -218,7 +217,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIn(Output newIn)
+  public void setIn(Input newIn)
   {
     if (newIn != in)
     {
@@ -314,7 +313,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
         setZ((LCs)newValue);
         return;
       case Langage_whilePackage.INPUT__IN:
-        setIn((Output)newValue);
+        setIn((Input)newValue);
         return;
       case Langage_whilePackage.INPUT__Y:
         setY((String)newValue);
@@ -340,7 +339,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input
         setZ((LCs)null);
         return;
       case Langage_whilePackage.INPUT__IN:
-        setIn((Output)null);
+        setIn((Input)null);
         return;
       case Langage_whilePackage.INPUT__Y:
         setY(Y_EDEFAULT);

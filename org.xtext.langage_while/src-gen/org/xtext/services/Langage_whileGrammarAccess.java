@@ -223,18 +223,18 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cZAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cZLCsParserRuleCall_0_2_0 = (RuleCall)cZAssignment_0_2.eContents().get(0);
 		private final Assignment cInAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final RuleCall cInOutputParserRuleCall_0_3_0 = (RuleCall)cInAssignment_0_3.eContents().get(0);
+		private final RuleCall cInInputParserRuleCall_0_3_0 = (RuleCall)cInAssignment_0_3.eContents().get(0);
 		private final Assignment cYAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cYVARTerminalRuleCall_1_0 = (RuleCall)cYAssignment_1.eContents().get(0);
 		
 		//Input:
-		//	v=VAR "," z=LCs in=Output | y=VAR;
+		//	v=VAR "," z=LCs in=Input | y=VAR;
 		@Override public ParserRule getRule() { return rule; }
 
-		//v=VAR "," z=LCs in=Output | y=VAR
+		//v=VAR "," z=LCs in=Input | y=VAR
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//v=VAR "," z=LCs in=Output
+		//v=VAR "," z=LCs in=Input
 		public Group getGroup_0() { return cGroup_0; }
 
 		//v=VAR
@@ -252,11 +252,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getZLCsParserRuleCall_0_2_0() { return cZLCsParserRuleCall_0_2_0; }
 
-		//in=Output
+		//in=Input
 		public Assignment getInAssignment_0_3() { return cInAssignment_0_3; }
 
-		//Output
-		public RuleCall getInOutputParserRuleCall_0_3_0() { return cInOutputParserRuleCall_0_3_0; }
+		//Input
+		public RuleCall getInInputParserRuleCall_0_3_0() { return cInInputParserRuleCall_0_3_0; }
 
 		//y=VAR
 		public Assignment getYAssignment_1() { return cYAssignment_1; }
@@ -275,18 +275,18 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cQAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cQLCsParserRuleCall_0_2_0 = (RuleCall)cQAssignment_0_2.eContents().get(0);
 		private final Assignment cOAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final RuleCall cOInputParserRuleCall_0_3_0 = (RuleCall)cOAssignment_0_3.eContents().get(0);
+		private final RuleCall cOOutputParserRuleCall_0_3_0 = (RuleCall)cOAssignment_0_3.eContents().get(0);
 		private final Assignment cSAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cSVARTerminalRuleCall_1_0 = (RuleCall)cSAssignment_1.eContents().get(0);
 		
 		//Output:
-		//	n=VAR "," q=LCs o=Input | s=VAR;
+		//	n=VAR "," q=LCs o=Output | s=VAR;
 		@Override public ParserRule getRule() { return rule; }
 
-		//n=VAR "," q=LCs o=Input | s=VAR
+		//n=VAR "," q=LCs o=Output | s=VAR
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//n=VAR "," q=LCs o=Input
+		//n=VAR "," q=LCs o=Output
 		public Group getGroup_0() { return cGroup_0; }
 
 		//n=VAR
@@ -304,11 +304,11 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		//LCs
 		public RuleCall getQLCsParserRuleCall_0_2_0() { return cQLCsParserRuleCall_0_2_0; }
 
-		//o=Input
+		//o=Output
 		public Assignment getOAssignment_0_3() { return cOAssignment_0_3; }
 
-		//Input
-		public RuleCall getOInputParserRuleCall_0_3_0() { return cOInputParserRuleCall_0_3_0; }
+		//Output
+		public RuleCall getOOutputParserRuleCall_0_3_0() { return cOOutputParserRuleCall_0_3_0; }
 
 		//s=VAR
 		public Assignment getSAssignment_1() { return cSAssignment_1; }
@@ -1521,7 +1521,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Input:
-	//	v=VAR "," z=LCs in=Output | y=VAR;
+	//	v=VAR "," z=LCs in=Input | y=VAR;
 	public InputElements getInputAccess() {
 		return pInput;
 	}
@@ -1531,7 +1531,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Output:
-	//	n=VAR "," q=LCs o=Input | s=VAR;
+	//	n=VAR "," q=LCs o=Output | s=VAR;
 	public OutputElements getOutputAccess() {
 		return pOutput;
 	}

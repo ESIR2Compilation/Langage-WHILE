@@ -504,9 +504,9 @@ ruleInput returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInputAccess().getInOutputParserRuleCall_0_3_0()); 
+	        newCompositeNode(grammarAccess.getInputAccess().getInInputParserRuleCall_0_3_0()); 
 	    }
-		lv_in_3_0=ruleOutput		{
+		lv_in_3_0=ruleInput		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInputRule());
 	        }
@@ -514,7 +514,7 @@ ruleInput returns [EObject current=null]
        			$current, 
        			"in",
         		lv_in_3_0, 
-        		"Output");
+        		"Input");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -602,9 +602,9 @@ ruleOutput returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOutputAccess().getOInputParserRuleCall_0_3_0()); 
+	        newCompositeNode(grammarAccess.getOutputAccess().getOOutputParserRuleCall_0_3_0()); 
 	    }
-		lv_o_3_0=ruleInput		{
+		lv_o_3_0=ruleOutput		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOutputRule());
 	        }
@@ -612,7 +612,7 @@ ruleOutput returns [EObject current=null]
        			$current, 
        			"o",
         		lv_o_3_0, 
-        		"Input");
+        		"Output");
 	        afterParserOrEnumRuleCall();
 	    }
 
