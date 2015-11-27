@@ -1,6 +1,4 @@
 package main;
-import org.xtext.langage_while.*;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,12 +8,12 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import tabSymb.TableSymbole;
 import tests.AbstractTest;
 import tests.BadFormatTest;
 import tests.BeautifulPrintTest;
 import tests.DoublePrintTest;
 import tests.SameCodeTest;
+import tests.StressTest;
 
 public class Testeur {
 
@@ -87,6 +85,10 @@ public class Testeur {
 			else
 				System.out.println();
 		}
+		
+		System.out.println("========== StressTest ==========");
+		AbstractTest stressTest = new StressTest();
+		stressTest.tester();
 	}
 
 	public void reinitialiserRapport(String entry, String label){
