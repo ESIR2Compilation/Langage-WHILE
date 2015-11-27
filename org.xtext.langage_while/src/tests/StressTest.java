@@ -33,6 +33,12 @@ public class StressTest extends AbstractTest {
 		CalculerTemps(1000);
 		creerFichierWhile(10000);
 		CalculerTemps(10000);
+		creerFichierWhile(20000);
+		CalculerTemps(20000);
+		creerFichierWhile(30000);
+		CalculerTemps(30000);
+		creerFichierWhile(40000);
+		CalculerTemps(40000);
 		creerFichierWhile(50000);
 		CalculerTemps(50000);
 
