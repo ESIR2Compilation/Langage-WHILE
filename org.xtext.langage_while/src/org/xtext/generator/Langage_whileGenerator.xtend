@@ -34,6 +34,7 @@ import org.xtext.langage_while.Model
 import org.xtext.langage_while.Output
 import org.xtext.langage_while.Program
 import org.xtext.langage_while.Vars
+import tabSymb.TableSymbole
 
 class Langage_whileGenerator implements IGenerator {
 	
@@ -74,6 +75,8 @@ class Langage_whileGenerator implements IGenerator {
 	
 	  @Inject extension IQualifiedNameProvider
 	
+		TableSymbole tableS= new TableSymbole();
+	
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
     for(e: resource.allContents.toIterable.filter(typeof(Model))) {
@@ -94,7 +97,10 @@ class Langage_whileGenerator implements IGenerator {
 	def compile (Model l)
 	'''
 	«l.greetings.compile»
+	«tableS.ToStringAll()»
 	'''
+	
+	
 	
 	def compile (Program p)
 	'''
@@ -106,24 +112,29 @@ class Langage_whileGenerator implements IGenerator {
 	'''
 	
 	def compile (Function f)
-	'''
+	'''	
+	«tableS.ajouterFonction(f.nom)»
+		
 		«"function " +f.nom + ":" + "
-" + f.d.compile
+" + f.d.compile(f.nom)
 		»
 	'''
 	
-	def compile (Def d)
+	def compile (Def d, String a)
 	'''
 		
-		
-		read «d.in.compile+"
-"» % «d.v.compile+"
-"» % write  «d.o.compile»
+		read «d.in.compile(a)+"
+	"» % «d.v.compile+"
+	"» % write  «d.o.compile(a)»
 	'''
 	
-	def compile (Input l)
-	'''
-	«(l.y)  ?: ((l.v)+" , "+(l.in.compile))» 
+	def compile (Input l, String a)
+	'''«tableS.ModifInputFunction(a)»
+	«if (l.y!=null)
+	tableS.ajouterVariable(l.y,a)
+	else
+	tableS.ajouterVariable(l.v,a)»
+	«(l.y)  ?: ((l.v)+" , "+(l.in.compile(a)))» 
 		'''
 	
 	
@@ -140,9 +151,14 @@ class Langage_whileGenerator implements IGenerator {
 	''' 
 	
 	
-	def compile (Output O)
+	def compile (Output O, String a)
 	'''
-	«(O.s) ?:  ((O.n)+", "+(O.o.compile))»
+	«tableS.ModifOutputFun(a)»
+	«if (O.s!=null)
+	tableS.ajouterVariable(O.s,a)
+	else
+	tableS.ajouterVariable(O.n,a)»
+	«(O.s) ?:  ((O.n)+", "+(O.o.compile(a)))»
 	'''
 	
 	def compile (Command c)  // a continuer
@@ -287,7 +303,9 @@ class Langage_whileGenerator implements IGenerator {
 	)
 	»
 	'''
-	////exprand, expror, exprnot, expreq
+	
+	
+	
 	
 }
 

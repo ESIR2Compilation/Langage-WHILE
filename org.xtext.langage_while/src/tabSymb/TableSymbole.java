@@ -40,7 +40,7 @@ public class TableSymbole {
 	public void ajouterFonction(String nom){
 		if( !fun.containsKey(nom) ){
 			ValeurFonction valeur = new ValeurFonction();
-			valeur.setInternalRep( ReadConvertFun(nom) + "_" + fun.size());
+			valeur.setInternString( ReadConvertFun(nom) + "_" + fun.size());
 			
 			fun.put(nom, valeur);
 		}
@@ -82,8 +82,8 @@ public class TableSymbole {
 	 * @param nom
 	 * @param newOutput
 	 */
-	public void ModifOutputFun(String nom, int newOutput){
-		fun.get(nom).setNbOutput(newOutput);
+	public void ModifOutputFun(String nom){
+		fun.get(nom).IncrNbOutput();
 	}
 	
 	/**
@@ -91,8 +91,8 @@ public class TableSymbole {
 	 * @param nom
 	 * @param newInput
 	 */
-	public void ModifInputFunction(String nom, int newInput){
-		fun.get(nom).setNbInput(newInput);
+	public void ModifInputFunction(String nom){
+		fun.get(nom).IncrNbInput();
 	}
 	
 	
@@ -120,10 +120,9 @@ public class TableSymbole {
 	
 	
 	
-	@SuppressWarnings("unused")
 	private void ToStringFun(){
-		Set<String> keys = fun.keySet(); 
-		Iterator<String> it = keys.iterator(); 
+		Set<String> keysfun  = fun.keySet(); 
+		Iterator<String> it = keysfun.iterator(); 
 		if(it.hasNext())
 			System.out.println("--- Les fonctions ---");
 		while( it.hasNext() ){
@@ -133,7 +132,24 @@ public class TableSymbole {
 	}
 	
 	
-
+	private void ToStringVar(){
+		Set<String> keysVar  = var.keySet(); 
+		Iterator<String> it = keysVar.iterator(); 
+		if(it.hasNext())
+			System.out.println("--- Les variables ---");
+		while( it.hasNext() ){
+			String key = it.next();
+			System.out.println("{ variables: " + key + " -> " + var.get(key) + " }" );
+		}
+	}
+	
+	public void ToStringAll(){
+		this.ToStringFun();
+		System.out.println("");
+		this.ToStringVar();
+	}
+	
+	
 	
 }
 

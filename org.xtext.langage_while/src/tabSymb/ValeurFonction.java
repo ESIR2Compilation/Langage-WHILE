@@ -5,22 +5,22 @@ public class ValeurFonction {
 
 	private int nbInput;
 	private int nbOutput;
-	private String internalRep;
+	private String internString;
 	
 	public ValeurFonction(int nbIn, int nbOut, String rep){
 		nbInput = nbIn;
 		nbOutput = nbOut;
-		internalRep = rep;
+		internString = rep;
 	}
 	
 	public ValeurFonction(){
 		nbInput = -1;
 		nbOutput = -1;
-		internalRep = "";
+		internString = "";
 	}
 
 	public String getInternalRep() {
-		return internalRep;
+		return internString;
 	}
 
 	public int getNbInput() {
@@ -31,20 +31,20 @@ public class ValeurFonction {
 		return nbOutput;
 	}
 	
-	public void setNbInput(int nbInput) {
-		this.nbInput = nbInput;
+	public void IncrNbInput() {
+		nbInput++;
 	}
 
-	public void setNbOutput(int nbOutput) {
-		this.nbOutput = nbOutput;
+	public void IncrNbOutput() {
+		nbOutput++;
 	}
 
-	public void setInternalRep(String internalRep) {
-		this.internalRep = internalRep;
+	public void setInternString(String internalRep) {
+		this.internString = internalRep;
 	}
 	
 	public String toString(){
-		return "nbInput: " + nbInput + " nbOutput: " + nbOutput + " internalRep: " + internalRep + " ";
+		return "nbInput: " + nbInput + " nbOutput: " + nbOutput + " internString: " + internString + " ";
 	}
 	
 }
