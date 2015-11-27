@@ -21,7 +21,7 @@ public class ValeurVariable {
 		}
 		
 		public String toString(){
-			return "internalRep: '" + internalRep + "'";
+			return " variable retournée: '" + internalRep + "'";
 		}
 	
 }

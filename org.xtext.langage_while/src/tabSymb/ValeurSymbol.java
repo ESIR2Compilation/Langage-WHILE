@@ -22,7 +22,7 @@ public class ValeurSymbol {
 	}
 	
 	public String toString(){
-		return "internalRep: '" + internalRep + "'";
+		return " Symbole retourné: '" + internalRep + "'";
 	}
 	
 }

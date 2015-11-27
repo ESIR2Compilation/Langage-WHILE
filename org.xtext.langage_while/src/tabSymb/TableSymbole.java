@@ -40,7 +40,7 @@ public class TableSymbole {
 	public void ajouterFonction(String nom){
 		if( !fun.containsKey(nom) ){
 			ValeurFonction valeur = new ValeurFonction();
-			valeur.setInternString( ReadConvertFun(nom) + "_" + fun.size());
+			valeur.setInternString( ReadConvertFun(nom) + "  taille :" + fun.size());
 			
 			fun.put(nom, valeur);
 		}
@@ -60,7 +60,7 @@ public class TableSymbole {
 			HashMap<String, ValeurVariable> mapV =  var.get(nomFonction);
 			
 			if(!mapV.containsKey(nomVariable)){
-				String rep = ReadConvertFun(nomVariable) + "_" + mapV.size();
+				String rep = ReadConvertFun(nomVariable) + " taille : " + mapV.size();
 				mapV.put(nomVariable, new ValeurVariable(rep));
 			}
 		}	}
@@ -108,7 +108,7 @@ public class TableSymbole {
 		for(int i = 0; i < StringCharre.length; i++){
 			if((StringCharre[i] == '>') | (StringCharre[i] == '+') | (StringCharre[i] == '.')  | (StringCharre[i] == '/') | 
 				(StringCharre[i] == '?') | (StringCharre[i] == '&') | (StringCharre[i] == '?') | (StringCharre[i] == '!')){
-				sbuff.append("_"+(int)StringCharre[i]);
+				sbuff.append("-"+(int)StringCharre[i]);
 			}else{
 				sbuff.append(StringCharre[i]);
 			}
