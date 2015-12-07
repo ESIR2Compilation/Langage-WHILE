@@ -23,12 +23,6 @@ public class StressTest extends AbstractTest {
 
 	@Override
 	public void tester() {
-		creerFichierWhile(1);
-		CalculerTemps(1);
-		creerFichierWhile(10);
-		CalculerTemps(10);
-		creerFichierWhile(100);
-		CalculerTemps(100);
 		creerFichierWhile(1000);
 		CalculerTemps(1000);
 		creerFichierWhile(10000);
@@ -53,6 +47,12 @@ public class StressTest extends AbstractTest {
 		time = System.currentTimeMillis() - time;
 		courbe.put(nombre, time);
 	}
+	
+	private long getTemps() {
+		long time = System.currentTimeMillis();
+		prettyPrinting("src/entries/", entry);
+		return System.currentTimeMillis() - time;
+	}
 
 	private void creerFichierWhile(int nombreFonction){
 		StringBuilder st = new StringBuilder();
@@ -71,6 +71,20 @@ public class StressTest extends AbstractTest {
 			e.printStackTrace();
 		}
 	}
+	
+	private void creerFichierCSV(String result){
+
+		FileWriter fw;
+		try {
+			fw = new FileWriter("src/results/points.csv");
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(result);
+			bw.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	private void supprimerFichierWhile(){
 		File file = new File("src/entries/" + entry);
@@ -78,6 +92,46 @@ public class StressTest extends AbstractTest {
 
 		file = new File("src/outputs/stressTest.whpp");
 		file.delete();
+	}
+	
+	public void genererGraphique(int nombrePoint){
+		StringBuilder st = new StringBuilder("Lignes de code (loc);");
+		for(int i =0; i < nombrePoint; ++i)
+			st.append("Temps de compilation (ms) (" + i + ");");
+		
+		creerFichierWhile(1000);
+		st.append("\n1000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+		
+		creerFichierWhile(10000);
+		st.append("\n10000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+		
+		creerFichierWhile(20000);
+		st.append("\n20000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+		
+		creerFichierWhile(30000);
+		st.append("\n30000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+		
+		creerFichierWhile(40000);
+		st.append("\n40000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+		
+		creerFichierWhile(50000);
+		st.append("\n50000;");
+		for(int i = 0; i < nombrePoint; ++i)
+			st.append(getTemps() + ";");
+
+		supprimerFichierWhile();
+		
+		creerFichierCSV(st.toString());
 	}
 	
 	public String getCoefficient(){

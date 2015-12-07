@@ -1,0 +1,7 @@
+Lignes de code (loc);Temps de compilation (ms) (0);Temps de compilation (ms) (1);Temps de compilation (ms) (2);Temps de compilation (ms) (3);Temps de compilation (ms) (4);Temps de compilation (ms) (5);Temps de compilation (ms) (6);Temps de compilation (ms) (7);Temps de compilation (ms) (8);Temps de compilation (ms) (9);Temps de compilation (ms) (10);Temps de compilation (ms) (11);Temps de compilation (ms) (12);Temps de compilation (ms) (13);Temps de compilation (ms) (14);Temps de compilation (ms) (15);Temps de compilation (ms) (16);Temps de compilation (ms) (17);Temps de compilation (ms) (18);Temps de compilation (ms) (19);
+1000;297;360;156;187;204;156;172;187;156;172;204;156;156;219;187;157;203;172;156;234;
+10000;1563;1469;1453;1437;1438;1484;1485;1453;1469;1469;1469;1453;1547;1672;1454;1656;1469;1500;1469;1437;
+20000;3031;2860;2906;2860;2875;2844;3062;2938;2813;2812;3001;2937;2828;2829;2812;2891;2875;2860;3000;2859;
+30000;4484;4485;4594;4453;4438;4391;4484;4516;4594;4594;4438;4469;4500;4454;4390;4501;4641;4500;4484;4485;
+40000;8938;9016;8844;9095;9250;9016;8969;9032;8922;8923;8938;8969;9157;8969;9797;9985;10313;10563;10216;10077;
+50000;14790;15141;16811;14842;15469;14698;15225;14668;14188;13750;14064;13953;14642;14485;14829;14157;15266;14298;14766;15423;

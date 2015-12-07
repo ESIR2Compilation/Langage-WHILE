@@ -89,7 +89,9 @@ public class Testeur {
 		System.out.println("========== StressTest ==========");
 		AbstractTest stressTest = new StressTest();
 		stressTest.tester();
+		//((StressTest) stressTest).genererGraphique(20);
 		System.out.println(stressTest.genererRapport());
+		
 	}
 
 	public void reinitialiserRapport(String entry, String label){
