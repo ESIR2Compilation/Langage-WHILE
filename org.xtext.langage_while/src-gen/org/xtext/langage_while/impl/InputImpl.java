@@ -21,13 +21,13 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getV <em>V</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getZ <em>Z</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getIn <em>In</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.InputImpl#getY <em>Y</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

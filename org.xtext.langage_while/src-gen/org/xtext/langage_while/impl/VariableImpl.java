@@ -18,10 +18,10 @@ import org.xtext.langage_while.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.VariableImpl#getN <em>N</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

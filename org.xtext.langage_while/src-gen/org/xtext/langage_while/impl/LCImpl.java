@@ -18,13 +18,13 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.LCImpl#getA <em>A</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.LCImpl#getZ <em>Z</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.LCImpl#getE <em>E</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.LCImpl#getR <em>R</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

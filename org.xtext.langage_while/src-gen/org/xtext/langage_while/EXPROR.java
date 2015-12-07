@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.EXPROR#getE1 <em>E1</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPROR#getLc1 <em>Lc1</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPROR#getLc2 <em>Lc2</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPROR#getE2 <em>E2</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getEXPROR()
  * @model
