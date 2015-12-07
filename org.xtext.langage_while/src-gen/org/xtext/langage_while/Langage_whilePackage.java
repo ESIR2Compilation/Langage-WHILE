@@ -434,292 +434,58 @@ public interface Langage_whilePackage extends EPackage
   int COMMAND = 7;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Nop</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__E = 0;
+  int COMMAND__NOP = 0;
 
   /**
-   * The feature id for the '<em><b>L</b></em>' containment reference.
+   * The feature id for the '<em><b>Affect</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__L = 1;
+  int COMMAND__AFFECT = 1;
 
   /**
-   * The feature id for the '<em><b>C</b></em>' containment reference.
+   * The feature id for the '<em><b>Wh</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__C = 2;
+  int COMMAND__WH = 2;
 
   /**
-   * The feature id for the '<em><b>N</b></em>' containment reference.
+   * The feature id for the '<em><b>Forr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__N = 3;
+  int COMMAND__FORR = 3;
 
   /**
-   * The feature id for the '<em><b>Ll</b></em>' containment reference.
+   * The feature id for the '<em><b>Fore</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__LL = 4;
+  int COMMAND__FORE = 4;
 
   /**
-   * The feature id for the '<em><b>Ee</b></em>' containment reference.
+   * The feature id for the '<em><b>Iff</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND__EE = 5;
-
-  /**
-   * The feature id for the '<em><b>Cc</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__CC = 6;
-
-  /**
-   * The feature id for the '<em><b>Z</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__Z = 7;
-
-  /**
-   * The feature id for the '<em><b>K</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__K = 8;
-
-  /**
-   * The feature id for the '<em><b>Lc</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__LC = 9;
-
-  /**
-   * The feature id for the '<em><b>Hh</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__HH = 10;
-
-  /**
-   * The feature id for the '<em><b>Tt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__TT = 11;
-
-  /**
-   * The feature id for the '<em><b>Vv</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__VV = 12;
-
-  /**
-   * The feature id for the '<em><b>C1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__C1 = 13;
-
-  /**
-   * The feature id for the '<em><b>Ss</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__SS = 14;
-
-  /**
-   * The feature id for the '<em><b>Mm</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__MM = 15;
-
-  /**
-   * The feature id for the '<em><b>Jj</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__JJ = 16;
-
-  /**
-   * The feature id for the '<em><b>Kk</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__KK = 17;
-
-  /**
-   * The feature id for the '<em><b>Hg</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__HG = 18;
-
-  /**
-   * The feature id for the '<em><b>C2</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__C2 = 19;
-
-  /**
-   * The feature id for the '<em><b>Gg</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__GG = 20;
-
-  /**
-   * The feature id for the '<em><b>Ff</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__FF = 21;
-
-  /**
-   * The feature id for the '<em><b>O</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__O = 22;
-
-  /**
-   * The feature id for the '<em><b>Dd</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__DD = 23;
-
-  /**
-   * The feature id for the '<em><b>Sq</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__SQ = 24;
-
-  /**
-   * The feature id for the '<em><b>Wx</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__WX = 25;
-
-  /**
-   * The feature id for the '<em><b>Lc2</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__LC2 = 26;
-
-  /**
-   * The feature id for the '<em><b>E1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__E1 = 27;
-
-  /**
-   * The feature id for the '<em><b>Lc3</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__LC3 = 28;
-
-  /**
-   * The feature id for the '<em><b>Lc4</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__LC4 = 29;
-
-  /**
-   * The feature id for the '<em><b>C3</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__C3 = 30;
-
-  /**
-   * The feature id for the '<em><b>Lc5</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__LC5 = 31;
+  int COMMAND__IFF = 5;
 
   /**
    * The number of structural features of the '<em>Command</em>' class.
@@ -728,7 +494,408 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMAND_FEATURE_COUNT = 32;
+  int COMMAND_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.AssignImpl <em>Assign</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.AssignImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getAssign()
+   * @generated
+   */
+  int ASSIGN = 8;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN__E = 0;
+
+  /**
+   * The feature id for the '<em><b>L</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN__L = 1;
+
+  /**
+   * The feature id for the '<em><b>C</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN__C = 2;
+
+  /**
+   * The feature id for the '<em><b>N</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN__N = 3;
+
+  /**
+   * The number of structural features of the '<em>Assign</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGN_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.WhileImpl <em>While</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.WhileImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getWhile()
+   * @generated
+   */
+  int WHILE = 9;
+
+  /**
+   * The feature id for the '<em><b>Ll</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__LL = 0;
+
+  /**
+   * The feature id for the '<em><b>Ee</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__EE = 1;
+
+  /**
+   * The feature id for the '<em><b>Cc</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__CC = 2;
+
+  /**
+   * The feature id for the '<em><b>Z</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__Z = 3;
+
+  /**
+   * The feature id for the '<em><b>K</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__K = 4;
+
+  /**
+   * The feature id for the '<em><b>Lc</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__LC = 5;
+
+  /**
+   * The number of structural features of the '<em>While</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.ForImpl <em>For</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.ForImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFor()
+   * @generated
+   */
+  int FOR = 10;
+
+  /**
+   * The feature id for the '<em><b>Cc</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__CC = 0;
+
+  /**
+   * The feature id for the '<em><b>Hh</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__HH = 1;
+
+  /**
+   * The feature id for the '<em><b>Tt</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__TT = 2;
+
+  /**
+   * The feature id for the '<em><b>Vv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__VV = 3;
+
+  /**
+   * The feature id for the '<em><b>C1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__C1 = 4;
+
+  /**
+   * The feature id for the '<em><b>Ss</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR__SS = 5;
+
+  /**
+   * The number of structural features of the '<em>For</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.IfImpl <em>If</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.IfImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getIf()
+   * @generated
+   */
+  int IF = 11;
+
+  /**
+   * The feature id for the '<em><b>Mm</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__MM = 0;
+
+  /**
+   * The feature id for the '<em><b>Jj</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__JJ = 1;
+
+  /**
+   * The feature id for the '<em><b>Kk</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__KK = 2;
+
+  /**
+   * The feature id for the '<em><b>Hg</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__HG = 3;
+
+  /**
+   * The feature id for the '<em><b>C2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__C2 = 4;
+
+  /**
+   * The feature id for the '<em><b>Gg</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__GG = 5;
+
+  /**
+   * The feature id for the '<em><b>Ff</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__FF = 6;
+
+  /**
+   * The feature id for the '<em><b>O</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__O = 7;
+
+  /**
+   * The feature id for the '<em><b>Dd</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF__DD = 8;
+
+  /**
+   * The number of structural features of the '<em>If</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_FEATURE_COUNT = 9;
+
+  /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.ForeachImpl <em>Foreach</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.ForeachImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getForeach()
+   * @generated
+   */
+  int FOREACH = 12;
+
+  /**
+   * The feature id for the '<em><b>Sq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__SQ = 0;
+
+  /**
+   * The feature id for the '<em><b>Wx</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__WX = 1;
+
+  /**
+   * The feature id for the '<em><b>Lc</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__LC = 2;
+
+  /**
+   * The feature id for the '<em><b>Lc2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__LC2 = 3;
+
+  /**
+   * The feature id for the '<em><b>E1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__E1 = 4;
+
+  /**
+   * The feature id for the '<em><b>Lc3</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__LC3 = 5;
+
+  /**
+   * The feature id for the '<em><b>Lc4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__LC4 = 6;
+
+  /**
+   * The feature id for the '<em><b>C3</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__C3 = 7;
+
+  /**
+   * The feature id for the '<em><b>Lc5</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH__LC5 = 8;
+
+  /**
+   * The number of structural features of the '<em>Foreach</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREACH_FEATURE_COUNT = 9;
 
   /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.VarsImpl <em>Vars</em>}' class.
@@ -738,7 +905,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVars()
    * @generated
    */
-  int VARS = 8;
+  int VARS = 13;
 
   /**
    * The feature id for the '<em><b>A</b></em>' attribute.
@@ -784,7 +951,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRS()
    * @generated
    */
-  int EXPRS = 9;
+  int EXPRS = 14;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -830,7 +997,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPR()
    * @generated
    */
-  int EXPR = 10;
+  int EXPR = 15;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -867,7 +1034,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRSIMPLE()
    * @generated
    */
-  int EXPRSIMPLE = 11;
+  int EXPRSIMPLE = 16;
 
   /**
    * The feature id for the '<em><b>L</b></em>' attribute.
@@ -958,7 +1125,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLEXPR()
    * @generated
    */
-  int LEXPR = 12;
+  int LEXPR = 17;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -1004,7 +1171,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRAND()
    * @generated
    */
-  int EXPRAND = 13;
+  int EXPRAND = 18;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -1059,7 +1226,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPROR()
    * @generated
    */
-  int EXPROR = 14;
+  int EXPROR = 19;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -1114,7 +1281,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRNOT()
    * @generated
    */
-  int EXPRNOT = 15;
+  int EXPRNOT = 20;
 
   /**
    * The feature id for the '<em><b>Lc1</b></em>' containment reference.
@@ -1151,7 +1318,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPREQ()
    * @generated
    */
-  int EXPREQ = 16;
+  int EXPREQ = 21;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -1215,7 +1382,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 17;
+  int VARIABLE = 22;
 
   /**
    * The feature id for the '<em><b>N</b></em>' attribute.
@@ -1243,7 +1410,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLCs()
    * @generated
    */
-  int LCS = 18;
+  int LCS = 23;
 
   /**
    * The feature id for the '<em><b>L</b></em>' attribute.
@@ -1352,7 +1519,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLC()
    * @generated
    */
-  int LC = 19;
+  int LC = 24;
 
   /**
    * The feature id for the '<em><b>A</b></em>' attribute.
@@ -1767,356 +1934,494 @@ public interface Langage_whilePackage extends EPackage
   EClass getCommand();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getE <em>E</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Command#getNop <em>Nop</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nop</em>'.
+   * @see org.xtext.langage_while.Command#getNop()
+   * @see #getCommand()
+   * @generated
+   */
+  EAttribute getCommand_Nop();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getAffect <em>Affect</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Affect</em>'.
+   * @see org.xtext.langage_while.Command#getAffect()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Affect();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getWh <em>Wh</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Wh</em>'.
+   * @see org.xtext.langage_while.Command#getWh()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Wh();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getForr <em>Forr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Forr</em>'.
+   * @see org.xtext.langage_while.Command#getForr()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Forr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getFore <em>Fore</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Fore</em>'.
+   * @see org.xtext.langage_while.Command#getFore()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Fore();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getIff <em>Iff</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Iff</em>'.
+   * @see org.xtext.langage_while.Command#getIff()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Iff();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.langage_while.Assign <em>Assign</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Assign</em>'.
+   * @see org.xtext.langage_while.Assign
+   * @generated
+   */
+  EClass getAssign();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Assign#getE <em>E</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>E</em>'.
-   * @see org.xtext.langage_while.Command#getE()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Assign#getE()
+   * @see #getAssign()
    * @generated
    */
-  EReference getCommand_E();
+  EReference getAssign_E();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getL <em>L</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Assign#getL <em>L</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>L</em>'.
-   * @see org.xtext.langage_while.Command#getL()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Assign#getL()
+   * @see #getAssign()
    * @generated
    */
-  EReference getCommand_L();
+  EReference getAssign_L();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getC <em>C</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Assign#getC <em>C</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>C</em>'.
-   * @see org.xtext.langage_while.Command#getC()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Assign#getC()
+   * @see #getAssign()
    * @generated
    */
-  EReference getCommand_C();
+  EReference getAssign_C();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getN <em>N</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Assign#getN <em>N</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>N</em>'.
-   * @see org.xtext.langage_while.Command#getN()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Assign#getN()
+   * @see #getAssign()
    * @generated
    */
-  EReference getCommand_N();
+  EReference getAssign_N();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLl <em>Ll</em>}'.
+   * Returns the meta object for class '{@link org.xtext.langage_while.While <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>While</em>'.
+   * @see org.xtext.langage_while.While
+   * @generated
+   */
+  EClass getWhile();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getLl <em>Ll</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Ll</em>'.
-   * @see org.xtext.langage_while.Command#getLl()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getLl()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_Ll();
+  EReference getWhile_Ll();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getEe <em>Ee</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getEe <em>Ee</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Ee</em>'.
-   * @see org.xtext.langage_while.Command#getEe()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getEe()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_Ee();
+  EReference getWhile_Ee();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getCc <em>Cc</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getCc <em>Cc</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Cc</em>'.
-   * @see org.xtext.langage_while.Command#getCc()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getCc()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_Cc();
+  EReference getWhile_Cc();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getZ <em>Z</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getZ <em>Z</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Z</em>'.
-   * @see org.xtext.langage_while.Command#getZ()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getZ()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_Z();
+  EReference getWhile_Z();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getK <em>K</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getK <em>K</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>K</em>'.
-   * @see org.xtext.langage_while.Command#getK()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getK()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_K();
+  EReference getWhile_K();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLc <em>Lc</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.While#getLc <em>Lc</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Lc</em>'.
-   * @see org.xtext.langage_while.Command#getLc()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.While#getLc()
+   * @see #getWhile()
    * @generated
    */
-  EReference getCommand_Lc();
+  EReference getWhile_Lc();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getHh <em>Hh</em>}'.
+   * Returns the meta object for class '{@link org.xtext.langage_while.For <em>For</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>For</em>'.
+   * @see org.xtext.langage_while.For
+   * @generated
+   */
+  EClass getFor();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getCc <em>Cc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cc</em>'.
+   * @see org.xtext.langage_while.For#getCc()
+   * @see #getFor()
+   * @generated
+   */
+  EReference getFor_Cc();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getHh <em>Hh</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Hh</em>'.
-   * @see org.xtext.langage_while.Command#getHh()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.For#getHh()
+   * @see #getFor()
    * @generated
    */
-  EReference getCommand_Hh();
+  EReference getFor_Hh();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getTt <em>Tt</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getTt <em>Tt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Tt</em>'.
-   * @see org.xtext.langage_while.Command#getTt()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.For#getTt()
+   * @see #getFor()
    * @generated
    */
-  EReference getCommand_Tt();
+  EReference getFor_Tt();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getVv <em>Vv</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getVv <em>Vv</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Vv</em>'.
-   * @see org.xtext.langage_while.Command#getVv()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.For#getVv()
+   * @see #getFor()
    * @generated
    */
-  EReference getCommand_Vv();
+  EReference getFor_Vv();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getC1 <em>C1</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getC1 <em>C1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>C1</em>'.
-   * @see org.xtext.langage_while.Command#getC1()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.For#getC1()
+   * @see #getFor()
    * @generated
    */
-  EReference getCommand_C1();
+  EReference getFor_C1();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getSs <em>Ss</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.For#getSs <em>Ss</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Ss</em>'.
-   * @see org.xtext.langage_while.Command#getSs()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.For#getSs()
+   * @see #getFor()
    * @generated
    */
-  EReference getCommand_Ss();
+  EReference getFor_Ss();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getMm <em>Mm</em>}'.
+   * Returns the meta object for class '{@link org.xtext.langage_while.If <em>If</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>If</em>'.
+   * @see org.xtext.langage_while.If
+   * @generated
+   */
+  EClass getIf();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getMm <em>Mm</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Mm</em>'.
-   * @see org.xtext.langage_while.Command#getMm()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getMm()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Mm();
+  EReference getIf_Mm();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getJj <em>Jj</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getJj <em>Jj</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Jj</em>'.
-   * @see org.xtext.langage_while.Command#getJj()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getJj()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Jj();
+  EReference getIf_Jj();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getKk <em>Kk</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getKk <em>Kk</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Kk</em>'.
-   * @see org.xtext.langage_while.Command#getKk()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getKk()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Kk();
+  EReference getIf_Kk();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getHg <em>Hg</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getHg <em>Hg</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Hg</em>'.
-   * @see org.xtext.langage_while.Command#getHg()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getHg()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Hg();
+  EReference getIf_Hg();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getC2 <em>C2</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getC2 <em>C2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>C2</em>'.
-   * @see org.xtext.langage_while.Command#getC2()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getC2()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_C2();
+  EReference getIf_C2();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getGg <em>Gg</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getGg <em>Gg</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Gg</em>'.
-   * @see org.xtext.langage_while.Command#getGg()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getGg()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Gg();
+  EReference getIf_Gg();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getFf <em>Ff</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getFf <em>Ff</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Ff</em>'.
-   * @see org.xtext.langage_while.Command#getFf()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getFf()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Ff();
+  EReference getIf_Ff();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getO <em>O</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getO <em>O</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>O</em>'.
-   * @see org.xtext.langage_while.Command#getO()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getO()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_O();
+  EReference getIf_O();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getDd <em>Dd</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.If#getDd <em>Dd</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Dd</em>'.
-   * @see org.xtext.langage_while.Command#getDd()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.If#getDd()
+   * @see #getIf()
    * @generated
    */
-  EReference getCommand_Dd();
+  EReference getIf_Dd();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getSq <em>Sq</em>}'.
+   * Returns the meta object for class '{@link org.xtext.langage_while.Foreach <em>Foreach</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Foreach</em>'.
+   * @see org.xtext.langage_while.Foreach
+   * @generated
+   */
+  EClass getForeach();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getSq <em>Sq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Sq</em>'.
-   * @see org.xtext.langage_while.Command#getSq()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getSq()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Sq();
+  EReference getForeach_Sq();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getWx <em>Wx</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getWx <em>Wx</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Wx</em>'.
-   * @see org.xtext.langage_while.Command#getWx()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getWx()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Wx();
+  EReference getForeach_Wx();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLc2 <em>Lc2</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getLc <em>Lc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Lc</em>'.
+   * @see org.xtext.langage_while.Foreach#getLc()
+   * @see #getForeach()
+   * @generated
+   */
+  EReference getForeach_Lc();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getLc2 <em>Lc2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Lc2</em>'.
-   * @see org.xtext.langage_while.Command#getLc2()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getLc2()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Lc2();
+  EReference getForeach_Lc2();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getE1 <em>E1</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getE1 <em>E1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>E1</em>'.
-   * @see org.xtext.langage_while.Command#getE1()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getE1()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_E1();
+  EReference getForeach_E1();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLc3 <em>Lc3</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getLc3 <em>Lc3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Lc3</em>'.
-   * @see org.xtext.langage_while.Command#getLc3()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getLc3()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Lc3();
+  EReference getForeach_Lc3();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLc4 <em>Lc4</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getLc4 <em>Lc4</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Lc4</em>'.
-   * @see org.xtext.langage_while.Command#getLc4()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getLc4()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Lc4();
+  EReference getForeach_Lc4();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getC3 <em>C3</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getC3 <em>C3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>C3</em>'.
-   * @see org.xtext.langage_while.Command#getC3()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getC3()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_C3();
+  EReference getForeach_C3();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Command#getLc5 <em>Lc5</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Foreach#getLc5 <em>Lc5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Lc5</em>'.
-   * @see org.xtext.langage_while.Command#getLc5()
-   * @see #getCommand()
+   * @see org.xtext.langage_while.Foreach#getLc5()
+   * @see #getForeach()
    * @generated
    */
-  EReference getCommand_Lc5();
+  EReference getForeach_Lc5();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.Vars <em>Vars</em>}'.
@@ -3001,12 +3306,70 @@ public interface Langage_whilePackage extends EPackage
     EClass COMMAND = eINSTANCE.getCommand();
 
     /**
+     * The meta object literal for the '<em><b>Nop</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMMAND__NOP = eINSTANCE.getCommand_Nop();
+
+    /**
+     * The meta object literal for the '<em><b>Affect</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__AFFECT = eINSTANCE.getCommand_Affect();
+
+    /**
+     * The meta object literal for the '<em><b>Wh</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__WH = eINSTANCE.getCommand_Wh();
+
+    /**
+     * The meta object literal for the '<em><b>Forr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__FORR = eINSTANCE.getCommand_Forr();
+
+    /**
+     * The meta object literal for the '<em><b>Fore</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__FORE = eINSTANCE.getCommand_Fore();
+
+    /**
+     * The meta object literal for the '<em><b>Iff</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__IFF = eINSTANCE.getCommand_Iff();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.AssignImpl <em>Assign</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.AssignImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getAssign()
+     * @generated
+     */
+    EClass ASSIGN = eINSTANCE.getAssign();
+
+    /**
      * The meta object literal for the '<em><b>E</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__E = eINSTANCE.getCommand_E();
+    EReference ASSIGN__E = eINSTANCE.getAssign_E();
 
     /**
      * The meta object literal for the '<em><b>L</b></em>' containment reference feature.
@@ -3014,7 +3377,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__L = eINSTANCE.getCommand_L();
+    EReference ASSIGN__L = eINSTANCE.getAssign_L();
 
     /**
      * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
@@ -3022,7 +3385,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__C = eINSTANCE.getCommand_C();
+    EReference ASSIGN__C = eINSTANCE.getAssign_C();
 
     /**
      * The meta object literal for the '<em><b>N</b></em>' containment reference feature.
@@ -3030,7 +3393,17 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__N = eINSTANCE.getCommand_N();
+    EReference ASSIGN__N = eINSTANCE.getAssign_N();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.WhileImpl <em>While</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.WhileImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getWhile()
+     * @generated
+     */
+    EClass WHILE = eINSTANCE.getWhile();
 
     /**
      * The meta object literal for the '<em><b>Ll</b></em>' containment reference feature.
@@ -3038,7 +3411,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LL = eINSTANCE.getCommand_Ll();
+    EReference WHILE__LL = eINSTANCE.getWhile_Ll();
 
     /**
      * The meta object literal for the '<em><b>Ee</b></em>' containment reference feature.
@@ -3046,7 +3419,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__EE = eINSTANCE.getCommand_Ee();
+    EReference WHILE__EE = eINSTANCE.getWhile_Ee();
 
     /**
      * The meta object literal for the '<em><b>Cc</b></em>' containment reference feature.
@@ -3054,7 +3427,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__CC = eINSTANCE.getCommand_Cc();
+    EReference WHILE__CC = eINSTANCE.getWhile_Cc();
 
     /**
      * The meta object literal for the '<em><b>Z</b></em>' containment reference feature.
@@ -3062,7 +3435,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__Z = eINSTANCE.getCommand_Z();
+    EReference WHILE__Z = eINSTANCE.getWhile_Z();
 
     /**
      * The meta object literal for the '<em><b>K</b></em>' containment reference feature.
@@ -3070,7 +3443,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__K = eINSTANCE.getCommand_K();
+    EReference WHILE__K = eINSTANCE.getWhile_K();
 
     /**
      * The meta object literal for the '<em><b>Lc</b></em>' containment reference feature.
@@ -3078,7 +3451,25 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LC = eINSTANCE.getCommand_Lc();
+    EReference WHILE__LC = eINSTANCE.getWhile_Lc();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.ForImpl <em>For</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.ForImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFor()
+     * @generated
+     */
+    EClass FOR = eINSTANCE.getFor();
+
+    /**
+     * The meta object literal for the '<em><b>Cc</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR__CC = eINSTANCE.getFor_Cc();
 
     /**
      * The meta object literal for the '<em><b>Hh</b></em>' containment reference feature.
@@ -3086,7 +3477,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__HH = eINSTANCE.getCommand_Hh();
+    EReference FOR__HH = eINSTANCE.getFor_Hh();
 
     /**
      * The meta object literal for the '<em><b>Tt</b></em>' containment reference feature.
@@ -3094,7 +3485,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__TT = eINSTANCE.getCommand_Tt();
+    EReference FOR__TT = eINSTANCE.getFor_Tt();
 
     /**
      * The meta object literal for the '<em><b>Vv</b></em>' containment reference feature.
@@ -3102,7 +3493,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__VV = eINSTANCE.getCommand_Vv();
+    EReference FOR__VV = eINSTANCE.getFor_Vv();
 
     /**
      * The meta object literal for the '<em><b>C1</b></em>' containment reference feature.
@@ -3110,7 +3501,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__C1 = eINSTANCE.getCommand_C1();
+    EReference FOR__C1 = eINSTANCE.getFor_C1();
 
     /**
      * The meta object literal for the '<em><b>Ss</b></em>' containment reference feature.
@@ -3118,7 +3509,17 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__SS = eINSTANCE.getCommand_Ss();
+    EReference FOR__SS = eINSTANCE.getFor_Ss();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.IfImpl <em>If</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.IfImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getIf()
+     * @generated
+     */
+    EClass IF = eINSTANCE.getIf();
 
     /**
      * The meta object literal for the '<em><b>Mm</b></em>' containment reference feature.
@@ -3126,7 +3527,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__MM = eINSTANCE.getCommand_Mm();
+    EReference IF__MM = eINSTANCE.getIf_Mm();
 
     /**
      * The meta object literal for the '<em><b>Jj</b></em>' containment reference feature.
@@ -3134,7 +3535,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__JJ = eINSTANCE.getCommand_Jj();
+    EReference IF__JJ = eINSTANCE.getIf_Jj();
 
     /**
      * The meta object literal for the '<em><b>Kk</b></em>' containment reference feature.
@@ -3142,7 +3543,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__KK = eINSTANCE.getCommand_Kk();
+    EReference IF__KK = eINSTANCE.getIf_Kk();
 
     /**
      * The meta object literal for the '<em><b>Hg</b></em>' containment reference feature.
@@ -3150,7 +3551,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__HG = eINSTANCE.getCommand_Hg();
+    EReference IF__HG = eINSTANCE.getIf_Hg();
 
     /**
      * The meta object literal for the '<em><b>C2</b></em>' containment reference feature.
@@ -3158,7 +3559,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__C2 = eINSTANCE.getCommand_C2();
+    EReference IF__C2 = eINSTANCE.getIf_C2();
 
     /**
      * The meta object literal for the '<em><b>Gg</b></em>' containment reference feature.
@@ -3166,7 +3567,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__GG = eINSTANCE.getCommand_Gg();
+    EReference IF__GG = eINSTANCE.getIf_Gg();
 
     /**
      * The meta object literal for the '<em><b>Ff</b></em>' containment reference feature.
@@ -3174,7 +3575,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__FF = eINSTANCE.getCommand_Ff();
+    EReference IF__FF = eINSTANCE.getIf_Ff();
 
     /**
      * The meta object literal for the '<em><b>O</b></em>' containment reference feature.
@@ -3182,7 +3583,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__O = eINSTANCE.getCommand_O();
+    EReference IF__O = eINSTANCE.getIf_O();
 
     /**
      * The meta object literal for the '<em><b>Dd</b></em>' containment reference feature.
@@ -3190,7 +3591,17 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__DD = eINSTANCE.getCommand_Dd();
+    EReference IF__DD = eINSTANCE.getIf_Dd();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.ForeachImpl <em>Foreach</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.ForeachImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getForeach()
+     * @generated
+     */
+    EClass FOREACH = eINSTANCE.getForeach();
 
     /**
      * The meta object literal for the '<em><b>Sq</b></em>' containment reference feature.
@@ -3198,7 +3609,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__SQ = eINSTANCE.getCommand_Sq();
+    EReference FOREACH__SQ = eINSTANCE.getForeach_Sq();
 
     /**
      * The meta object literal for the '<em><b>Wx</b></em>' containment reference feature.
@@ -3206,7 +3617,15 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__WX = eINSTANCE.getCommand_Wx();
+    EReference FOREACH__WX = eINSTANCE.getForeach_Wx();
+
+    /**
+     * The meta object literal for the '<em><b>Lc</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOREACH__LC = eINSTANCE.getForeach_Lc();
 
     /**
      * The meta object literal for the '<em><b>Lc2</b></em>' containment reference feature.
@@ -3214,7 +3633,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LC2 = eINSTANCE.getCommand_Lc2();
+    EReference FOREACH__LC2 = eINSTANCE.getForeach_Lc2();
 
     /**
      * The meta object literal for the '<em><b>E1</b></em>' containment reference feature.
@@ -3222,7 +3641,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__E1 = eINSTANCE.getCommand_E1();
+    EReference FOREACH__E1 = eINSTANCE.getForeach_E1();
 
     /**
      * The meta object literal for the '<em><b>Lc3</b></em>' containment reference feature.
@@ -3230,7 +3649,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LC3 = eINSTANCE.getCommand_Lc3();
+    EReference FOREACH__LC3 = eINSTANCE.getForeach_Lc3();
 
     /**
      * The meta object literal for the '<em><b>Lc4</b></em>' containment reference feature.
@@ -3238,7 +3657,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LC4 = eINSTANCE.getCommand_Lc4();
+    EReference FOREACH__LC4 = eINSTANCE.getForeach_Lc4();
 
     /**
      * The meta object literal for the '<em><b>C3</b></em>' containment reference feature.
@@ -3246,7 +3665,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__C3 = eINSTANCE.getCommand_C3();
+    EReference FOREACH__C3 = eINSTANCE.getForeach_C3();
 
     /**
      * The meta object literal for the '<em><b>Lc5</b></em>' containment reference feature.
@@ -3254,7 +3673,7 @@ public interface Langage_whilePackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__LC5 = eINSTANCE.getCommand_Lc5();
+    EReference FOREACH__LC5 = eINSTANCE.getForeach_Lc5();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.VarsImpl <em>Vars</em>}' class.

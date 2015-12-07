@@ -47,10 +47,22 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affect" eType="#//Assign"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wh" eType="#//While" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forr" eType="#//For" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fore" eType="#//Foreach"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iff" eType="#//If" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assign">
     <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//Vars" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//EXPRS" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="While">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ll" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ee" eType="#//EXPR" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cc" eType="#//LCs" containment="true"/>
@@ -58,12 +70,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="k" eType="#//Commands"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lc" eType="#//LCs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="For">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cc" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hh" eType="#//EXPR" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tt" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vv" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="c1" eType="#//Commands"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ss" eType="#//LCs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="If">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mm" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jj" eType="#//EXPR" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kk" eType="#//LCs" containment="true"/>
@@ -75,8 +92,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="#//Commands"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dd" eType="#//LCs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Foreach">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sq" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="wx" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lc" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lc2" eType="#//LCs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="e1" eType="#//EXPR" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lc3" eType="#//LCs" containment="true"/>

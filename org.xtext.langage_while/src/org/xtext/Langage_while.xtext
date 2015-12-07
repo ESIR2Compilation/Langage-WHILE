@@ -26,11 +26,15 @@ Output : (n=VAR ',' (q=LCs) (o=Output)) | s=VAR;
 /* COMMANDES SIMPLES ET COMPLEXES */
 Commands : (a=Command) (';' l=LCs s=Commands)?;
 
-Command : 'nop' | (e=Vars l=LCs ':=' c=LCs n=EXPRS) |
-		 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od' |
-		 'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od' |
-		 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi' |
-		 'foreach' sq=LCs wx=EXPR lc=LCs 'in' lc2=LCs e1=EXPR lc3=LCs 'do' lc4=LCs c3=Commands lc5=LCs 'od';
+Command :nop=Nop|affect=Assign|wh=While|forr=For|fore=Foreach|iff=If;
+
+Nop:'nop';
+Assign:(e=Vars l=LCs ':=' c=LCs n=EXPRS) ;
+While: 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od' ;
+For:'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od' ;
+If: 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi' ;
+Foreach: 'foreach' sq=LCs wx=EXPR lc=LCs 'in' lc2=LCs e1=EXPR lc3=LCs 'do' lc4=LCs c3=Commands lc5=LCs 'od';
+
 Vars : (a=VAR) (',' (l=LCs) (u=Vars))?;
 EXPRS : f=EXPR (',' l=LCs e2=EXPRS)?;
 

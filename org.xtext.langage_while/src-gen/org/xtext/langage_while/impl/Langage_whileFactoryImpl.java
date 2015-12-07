@@ -72,6 +72,11 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
       case Langage_whilePackage.OUTPUT: return createOutput();
       case Langage_whilePackage.COMMANDS: return createCommands();
       case Langage_whilePackage.COMMAND: return createCommand();
+      case Langage_whilePackage.ASSIGN: return createAssign();
+      case Langage_whilePackage.WHILE: return createWhile();
+      case Langage_whilePackage.FOR: return createFor();
+      case Langage_whilePackage.IF: return createIf();
+      case Langage_whilePackage.FOREACH: return createForeach();
       case Langage_whilePackage.VARS: return createVars();
       case Langage_whilePackage.EXPRS: return createEXPRS();
       case Langage_whilePackage.EXPR: return createEXPR();
@@ -175,6 +180,61 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
   {
     CommandImpl command = new CommandImpl();
     return command;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Assign createAssign()
+  {
+    AssignImpl assign = new AssignImpl();
+    return assign;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public While createWhile()
+  {
+    WhileImpl while_ = new WhileImpl();
+    return while_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public For createFor()
+  {
+    ForImpl for_ = new ForImpl();
+    return for_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public If createIf()
+  {
+    IfImpl if_ = new IfImpl();
+    return if_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Foreach createForeach()
+  {
+    ForeachImpl foreach = new ForeachImpl();
+    return foreach;
   }
 
   /**

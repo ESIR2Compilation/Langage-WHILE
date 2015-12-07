@@ -35,6 +35,11 @@ import org.xtext.langage_while.Output
 import org.xtext.langage_while.Program
 import org.xtext.langage_while.Vars
 import tabSymb.*
+import org.xtext.langage_while.If
+import org.xtext.langage_while.Assign
+import org.xtext.langage_while.For
+import org.xtext.langage_while.Foreach
+import org.xtext.langage_while.While
 
 class Langage_whileGenerator implements IGenerator {
 	
@@ -148,16 +153,11 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (Commands n)
 	'''
-	«/*n.a.compile*/ "if "+ "nil" + " then " + " b!" + "
-
-	else" + "	A!=null" +" 
-
-	fi" +  (("; "  //n 
-	
-) ?: null) 
-	» 
+	«n.a.compile»
+	«IF n.s != null»
+	«n.s.compile»
+	«ENDIF»
 	''' 
-	
 	
 	def compile (Output O, String a)
 	'''
@@ -171,35 +171,50 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (Command c)  // a continuer
 	'''
-	« (("if "  + c.jj.compile+"
-" + "then "  + c.c2.compile + "
-"  )+ ((("else " + c.ff.compile + c.o.compile + c.dd.compile+ "
-")?:"") + "fi") ?:("") )
-	
-	?:
-	(((c.e.compile)+" := "+(c.n.compile))
-		
-		?:( ("while " + (c.ee.compile+"
-")  + "do " + (c.z.compile) + (c.k.compile+"
-")  + " od ")
-			
-			?: ( ("for " + c.hh.compile+"
-" + "do "  + c.c1.compile + " od")
-				
-				?: ( "nop"
-					
-					?: ("foreach " + c.wx.compile + "
- in " + c.e1.compile  + " do "  + c.c3.compile  + " od"
-						
-					)
-				)
-			) 
-		)
+	«IF c.affect != null»«c.affect.compile»«ENDIF»
+	«IF c.nop != null»nop«ENDIF»
+	«IF c.iff != null»«c.iff.compile»«ENDIF»
+	«IF c.wh != null»«c.wh.compile»«ENDIF»
+	«IF c.forr != null»«c.forr.compile»«ENDIF»
+	«IF c.fore != null»«c.fore.compile»«ENDIF»
+	'''
 	
 	
-	
-	)
-	»
+	def compile(Assign a)
+	 '''
+	 «a.e.compile» := «a.n.compile»
+	 '''
+	def compile(If i) 
+	'''
+	if «i.jj.compile»
+	then
+	«i.c2.compile»
+	else
+	«i.o.compile»
+	fi
+	'''
+
+	def compile(For f)
+	 '''
+	 for «f.hh.compile»
+	 do
+		«f.c1.compile»
+	 od
+	'''
+
+	def compile(Foreach f) 
+	'''
+	foreach «f.wx.compile» in «f.e1.compile»
+	do
+	«f.c3.compile»
+	od'''
+
+	def compile(While w) 
+	'''
+	while «w.ee.compile»
+	do
+	«w.k.compile»
+	od
 	'''
 	
 	def compile (Vars v)
