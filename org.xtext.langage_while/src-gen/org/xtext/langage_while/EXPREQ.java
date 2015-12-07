@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.EXPREQ#getE1 <em>E1</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPREQ#getCcc <em>Ccc</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.langage_while.EXPREQ#getW <em>W</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPREQ#getEx <em>Ex</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ()
  * @model

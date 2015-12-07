@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getL <em>L</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getS <em>S</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getV <em>V</em>}</li>
  *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getW <em>W</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE()
  * @model

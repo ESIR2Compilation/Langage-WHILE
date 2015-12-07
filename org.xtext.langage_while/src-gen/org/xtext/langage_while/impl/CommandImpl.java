@@ -25,6 +25,7 @@ import org.xtext.langage_while.Vars;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getE <em>E</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getL <em>L</em>}</li>
@@ -59,7 +60,6 @@ import org.xtext.langage_while.Vars;
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getC3 <em>C3</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getLc5 <em>Lc5</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

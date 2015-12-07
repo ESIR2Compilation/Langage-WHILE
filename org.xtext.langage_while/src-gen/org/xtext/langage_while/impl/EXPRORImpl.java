@@ -22,13 +22,13 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.EXPRORImpl#getE1 <em>E1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPRORImpl#getLc1 <em>Lc1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPRORImpl#getLc2 <em>Lc2</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPRORImpl#getE2 <em>E2</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
