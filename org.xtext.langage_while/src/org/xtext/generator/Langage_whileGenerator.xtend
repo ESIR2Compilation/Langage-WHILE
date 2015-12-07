@@ -34,7 +34,7 @@ import org.xtext.langage_while.Model
 import org.xtext.langage_while.Output
 import org.xtext.langage_while.Program
 import org.xtext.langage_while.Vars
-import tabSymb.TableSymbole
+import tabSymb.*
 
 class Langage_whileGenerator implements IGenerator {
 	
@@ -73,9 +73,15 @@ class Langage_whileGenerator implements IGenerator {
   		return null;
 	}
 	
+	def Fonction createFonct(int i){
+		return  new Fonction("funct"+i);
+	}
+	
 	  @Inject extension IQualifiedNameProvider
 	
-		TableSymbole tableS= new TableSymbole();
+		TabSymbole tableS= new TabSymbole();
+		Fonction fonct;
+		int cpt=0;
 	
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
@@ -97,23 +103,25 @@ class Langage_whileGenerator implements IGenerator {
 	def compile (Model l)
 	'''
 	«l.greetings.compile»
-	«tableS.ToStringAll()»
+	«tableS.afficher()»
 	'''
 	
 	
 	
 	def compile (Program p)
 	'''
+	«cpt=0»
 	«FOR f:p.f»
 	«f.compile»
 	«ENDFOR» 
 	«((p.u)+(p)) ?: ("")»
-	
 	'''
 	
 	def compile (Function f)
-	'''	
-	«tableS.ajouterFonction(f.nom)»
+	'''	«tableS.addSymbole(f.nom)»
+	« cpt++»
+	« fonct = createFonct(cpt) »
+	«tableS.addFonction(f.nom,fonct)»
 		
 		«"function " +f.nom + ":" + "
 " + f.d.compile(f.nom)
@@ -129,11 +137,11 @@ class Langage_whileGenerator implements IGenerator {
 	'''
 	
 	def compile (Input l, String a)
-	'''«tableS.ModifInputFunction(a)»
+	'''«fonct.incNbEntree()»
 	«if (l.y!=null)
-	tableS.ajouterVariable(l.y,a)
+	fonct.addVariable(l.y)
 	else
-	tableS.ajouterVariable(l.v,a)»
+	fonct.addVariable(l.v)»
 	«(l.y)  ?: ((l.v)+" , "+(l.in.compile(a)))» 
 		'''
 	
@@ -153,12 +161,12 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (Output O, String a)
 	'''
-	«tableS.ModifOutputFun(a)»
+	«fonct.incNbSortie()»
 	«if (O.s!=null)
-	tableS.ajouterVariable(O.s,a)
+	""
 	else
-	tableS.ajouterVariable(O.n,a)»
-	«(O.s) ?:  ((O.n)+", "+(O.o.compile(a)))»
+	
+	(O.s) ?:  ((O.n)+", "+(O.o.compile(a)))»
 	'''
 	
 	def compile (Command c)  // a continuer
@@ -226,6 +234,7 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (EXPRSIMPLE ex) // a revoir
 	'''
+	
 	«"nil" 
 	?:( (ex.l) 
 		
@@ -241,6 +250,7 @@ class Langage_whileGenerator implements IGenerator {
 							
 							?: ("(" + ex.v + ex.w.compile + ")"
 								
+								
 							)
 							
 						)
@@ -254,10 +264,10 @@ class Langage_whileGenerator implements IGenerator {
 		) 
 		
 	)»
-	
+	«if (ex.v.length != 0)
+	tableS.addSymbole(ex.v)»
 	
 
-	»
 	
 	
 	'''

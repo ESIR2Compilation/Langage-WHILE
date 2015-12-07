@@ -11,6 +11,8 @@ import java.io.FileInputStream;
  */
 public class DoublePrintTest extends AbstractTest{
 	
+	//TODO réécrire le fichier généré dans l'entry, sous l'extension while, le reprinté puis le supprimer.
+	//TODO comparer le contenu des deux 
 	public void tester() {
 		File f1 = prettyPrinting("src/entries/", entry);
 		File f2 = prettyPrinting("src/outputs/", f1.getName());
