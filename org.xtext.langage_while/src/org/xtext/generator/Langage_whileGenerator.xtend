@@ -90,13 +90,21 @@ class Langage_whileGenerator implements IGenerator {
 	
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+   
+   		var File file = new File(resource.URI.toString);
+		var String name = file.name;
+		
+				if (name.contains("."))
+			name = name.substring(0, name.lastIndexOf("."));
+		
+				var String output = "";
+		
     for(e: resource.allContents.toIterable.filter(typeof(Model))) {
-      fsa.generateFile(
-        //e.toString+
-        "test.whpp",
-        e.compile)
+    				output += e.compile + '\n'
+        }
+      fsa.generateFile(name+".whpp",output)
     }
-  }
+  
 		
 //		fsa.generateFile('greetings.txt', 'People to greet: ' + 
 //			resource.allContents
@@ -110,8 +118,6 @@ class Langage_whileGenerator implements IGenerator {
 	«l.greetings.compile»
 	«tableS.afficher()»
 	'''
-	
-	
 	
 	def compile (Program p)
 	'''
@@ -168,7 +174,7 @@ class Langage_whileGenerator implements IGenerator {
 	
 	(O.s) ?:  ((O.n)+", "+(O.o.compile(a)))»
 	'''
-	
+	/* */
 	def compile (Command c)  // a continuer
 	'''
 	«IF c.affect != null»«c.affect.compile»«ENDIF»
@@ -182,38 +188,39 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile(Assign a)
 	 '''
-	 «a.e.compile» := «a.n.compile»
+	 «a.e» := «a.n»
 	 '''
 	def compile(If i) 
 	'''
-	if «i.jj.compile»
+	if «i.jj»
 	then
-	«i.c2.compile»
+	«i.c2»
 	else
-	«i.o.compile»
+	«i.o»
 	fi
 	'''
 
 	def compile(For f)
 	 '''
-	 for «f.hh.compile»
+	 for «f.hh»
 	 do
-		«f.c1.compile»
+	 «f.c1»
 	 od
 	'''
 
 	def compile(Foreach f) 
 	'''
-	foreach «f.wx.compile» in «f.e1.compile»
+	foreach «f.wx» in «f.e1»
 	do
-	«f.c3.compile»
-	od'''
+	«f.c3»
+	od
+	'''
 
 	def compile(While w) 
 	'''
-	while «w.ee.compile»
+	while «w.ee»
 	do
-	«w.k.compile»
+	«w.k»
 	od
 	'''
 	
@@ -227,8 +234,6 @@ class Langage_whileGenerator implements IGenerator {
 	« e.f.compile + ( (", " + e.e2.compile) ?: ("") )
 	»
 	'''
-	
-	
 	
 	def compile (LEXPR l)
 	'''
