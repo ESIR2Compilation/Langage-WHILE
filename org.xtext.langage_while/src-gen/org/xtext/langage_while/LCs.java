@@ -10,11 +10,11 @@ package org.xtext.langage_while;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.LCs#getN <em>N</em>}</li>
  *   <li>{@link org.xtext.langage_while.LCs#getA <em>A</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getLCs()
  * @model

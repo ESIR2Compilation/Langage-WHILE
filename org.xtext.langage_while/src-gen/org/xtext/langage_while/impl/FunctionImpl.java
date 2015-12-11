@@ -22,13 +22,13 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getN <em>N</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getT <em>T</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getD <em>D</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

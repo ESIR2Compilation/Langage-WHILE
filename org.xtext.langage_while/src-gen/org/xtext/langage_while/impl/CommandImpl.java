@@ -25,7 +25,6 @@ import org.xtext.langage_while.While;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getNop <em>Nop</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getAffect <em>Affect</em>}</li>
@@ -34,6 +33,7 @@ import org.xtext.langage_while.While;
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getFore <em>Fore</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getIff <em>Iff</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

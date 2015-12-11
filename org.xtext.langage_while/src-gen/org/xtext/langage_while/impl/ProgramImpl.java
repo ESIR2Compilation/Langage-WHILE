@@ -28,12 +28,12 @@ import org.xtext.langage_while.Program;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ProgramImpl#getF <em>F</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ProgramImpl#getU <em>U</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ProgramImpl#getPp <em>Pp</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

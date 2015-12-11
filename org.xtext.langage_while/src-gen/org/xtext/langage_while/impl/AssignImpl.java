@@ -23,13 +23,13 @@ import org.xtext.langage_while.Vars;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getE <em>E</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getL <em>L</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getC <em>C</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getN <em>N</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

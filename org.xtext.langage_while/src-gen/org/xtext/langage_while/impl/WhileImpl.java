@@ -23,7 +23,6 @@ import org.xtext.langage_while.While;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getLl <em>Ll</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getEe <em>Ee</em>}</li>
@@ -32,6 +31,7 @@ import org.xtext.langage_while.While;
  *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getK <em>K</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getLc <em>Lc</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

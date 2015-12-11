@@ -21,11 +21,11 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.LCsImpl#getN <em>N</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.LCsImpl#getA <em>A</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

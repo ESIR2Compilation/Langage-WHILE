@@ -23,7 +23,6 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.EXPREQImpl#getE1 <em>E1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPREQImpl#getCcc <em>Ccc</em>}</li>
@@ -31,6 +30,7 @@ import org.xtext.langage_while.Langage_whilePackage;
  *   <li>{@link org.xtext.langage_while.impl.EXPREQImpl#getW <em>W</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPREQImpl#getEx <em>Ex</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

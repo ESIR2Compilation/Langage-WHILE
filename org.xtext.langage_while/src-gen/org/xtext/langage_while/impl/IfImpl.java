@@ -23,7 +23,6 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.IfImpl#getMm <em>Mm</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.IfImpl#getJj <em>Jj</em>}</li>
@@ -35,6 +34,7 @@ import org.xtext.langage_while.Langage_whilePackage;
  *   <li>{@link org.xtext.langage_while.impl.IfImpl#getO <em>O</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.IfImpl#getDd <em>Dd</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.While#getLl <em>Ll</em>}</li>
  *   <li>{@link org.xtext.langage_while.While#getEe <em>Ee</em>}</li>
@@ -20,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.langage_while.While#getK <em>K</em>}</li>
  *   <li>{@link org.xtext.langage_while.While#getLc <em>Lc</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getWhile()
  * @model

@@ -24,7 +24,6 @@ import org.xtext.langage_while.Output;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.DefImpl#getL <em>L</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.DefImpl#getIn <em>In</em>}</li>
@@ -34,6 +33,7 @@ import org.xtext.langage_while.Output;
  *   <li>{@link org.xtext.langage_while.impl.DefImpl#getU <em>U</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.DefImpl#getO <em>O</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

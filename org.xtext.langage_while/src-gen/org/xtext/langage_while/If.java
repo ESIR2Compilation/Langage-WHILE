@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.If#getMm <em>Mm</em>}</li>
  *   <li>{@link org.xtext.langage_while.If#getJj <em>Jj</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.langage_while.If#getO <em>O</em>}</li>
  *   <li>{@link org.xtext.langage_while.If#getDd <em>Dd</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getIf()
  * @model
