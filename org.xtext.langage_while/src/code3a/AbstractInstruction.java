@@ -1,20 +1,52 @@
 package code3a;
 
-
+import java.util.*;
 
 /**
+ * Représentation abstraite d'une commande While :
 
- * Représentation abstraite d'un instruction :
+ * 	 Nop
 
- * 	- Abstract Command
+ *   While
 
- *  - Abstract Expression
+ *   For
 
+ *   Foreach
+
+ *   If
+
+ *   IfElse
+
+ *   Aff
+======
+
+ * 	 Nil
+
+ *   Cons
+
+ *   List
+
+ *   Hd
+
+ *   Tl
+
+ *   EgalWH
+
+ *   And
+
+ *   Or
+
+ *   Not
  */
 
 public abstract class AbstractInstruction {
 
-	
+	String code;
+
+	public AbstractInstruction() {
+		super();
+		this.code = "";
+	}
 
 	/**
 
@@ -25,7 +57,10 @@ public abstract class AbstractInstruction {
 	 * @return
 
 	 */
-
-	public abstract String genCode3A(int offset);
+	public abstract TreeSet<String> evaluer();
+	public String genCode3A(){
+		evaluer();
+		return code;
+	}
 
 }
