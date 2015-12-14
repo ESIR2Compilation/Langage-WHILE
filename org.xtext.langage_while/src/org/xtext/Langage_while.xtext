@@ -3,8 +3,7 @@ grammar org.xtext.Langage_while with org.eclipse.xtext.common.Terminals
 generate langage_while "http://www.xtext.org/Langage_while"
 
 Model:
-	greetings=(Program);
-
+	(prog+= Function )*;
 	
 
 	/* Intégrer def dans function pour l'interprétation du noeud
@@ -14,7 +13,6 @@ Model:
 
 
 /* PROGRAM */
-Program : (f+=Function)* (u=CR (pp=Program))?;
 Function : 'function' (n=LCs) (nom=SYM) ':' (t=LCs) (d=Def);
 Def : 'read' l=LCs (in=Input) z=LCs
 		'%' v=Commands s=LCs
@@ -29,10 +27,10 @@ Commands : (a=Command) (';' l=LCs s=Commands)?;
 Command :nop=Nop|affect=Assign|wh=While|forr=For|fore=Foreach|iff=If;
 
 Nop:'nop';
-Assign:(e=Vars l=LCs ':=' c=LCs n=EXPRS) ;
-While: 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od' ;
-For:'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od' ;
-If: 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi' ;
+Assign:(e=Vars l=LCs ':=' c=LCs n=EXPRS);
+While: 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od';
+For:'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od';
+If: 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi';
 Foreach: 'foreach' sq=LCs wx=EXPR lc=LCs 'in' lc2=LCs e1=EXPR lc3=LCs 'do' lc4=LCs c3=Commands lc5=LCs 'od';
 
 Vars : (a=VAR) (',' (l=LCs) (u=Vars))?;
@@ -41,10 +39,8 @@ EXPRS : f=EXPR (',' l=LCs e2=EXPRS)?;
 
 /* EXPRESSIONS SIMPLES */
 EXPR : e1=EXPRSIMPLE | ex=EXPRAND;
-EXPRSIMPLE : (('nil') | l=VAR | s=SYM) |
-			('(' 'cons' yy=LEXPR ')') | ('(' 'list' b=LEXPR ')') |
-			('(' 'hd' u=LCs g=EXPR ')') | ('(' 'tl' LCs n=EXPR ')') |
-			('(' v=SYM w=LEXPR ')');
+EXPRSIMPLE: nil='nil' | v=VAR | sym=SYM | '(' mot=('cons'|'list') lex=LEXPR ')' | '(' mot=('hd'|'tl') l=LCs ex=EXPR ')' | '(' sym=SYM lex=LEXPR ')';
+
 			 
 LEXPR : (f=LCs) (n=EXPR) (t=LEXPR)?;
 
@@ -67,8 +63,10 @@ terminal CONF :  (('-'|'+'|'.'|'/'|'_'|'&'|"->")('a'..'z'|'A'..'Z'|'0'..'9')+)*(
 
 //Ponctuation: PONCT;	
 //terminal PONCT : (','|';'|':'|'('|')'); 
-LCs : a=LC?;
+
+LCs : l=LC?;
 LC : a=SP|z=CR|e=TAB|r=LF; 
+
 terminal SP : ' '; 
 terminal CR : '\n'; 
 terminal TAB : '\t'; 

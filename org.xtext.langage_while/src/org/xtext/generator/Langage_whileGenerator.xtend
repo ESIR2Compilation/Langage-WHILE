@@ -17,7 +17,6 @@ import org.eclipse.xtext.resource.XtextResourceSet
 import org.xtext.Langage_whileStandaloneSetup
 import org.xtext.langage_while.Command
 import org.xtext.langage_while.Commands
-import org.xtext.langage_while.Def
 import org.xtext.langage_while.EXPR
 import org.xtext.langage_while.EXPRAND
 import org.xtext.langage_while.EXPREQ
@@ -32,14 +31,15 @@ import org.xtext.langage_while.LCs
 import org.xtext.langage_while.LEXPR
 import org.xtext.langage_while.Model
 import org.xtext.langage_while.Output
-import org.xtext.langage_while.Program
 import org.xtext.langage_while.Vars
-import tabSymb.*
 import org.xtext.langage_while.If
 import org.xtext.langage_while.Assign
 import org.xtext.langage_while.For
 import org.xtext.langage_while.Foreach
 import org.xtext.langage_while.While
+import tabSymb.Fonction
+import tabSymb.TabSymbole
+import org.xtext.langage_while.Def
 
 class Langage_whileGenerator implements IGenerator {
 	
@@ -68,9 +68,9 @@ class Langage_whileGenerator implements IGenerator {
 			
   			val fstream = new FileWriter("src/outputs/" + out);
   			val buff = new BufferedWriter(fstream);
-  			for(p: xtextResource.allContents.toIterable.filter(Program))
+  			for(p: xtextResource.allContents.toIterable.filter(Function))
 				buff.write(p.compile().toString);
-  			buff.close();
+  				buff.close();
   			return new File("src/outputs/" + out);
   		}catch (Exception e){
   			e.printStackTrace();
@@ -99,7 +99,7 @@ class Langage_whileGenerator implements IGenerator {
 		
 				var String output = "";
 		
-    for(e: resource.allContents.toIterable.filter(typeof(Model))) {
+    for(e: resource.allContents.toIterable.filter(typeof(Function))) {
     				output += e.compile + '\n'
         }
       fsa.generateFile(name+".whpp",output)
@@ -112,37 +112,22 @@ class Langage_whileGenerator implements IGenerator {
 //				.map[name]
 //				.join(', '))
 	
-	
-	def compile (Model l)
-	'''
-	«l.greetings.compile»
-	«tableS.afficher()»
-	'''
-	
-	def compile (Program p)
-	'''
-	«cpt=0»
-	«FOR f:p.f»
-	«f.compile»
-	«ENDFOR» 
-	«((p.u)+(p)) ?: ("")»
-	'''
-	
+
+
 	def compile (Function f)
 	'''	«tableS.addSymbole(f.nom)»
 	« cpt++»
 	« fonct = createFonct(cpt) »
 	«tableS.addFonction(f.nom,fonct)»
 		
-		«"function " +f.nom + ":" + "
-" + f.d.compile(f.nom)
-		»
+		function  «f.nom» :
+		 « f.d.compile(f.nom) »
+
 	'''
 	
 	def compile (Def d, String a)
 	'''
-		
-		read «d.in.compile(a)+"
+				read «d.in.compile(a)+"
 	"» % «d.v.compile+"
 	"» % write  «d.o.compile(a)»
 	'''
@@ -159,12 +144,14 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (Commands n)
 	'''
+
 	«n.a.compile»
 	«IF n.s != null»
 	«n.s.compile»
 	«ENDIF»
 	''' 
 	
+
 	def compile (Output O, String a)
 	'''
 	«fonct.incNbSortie()»
@@ -241,21 +228,30 @@ class Langage_whileGenerator implements IGenerator {
 	'''	
 	
 	def compile (EXPR e)
-	'''nil
-	«
-	switch (e)
-	{
-	case e.e1!=null : e.e1.compile
+	'''
+	«IF e.e1 != null»«e.e1.compile»«ENDIF»
+	«IF e.ex != null»«e.ex.compile»«ENDIF»
 
-	case e.ex!=null : e.ex.compile
-}
-»
 	'''
-	
-	def compile (EXPRSIMPLE ex) // a revoir
+		
+	def compile (EXPRSIMPLE e) // a revoir
 	'''
+	«IF e.nil != null»nil«ENDIF»
+	«IF e.v != null»«e.v»«ENDIF»
+	«IF e.sym != null && e.lex == null»«e.sym»«ENDIF»
+	«IF e.mot != null && e.lex != null »(«e.mot» «e.lex.compile»)«ENDIF»
+	«IF e.mot != null && e.ex != null »(«e.mot» «e.ex.compile»)«ENDIF»
+	«IF e.sym != null && e.lex != null »(«e.sym» «e.lex.compile»)«ENDIF»
 	
-	«"nil" 
+	«if (e.v.length != 0
+	)
+	tableS.addSymbole(e.v)»
+		'''
+		
+		
+	/*
+	
+		«"nil" 
 	?:( (ex.l) 
 		
 		?: ((ex.s)
@@ -269,8 +265,7 @@ class Langage_whileGenerator implements IGenerator {
 						?: ( ("( tl " + ex.g.compile + ")")
 							
 							?: ("(" + ex.v + ex.w.compile + ")"
-								
-								
+											
 							)
 							
 						)
@@ -284,23 +279,16 @@ class Langage_whileGenerator implements IGenerator {
 		) 
 		
 	)»
-	«if (ex.v.length != 0)
-	tableS.addSymbole(ex.v)»
-	
-
-	
-	
-	'''
-	
+	*/
 	def compile (EXPRAND e)
 	'''
-	«(e.f.compile) + (( " and " + e.lc2.compile + e) ?: (""))
+	«(e.f.compile) + (( " and "  + e.compile) ?: (""))
 	»
 	'''
 	
 	def compile (EXPROR e)
 	'''
-	«(e.e1.compile) + (( e.lc1.compile + " or " + e) ?: (""))
+	«(e.e1.compile) + (( " or " + e.compile) ?: (""))
 	»
 	'''
 	def compile (EXPRNOT e)
@@ -315,11 +303,6 @@ class Langage_whileGenerator implements IGenerator {
 	»
 	'''
 	
-	def compile (LCs l)
-	'''
-	«(l.a.compile) ?: ("")
-	»
-	'''
 	
 	def compile (LC m)
 	'''
@@ -333,8 +316,7 @@ class Langage_whileGenerator implements IGenerator {
 	)
 	»
 	'''
-	
-	
+
 	
 	
 }

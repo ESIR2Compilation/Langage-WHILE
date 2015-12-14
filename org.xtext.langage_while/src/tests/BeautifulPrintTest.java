@@ -10,13 +10,14 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-/* BeautifulPrint Test : 
+/** BeautifulPrint Test : 
  * Cette classe sert à détecter si l'indentation respecte certains parametres déclarer au préalables. 
  * True : L'indentation est bien faite
  * False sinon.
  *  
  */
 
+//TODO Finir le test pour gérer les autres régles
 public class BeautifulPrintTest extends AbstractTest{
 	private static final String indent_while_for = "\t\t\t";
 
@@ -70,7 +71,6 @@ public class BeautifulPrintTest extends AbstractTest{
 			estValide = false;
 			return;
 		}
-
 
 
 		if(resultat=false){
