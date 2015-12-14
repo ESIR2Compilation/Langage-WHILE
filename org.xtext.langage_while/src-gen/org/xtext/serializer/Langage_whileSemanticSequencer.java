@@ -38,7 +38,6 @@ import org.xtext.langage_while.LEXPR;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
-import org.xtext.langage_while.Program;
 import org.xtext.langage_while.Variable;
 import org.xtext.langage_while.Vars;
 import org.xtext.langage_while.While;
@@ -105,15 +104,8 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 				sequence_LC(context, (LC) semanticObject); 
 				return; 
 			case Langage_whilePackage.LCS:
-				if(context == grammarAccess.getEXPRSIMPLERule()) {
-					sequence_EXPRSIMPLE_LCs(context, (LCs) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getLCsRule()) {
-					sequence_LCs(context, (LCs) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_LCs(context, (LCs) semanticObject); 
+				return; 
 			case Langage_whilePackage.LEXPR:
 				sequence_LEXPR(context, (LEXPR) semanticObject); 
 				return; 
@@ -122,9 +114,6 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case Langage_whilePackage.OUTPUT:
 				sequence_Output(context, (Output) semanticObject); 
-				return; 
-			case Langage_whilePackage.PROGRAM:
-				sequence_Program(context, (Program) semanticObject); 
 				return; 
 			case Langage_whilePackage.VARIABLE:
 				sequence_Variable(context, (Variable) semanticObject); 
@@ -269,18 +258,16 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     ((l=VAR | s=SYM)? | yy=LEXPR | b=LEXPR | (u=LCs g=EXPR) | (v=SYM w=LEXPR))
+	 *     (
+	 *         nil='nil' | 
+	 *         v=VAR | 
+	 *         sym=SYM | 
+	 *         ((mot='cons' | mot='list') lex=LEXPR) | 
+	 *         ((mot='hd' | mot='tl') l=LCs ex=EXPR) | 
+	 *         (sym=SYM lex=LEXPR)
+	 *     )
 	 */
 	protected void sequence_EXPRSIMPLE(EObject context, EXPRSIMPLE semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (a=LC n=EXPR)
-	 */
-	protected void sequence_EXPRSIMPLE_LCs(EObject context, LCs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -453,7 +440,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     a=LC?
+	 *     l=LC?
 	 */
 	protected void sequence_LCs(EObject context, LCs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -471,17 +458,10 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     greetings=Program
+	 *     prog+=Function*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.MODEL__GREETINGS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.MODEL__GREETINGS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getModelAccess().getGreetingsProgramParserRuleCall_0(), semanticObject.getGreetings());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -490,15 +470,6 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     ((n=VAR q=LCs o=Output) | s=VAR)
 	 */
 	protected void sequence_Output(EObject context, Output semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (f+=Function* (u=CR pp=Program)?)
-	 */
-	protected void sequence_Program(EObject context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

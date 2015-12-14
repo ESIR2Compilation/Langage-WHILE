@@ -32,15 +32,6 @@ public interface Langage_whileFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Program</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Program</em>'.
-   * @generated
-   */
-  Program createProgram();
-
-  /**
    * Returns a new object of class '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

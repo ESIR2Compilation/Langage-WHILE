@@ -24,14 +24,13 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getL <em>L</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getS <em>S</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getYy <em>Yy</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getB <em>B</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getU <em>U</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getG <em>G</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getNil <em>Nil</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getV <em>V</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getW <em>W</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getSym <em>Sym</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getMot <em>Mot</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getLex <em>Lex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getL <em>L</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.EXPRSIMPLEImpl#getEx <em>Ex</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,84 +39,24 @@ import org.xtext.langage_while.Langage_whilePackage;
 public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPRSIMPLE
 {
   /**
-   * The default value of the '{@link #getL() <em>L</em>}' attribute.
+   * The default value of the '{@link #getNil() <em>Nil</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getL()
+   * @see #getNil()
    * @generated
    * @ordered
    */
-  protected static final String L_EDEFAULT = null;
+  protected static final String NIL_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getL() <em>L</em>}' attribute.
+   * The cached value of the '{@link #getNil() <em>Nil</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getL()
+   * @see #getNil()
    * @generated
    * @ordered
    */
-  protected String l = L_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getS() <em>S</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getS()
-   * @generated
-   * @ordered
-   */
-  protected static final String S_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getS() <em>S</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getS()
-   * @generated
-   * @ordered
-   */
-  protected String s = S_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getYy() <em>Yy</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getYy()
-   * @generated
-   * @ordered
-   */
-  protected LEXPR yy;
-
-  /**
-   * The cached value of the '{@link #getB() <em>B</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getB()
-   * @generated
-   * @ordered
-   */
-  protected LEXPR b;
-
-  /**
-   * The cached value of the '{@link #getU() <em>U</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getU()
-   * @generated
-   * @ordered
-   */
-  protected LCs u;
-
-  /**
-   * The cached value of the '{@link #getG() <em>G</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getG()
-   * @generated
-   * @ordered
-   */
-  protected EXPR g;
+  protected String nil = NIL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getV() <em>V</em>}' attribute.
@@ -140,14 +79,74 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   protected String v = V_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getW() <em>W</em>}' containment reference.
+   * The default value of the '{@link #getSym() <em>Sym</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getW()
+   * @see #getSym()
    * @generated
    * @ordered
    */
-  protected LEXPR w;
+  protected static final String SYM_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSym() <em>Sym</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSym()
+   * @generated
+   * @ordered
+   */
+  protected String sym = SYM_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMot() <em>Mot</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMot()
+   * @generated
+   * @ordered
+   */
+  protected static final String MOT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMot() <em>Mot</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMot()
+   * @generated
+   * @ordered
+   */
+  protected String mot = MOT_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getLex() <em>Lex</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLex()
+   * @generated
+   * @ordered
+   */
+  protected LEXPR lex;
+
+  /**
+   * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getL()
+   * @generated
+   * @ordered
+   */
+  protected LCs l;
+
+  /**
+   * The cached value of the '{@link #getEx() <em>Ex</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEx()
+   * @generated
+   * @ordered
+   */
+  protected EXPR ex;
 
   /**
    * <!-- begin-user-doc -->
@@ -175,9 +174,9 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getL()
+  public String getNil()
   {
-    return l;
+    return nil;
   }
 
   /**
@@ -185,227 +184,12 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setL(String newL)
+  public void setNil(String newNil)
   {
-    String oldL = l;
-    l = newL;
+    String oldNil = nil;
+    nil = newNil;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__L, oldL, l));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getS()
-  {
-    return s;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setS(String newS)
-  {
-    String oldS = s;
-    s = newS;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__S, oldS, s));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LEXPR getYy()
-  {
-    return yy;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetYy(LEXPR newYy, NotificationChain msgs)
-  {
-    LEXPR oldYy = yy;
-    yy = newYy;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__YY, oldYy, newYy);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setYy(LEXPR newYy)
-  {
-    if (newYy != yy)
-    {
-      NotificationChain msgs = null;
-      if (yy != null)
-        msgs = ((InternalEObject)yy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__YY, null, msgs);
-      if (newYy != null)
-        msgs = ((InternalEObject)newYy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__YY, null, msgs);
-      msgs = basicSetYy(newYy, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__YY, newYy, newYy));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LEXPR getB()
-  {
-    return b;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetB(LEXPR newB, NotificationChain msgs)
-  {
-    LEXPR oldB = b;
-    b = newB;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__B, oldB, newB);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setB(LEXPR newB)
-  {
-    if (newB != b)
-    {
-      NotificationChain msgs = null;
-      if (b != null)
-        msgs = ((InternalEObject)b).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__B, null, msgs);
-      if (newB != null)
-        msgs = ((InternalEObject)newB).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__B, null, msgs);
-      msgs = basicSetB(newB, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__B, newB, newB));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getU()
-  {
-    return u;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetU(LCs newU, NotificationChain msgs)
-  {
-    LCs oldU = u;
-    u = newU;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__U, oldU, newU);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setU(LCs newU)
-  {
-    if (newU != u)
-    {
-      NotificationChain msgs = null;
-      if (u != null)
-        msgs = ((InternalEObject)u).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__U, null, msgs);
-      if (newU != null)
-        msgs = ((InternalEObject)newU).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__U, null, msgs);
-      msgs = basicSetU(newU, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__U, newU, newU));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EXPR getG()
-  {
-    return g;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetG(EXPR newG, NotificationChain msgs)
-  {
-    EXPR oldG = g;
-    g = newG;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__G, oldG, newG);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setG(EXPR newG)
-  {
-    if (newG != g)
-    {
-      NotificationChain msgs = null;
-      if (g != null)
-        msgs = ((InternalEObject)g).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__G, null, msgs);
-      if (newG != null)
-        msgs = ((InternalEObject)newG).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__G, null, msgs);
-      msgs = basicSetG(newG, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__G, newG, newG));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__NIL, oldNil, nil));
   }
 
   /**
@@ -436,9 +220,9 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public LEXPR getW()
+  public String getSym()
   {
-    return w;
+    return sym;
   }
 
   /**
@@ -446,13 +230,59 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetW(LEXPR newW, NotificationChain msgs)
+  public void setSym(String newSym)
   {
-    LEXPR oldW = w;
-    w = newW;
+    String oldSym = sym;
+    sym = newSym;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__SYM, oldSym, sym));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getMot()
+  {
+    return mot;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMot(String newMot)
+  {
+    String oldMot = mot;
+    mot = newMot;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__MOT, oldMot, mot));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LEXPR getLex()
+  {
+    return lex;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLex(LEXPR newLex, NotificationChain msgs)
+  {
+    LEXPR oldLex = lex;
+    lex = newLex;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__W, oldW, newW);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__LEX, oldLex, newLex);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -463,20 +293,116 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setW(LEXPR newW)
+  public void setLex(LEXPR newLex)
   {
-    if (newW != w)
+    if (newLex != lex)
     {
       NotificationChain msgs = null;
-      if (w != null)
-        msgs = ((InternalEObject)w).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__W, null, msgs);
-      if (newW != null)
-        msgs = ((InternalEObject)newW).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__W, null, msgs);
-      msgs = basicSetW(newW, msgs);
+      if (lex != null)
+        msgs = ((InternalEObject)lex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__LEX, null, msgs);
+      if (newLex != null)
+        msgs = ((InternalEObject)newLex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__LEX, null, msgs);
+      msgs = basicSetLex(newLex, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__W, newW, newW));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__LEX, newLex, newLex));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LCs getL()
+  {
+    return l;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetL(LCs newL, NotificationChain msgs)
+  {
+    LCs oldL = l;
+    l = newL;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__L, oldL, newL);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setL(LCs newL)
+  {
+    if (newL != l)
+    {
+      NotificationChain msgs = null;
+      if (l != null)
+        msgs = ((InternalEObject)l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__L, null, msgs);
+      if (newL != null)
+        msgs = ((InternalEObject)newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__L, null, msgs);
+      msgs = basicSetL(newL, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__L, newL, newL));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EXPR getEx()
+  {
+    return ex;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetEx(EXPR newEx, NotificationChain msgs)
+  {
+    EXPR oldEx = ex;
+    ex = newEx;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__EX, oldEx, newEx);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEx(EXPR newEx)
+  {
+    if (newEx != ex)
+    {
+      NotificationChain msgs = null;
+      if (ex != null)
+        msgs = ((InternalEObject)ex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__EX, null, msgs);
+      if (newEx != null)
+        msgs = ((InternalEObject)newEx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRSIMPLE__EX, null, msgs);
+      msgs = basicSetEx(newEx, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRSIMPLE__EX, newEx, newEx));
   }
 
   /**
@@ -489,16 +415,12 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRSIMPLE__YY:
-        return basicSetYy(null, msgs);
-      case Langage_whilePackage.EXPRSIMPLE__B:
-        return basicSetB(null, msgs);
-      case Langage_whilePackage.EXPRSIMPLE__U:
-        return basicSetU(null, msgs);
-      case Langage_whilePackage.EXPRSIMPLE__G:
-        return basicSetG(null, msgs);
-      case Langage_whilePackage.EXPRSIMPLE__W:
-        return basicSetW(null, msgs);
+      case Langage_whilePackage.EXPRSIMPLE__LEX:
+        return basicSetLex(null, msgs);
+      case Langage_whilePackage.EXPRSIMPLE__L:
+        return basicSetL(null, msgs);
+      case Langage_whilePackage.EXPRSIMPLE__EX:
+        return basicSetEx(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -513,22 +435,20 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRSIMPLE__L:
-        return getL();
-      case Langage_whilePackage.EXPRSIMPLE__S:
-        return getS();
-      case Langage_whilePackage.EXPRSIMPLE__YY:
-        return getYy();
-      case Langage_whilePackage.EXPRSIMPLE__B:
-        return getB();
-      case Langage_whilePackage.EXPRSIMPLE__U:
-        return getU();
-      case Langage_whilePackage.EXPRSIMPLE__G:
-        return getG();
+      case Langage_whilePackage.EXPRSIMPLE__NIL:
+        return getNil();
       case Langage_whilePackage.EXPRSIMPLE__V:
         return getV();
-      case Langage_whilePackage.EXPRSIMPLE__W:
-        return getW();
+      case Langage_whilePackage.EXPRSIMPLE__SYM:
+        return getSym();
+      case Langage_whilePackage.EXPRSIMPLE__MOT:
+        return getMot();
+      case Langage_whilePackage.EXPRSIMPLE__LEX:
+        return getLex();
+      case Langage_whilePackage.EXPRSIMPLE__L:
+        return getL();
+      case Langage_whilePackage.EXPRSIMPLE__EX:
+        return getEx();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -543,29 +463,26 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRSIMPLE__L:
-        setL((String)newValue);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__S:
-        setS((String)newValue);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__YY:
-        setYy((LEXPR)newValue);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__B:
-        setB((LEXPR)newValue);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__U:
-        setU((LCs)newValue);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__G:
-        setG((EXPR)newValue);
+      case Langage_whilePackage.EXPRSIMPLE__NIL:
+        setNil((String)newValue);
         return;
       case Langage_whilePackage.EXPRSIMPLE__V:
         setV((String)newValue);
         return;
-      case Langage_whilePackage.EXPRSIMPLE__W:
-        setW((LEXPR)newValue);
+      case Langage_whilePackage.EXPRSIMPLE__SYM:
+        setSym((String)newValue);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__MOT:
+        setMot((String)newValue);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__LEX:
+        setLex((LEXPR)newValue);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__L:
+        setL((LCs)newValue);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__EX:
+        setEx((EXPR)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -581,29 +498,26 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRSIMPLE__L:
-        setL(L_EDEFAULT);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__S:
-        setS(S_EDEFAULT);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__YY:
-        setYy((LEXPR)null);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__B:
-        setB((LEXPR)null);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__U:
-        setU((LCs)null);
-        return;
-      case Langage_whilePackage.EXPRSIMPLE__G:
-        setG((EXPR)null);
+      case Langage_whilePackage.EXPRSIMPLE__NIL:
+        setNil(NIL_EDEFAULT);
         return;
       case Langage_whilePackage.EXPRSIMPLE__V:
         setV(V_EDEFAULT);
         return;
-      case Langage_whilePackage.EXPRSIMPLE__W:
-        setW((LEXPR)null);
+      case Langage_whilePackage.EXPRSIMPLE__SYM:
+        setSym(SYM_EDEFAULT);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__MOT:
+        setMot(MOT_EDEFAULT);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__LEX:
+        setLex((LEXPR)null);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__L:
+        setL((LCs)null);
+        return;
+      case Langage_whilePackage.EXPRSIMPLE__EX:
+        setEx((EXPR)null);
         return;
     }
     super.eUnset(featureID);
@@ -619,22 +533,20 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRSIMPLE__L:
-        return L_EDEFAULT == null ? l != null : !L_EDEFAULT.equals(l);
-      case Langage_whilePackage.EXPRSIMPLE__S:
-        return S_EDEFAULT == null ? s != null : !S_EDEFAULT.equals(s);
-      case Langage_whilePackage.EXPRSIMPLE__YY:
-        return yy != null;
-      case Langage_whilePackage.EXPRSIMPLE__B:
-        return b != null;
-      case Langage_whilePackage.EXPRSIMPLE__U:
-        return u != null;
-      case Langage_whilePackage.EXPRSIMPLE__G:
-        return g != null;
+      case Langage_whilePackage.EXPRSIMPLE__NIL:
+        return NIL_EDEFAULT == null ? nil != null : !NIL_EDEFAULT.equals(nil);
       case Langage_whilePackage.EXPRSIMPLE__V:
         return V_EDEFAULT == null ? v != null : !V_EDEFAULT.equals(v);
-      case Langage_whilePackage.EXPRSIMPLE__W:
-        return w != null;
+      case Langage_whilePackage.EXPRSIMPLE__SYM:
+        return SYM_EDEFAULT == null ? sym != null : !SYM_EDEFAULT.equals(sym);
+      case Langage_whilePackage.EXPRSIMPLE__MOT:
+        return MOT_EDEFAULT == null ? mot != null : !MOT_EDEFAULT.equals(mot);
+      case Langage_whilePackage.EXPRSIMPLE__LEX:
+        return lex != null;
+      case Langage_whilePackage.EXPRSIMPLE__L:
+        return l != null;
+      case Langage_whilePackage.EXPRSIMPLE__EX:
+        return ex != null;
     }
     return super.eIsSet(featureID);
   }
@@ -650,12 +562,14 @@ public class EXPRSIMPLEImpl extends MinimalEObjectImpl.Container implements EXPR
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (l: ");
-    result.append(l);
-    result.append(", s: ");
-    result.append(s);
+    result.append(" (nil: ");
+    result.append(nil);
     result.append(", v: ");
     result.append(v);
+    result.append(", sym: ");
+    result.append(sym);
+    result.append(", mot: ");
+    result.append(mot);
     result.append(')');
     return result.toString();
   }

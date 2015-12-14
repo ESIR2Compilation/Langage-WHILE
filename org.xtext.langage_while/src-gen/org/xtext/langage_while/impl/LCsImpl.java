@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.EXPR;
 import org.xtext.langage_while.LC;
 import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
@@ -22,34 +22,23 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.LCsImpl#getN <em>N</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.LCsImpl#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.LCsImpl#getL <em>L</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LCsImpl extends EXPRSIMPLEImpl implements LCs
+public class LCsImpl extends MinimalEObjectImpl.Container implements LCs
 {
   /**
-   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
+   * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getN()
+   * @see #getL()
    * @generated
    * @ordered
    */
-  protected EXPR n;
-
-  /**
-   * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getA()
-   * @generated
-   * @ordered
-   */
-  protected LC a;
+  protected LC l;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,9 +66,9 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPR getN()
+  public LC getL()
   {
-    return n;
+    return l;
   }
 
   /**
@@ -87,13 +76,13 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetN(EXPR newN, NotificationChain msgs)
+  public NotificationChain basicSetL(LC newL, NotificationChain msgs)
   {
-    EXPR oldN = n;
-    n = newN;
+    LC oldL = l;
+    l = newL;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__N, oldN, newN);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__L, oldL, newL);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -104,68 +93,20 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setN(EXPR newN)
+  public void setL(LC newL)
   {
-    if (newN != n)
+    if (newL != l)
     {
       NotificationChain msgs = null;
-      if (n != null)
-        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__N, null, msgs);
-      if (newN != null)
-        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__N, null, msgs);
-      msgs = basicSetN(newN, msgs);
+      if (l != null)
+        msgs = ((InternalEObject)l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__L, null, msgs);
+      if (newL != null)
+        msgs = ((InternalEObject)newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__L, null, msgs);
+      msgs = basicSetL(newL, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__N, newN, newN));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LC getA()
-  {
-    return a;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetA(LC newA, NotificationChain msgs)
-  {
-    LC oldA = a;
-    a = newA;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__A, oldA, newA);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setA(LC newA)
-  {
-    if (newA != a)
-    {
-      NotificationChain msgs = null;
-      if (a != null)
-        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__A, null, msgs);
-      if (newA != null)
-        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.LCS__A, null, msgs);
-      msgs = basicSetA(newA, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__A, newA, newA));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.LCS__L, newL, newL));
   }
 
   /**
@@ -178,10 +119,8 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
   {
     switch (featureID)
     {
-      case Langage_whilePackage.LCS__N:
-        return basicSetN(null, msgs);
-      case Langage_whilePackage.LCS__A:
-        return basicSetA(null, msgs);
+      case Langage_whilePackage.LCS__L:
+        return basicSetL(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -196,10 +135,8 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
   {
     switch (featureID)
     {
-      case Langage_whilePackage.LCS__N:
-        return getN();
-      case Langage_whilePackage.LCS__A:
-        return getA();
+      case Langage_whilePackage.LCS__L:
+        return getL();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -214,11 +151,8 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
   {
     switch (featureID)
     {
-      case Langage_whilePackage.LCS__N:
-        setN((EXPR)newValue);
-        return;
-      case Langage_whilePackage.LCS__A:
-        setA((LC)newValue);
+      case Langage_whilePackage.LCS__L:
+        setL((LC)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -234,11 +168,8 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
   {
     switch (featureID)
     {
-      case Langage_whilePackage.LCS__N:
-        setN((EXPR)null);
-        return;
-      case Langage_whilePackage.LCS__A:
-        setA((LC)null);
+      case Langage_whilePackage.LCS__L:
+        setL((LC)null);
         return;
     }
     super.eUnset(featureID);
@@ -254,10 +185,8 @@ public class LCsImpl extends EXPRSIMPLEImpl implements LCs
   {
     switch (featureID)
     {
-      case Langage_whilePackage.LCS__N:
-        return n != null;
-      case Langage_whilePackage.LCS__A:
-        return a != null;
+      case Langage_whilePackage.LCS__L:
+        return l != null;
     }
     return super.eIsSet(featureID);
   }

@@ -2,18 +2,23 @@
  */
 package org.xtext.langage_while.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.xtext.langage_while.Function;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
-import org.xtext.langage_while.Program;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +27,7 @@ import org.xtext.langage_while.Program;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.ModelImpl#getProg <em>Prog</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,14 +36,14 @@ import org.xtext.langage_while.Program;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference.
+   * The cached value of the '{@link #getProg() <em>Prog</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getProg()
    * @generated
    * @ordered
    */
-  protected Program greetings;
+  protected EList<Function> prog;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,47 +71,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public Program getGreetings()
+  public EList<Function> getProg()
   {
-    return greetings;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetGreetings(Program newGreetings, NotificationChain msgs)
-  {
-    Program oldGreetings = greetings;
-    greetings = newGreetings;
-    if (eNotificationRequired())
+    if (prog == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.MODEL__GREETINGS, oldGreetings, newGreetings);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      prog = new EObjectContainmentEList<Function>(Function.class, this, Langage_whilePackage.MODEL__PROG);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setGreetings(Program newGreetings)
-  {
-    if (newGreetings != greetings)
-    {
-      NotificationChain msgs = null;
-      if (greetings != null)
-        msgs = ((InternalEObject)greetings).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.MODEL__GREETINGS, null, msgs);
-      if (newGreetings != null)
-        msgs = ((InternalEObject)newGreetings).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.MODEL__GREETINGS, null, msgs);
-      msgs = basicSetGreetings(newGreetings, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.MODEL__GREETINGS, newGreetings, newGreetings));
+    return prog;
   }
 
   /**
@@ -119,8 +90,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return basicSetGreetings(null, msgs);
+      case Langage_whilePackage.MODEL__PROG:
+        return ((InternalEList<?>)getProg()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +106,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return getGreetings();
+      case Langage_whilePackage.MODEL__PROG:
+        return getProg();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -146,13 +117,15 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        setGreetings((Program)newValue);
+      case Langage_whilePackage.MODEL__PROG:
+        getProg().clear();
+        getProg().addAll((Collection<? extends Function>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +141,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        setGreetings((Program)null);
+      case Langage_whilePackage.MODEL__PROG:
+        getProg().clear();
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +158,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case Langage_whilePackage.MODEL__GREETINGS:
-        return greetings != null;
+      case Langage_whilePackage.MODEL__PROG:
+        return prog != null && !prog.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -13,11 +13,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLangage_whileLexer extends Lexer {
     public static final int RULE_LF=9;
-    public static final int RULE_CR=4;
+    public static final int RULE_CR=7;
     public static final int RULE_TAB=8;
     public static final int T__19=19;
     public static final int T__18=18;
-    public static final int RULE_SP=7;
+    public static final int RULE_SP=6;
     public static final int RULE_ID=11;
     public static final int RULE_CONF=10;
     public static final int T__26=26;
@@ -45,7 +45,7 @@ public class InternalLangage_whileLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_SYM=5;
+    public static final int RULE_SYM=4;
     public static final int RULE_WS=16;
     public static final int RULE_ANY_OTHER=17;
     public static final int T__44=44;
@@ -56,7 +56,7 @@ public class InternalLangage_whileLexer extends Lexer {
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
-    public static final int RULE_VAR=6;
+    public static final int RULE_VAR=5;
 
     // delegates
     // delegators
@@ -97,10 +97,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:12:7: ( 'nil' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:12:9: 'nil'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:12:7: ( 'cons' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:12:9: 'cons'
             {
-            match("nil"); 
+            match("cons"); 
 
 
             }
@@ -118,10 +118,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:13:7: ( 'function' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:13:9: 'function'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:13:7: ( 'list' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:13:9: 'list'
             {
-            match("function"); 
+            match("list"); 
 
 
             }
@@ -139,10 +139,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:14:7: ( ':' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:14:9: ':'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:14:7: ( 'hd' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:14:9: 'hd'
             {
-            match(':'); 
+            match("hd"); 
+
 
             }
 
@@ -159,10 +160,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:15:7: ( 'read' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:15:9: 'read'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:15:7: ( 'tl' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:15:9: 'tl'
             {
-            match("read"); 
+            match("tl"); 
 
 
             }
@@ -180,10 +181,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:16:7: ( '%' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:16:9: '%'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:16:7: ( 'function' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:16:9: 'function'
             {
-            match('%'); 
+            match("function"); 
+
 
             }
 
@@ -200,11 +202,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:17:7: ( 'write' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:17:9: 'write'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:17:7: ( ':' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:17:9: ':'
             {
-            match("write"); 
-
+            match(':'); 
 
             }
 
@@ -221,10 +222,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:18:7: ( ',' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:18:9: ','
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:18:7: ( 'read' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:18:9: 'read'
             {
-            match(','); 
+            match("read"); 
+
 
             }
 
@@ -241,10 +243,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:19:7: ( ';' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:19:9: ';'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:19:7: ( '%' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:19:9: '%'
             {
-            match(';'); 
+            match('%'); 
 
             }
 
@@ -261,10 +263,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:20:7: ( ':=' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:20:9: ':='
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:20:7: ( 'write' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:20:9: 'write'
             {
-            match(":="); 
+            match("write"); 
 
 
             }
@@ -282,11 +284,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:21:7: ( 'while' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:21:9: 'while'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:21:7: ( ',' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:21:9: ','
             {
-            match("while"); 
-
+            match(','); 
 
             }
 
@@ -303,11 +304,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:22:7: ( 'do' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:22:9: 'do'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:22:7: ( ';' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:22:9: ';'
             {
-            match("do"); 
-
+            match(';'); 
 
             }
 
@@ -324,10 +324,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:23:7: ( 'od' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:23:9: 'od'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:23:7: ( ':=' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:23:9: ':='
             {
-            match("od"); 
+            match(":="); 
 
 
             }
@@ -345,10 +345,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:24:7: ( 'for' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:24:9: 'for'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:24:7: ( 'while' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:24:9: 'while'
             {
-            match("for"); 
+            match("while"); 
 
 
             }
@@ -366,10 +366,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:25:7: ( 'if' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:25:9: 'if'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:25:7: ( 'do' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:25:9: 'do'
             {
-            match("if"); 
+            match("do"); 
 
 
             }
@@ -387,10 +387,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:26:7: ( 'then' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:26:9: 'then'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:26:7: ( 'od' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:26:9: 'od'
             {
-            match("then"); 
+            match("od"); 
 
 
             }
@@ -408,10 +408,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:27:7: ( 'fi' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:27:9: 'fi'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:27:7: ( 'for' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:27:9: 'for'
             {
-            match("fi"); 
+            match("for"); 
 
 
             }
@@ -429,10 +429,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:28:7: ( 'else' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:28:9: 'else'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:28:7: ( 'if' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:28:9: 'if'
             {
-            match("else"); 
+            match("if"); 
 
 
             }
@@ -450,10 +450,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:29:7: ( 'foreach' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:29:9: 'foreach'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:29:7: ( 'then' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:29:9: 'then'
             {
-            match("foreach"); 
+            match("then"); 
 
 
             }
@@ -471,10 +471,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:30:7: ( 'in' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:30:9: 'in'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:30:7: ( 'fi' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:30:9: 'fi'
             {
-            match("in"); 
+            match("fi"); 
 
 
             }
@@ -492,10 +492,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:31:7: ( '(' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:31:9: '('
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:31:7: ( 'else' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:31:9: 'else'
             {
-            match('('); 
+            match("else"); 
+
 
             }
 
@@ -512,10 +513,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:32:7: ( 'cons' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:32:9: 'cons'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:32:7: ( 'foreach' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:32:9: 'foreach'
             {
-            match("cons"); 
+            match("foreach"); 
 
 
             }
@@ -533,10 +534,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:33:7: ( ')' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:33:9: ')'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:33:7: ( 'in' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:33:9: 'in'
             {
-            match(')'); 
+            match("in"); 
+
 
             }
 
@@ -553,11 +555,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:34:7: ( 'list' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:34:9: 'list'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:34:7: ( '(' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:34:9: '('
             {
-            match("list"); 
-
+            match('('); 
 
             }
 
@@ -574,11 +575,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:35:7: ( 'hd' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:35:9: 'hd'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:35:7: ( ')' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:35:9: ')'
             {
-            match("hd"); 
-
+            match(')'); 
 
             }
 
@@ -595,10 +595,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:36:7: ( 'tl' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:36:9: 'tl'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:36:7: ( 'and' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:36:9: 'and'
             {
-            match("tl"); 
+            match("and"); 
 
 
             }
@@ -616,10 +616,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:37:7: ( 'and' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:37:9: 'and'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:37:7: ( 'or' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:37:9: 'or'
             {
-            match("and"); 
+            match("or"); 
 
 
             }
@@ -637,10 +637,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:38:7: ( 'or' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:38:9: 'or'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:38:7: ( 'not' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:38:9: 'not'
             {
-            match("or"); 
+            match("not"); 
 
 
             }
@@ -658,10 +658,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:39:7: ( 'not' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:39:9: 'not'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:39:7: ( '=?' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:39:9: '=?'
             {
-            match("not"); 
+            match("=?"); 
 
 
             }
@@ -679,10 +679,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:40:7: ( '=?' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:40:9: '=?'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:40:7: ( 'nil' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:40:9: 'nil'
             {
-            match("=?"); 
+            match("nil"); 
 
 
             }
@@ -700,11 +700,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7101:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7101:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6660:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6660:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('A','Z'); 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7101:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6660:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -754,11 +754,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SYM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7103:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7103:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6662:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6662:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('a','z'); 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7103:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6662:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -808,10 +808,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CONF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
             loop5:
             do {
                 int alt5=2;
@@ -824,9 +824,9 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    {
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
             	    int alt3=7;
             	    switch ( input.LA(1) ) {
             	    case '-':
@@ -881,49 +881,49 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    switch (alt3) {
             	        case 1 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:15: '-'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:15: '-'
             	            {
             	            match('-'); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:19: '+'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:19: '+'
             	            {
             	            match('+'); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:23: '.'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:23: '.'
             	            {
             	            match('.'); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:27: '/'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:27: '/'
             	            {
             	            match('/'); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:31: '_'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:31: '_'
             	            {
             	            match('_'); 
 
             	            }
             	            break;
             	        case 6 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:35: '&'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:35: '&'
             	            {
             	            match('&'); 
 
             	            }
             	            break;
             	        case 7 :
-            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:39: '->'
+            	            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:39: '->'
             	            {
             	            match("->"); 
 
@@ -933,7 +933,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    }
 
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7105:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6664:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    int cnt4=0;
             	    loop4:
             	    do {
@@ -1005,8 +1005,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7107:9: ( ' ' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7107:11: ' '
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6666:9: ( ' ' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6666:11: ' '
             {
             match(' '); 
 
@@ -1025,8 +1025,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7109:9: ( '\\n' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7109:11: '\\n'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6668:9: ( '\\n' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6668:11: '\\n'
             {
             match('\n'); 
 
@@ -1045,8 +1045,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_TAB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7111:10: ( '\\t' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7111:12: '\\t'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6670:10: ( '\\t' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6670:12: '\\t'
             {
             match('\t'); 
 
@@ -1065,8 +1065,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_LF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7113:9: ( '\\r' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7113:11: '\\r'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6672:9: ( '\\r' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6672:11: '\\r'
             {
             match('\r'); 
 
@@ -1085,10 +1085,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7115:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7115:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6674:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6674:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7115:11: ( '^' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6674:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1097,7 +1097,7 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7115:11: '^'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6674:11: '^'
                     {
                     match('^'); 
 
@@ -1115,7 +1115,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7115:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6674:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -1164,10 +1164,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7117:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7117:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6676:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6676:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7117:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6676:12: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -1181,7 +1181,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7117:13: '0' .. '9'
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6676:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1213,10 +1213,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1234,10 +1234,10 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -1253,7 +1253,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:21: '\\\\' .
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1261,7 +1261,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1286,10 +1286,10 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1305,7 +1305,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:54: '\\\\' .
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1313,7 +1313,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7119:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6678:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1356,12 +1356,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7121:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7121:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6680:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6680:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7121:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6680:24: ( options {greedy=false; } : . )*
             loop12:
             do {
                 int alt12=2;
@@ -1386,7 +1386,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7121:52: .
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6680:52: .
             	    {
             	    matchAny(); 
 
@@ -1416,12 +1416,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -1434,7 +1434,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1454,7 +1454,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:40: ( ( '\\r' )? '\\n' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1463,9 +1463,9 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:41: ( '\\r' )?
+                    // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:41: ( '\\r' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -1474,7 +1474,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7123:41: '\\r'
+                            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6682:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1506,10 +1506,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7125:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7125:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6684:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6684:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7125:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6684:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt16=0;
             loop16:
             do {
@@ -1563,8 +1563,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7127:16: ( . )
-            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:7127:18: .
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6686:16: ( . )
+            // ../org.xtext.langage_while.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalLangage_while.g:6686:18: .
             {
             matchAny(); 
 
@@ -1899,87 +1899,86 @@ public class InternalLangage_whileLexer extends Lexer {
 
     protected DFA17 dfa17 = new DFA17(this);
     static final String DFA17_eotS =
-        "\1\uffff\2\51\1\61\1\51\1\uffff\1\51\2\uffff\5\51\1\uffff\1\51"+
-        "\1\uffff\3\51\1\46\2\51\4\46\1\51\1\46\1\uffff\1\116\1\120\1\121"+
-        "\1\122\1\46\1\uffff\2\46\1\uffff\2\51\1\uffff\1\51\1\uffff\3\51"+
-        "\1\133\2\uffff\1\51\1\uffff\2\51\2\uffff\1\137\1\140\1\141\1\142"+
-        "\1\143\1\51\1\145\1\51\1\uffff\1\51\1\uffff\1\51\1\151\1\51\1\uffff"+
-        "\1\51\1\uffff\1\51\3\uffff\1\51\7\uffff\1\155\1\156\1\157\2\51\1"+
-        "\162\1\uffff\3\51\5\uffff\1\51\1\uffff\3\51\1\uffff\1\172\2\51\3"+
-        "\uffff\2\51\1\uffff\1\175\2\51\1\u0080\1\u0081\1\u0082\1\u0083\1"+
-        "\uffff\2\51\1\uffff\1\u0086\1\u0087\4\uffff\2\51\2\uffff\1\51\1"+
-        "\u008b\1\u008c\2\uffff";
+        "\1\uffff\6\51\1\66\1\51\1\uffff\1\51\2\uffff\4\51\2\uffff\1\51"+
+        "\1\46\2\51\4\46\1\51\1\46\1\uffff\1\116\1\120\1\121\1\122\1\46\1"+
+        "\uffff\2\46\1\uffff\2\51\1\uffff\1\51\1\uffff\3\51\1\133\1\134\3"+
+        "\51\1\140\2\uffff\1\51\1\uffff\2\51\2\uffff\1\144\1\145\1\146\1"+
+        "\147\1\150\1\51\2\uffff\1\51\1\uffff\1\51\1\uffff\1\51\3\uffff\1"+
+        "\51\7\uffff\1\155\1\156\1\157\3\51\2\uffff\2\51\1\165\1\uffff\3"+
+        "\51\5\uffff\1\51\1\172\2\51\3\uffff\1\173\1\174\1\175\2\51\1\uffff"+
+        "\1\u0080\2\51\1\u0083\4\uffff\2\51\1\uffff\1\u0086\1\u0087\1\uffff"+
+        "\2\51\2\uffff\1\51\1\u008b\1\u008c\2\uffff";
     static final String DFA17_eofS =
         "\u008d\uffff";
     static final String DFA17_minS =
-        "\1\0\2\41\1\75\1\41\1\uffff\1\41\2\uffff\5\41\1\uffff\1\41\1\uffff"+
-        "\3\41\1\77\2\41\3\60\1\52\2\60\1\uffff\4\11\1\101\1\uffff\2\0\1"+
-        "\uffff\2\41\1\uffff\1\41\1\uffff\1\60\3\41\2\uffff\1\41\1\uffff"+
-        "\2\41\2\uffff\10\41\1\uffff\1\41\1\uffff\3\41\1\uffff\1\41\1\uffff"+
-        "\1\60\3\uffff\1\41\7\uffff\6\41\1\uffff\3\41\5\uffff\1\41\1\uffff"+
-        "\3\41\1\uffff\2\41\1\60\3\uffff\2\41\1\uffff\7\41\1\uffff\2\41\1"+
-        "\uffff\2\41\4\uffff\2\41\2\uffff\3\41\2\uffff";
+        "\1\0\6\41\1\75\1\41\1\uffff\1\41\2\uffff\4\41\2\uffff\1\41\1\77"+
+        "\2\41\3\60\1\52\2\60\1\uffff\4\11\1\101\1\uffff\2\0\1\uffff\2\41"+
+        "\1\uffff\1\41\1\uffff\1\60\10\41\2\uffff\1\41\1\uffff\2\41\2\uffff"+
+        "\6\41\2\uffff\1\41\1\uffff\1\41\1\uffff\1\60\3\uffff\1\41\7\uffff"+
+        "\6\41\2\uffff\3\41\1\uffff\3\41\5\uffff\3\41\1\60\3\uffff\5\41\1"+
+        "\uffff\4\41\4\uffff\2\41\1\uffff\2\41\1\uffff\2\41\2\uffff\3\41"+
+        "\2\uffff";
     static final String DFA17_maxS =
-        "\1\uffff\2\172\1\75\1\172\1\uffff\1\172\2\uffff\5\172\1\uffff\1"+
-        "\172\1\uffff\3\172\1\77\10\172\1\uffff\4\40\1\172\1\uffff\2\uffff"+
-        "\1\uffff\2\172\1\uffff\1\172\1\uffff\4\172\2\uffff\1\172\1\uffff"+
-        "\2\172\2\uffff\10\172\1\uffff\1\172\1\uffff\3\172\1\uffff\1\172"+
-        "\1\uffff\1\172\3\uffff\1\172\7\uffff\6\172\1\uffff\3\172\5\uffff"+
-        "\1\172\1\uffff\3\172\1\uffff\3\172\3\uffff\2\172\1\uffff\7\172\1"+
-        "\uffff\2\172\1\uffff\2\172\4\uffff\2\172\2\uffff\3\172\2\uffff";
+        "\1\uffff\6\172\1\75\1\172\1\uffff\1\172\2\uffff\4\172\2\uffff\1"+
+        "\172\1\77\10\172\1\uffff\4\40\1\172\1\uffff\2\uffff\1\uffff\2\172"+
+        "\1\uffff\1\172\1\uffff\11\172\2\uffff\1\172\1\uffff\2\172\2\uffff"+
+        "\6\172\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\3\uffff\1\172\7"+
+        "\uffff\6\172\2\uffff\3\172\1\uffff\3\172\5\uffff\4\172\3\uffff\5"+
+        "\172\1\uffff\4\172\4\uffff\2\172\1\uffff\2\172\1\uffff\2\172\2\uffff"+
+        "\3\172\2\uffff";
     static final String DFA17_acceptS =
-        "\5\uffff\1\6\1\uffff\1\10\1\11\5\uffff\1\25\1\uffff\1\27\14\uffff"+
-        "\1\41\5\uffff\1\47\2\uffff\1\54\2\uffff\1\46\1\uffff\1\40\4\uffff"+
-        "\1\12\1\4\1\uffff\1\6\2\uffff\1\10\1\11\10\uffff\1\25\1\uffff\1"+
-        "\27\3\uffff\1\36\1\uffff\1\37\1\uffff\1\41\1\51\1\52\1\uffff\1\42"+
-        "\1\53\1\43\1\44\1\45\1\47\1\50\6\uffff\1\21\3\uffff\1\14\1\15\1"+
-        "\34\1\17\1\24\1\uffff\1\32\3\uffff\1\31\3\uffff\1\1\1\35\1\2\2\uffff"+
-        "\1\16\7\uffff\1\33\2\uffff\1\5\2\uffff\1\20\1\22\1\26\1\30\2\uffff"+
-        "\1\7\1\13\3\uffff\1\23\1\3";
+        "\11\uffff\1\11\1\uffff\1\13\1\14\4\uffff\1\30\1\31\12\uffff\1\41"+
+        "\5\uffff\1\47\2\uffff\1\54\2\uffff\1\46\1\uffff\1\40\11\uffff\1"+
+        "\15\1\7\1\uffff\1\11\2\uffff\1\13\1\14\6\uffff\1\30\1\31\1\uffff"+
+        "\1\35\1\uffff\1\37\1\uffff\1\41\1\51\1\52\1\uffff\1\42\1\53\1\43"+
+        "\1\44\1\45\1\47\1\50\6\uffff\1\4\1\5\3\uffff\1\24\3\uffff\1\17\1"+
+        "\20\1\33\1\22\1\27\4\uffff\1\1\1\34\1\36\5\uffff\1\21\4\uffff\1"+
+        "\32\1\2\1\3\1\23\2\uffff\1\10\2\uffff\1\25\2\uffff\1\12\1\16\3\uffff"+
+        "\1\26\1\6";
     static final String DFA17_specialS =
         "\1\0\43\uffff\1\2\1\1\147\uffff}>";
     static final String[] DFA17_transitionS = {
-            "\11\46\1\40\1\37\2\46\1\41\22\46\1\36\1\35\1\44\2\46\1\5\1"+
-            "\34\1\45\1\16\1\20\1\46\1\30\1\7\1\27\1\31\1\32\12\43\1\3\1"+
-            "\10\1\46\1\24\1\46\1\35\1\46\32\25\3\46\1\42\1\33\1\46\1\23"+
-            "\1\26\1\17\1\11\1\15\1\2\1\26\1\22\1\13\2\26\1\21\1\26\1\1\1"+
-            "\12\2\26\1\4\1\26\1\14\2\26\1\6\3\26\uff85\46",
+            "\11\46\1\40\1\37\2\46\1\41\22\46\1\36\1\35\1\44\2\46\1\11\1"+
+            "\34\1\45\1\21\1\22\1\46\1\30\1\13\1\27\1\31\1\32\12\43\1\7\1"+
+            "\14\1\46\1\24\1\46\1\35\1\46\32\25\3\46\1\42\1\33\1\46\1\23"+
+            "\1\26\1\2\1\15\1\20\1\6\1\26\1\4\1\17\2\26\1\3\1\26\1\1\1\16"+
+            "\2\26\1\10\1\26\1\5\2\26\1\12\3\26\uff85\46",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\50\5\52\1\47"+
             "\13\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\57\5\52\1\56"+
-            "\5\52\1\55\5\52",
-            "\1\60",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\16\52\1\55\13\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\62\25\52",
-            "",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\56\21\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\7\52\1\65\11\52\1\64"+
-            "\10\52",
-            "",
-            "",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\57\26\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\16\52\1\70\13\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\71\15\52\1\72"+
-            "\10\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\5\52\1\73\7\52\1\74"+
-            "\14\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\7\52\1\75\3\52\1\76"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\7\52\1\61\3\52\1\60"+
             "\16\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\13\52\1\77\16\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\64\5\52\1\63"+
+            "\5\52\1\62\5\52",
+            "\1\65",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\67\25\52",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\16\52\1\101\13\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\7\52\1\72\11\52\1\71"+
+            "\10\52",
+            "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\103\21\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\16\52\1\75\13\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\104\26\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\76\15\52\1\77"+
+            "\10\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\5\52\1\100\7\52\1\101"+
+            "\14\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\13\52\1\102\16\52",
+            "",
+            "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\105\14\52",
             "\1\106",
@@ -2016,18 +2015,28 @@ public class InternalLangage_whileLexer extends Lexer {
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\131\14\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\21\52\1\132\10\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\132\7\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\135\25\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\136\14\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\21\52\1\137\10\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\1\134\31\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\1\141\31\52",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\135\21\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\142\21\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\136\21\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\143\21\52",
             "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
@@ -2041,19 +2050,9 @@ public class InternalLangage_whileLexer extends Lexer {
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\144\25\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\146\7\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\151\7\52",
             "",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\147\14\52",
             "",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\150\7\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\152\26\52",
             "",
@@ -2082,31 +2081,31 @@ public class InternalLangage_whileLexer extends Lexer {
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\130\5\uffff"+
             "\1\53\1\uffff\32\130\4\uffff\1\54\1\uffff\32\130",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\2\52\1\160\27\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\160\7\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\161\25\52",
-            "",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\163\26\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\164\6\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\13\52\1\165\16\52",
-            "",
-            "",
-            "",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\161\6\52",
             "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\166\14\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\15\52\1\162\14\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\2\52\1\163\27\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\164\25\52",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\167\25\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\3\52\1\166\26\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\22\52\1\170\7\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\167\6\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\171\6\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\13\52\1\170\16\52",
             "",
+            "",
+            "",
+            "",
+            "",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\171\25\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\110\4\uffff\1\110\4\uffff\1\110\1\uffff\3\110\12\153\5"+
@@ -2116,24 +2115,27 @@ public class InternalLangage_whileLexer extends Lexer {
             "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\173\6\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\1\174\31\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\23\52\1\176\6\52",
+            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\1\177\31\52",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\176\25\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\u0081\25\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\177\25\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\4\52\1\u0082\25\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
-            "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
-            "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
+            "",
+            "",
+            "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\10\52\1\u0084\21\52",
@@ -2144,9 +2146,6 @@ public class InternalLangage_whileLexer extends Lexer {
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\32\52",
-            "",
-            "",
-            "",
             "",
             "\1\53\4\uffff\1\53\4\uffff\1\53\1\uffff\3\53\12\52\5\uffff"+
             "\1\53\1\uffff\32\52\4\uffff\1\54\1\uffff\16\52\1\u0088\13\52",
@@ -2206,39 +2205,39 @@ public class InternalLangage_whileLexer extends Lexer {
                         s = -1;
                         if ( (LA17_0=='n') ) {s = 1;}
 
-                        else if ( (LA17_0=='f') ) {s = 2;}
+                        else if ( (LA17_0=='c') ) {s = 2;}
 
-                        else if ( (LA17_0==':') ) {s = 3;}
+                        else if ( (LA17_0=='l') ) {s = 3;}
 
-                        else if ( (LA17_0=='r') ) {s = 4;}
+                        else if ( (LA17_0=='h') ) {s = 4;}
 
-                        else if ( (LA17_0=='%') ) {s = 5;}
+                        else if ( (LA17_0=='t') ) {s = 5;}
 
-                        else if ( (LA17_0=='w') ) {s = 6;}
+                        else if ( (LA17_0=='f') ) {s = 6;}
 
-                        else if ( (LA17_0==',') ) {s = 7;}
+                        else if ( (LA17_0==':') ) {s = 7;}
 
-                        else if ( (LA17_0==';') ) {s = 8;}
+                        else if ( (LA17_0=='r') ) {s = 8;}
 
-                        else if ( (LA17_0=='d') ) {s = 9;}
+                        else if ( (LA17_0=='%') ) {s = 9;}
 
-                        else if ( (LA17_0=='o') ) {s = 10;}
+                        else if ( (LA17_0=='w') ) {s = 10;}
 
-                        else if ( (LA17_0=='i') ) {s = 11;}
+                        else if ( (LA17_0==',') ) {s = 11;}
 
-                        else if ( (LA17_0=='t') ) {s = 12;}
+                        else if ( (LA17_0==';') ) {s = 12;}
 
-                        else if ( (LA17_0=='e') ) {s = 13;}
+                        else if ( (LA17_0=='d') ) {s = 13;}
 
-                        else if ( (LA17_0=='(') ) {s = 14;}
+                        else if ( (LA17_0=='o') ) {s = 14;}
 
-                        else if ( (LA17_0=='c') ) {s = 15;}
+                        else if ( (LA17_0=='i') ) {s = 15;}
 
-                        else if ( (LA17_0==')') ) {s = 16;}
+                        else if ( (LA17_0=='e') ) {s = 16;}
 
-                        else if ( (LA17_0=='l') ) {s = 17;}
+                        else if ( (LA17_0=='(') ) {s = 17;}
 
-                        else if ( (LA17_0=='h') ) {s = 18;}
+                        else if ( (LA17_0==')') ) {s = 18;}
 
                         else if ( (LA17_0=='a') ) {s = 19;}
 

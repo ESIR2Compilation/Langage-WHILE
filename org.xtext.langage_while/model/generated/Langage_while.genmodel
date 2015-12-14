@@ -8,12 +8,7 @@
   <genPackages prefix="Langage_while" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="while" ecorePackage="Langage_while.ecore#/">
     <genClasses ecoreClass="Langage_while.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/greetings"/>
-    </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//Program">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/f"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Program/u"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/pp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/prog"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/n"/>
@@ -114,14 +109,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPR/ex"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//EXPRSIMPLE">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/l"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/s"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/yy"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/b"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/u"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/nil"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/w"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/sym"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/mot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/lex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/ex"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//LEXPR">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LEXPR/f"/>
@@ -155,8 +149,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Variable/n"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//LCs">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LCs/n"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LCs/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LCs/l"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//LC">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//LC/a"/>

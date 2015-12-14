@@ -40,6 +40,8 @@ import org.xtext.langage_while.While
 import tabSymb.Fonction
 import tabSymb.TabSymbole
 import org.xtext.langage_while.Def
+import Chevron.Chevron3a
+import java.util.*
 
 class Langage_whileGenerator implements IGenerator {
 	
@@ -81,12 +83,17 @@ class Langage_whileGenerator implements IGenerator {
 	def Fonction createFonct(int i){
 		return  new Fonction("funct"+i);
 	}
+	def List<Chevron3a> createList(){
+		return new ArrayList<Chevron3a>();
+	}
 	
 	  @Inject extension IQualifiedNameProvider
 	
 		TabSymbole tableS= new TabSymbole();
 		Fonction fonct;
 		int cpt=0;
+		List <Chevron3a> listChev; 
+		Map<String,List <Chevron3a> > code3a;
 	
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
@@ -119,6 +126,10 @@ class Langage_whileGenerator implements IGenerator {
 	« cpt++»
 	« fonct = createFonct(cpt) »
 	«tableS.addFonction(f.nom,fonct)»
+	« listChev = createList()»
+	«code3a.put(f.nom,listChev)
+	
+	»
 		
 		function  «f.nom» :
 		 « f.d.compile(f.nom) »
@@ -134,11 +145,14 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def compile (Input l, String a)
 	'''«fonct.incNbEntree()»
-	«if (l.y!=null)
+	«if (l.y!=null){
 	fonct.addVariable(l.y)
+	listChev.add(new Chevron3a("read",l.y,null,null))
+	}
 	else
 	fonct.addVariable(l.v)»
 	«(l.y)  ?: ((l.v)+" , "+(l.in.compile(a)))» 
+	«listChev.add(new Chevron3a("read",l.v,null,null))»
 		'''
 	
 	

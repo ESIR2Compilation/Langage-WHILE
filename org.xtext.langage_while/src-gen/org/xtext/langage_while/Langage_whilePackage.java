@@ -67,13 +67,13 @@ public interface Langage_whilePackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference.
+   * The feature id for the '<em><b>Prog</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int MODEL__PROG = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -85,52 +85,6 @@ public interface Langage_whilePackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.langage_while.impl.ProgramImpl <em>Program</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.langage_while.impl.ProgramImpl
-   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getProgram()
-   * @generated
-   */
-  int PROGRAM = 1;
-
-  /**
-   * The feature id for the '<em><b>F</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__F = 0;
-
-  /**
-   * The feature id for the '<em><b>U</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__U = 1;
-
-  /**
-   * The feature id for the '<em><b>Pp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__PP = 2;
-
-  /**
-   * The number of structural features of the '<em>Program</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM_FEATURE_COUNT = 3;
-
-  /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.FunctionImpl <em>Function</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -138,7 +92,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 2;
+  int FUNCTION = 1;
 
   /**
    * The feature id for the '<em><b>N</b></em>' containment reference.
@@ -193,7 +147,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getDef()
    * @generated
    */
-  int DEF = 3;
+  int DEF = 2;
 
   /**
    * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -275,7 +229,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getInput()
    * @generated
    */
-  int INPUT = 4;
+  int INPUT = 3;
 
   /**
    * The feature id for the '<em><b>V</b></em>' attribute.
@@ -330,7 +284,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getOutput()
    * @generated
    */
-  int OUTPUT = 5;
+  int OUTPUT = 4;
 
   /**
    * The feature id for the '<em><b>N</b></em>' attribute.
@@ -385,7 +339,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getCommands()
    * @generated
    */
-  int COMMANDS = 6;
+  int COMMANDS = 5;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -431,7 +385,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getCommand()
    * @generated
    */
-  int COMMAND = 7;
+  int COMMAND = 6;
 
   /**
    * The feature id for the '<em><b>Nop</b></em>' attribute.
@@ -504,7 +458,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getAssign()
    * @generated
    */
-  int ASSIGN = 8;
+  int ASSIGN = 7;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -559,7 +513,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getWhile()
    * @generated
    */
-  int WHILE = 9;
+  int WHILE = 8;
 
   /**
    * The feature id for the '<em><b>Ll</b></em>' containment reference.
@@ -632,7 +586,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFor()
    * @generated
    */
-  int FOR = 10;
+  int FOR = 9;
 
   /**
    * The feature id for the '<em><b>Cc</b></em>' containment reference.
@@ -705,7 +659,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getIf()
    * @generated
    */
-  int IF = 11;
+  int IF = 10;
 
   /**
    * The feature id for the '<em><b>Mm</b></em>' containment reference.
@@ -805,7 +759,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getForeach()
    * @generated
    */
-  int FOREACH = 12;
+  int FOREACH = 11;
 
   /**
    * The feature id for the '<em><b>Sq</b></em>' containment reference.
@@ -905,7 +859,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVars()
    * @generated
    */
-  int VARS = 13;
+  int VARS = 12;
 
   /**
    * The feature id for the '<em><b>A</b></em>' attribute.
@@ -951,7 +905,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRS()
    * @generated
    */
-  int EXPRS = 14;
+  int EXPRS = 13;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -997,7 +951,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPR()
    * @generated
    */
-  int EXPR = 15;
+  int EXPR = 14;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -1034,61 +988,16 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRSIMPLE()
    * @generated
    */
-  int EXPRSIMPLE = 16;
+  int EXPRSIMPLE = 15;
 
   /**
-   * The feature id for the '<em><b>L</b></em>' attribute.
+   * The feature id for the '<em><b>Nil</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRSIMPLE__L = 0;
-
-  /**
-   * The feature id for the '<em><b>S</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRSIMPLE__S = 1;
-
-  /**
-   * The feature id for the '<em><b>Yy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRSIMPLE__YY = 2;
-
-  /**
-   * The feature id for the '<em><b>B</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRSIMPLE__B = 3;
-
-  /**
-   * The feature id for the '<em><b>U</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRSIMPLE__U = 4;
-
-  /**
-   * The feature id for the '<em><b>G</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRSIMPLE__G = 5;
+  int EXPRSIMPLE__NIL = 0;
 
   /**
    * The feature id for the '<em><b>V</b></em>' attribute.
@@ -1097,16 +1006,52 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRSIMPLE__V = 6;
+  int EXPRSIMPLE__V = 1;
 
   /**
-   * The feature id for the '<em><b>W</b></em>' containment reference.
+   * The feature id for the '<em><b>Sym</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRSIMPLE__W = 7;
+  int EXPRSIMPLE__SYM = 2;
+
+  /**
+   * The feature id for the '<em><b>Mot</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRSIMPLE__MOT = 3;
+
+  /**
+   * The feature id for the '<em><b>Lex</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRSIMPLE__LEX = 4;
+
+  /**
+   * The feature id for the '<em><b>L</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRSIMPLE__L = 5;
+
+  /**
+   * The feature id for the '<em><b>Ex</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRSIMPLE__EX = 6;
 
   /**
    * The number of structural features of the '<em>EXPRSIMPLE</em>' class.
@@ -1115,7 +1060,7 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRSIMPLE_FEATURE_COUNT = 8;
+  int EXPRSIMPLE_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.LEXPRImpl <em>LEXPR</em>}' class.
@@ -1125,7 +1070,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLEXPR()
    * @generated
    */
-  int LEXPR = 17;
+  int LEXPR = 16;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -1171,7 +1116,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRAND()
    * @generated
    */
-  int EXPRAND = 18;
+  int EXPRAND = 17;
 
   /**
    * The feature id for the '<em><b>F</b></em>' containment reference.
@@ -1226,7 +1171,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPROR()
    * @generated
    */
-  int EXPROR = 19;
+  int EXPROR = 18;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -1281,7 +1226,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPRNOT()
    * @generated
    */
-  int EXPRNOT = 20;
+  int EXPRNOT = 19;
 
   /**
    * The feature id for the '<em><b>Lc1</b></em>' containment reference.
@@ -1318,7 +1263,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getEXPREQ()
    * @generated
    */
-  int EXPREQ = 21;
+  int EXPREQ = 20;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -1382,7 +1327,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 22;
+  int VARIABLE = 21;
 
   /**
    * The feature id for the '<em><b>N</b></em>' attribute.
@@ -1410,97 +1355,16 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLCs()
    * @generated
    */
-  int LCS = 23;
+  int LCS = 22;
 
   /**
-   * The feature id for the '<em><b>L</b></em>' attribute.
+   * The feature id for the '<em><b>L</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LCS__L = EXPRSIMPLE__L;
-
-  /**
-   * The feature id for the '<em><b>S</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__S = EXPRSIMPLE__S;
-
-  /**
-   * The feature id for the '<em><b>Yy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__YY = EXPRSIMPLE__YY;
-
-  /**
-   * The feature id for the '<em><b>B</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__B = EXPRSIMPLE__B;
-
-  /**
-   * The feature id for the '<em><b>U</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__U = EXPRSIMPLE__U;
-
-  /**
-   * The feature id for the '<em><b>G</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__G = EXPRSIMPLE__G;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__V = EXPRSIMPLE__V;
-
-  /**
-   * The feature id for the '<em><b>W</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__W = EXPRSIMPLE__W;
-
-  /**
-   * The feature id for the '<em><b>N</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__N = EXPRSIMPLE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>A</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LCS__A = EXPRSIMPLE_FEATURE_COUNT + 1;
+  int LCS__L = 0;
 
   /**
    * The number of structural features of the '<em>LCs</em>' class.
@@ -1509,7 +1373,7 @@ public interface Langage_whilePackage extends EPackage
    * @generated
    * @ordered
    */
-  int LCS_FEATURE_COUNT = EXPRSIMPLE_FEATURE_COUNT + 2;
+  int LCS_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.LCImpl <em>LC</em>}' class.
@@ -1519,7 +1383,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLC()
    * @generated
    */
-  int LC = 24;
+  int LC = 23;
 
   /**
    * The feature id for the '<em><b>A</b></em>' attribute.
@@ -1578,58 +1442,15 @@ public interface Langage_whilePackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.langage_while.Model#getProg <em>Prog</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Greetings</em>'.
-   * @see org.xtext.langage_while.Model#getGreetings()
+   * @return the meta object for the containment reference list '<em>Prog</em>'.
+   * @see org.xtext.langage_while.Model#getProg()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Greetings();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.langage_while.Program <em>Program</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Program</em>'.
-   * @see org.xtext.langage_while.Program
-   * @generated
-   */
-  EClass getProgram();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.langage_while.Program#getF <em>F</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>F</em>'.
-   * @see org.xtext.langage_while.Program#getF()
-   * @see #getProgram()
-   * @generated
-   */
-  EReference getProgram_F();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Program#getU <em>U</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>U</em>'.
-   * @see org.xtext.langage_while.Program#getU()
-   * @see #getProgram()
-   * @generated
-   */
-  EAttribute getProgram_U();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Program#getPp <em>Pp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Pp</em>'.
-   * @see org.xtext.langage_while.Program#getPp()
-   * @see #getProgram()
-   * @generated
-   */
-  EReference getProgram_Pp();
+  EReference getModel_Prog();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.Function <em>Function</em>}'.
@@ -2552,70 +2373,15 @@ public interface Langage_whilePackage extends EPackage
   EClass getEXPRSIMPLE();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getL <em>L</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getNil <em>Nil</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>L</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getL()
+   * @return the meta object for the attribute '<em>Nil</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getNil()
    * @see #getEXPRSIMPLE()
    * @generated
    */
-  EAttribute getEXPRSIMPLE_L();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getS <em>S</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>S</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getS()
-   * @see #getEXPRSIMPLE()
-   * @generated
-   */
-  EAttribute getEXPRSIMPLE_S();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getYy <em>Yy</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Yy</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getYy()
-   * @see #getEXPRSIMPLE()
-   * @generated
-   */
-  EReference getEXPRSIMPLE_Yy();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getB()
-   * @see #getEXPRSIMPLE()
-   * @generated
-   */
-  EReference getEXPRSIMPLE_B();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getU <em>U</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>U</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getU()
-   * @see #getEXPRSIMPLE()
-   * @generated
-   */
-  EReference getEXPRSIMPLE_U();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getG <em>G</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>G</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getG()
-   * @see #getEXPRSIMPLE()
-   * @generated
-   */
-  EReference getEXPRSIMPLE_G();
+  EAttribute getEXPRSIMPLE_Nil();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getV <em>V</em>}'.
@@ -2629,15 +2395,59 @@ public interface Langage_whilePackage extends EPackage
   EAttribute getEXPRSIMPLE_V();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getW <em>W</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getSym <em>Sym</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>W</em>'.
-   * @see org.xtext.langage_while.EXPRSIMPLE#getW()
+   * @return the meta object for the attribute '<em>Sym</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getSym()
    * @see #getEXPRSIMPLE()
    * @generated
    */
-  EReference getEXPRSIMPLE_W();
+  EAttribute getEXPRSIMPLE_Sym();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.EXPRSIMPLE#getMot <em>Mot</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Mot</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getMot()
+   * @see #getEXPRSIMPLE()
+   * @generated
+   */
+  EAttribute getEXPRSIMPLE_Mot();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getLex <em>Lex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Lex</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getLex()
+   * @see #getEXPRSIMPLE()
+   * @generated
+   */
+  EReference getEXPRSIMPLE_Lex();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getL <em>L</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>L</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getL()
+   * @see #getEXPRSIMPLE()
+   * @generated
+   */
+  EReference getEXPRSIMPLE_L();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.EXPRSIMPLE#getEx <em>Ex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ex</em>'.
+   * @see org.xtext.langage_while.EXPRSIMPLE#getEx()
+   * @see #getEXPRSIMPLE()
+   * @generated
+   */
+  EReference getEXPRSIMPLE_Ex();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.LEXPR <em>LEXPR</em>}'.
@@ -2919,26 +2729,15 @@ public interface Langage_whilePackage extends EPackage
   EClass getLCs();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.LCs#getN <em>N</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.LCs#getL <em>L</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>N</em>'.
-   * @see org.xtext.langage_while.LCs#getN()
+   * @return the meta object for the containment reference '<em>L</em>'.
+   * @see org.xtext.langage_while.LCs#getL()
    * @see #getLCs()
    * @generated
    */
-  EReference getLCs_N();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.LCs#getA <em>A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A</em>'.
-   * @see org.xtext.langage_while.LCs#getA()
-   * @see #getLCs()
-   * @generated
-   */
-  EReference getLCs_A();
+  EReference getLCs_L();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.LC <em>LC</em>}'.
@@ -3028,46 +2827,12 @@ public interface Langage_whilePackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Prog</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.langage_while.impl.ProgramImpl <em>Program</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.langage_while.impl.ProgramImpl
-     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getProgram()
-     * @generated
-     */
-    EClass PROGRAM = eINSTANCE.getProgram();
-
-    /**
-     * The meta object literal for the '<em><b>F</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM__F = eINSTANCE.getProgram_F();
-
-    /**
-     * The meta object literal for the '<em><b>U</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PROGRAM__U = eINSTANCE.getProgram_U();
-
-    /**
-     * The meta object literal for the '<em><b>Pp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM__PP = eINSTANCE.getProgram_Pp();
+    EReference MODEL__PROG = eINSTANCE.getModel_Prog();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.FunctionImpl <em>Function</em>}' class.
@@ -3780,52 +3545,12 @@ public interface Langage_whilePackage extends EPackage
     EClass EXPRSIMPLE = eINSTANCE.getEXPRSIMPLE();
 
     /**
-     * The meta object literal for the '<em><b>L</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nil</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRSIMPLE__L = eINSTANCE.getEXPRSIMPLE_L();
-
-    /**
-     * The meta object literal for the '<em><b>S</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXPRSIMPLE__S = eINSTANCE.getEXPRSIMPLE_S();
-
-    /**
-     * The meta object literal for the '<em><b>Yy</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRSIMPLE__YY = eINSTANCE.getEXPRSIMPLE_Yy();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRSIMPLE__B = eINSTANCE.getEXPRSIMPLE_B();
-
-    /**
-     * The meta object literal for the '<em><b>U</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRSIMPLE__U = eINSTANCE.getEXPRSIMPLE_U();
-
-    /**
-     * The meta object literal for the '<em><b>G</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRSIMPLE__G = eINSTANCE.getEXPRSIMPLE_G();
+    EAttribute EXPRSIMPLE__NIL = eINSTANCE.getEXPRSIMPLE_Nil();
 
     /**
      * The meta object literal for the '<em><b>V</b></em>' attribute feature.
@@ -3836,12 +3561,44 @@ public interface Langage_whilePackage extends EPackage
     EAttribute EXPRSIMPLE__V = eINSTANCE.getEXPRSIMPLE_V();
 
     /**
-     * The meta object literal for the '<em><b>W</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Sym</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EXPRSIMPLE__W = eINSTANCE.getEXPRSIMPLE_W();
+    EAttribute EXPRSIMPLE__SYM = eINSTANCE.getEXPRSIMPLE_Sym();
+
+    /**
+     * The meta object literal for the '<em><b>Mot</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRSIMPLE__MOT = eINSTANCE.getEXPRSIMPLE_Mot();
+
+    /**
+     * The meta object literal for the '<em><b>Lex</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRSIMPLE__LEX = eINSTANCE.getEXPRSIMPLE_Lex();
+
+    /**
+     * The meta object literal for the '<em><b>L</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRSIMPLE__L = eINSTANCE.getEXPRSIMPLE_L();
+
+    /**
+     * The meta object literal for the '<em><b>Ex</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRSIMPLE__EX = eINSTANCE.getEXPRSIMPLE_Ex();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.LEXPRImpl <em>LEXPR</em>}' class.
@@ -4066,20 +3823,12 @@ public interface Langage_whilePackage extends EPackage
     EClass LCS = eINSTANCE.getLCs();
 
     /**
-     * The meta object literal for the '<em><b>N</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>L</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LCS__N = eINSTANCE.getLCs_N();
-
-    /**
-     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LCS__A = eINSTANCE.getLCs_A();
+    EReference LCS__L = eINSTANCE.getLCs_L();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.LCImpl <em>LC</em>}' class.

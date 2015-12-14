@@ -79,13 +79,6 @@ public class Langage_whileSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case Langage_whilePackage.PROGRAM:
-      {
-        Program program = (Program)theEObject;
-        T result = caseProgram(program);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case Langage_whilePackage.FUNCTION:
       {
         Function function = (Function)theEObject;
@@ -237,7 +230,6 @@ public class Langage_whileSwitch<T> extends Switch<T>
       {
         LCs lCs = (LCs)theEObject;
         T result = caseLCs(lCs);
-        if (result == null) result = caseEXPRSIMPLE(lCs);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -264,22 +256,6 @@ public class Langage_whileSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModel(Model object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Program</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Program</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseProgram(Program object)
   {
     return null;
   }

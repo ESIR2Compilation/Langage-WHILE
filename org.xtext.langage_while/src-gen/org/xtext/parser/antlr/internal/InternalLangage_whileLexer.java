@@ -13,11 +13,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLangage_whileLexer extends Lexer {
     public static final int RULE_LF=9;
-    public static final int RULE_CR=4;
+    public static final int RULE_CR=7;
     public static final int RULE_TAB=8;
     public static final int T__19=19;
     public static final int T__18=18;
-    public static final int RULE_SP=7;
+    public static final int RULE_SP=6;
     public static final int RULE_ID=11;
     public static final int RULE_CONF=10;
     public static final int T__26=26;
@@ -45,7 +45,7 @@ public class InternalLangage_whileLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_SYM=5;
+    public static final int RULE_SYM=4;
     public static final int RULE_WS=16;
     public static final int RULE_ANY_OTHER=17;
     public static final int T__44=44;
@@ -56,7 +56,7 @@ public class InternalLangage_whileLexer extends Lexer {
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
-    public static final int RULE_VAR=6;
+    public static final int RULE_VAR=5;
 
     // delegates
     // delegators
@@ -533,10 +533,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:33:7: ( ')' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:33:9: ')'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:33:7: ( 'list' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:33:9: 'list'
             {
-            match(')'); 
+            match("list"); 
+
 
             }
 
@@ -553,11 +554,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:34:7: ( 'list' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:34:9: 'list'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:34:7: ( ')' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:34:9: ')'
             {
-            match("list"); 
-
+            match(')'); 
 
             }
 
@@ -700,11 +700,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2736:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2736:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2650:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2650:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('A','Z'); 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2736:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2650:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -754,11 +754,11 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SYM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2738:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2738:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2652:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2652:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* RULE_CONF
             {
             matchRange('a','z'); 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2738:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2652:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -808,10 +808,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CONF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:11: ( ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )* ( '?' | '!' )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:13: ( ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+ )*
             loop5:
             do {
                 int alt5=2;
@@ -824,9 +824,9 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    {
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:14: ( '-' | '+' | '.' | '/' | '_' | '&' | '->' )
             	    int alt3=7;
             	    switch ( input.LA(1) ) {
             	    case '-':
@@ -881,49 +881,49 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    switch (alt3) {
             	        case 1 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:15: '-'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:15: '-'
             	            {
             	            match('-'); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:19: '+'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:19: '+'
             	            {
             	            match('+'); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:23: '.'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:23: '.'
             	            {
             	            match('.'); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:27: '/'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:27: '/'
             	            {
             	            match('/'); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:31: '_'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:31: '_'
             	            {
             	            match('_'); 
 
             	            }
             	            break;
             	        case 6 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:35: '&'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:35: '&'
             	            {
             	            match('&'); 
 
             	            }
             	            break;
             	        case 7 :
-            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:39: '->'
+            	            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:39: '->'
             	            {
             	            match("->"); 
 
@@ -933,7 +933,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
             	    }
 
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2740:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2654:45: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )+
             	    int cnt4=0;
             	    loop4:
             	    do {
@@ -1005,8 +1005,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2742:9: ( ' ' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2742:11: ' '
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2656:9: ( ' ' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2656:11: ' '
             {
             match(' '); 
 
@@ -1025,8 +1025,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_CR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2744:9: ( '\\n' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2744:11: '\\n'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2658:9: ( '\\n' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2658:11: '\\n'
             {
             match('\n'); 
 
@@ -1045,8 +1045,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_TAB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2746:10: ( '\\t' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2746:12: '\\t'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2660:10: ( '\\t' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2660:12: '\\t'
             {
             match('\t'); 
 
@@ -1065,8 +1065,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_LF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2748:9: ( '\\r' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2748:11: '\\r'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2662:9: ( '\\r' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2662:11: '\\r'
             {
             match('\r'); 
 
@@ -1085,10 +1085,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2750:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2750:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2664:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2664:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2750:11: ( '^' )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2664:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1097,7 +1097,7 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2750:11: '^'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2664:11: '^'
                     {
                     match('^'); 
 
@@ -1115,7 +1115,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2750:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2664:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -1164,10 +1164,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2752:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2752:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2666:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2666:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2752:12: ( '0' .. '9' )+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2666:12: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -1181,7 +1181,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2752:13: '0' .. '9'
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2666:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1213,10 +1213,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1234,10 +1234,10 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -1253,7 +1253,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:21: '\\\\' .
+                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1261,7 +1261,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1286,10 +1286,10 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1305,7 +1305,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:54: '\\\\' .
+                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1313,7 +1313,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2754:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2668:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1356,12 +1356,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2756:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2756:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2670:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2670:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2756:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2670:24: ( options {greedy=false; } : . )*
             loop12:
             do {
                 int alt12=2;
@@ -1386,7 +1386,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2756:52: .
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2670:52: .
             	    {
             	    matchAny(); 
 
@@ -1416,12 +1416,12 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -1434,7 +1434,7 @@ public class InternalLangage_whileLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1454,7 +1454,7 @@ public class InternalLangage_whileLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:40: ( ( '\\r' )? '\\n' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1463,9 +1463,9 @@ public class InternalLangage_whileLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:41: ( '\\r' )?
+                    // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:41: ( '\\r' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -1474,7 +1474,7 @@ public class InternalLangage_whileLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2758:41: '\\r'
+                            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2672:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1506,10 +1506,10 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2760:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2760:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2674:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2674:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2760:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2674:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt16=0;
             loop16:
             do {
@@ -1563,8 +1563,8 @@ public class InternalLangage_whileLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2762:16: ( . )
-            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2762:18: .
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2676:16: ( . )
+            // ../org.xtext.langage_while/src-gen/org/xtext/parser/antlr/internal/InternalLangage_while.g:2676:18: .
             {
             matchAny(); 
 
@@ -1899,50 +1899,50 @@ public class InternalLangage_whileLexer extends Lexer {
 
     protected DFA17 dfa17 = new DFA17(this);
     static final String DFA17_eotS =
-        "\1\uffff\1\52\1\57\1\52\1\uffff\1\52\2\uffff\6\52\1\uffff\1\52"+
-        "\1\uffff\3\52\1\46\2\52\4\46\1\52\1\46\1\uffff\1\116\1\120\1\121"+
+        "\1\uffff\1\52\1\57\1\52\1\uffff\1\52\2\uffff\6\52\1\uffff\2\52"+
+        "\1\uffff\2\52\1\46\2\52\4\46\1\52\1\46\1\uffff\1\116\1\120\1\121"+
         "\1\122\1\46\1\uffff\2\46\1\uffff\2\52\1\127\1\uffff\1\52\1\uffff"+
         "\1\52\2\uffff\1\52\1\uffff\2\52\2\uffff\2\52\1\137\1\140\1\141\1"+
-        "\142\1\143\1\52\1\145\1\52\1\uffff\1\52\1\uffff\1\52\1\151\1\52"+
-        "\1\uffff\1\52\1\uffff\1\52\3\uffff\1\52\7\uffff\1\52\1\157\1\uffff"+
-        "\4\52\1\163\1\164\1\165\5\uffff\1\52\1\uffff\3\52\1\uffff\1\172"+
-        "\4\52\1\uffff\1\175\2\52\3\uffff\1\u0080\1\u0081\1\u0082\1\u0083"+
-        "\1\uffff\2\52\1\uffff\1\u0086\1\u0087\4\uffff\2\52\2\uffff\1\52"+
-        "\1\u008b\1\u008c\2\uffff";
+        "\142\1\143\1\52\1\145\1\52\1\uffff\2\52\1\uffff\1\151\1\52\1\uffff"+
+        "\1\52\1\uffff\1\52\3\uffff\1\52\7\uffff\1\52\1\157\1\uffff\4\52"+
+        "\1\163\1\164\1\165\5\uffff\1\52\1\uffff\3\52\1\uffff\1\172\4\52"+
+        "\1\uffff\1\175\2\52\3\uffff\1\u0080\1\u0081\1\u0082\1\u0083\1\uffff"+
+        "\2\52\1\uffff\1\u0086\1\u0087\4\uffff\2\52\2\uffff\1\52\1\u008b"+
+        "\1\u008c\2\uffff";
     static final String DFA17_eofS =
         "\u008d\uffff";
     static final String DFA17_minS =
-        "\1\0\1\41\1\75\1\41\1\uffff\1\41\2\uffff\6\41\1\uffff\1\41\1\uffff"+
-        "\3\41\1\77\2\41\3\60\1\52\2\60\1\uffff\4\11\1\101\1\uffff\2\0\1"+
+        "\1\0\1\41\1\75\1\41\1\uffff\1\41\2\uffff\6\41\1\uffff\2\41\1\uffff"+
+        "\2\41\1\77\2\41\3\60\1\52\2\60\1\uffff\4\11\1\101\1\uffff\2\0\1"+
         "\uffff\3\41\1\uffff\1\41\1\uffff\1\60\2\uffff\1\41\1\uffff\2\41"+
-        "\2\uffff\12\41\1\uffff\1\41\1\uffff\3\41\1\uffff\1\41\1\uffff\1"+
+        "\2\uffff\12\41\1\uffff\2\41\1\uffff\2\41\1\uffff\1\41\1\uffff\1"+
         "\60\3\uffff\1\41\7\uffff\2\41\1\uffff\7\41\5\uffff\1\41\1\uffff"+
         "\3\41\1\uffff\2\41\1\60\2\41\1\uffff\3\41\3\uffff\4\41\1\uffff\2"+
         "\41\1\uffff\2\41\4\uffff\2\41\2\uffff\3\41\2\uffff";
     static final String DFA17_maxS =
-        "\1\uffff\1\172\1\75\1\172\1\uffff\1\172\2\uffff\6\172\1\uffff\1"+
-        "\172\1\uffff\3\172\1\77\10\172\1\uffff\4\40\1\172\1\uffff\2\uffff"+
+        "\1\uffff\1\172\1\75\1\172\1\uffff\1\172\2\uffff\6\172\1\uffff\2"+
+        "\172\1\uffff\2\172\1\77\10\172\1\uffff\4\40\1\172\1\uffff\2\uffff"+
         "\1\uffff\3\172\1\uffff\1\172\1\uffff\1\172\2\uffff\1\172\1\uffff"+
-        "\2\172\2\uffff\12\172\1\uffff\1\172\1\uffff\3\172\1\uffff\1\172"+
+        "\2\172\2\uffff\12\172\1\uffff\2\172\1\uffff\2\172\1\uffff\1\172"+
         "\1\uffff\1\172\3\uffff\1\172\7\uffff\2\172\1\uffff\7\172\5\uffff"+
         "\1\172\1\uffff\3\172\1\uffff\5\172\1\uffff\3\172\3\uffff\4\172\1"+
         "\uffff\2\172\1\uffff\2\172\4\uffff\2\172\2\uffff\3\172\2\uffff";
     static final String DFA17_acceptS =
-        "\4\uffff\1\4\1\uffff\1\6\1\7\6\uffff\1\25\1\uffff\1\27\14\uffff"+
+        "\4\uffff\1\4\1\uffff\1\6\1\7\6\uffff\1\25\2\uffff\1\30\13\uffff"+
         "\1\41\5\uffff\1\47\2\uffff\1\54\3\uffff\1\46\1\uffff\1\40\1\uffff"+
-        "\1\11\1\2\1\uffff\1\4\2\uffff\1\6\1\7\12\uffff\1\25\1\uffff\1\27"+
-        "\3\uffff\1\36\1\uffff\1\37\1\uffff\1\41\1\51\1\52\1\uffff\1\42\1"+
+        "\1\11\1\2\1\uffff\1\4\2\uffff\1\6\1\7\12\uffff\1\25\2\uffff\1\30"+
+        "\2\uffff\1\36\1\uffff\1\37\1\uffff\1\41\1\51\1\52\1\uffff\1\42\1"+
         "\53\1\43\1\44\1\45\1\47\1\50\2\uffff\1\21\7\uffff\1\13\1\14\1\34"+
         "\1\16\1\23\1\uffff\1\32\3\uffff\1\31\5\uffff\1\15\3\uffff\1\10\1"+
-        "\35\1\24\4\uffff\1\33\2\uffff\1\3\2\uffff\1\17\1\20\1\26\1\30\2"+
+        "\35\1\24\4\uffff\1\33\2\uffff\1\3\2\uffff\1\17\1\20\1\26\1\27\2"+
         "\uffff\1\5\1\12\3\uffff\1\22\1\1";
     static final String DFA17_specialS =
         "\1\0\43\uffff\1\2\1\1\147\uffff}>";
     static final String[] DFA17_transitionS = {
             "\11\46\1\40\1\37\2\46\1\41\22\46\1\36\1\35\1\44\2\46\1\4\1"+
-            "\34\1\45\1\16\1\20\1\46\1\30\1\6\1\27\1\31\1\32\12\43\1\2\1"+
+            "\34\1\45\1\16\1\21\1\46\1\30\1\6\1\27\1\31\1\32\12\43\1\2\1"+
             "\7\1\46\1\24\1\46\1\35\1\46\32\25\3\46\1\42\1\33\1\46\1\23\1"+
-            "\26\1\17\1\11\1\15\1\1\1\26\1\22\1\13\2\26\1\21\1\26\1\10\1"+
+            "\26\1\17\1\11\1\15\1\1\1\26\1\22\1\13\2\26\1\20\1\26\1\10\1"+
             "\12\2\26\1\3\1\26\1\14\2\26\1\5\3\26\uff85\46",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\10\53\1\51\5\53\1\50"+
@@ -1975,9 +1975,9 @@ public class InternalLangage_whileLexer extends Lexer {
             "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\16\53\1\101\13\53",
-            "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
-            "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\10\53\1\103\21\53",
+            "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\10\53\1\102\21\53",
+            "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\3\53\1\104\26\53",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
@@ -2049,9 +2049,9 @@ public class InternalLangage_whileLexer extends Lexer {
             "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\15\53\1\147\14\53",
-            "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\22\53\1\150\7\53",
+            "",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
             "\1\54\1\uffff\32\53\4\uffff\1\55\1\uffff\32\53",
             "\1\54\4\uffff\1\54\4\uffff\1\54\1\uffff\3\54\12\53\5\uffff"+
@@ -2234,9 +2234,9 @@ public class InternalLangage_whileLexer extends Lexer {
 
                         else if ( (LA17_0=='c') ) {s = 15;}
 
-                        else if ( (LA17_0==')') ) {s = 16;}
+                        else if ( (LA17_0=='l') ) {s = 16;}
 
-                        else if ( (LA17_0=='l') ) {s = 17;}
+                        else if ( (LA17_0==')') ) {s = 17;}
 
                         else if ( (LA17_0=='h') ) {s = 18;}
 

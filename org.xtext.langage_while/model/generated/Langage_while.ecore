@@ -2,14 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="langage_while" nsURI="http://www.xtext.org/Langage_while" nsPrefix="langage_while">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="greetings" eType="#//Program"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="f" upperBound="-1" eType="#//Function"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="u" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pp" eType="#//Program"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prog" upperBound="-1" eType="#//Function"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
@@ -122,14 +115,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EXPRSIMPLE">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="yy" eType="#//LEXPR" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//LEXPR" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//LCs" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="g" eType="#//EXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="v" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="w" eType="#//LEXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sym" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lex" eType="#//LEXPR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LCs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ex" eType="#//EXPR" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LEXPR">
     <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//LCs" containment="true"/>
@@ -166,9 +158,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="n" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LCs" eSuperTypes="#//EXPRSIMPLE">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//EXPR" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//LC" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LCs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" eType="#//LC" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LC">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="a" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -1,0 +1,23 @@
+package Chevron;
+
+import java.util.List;
+
+public class Chevron3a {
+
+	
+	private String op;
+	private String write;
+	private List<Chevron3a> Read1;
+	private List<Chevron3a> Read2;
+	
+	
+	public Chevron3a(String op, String write, List<Chevron3a> read1,
+			List<Chevron3a> read2) {
+		super();
+		this.op = op;
+		this.write = write;
+		Read1 = read1;
+		Read2 = read2;
+	
+
+}

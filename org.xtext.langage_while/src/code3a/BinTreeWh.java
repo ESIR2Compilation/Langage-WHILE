@@ -20,6 +20,19 @@ public class BinTreeWh {
 		this.sad = b;
 	}
 	
+	private void addDroite(BinTreeWh a, String s)
+	{ BinTreeWh Actu = a;
+	
+	 while (Actu.noeud != ""){
+			Actu = Actu.sag;
+			
+		  }
+	 
+		
+	
+	}
+	
+	
 	public String getName(){
 		return noeud;
 	}
