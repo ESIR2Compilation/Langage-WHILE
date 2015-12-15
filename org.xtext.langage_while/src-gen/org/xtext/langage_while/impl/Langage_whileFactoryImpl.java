@@ -66,7 +66,7 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
     {
       case Langage_whilePackage.MODEL: return createModel();
       case Langage_whilePackage.FUNCTION: return createFunction();
-      case Langage_whilePackage.DEF: return createDef();
+      case Langage_whilePackage.DEFINITION: return createDefinition();
       case Langage_whilePackage.INPUT: return createInput();
       case Langage_whilePackage.OUTPUT: return createOutput();
       case Langage_whilePackage.COMMANDS: return createCommands();
@@ -76,18 +76,18 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
       case Langage_whilePackage.FOR: return createFor();
       case Langage_whilePackage.IF: return createIf();
       case Langage_whilePackage.FOREACH: return createForeach();
+      case Langage_whilePackage.IFCONFORT: return createIfconfort();
       case Langage_whilePackage.VARS: return createVars();
-      case Langage_whilePackage.EXPRS: return createEXPRS();
-      case Langage_whilePackage.EXPR: return createEXPR();
-      case Langage_whilePackage.EXPRSIMPLE: return createEXPRSIMPLE();
-      case Langage_whilePackage.LEXPR: return createLEXPR();
-      case Langage_whilePackage.EXPRAND: return createEXPRAND();
-      case Langage_whilePackage.EXPROR: return createEXPROR();
-      case Langage_whilePackage.EXPRNOT: return createEXPRNOT();
-      case Langage_whilePackage.EXPREQ: return createEXPREQ();
-      case Langage_whilePackage.VARIABLE: return createVariable();
-      case Langage_whilePackage.LCS: return createLCs();
-      case Langage_whilePackage.LC: return createLC();
+      case Langage_whilePackage.EXPRS: return createExprs();
+      case Langage_whilePackage.EXPR: return createExpr();
+      case Langage_whilePackage.EXPR_SIMPLE: return createExprSimple();
+      case Langage_whilePackage.LEXPR: return createLExpr();
+      case Langage_whilePackage.EXPR_AND: return createExprAnd();
+      case Langage_whilePackage.EXPR_OR: return createExprOr();
+      case Langage_whilePackage.EXPR_NOT: return createExprNot();
+      case Langage_whilePackage.EXPR_EQ: return createExprEq();
+      case Langage_whilePackage.VAR: return createVAR();
+      case Langage_whilePackage.SYMB: return createSYMB();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -120,10 +120,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public Def createDef()
+  public Definition createDefinition()
   {
-    DefImpl def = new DefImpl();
-    return def;
+    DefinitionImpl definition = new DefinitionImpl();
+    return definition;
   }
 
   /**
@@ -230,6 +230,17 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
+  public Ifconfort createIfconfort()
+  {
+    IfconfortImpl ifconfort = new IfconfortImpl();
+    return ifconfort;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Vars createVars()
   {
     VarsImpl vars = new VarsImpl();
@@ -241,9 +252,9 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRS createEXPRS()
+  public Exprs createExprs()
   {
-    EXPRSImpl exprs = new EXPRSImpl();
+    ExprsImpl exprs = new ExprsImpl();
     return exprs;
   }
 
@@ -252,9 +263,9 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPR createEXPR()
+  public Expr createExpr()
   {
-    EXPRImpl expr = new EXPRImpl();
+    ExprImpl expr = new ExprImpl();
     return expr;
   }
 
@@ -263,10 +274,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRSIMPLE createEXPRSIMPLE()
+  public ExprSimple createExprSimple()
   {
-    EXPRSIMPLEImpl exprsimple = new EXPRSIMPLEImpl();
-    return exprsimple;
+    ExprSimpleImpl exprSimple = new ExprSimpleImpl();
+    return exprSimple;
   }
 
   /**
@@ -274,10 +285,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public LEXPR createLEXPR()
+  public LExpr createLExpr()
   {
-    LEXPRImpl lexpr = new LEXPRImpl();
-    return lexpr;
+    LExprImpl lExpr = new LExprImpl();
+    return lExpr;
   }
 
   /**
@@ -285,10 +296,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRAND createEXPRAND()
+  public ExprAnd createExprAnd()
   {
-    EXPRANDImpl exprand = new EXPRANDImpl();
-    return exprand;
+    ExprAndImpl exprAnd = new ExprAndImpl();
+    return exprAnd;
   }
 
   /**
@@ -296,10 +307,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPROR createEXPROR()
+  public ExprOr createExprOr()
   {
-    EXPRORImpl expror = new EXPRORImpl();
-    return expror;
+    ExprOrImpl exprOr = new ExprOrImpl();
+    return exprOr;
   }
 
   /**
@@ -307,10 +318,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRNOT createEXPRNOT()
+  public ExprNot createExprNot()
   {
-    EXPRNOTImpl exprnot = new EXPRNOTImpl();
-    return exprnot;
+    ExprNotImpl exprNot = new ExprNotImpl();
+    return exprNot;
   }
 
   /**
@@ -318,10 +329,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPREQ createEXPREQ()
+  public ExprEq createExprEq()
   {
-    EXPREQImpl expreq = new EXPREQImpl();
-    return expreq;
+    ExprEqImpl exprEq = new ExprEqImpl();
+    return exprEq;
   }
 
   /**
@@ -329,10 +340,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable createVariable()
+  public VAR createVAR()
   {
-    VariableImpl variable = new VariableImpl();
-    return variable;
+    VARImpl var = new VARImpl();
+    return var;
   }
 
   /**
@@ -340,21 +351,10 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public LCs createLCs()
+  public SYMB createSYMB()
   {
-    LCsImpl lCs = new LCsImpl();
-    return lCs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LC createLC()
-  {
-    LCImpl lc = new LCImpl();
-    return lc;
+    SYMBImpl symb = new SYMBImpl();
+    return symb;
   }
 
   /**

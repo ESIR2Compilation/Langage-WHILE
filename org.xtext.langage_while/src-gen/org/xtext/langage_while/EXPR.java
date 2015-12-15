@@ -6,73 +6,73 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EXPR</b></em>'.
+ * A representation of the model object '<em><b>Expr</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.EXPR#getE1 <em>E1</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPR#getEx <em>Ex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Expr#getExs <em>Exs</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Expr#getExa <em>Exa</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.langage_while.Langage_whilePackage#getEXPR()
+ * @see org.xtext.langage_while.Langage_whilePackage#getExpr()
  * @model
  * @generated
  */
-public interface EXPR extends EObject
+public interface Expr extends EObject
 {
   /**
-   * Returns the value of the '<em><b>E1</b></em>' containment reference.
+   * Returns the value of the '<em><b>Exs</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E1</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Exs</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E1</em>' containment reference.
-   * @see #setE1(EXPRSIMPLE)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPR_E1()
+   * @return the value of the '<em>Exs</em>' containment reference.
+   * @see #setExs(ExprSimple)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExpr_Exs()
    * @model containment="true"
    * @generated
    */
-  EXPRSIMPLE getE1();
+  ExprSimple getExs();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPR#getE1 <em>E1</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.Expr#getExs <em>Exs</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E1</em>' containment reference.
-   * @see #getE1()
+   * @param value the new value of the '<em>Exs</em>' containment reference.
+   * @see #getExs()
    * @generated
    */
-  void setE1(EXPRSIMPLE value);
+  void setExs(ExprSimple value);
 
   /**
-   * Returns the value of the '<em><b>Ex</b></em>' containment reference.
+   * Returns the value of the '<em><b>Exa</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ex</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Exa</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ex</em>' containment reference.
-   * @see #setEx(EXPRAND)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPR_Ex()
+   * @return the value of the '<em>Exa</em>' containment reference.
+   * @see #setExa(ExprAnd)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExpr_Exa()
    * @model containment="true"
    * @generated
    */
-  EXPRAND getEx();
+  ExprAnd getExa();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPR#getEx <em>Ex</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.Expr#getExa <em>Exa</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ex</em>' containment reference.
-   * @see #getEx()
+   * @param value the new value of the '<em>Exa</em>' containment reference.
+   * @see #getExa()
    * @generated
    */
-  void setEx(EXPRAND value);
+  void setExa(ExprAnd value);
 
-} // EXPR
+} // Expr

@@ -2,131 +2,69 @@
  */
 package org.xtext.langage_while;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EXPRAND</b></em>'.
+ * A representation of the model object '<em><b>Expr And</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.EXPRAND#getF <em>F</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRAND#getLc1 <em>Lc1</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRAND#getLc2 <em>Lc2</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRAND#getEe <em>Ee</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprAnd#getExo1 <em>Exo1</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprAnd#getExo2 <em>Exo2</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.langage_while.Langage_whilePackage#getEXPRAND()
+ * @see org.xtext.langage_while.Langage_whilePackage#getExprAnd()
  * @model
  * @generated
  */
-public interface EXPRAND extends EObject
+public interface ExprAnd extends EObject
 {
   /**
-   * Returns the value of the '<em><b>F</b></em>' containment reference.
+   * Returns the value of the '<em><b>Exo1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>F</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Exo1</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>F</em>' containment reference.
-   * @see #setF(EXPROR)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRAND_F()
+   * @return the value of the '<em>Exo1</em>' containment reference.
+   * @see #setExo1(ExprOr)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprAnd_Exo1()
    * @model containment="true"
    * @generated
    */
-  EXPROR getF();
+  ExprOr getExo1();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRAND#getF <em>F</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprAnd#getExo1 <em>Exo1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>F</em>' containment reference.
-   * @see #getF()
+   * @param value the new value of the '<em>Exo1</em>' containment reference.
+   * @see #getExo1()
    * @generated
    */
-  void setF(EXPROR value);
+  void setExo1(ExprOr value);
 
   /**
-   * Returns the value of the '<em><b>Lc1</b></em>' containment reference.
+   * Returns the value of the '<em><b>Exo2</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.langage_while.ExprOr}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Lc1</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Exo2</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Lc1</em>' containment reference.
-   * @see #setLc1(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRAND_Lc1()
+   * @return the value of the '<em>Exo2</em>' containment reference list.
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprAnd_Exo2()
    * @model containment="true"
    * @generated
    */
-  LCs getLc1();
+  EList<ExprOr> getExo2();
 
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRAND#getLc1 <em>Lc1</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lc1</em>' containment reference.
-   * @see #getLc1()
-   * @generated
-   */
-  void setLc1(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>Lc2</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Lc2</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Lc2</em>' containment reference.
-   * @see #setLc2(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRAND_Lc2()
-   * @model containment="true"
-   * @generated
-   */
-  LCs getLc2();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRAND#getLc2 <em>Lc2</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lc2</em>' containment reference.
-   * @see #getLc2()
-   * @generated
-   */
-  void setLc2(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>Ee</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Ee</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ee</em>' containment reference.
-   * @see #setEe(EXPRAND)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRAND_Ee()
-   * @model containment="true"
-   * @generated
-   */
-  EXPRAND getEe();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRAND#getEe <em>Ee</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ee</em>' containment reference.
-   * @see #getEe()
-   * @generated
-   */
-  void setEe(EXPRAND value);
-
-} // EXPRAND
+} // ExprAnd

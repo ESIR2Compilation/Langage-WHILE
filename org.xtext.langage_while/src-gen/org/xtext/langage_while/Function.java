@@ -12,10 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.Function#getN <em>N</em>}</li>
- *   <li>{@link org.xtext.langage_while.Function#getNom <em>Nom</em>}</li>
- *   <li>{@link org.xtext.langage_while.Function#getT <em>T</em>}</li>
- *   <li>{@link org.xtext.langage_while.Function#getD <em>D</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Function#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Function#getDef <em>Def</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,107 +24,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Function extends EObject
 {
   /**
-   * Returns the value of the '<em><b>N</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>N</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>N</em>' containment reference.
-   * @see #setN(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_N()
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(SYMB)
+   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_Name()
    * @model containment="true"
    * @generated
    */
-  LCs getN();
+  SYMB getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.Function#getN <em>N</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.Function#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>N</em>' containment reference.
-   * @see #getN()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setN(LCs value);
+  void setName(SYMB value);
 
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Def</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nom</em>' attribute isn't clear,
+   * If the meaning of the '<em>Def</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_Nom()
-   * @model
-   * @generated
-   */
-  String getNom();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Function#getNom <em>Nom</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
-   * @generated
-   */
-  void setNom(String value);
-
-  /**
-   * Returns the value of the '<em><b>T</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>T</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>T</em>' containment reference.
-   * @see #setT(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_T()
+   * @return the value of the '<em>Def</em>' containment reference.
+   * @see #setDef(Definition)
+   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_Def()
    * @model containment="true"
    * @generated
    */
-  LCs getT();
+  Definition getDef();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.Function#getT <em>T</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.Function#getDef <em>Def</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>T</em>' containment reference.
-   * @see #getT()
+   * @param value the new value of the '<em>Def</em>' containment reference.
+   * @see #getDef()
    * @generated
    */
-  void setT(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>D</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>D</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>D</em>' containment reference.
-   * @see #setD(Def)
-   * @see org.xtext.langage_while.Langage_whilePackage#getFunction_D()
-   * @model containment="true"
-   * @generated
-   */
-  Def getD();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Function#getD <em>D</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>D</em>' containment reference.
-   * @see #getD()
-   * @generated
-   */
-  void setD(Def value);
+  void setDef(Definition value);
 
 } // Function

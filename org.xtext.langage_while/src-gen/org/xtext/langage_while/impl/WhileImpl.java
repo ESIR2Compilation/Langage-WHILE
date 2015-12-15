@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.langage_while.Commands;
-import org.xtext.langage_while.EXPR;
-import org.xtext.langage_while.LCs;
+import org.xtext.langage_while.Expr;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.While;
 
@@ -24,12 +23,8 @@ import org.xtext.langage_while.While;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getLl <em>Ll</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getEe <em>Ee</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getCc <em>Cc</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getZ <em>Z</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getK <em>K</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getLc <em>Lc</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getEx <em>Ex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.WhileImpl#getC <em>C</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,64 +33,24 @@ import org.xtext.langage_while.While;
 public class WhileImpl extends MinimalEObjectImpl.Container implements While
 {
   /**
-   * The cached value of the '{@link #getLl() <em>Ll</em>}' containment reference.
+   * The cached value of the '{@link #getEx() <em>Ex</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLl()
+   * @see #getEx()
    * @generated
    * @ordered
    */
-  protected LCs ll;
+  protected Expr ex;
 
   /**
-   * The cached value of the '{@link #getEe() <em>Ee</em>}' containment reference.
+   * The cached value of the '{@link #getC() <em>C</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEe()
+   * @see #getC()
    * @generated
    * @ordered
    */
-  protected EXPR ee;
-
-  /**
-   * The cached value of the '{@link #getCc() <em>Cc</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCc()
-   * @generated
-   * @ordered
-   */
-  protected LCs cc;
-
-  /**
-   * The cached value of the '{@link #getZ() <em>Z</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getZ()
-   * @generated
-   * @ordered
-   */
-  protected LCs z;
-
-  /**
-   * The cached value of the '{@link #getK() <em>K</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getK()
-   * @generated
-   * @ordered
-   */
-  protected Commands k;
-
-  /**
-   * The cached value of the '{@link #getLc() <em>Lc</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLc()
-   * @generated
-   * @ordered
-   */
-  protected LCs lc;
+  protected Commands c;
 
   /**
    * <!-- begin-user-doc -->
@@ -123,9 +78,9 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public LCs getLl()
+  public Expr getEx()
   {
-    return ll;
+    return ex;
   }
 
   /**
@@ -133,13 +88,13 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLl(LCs newLl, NotificationChain msgs)
+  public NotificationChain basicSetEx(Expr newEx, NotificationChain msgs)
   {
-    LCs oldLl = ll;
-    ll = newLl;
+    Expr oldEx = ex;
+    ex = newEx;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__LL, oldLl, newLl);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__EX, oldEx, newEx);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -150,20 +105,20 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLl(LCs newLl)
+  public void setEx(Expr newEx)
   {
-    if (newLl != ll)
+    if (newEx != ex)
     {
       NotificationChain msgs = null;
-      if (ll != null)
-        msgs = ((InternalEObject)ll).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__LL, null, msgs);
-      if (newLl != null)
-        msgs = ((InternalEObject)newLl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__LL, null, msgs);
-      msgs = basicSetLl(newLl, msgs);
+      if (ex != null)
+        msgs = ((InternalEObject)ex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__EX, null, msgs);
+      if (newEx != null)
+        msgs = ((InternalEObject)newEx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__EX, null, msgs);
+      msgs = basicSetEx(newEx, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__LL, newLl, newLl));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__EX, newEx, newEx));
   }
 
   /**
@@ -171,9 +126,9 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPR getEe()
+  public Commands getC()
   {
-    return ee;
+    return c;
   }
 
   /**
@@ -181,13 +136,13 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEe(EXPR newEe, NotificationChain msgs)
+  public NotificationChain basicSetC(Commands newC, NotificationChain msgs)
   {
-    EXPR oldEe = ee;
-    ee = newEe;
+    Commands oldC = c;
+    c = newC;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__EE, oldEe, newEe);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__C, oldC, newC);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -198,212 +153,20 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEe(EXPR newEe)
+  public void setC(Commands newC)
   {
-    if (newEe != ee)
+    if (newC != c)
     {
       NotificationChain msgs = null;
-      if (ee != null)
-        msgs = ((InternalEObject)ee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__EE, null, msgs);
-      if (newEe != null)
-        msgs = ((InternalEObject)newEe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__EE, null, msgs);
-      msgs = basicSetEe(newEe, msgs);
+      if (c != null)
+        msgs = ((InternalEObject)c).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__C, null, msgs);
+      if (newC != null)
+        msgs = ((InternalEObject)newC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__C, null, msgs);
+      msgs = basicSetC(newC, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__EE, newEe, newEe));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getCc()
-  {
-    return cc;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCc(LCs newCc, NotificationChain msgs)
-  {
-    LCs oldCc = cc;
-    cc = newCc;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__CC, oldCc, newCc);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCc(LCs newCc)
-  {
-    if (newCc != cc)
-    {
-      NotificationChain msgs = null;
-      if (cc != null)
-        msgs = ((InternalEObject)cc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__CC, null, msgs);
-      if (newCc != null)
-        msgs = ((InternalEObject)newCc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__CC, null, msgs);
-      msgs = basicSetCc(newCc, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__CC, newCc, newCc));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getZ()
-  {
-    return z;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetZ(LCs newZ, NotificationChain msgs)
-  {
-    LCs oldZ = z;
-    z = newZ;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__Z, oldZ, newZ);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setZ(LCs newZ)
-  {
-    if (newZ != z)
-    {
-      NotificationChain msgs = null;
-      if (z != null)
-        msgs = ((InternalEObject)z).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__Z, null, msgs);
-      if (newZ != null)
-        msgs = ((InternalEObject)newZ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__Z, null, msgs);
-      msgs = basicSetZ(newZ, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__Z, newZ, newZ));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Commands getK()
-  {
-    return k;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetK(Commands newK, NotificationChain msgs)
-  {
-    Commands oldK = k;
-    k = newK;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__K, oldK, newK);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setK(Commands newK)
-  {
-    if (newK != k)
-    {
-      NotificationChain msgs = null;
-      if (k != null)
-        msgs = ((InternalEObject)k).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__K, null, msgs);
-      if (newK != null)
-        msgs = ((InternalEObject)newK).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__K, null, msgs);
-      msgs = basicSetK(newK, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__K, newK, newK));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getLc()
-  {
-    return lc;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLc(LCs newLc, NotificationChain msgs)
-  {
-    LCs oldLc = lc;
-    lc = newLc;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__LC, oldLc, newLc);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLc(LCs newLc)
-  {
-    if (newLc != lc)
-    {
-      NotificationChain msgs = null;
-      if (lc != null)
-        msgs = ((InternalEObject)lc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__LC, null, msgs);
-      if (newLc != null)
-        msgs = ((InternalEObject)newLc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.WHILE__LC, null, msgs);
-      msgs = basicSetLc(newLc, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__LC, newLc, newLc));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.WHILE__C, newC, newC));
   }
 
   /**
@@ -416,18 +179,10 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
   {
     switch (featureID)
     {
-      case Langage_whilePackage.WHILE__LL:
-        return basicSetLl(null, msgs);
-      case Langage_whilePackage.WHILE__EE:
-        return basicSetEe(null, msgs);
-      case Langage_whilePackage.WHILE__CC:
-        return basicSetCc(null, msgs);
-      case Langage_whilePackage.WHILE__Z:
-        return basicSetZ(null, msgs);
-      case Langage_whilePackage.WHILE__K:
-        return basicSetK(null, msgs);
-      case Langage_whilePackage.WHILE__LC:
-        return basicSetLc(null, msgs);
+      case Langage_whilePackage.WHILE__EX:
+        return basicSetEx(null, msgs);
+      case Langage_whilePackage.WHILE__C:
+        return basicSetC(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -442,18 +197,10 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
   {
     switch (featureID)
     {
-      case Langage_whilePackage.WHILE__LL:
-        return getLl();
-      case Langage_whilePackage.WHILE__EE:
-        return getEe();
-      case Langage_whilePackage.WHILE__CC:
-        return getCc();
-      case Langage_whilePackage.WHILE__Z:
-        return getZ();
-      case Langage_whilePackage.WHILE__K:
-        return getK();
-      case Langage_whilePackage.WHILE__LC:
-        return getLc();
+      case Langage_whilePackage.WHILE__EX:
+        return getEx();
+      case Langage_whilePackage.WHILE__C:
+        return getC();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -468,23 +215,11 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
   {
     switch (featureID)
     {
-      case Langage_whilePackage.WHILE__LL:
-        setLl((LCs)newValue);
+      case Langage_whilePackage.WHILE__EX:
+        setEx((Expr)newValue);
         return;
-      case Langage_whilePackage.WHILE__EE:
-        setEe((EXPR)newValue);
-        return;
-      case Langage_whilePackage.WHILE__CC:
-        setCc((LCs)newValue);
-        return;
-      case Langage_whilePackage.WHILE__Z:
-        setZ((LCs)newValue);
-        return;
-      case Langage_whilePackage.WHILE__K:
-        setK((Commands)newValue);
-        return;
-      case Langage_whilePackage.WHILE__LC:
-        setLc((LCs)newValue);
+      case Langage_whilePackage.WHILE__C:
+        setC((Commands)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -500,23 +235,11 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
   {
     switch (featureID)
     {
-      case Langage_whilePackage.WHILE__LL:
-        setLl((LCs)null);
+      case Langage_whilePackage.WHILE__EX:
+        setEx((Expr)null);
         return;
-      case Langage_whilePackage.WHILE__EE:
-        setEe((EXPR)null);
-        return;
-      case Langage_whilePackage.WHILE__CC:
-        setCc((LCs)null);
-        return;
-      case Langage_whilePackage.WHILE__Z:
-        setZ((LCs)null);
-        return;
-      case Langage_whilePackage.WHILE__K:
-        setK((Commands)null);
-        return;
-      case Langage_whilePackage.WHILE__LC:
-        setLc((LCs)null);
+      case Langage_whilePackage.WHILE__C:
+        setC((Commands)null);
         return;
     }
     super.eUnset(featureID);
@@ -532,18 +255,10 @@ public class WhileImpl extends MinimalEObjectImpl.Container implements While
   {
     switch (featureID)
     {
-      case Langage_whilePackage.WHILE__LL:
-        return ll != null;
-      case Langage_whilePackage.WHILE__EE:
-        return ee != null;
-      case Langage_whilePackage.WHILE__CC:
-        return cc != null;
-      case Langage_whilePackage.WHILE__Z:
-        return z != null;
-      case Langage_whilePackage.WHILE__K:
-        return k != null;
-      case Langage_whilePackage.WHILE__LC:
-        return lc != null;
+      case Langage_whilePackage.WHILE__EX:
+        return ex != null;
+      case Langage_whilePackage.WHILE__C:
+        return c != null;
     }
     return super.eIsSet(featureID);
   }

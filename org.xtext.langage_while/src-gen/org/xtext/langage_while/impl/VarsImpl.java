@@ -2,17 +2,22 @@
  */
 package org.xtext.langage_while.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.LCs;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.langage_while.Langage_whilePackage;
+import org.xtext.langage_while.VAR;
 import org.xtext.langage_while.Vars;
 
 /**
@@ -22,9 +27,7 @@ import org.xtext.langage_while.Vars;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.VarsImpl#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.VarsImpl#getL <em>L</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.VarsImpl#getU <em>U</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.VarsImpl#getVs <em>Vs</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,44 +36,14 @@ import org.xtext.langage_while.Vars;
 public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
 {
   /**
-   * The default value of the '{@link #getA() <em>A</em>}' attribute.
+   * The cached value of the '{@link #getVs() <em>Vs</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getA()
+   * @see #getVs()
    * @generated
    * @ordered
    */
-  protected static final String A_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getA() <em>A</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getA()
-   * @generated
-   * @ordered
-   */
-  protected String a = A_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getL()
-   * @generated
-   * @ordered
-   */
-  protected LCs l;
-
-  /**
-   * The cached value of the '{@link #getU() <em>U</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getU()
-   * @generated
-   * @ordered
-   */
-  protected Vars u;
+  protected EList<VAR> vs;
 
   /**
    * <!-- begin-user-doc -->
@@ -98,118 +71,13 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getA()
+  public EList<VAR> getVs()
   {
-    return a;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setA(String newA)
-  {
-    String oldA = a;
-    a = newA;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.VARS__A, oldA, a));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getL()
-  {
-    return l;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetL(LCs newL, NotificationChain msgs)
-  {
-    LCs oldL = l;
-    l = newL;
-    if (eNotificationRequired())
+    if (vs == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.VARS__L, oldL, newL);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      vs = new EObjectContainmentEList<VAR>(VAR.class, this, Langage_whilePackage.VARS__VS);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setL(LCs newL)
-  {
-    if (newL != l)
-    {
-      NotificationChain msgs = null;
-      if (l != null)
-        msgs = ((InternalEObject)l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.VARS__L, null, msgs);
-      if (newL != null)
-        msgs = ((InternalEObject)newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.VARS__L, null, msgs);
-      msgs = basicSetL(newL, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.VARS__L, newL, newL));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Vars getU()
-  {
-    return u;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetU(Vars newU, NotificationChain msgs)
-  {
-    Vars oldU = u;
-    u = newU;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.VARS__U, oldU, newU);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setU(Vars newU)
-  {
-    if (newU != u)
-    {
-      NotificationChain msgs = null;
-      if (u != null)
-        msgs = ((InternalEObject)u).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.VARS__U, null, msgs);
-      if (newU != null)
-        msgs = ((InternalEObject)newU).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.VARS__U, null, msgs);
-      msgs = basicSetU(newU, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.VARS__U, newU, newU));
+    return vs;
   }
 
   /**
@@ -222,10 +90,8 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
   {
     switch (featureID)
     {
-      case Langage_whilePackage.VARS__L:
-        return basicSetL(null, msgs);
-      case Langage_whilePackage.VARS__U:
-        return basicSetU(null, msgs);
+      case Langage_whilePackage.VARS__VS:
+        return ((InternalEList<?>)getVs()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -240,12 +106,8 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
   {
     switch (featureID)
     {
-      case Langage_whilePackage.VARS__A:
-        return getA();
-      case Langage_whilePackage.VARS__L:
-        return getL();
-      case Langage_whilePackage.VARS__U:
-        return getU();
+      case Langage_whilePackage.VARS__VS:
+        return getVs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -255,19 +117,15 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Langage_whilePackage.VARS__A:
-        setA((String)newValue);
-        return;
-      case Langage_whilePackage.VARS__L:
-        setL((LCs)newValue);
-        return;
-      case Langage_whilePackage.VARS__U:
-        setU((Vars)newValue);
+      case Langage_whilePackage.VARS__VS:
+        getVs().clear();
+        getVs().addAll((Collection<? extends VAR>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -283,14 +141,8 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
   {
     switch (featureID)
     {
-      case Langage_whilePackage.VARS__A:
-        setA(A_EDEFAULT);
-        return;
-      case Langage_whilePackage.VARS__L:
-        setL((LCs)null);
-        return;
-      case Langage_whilePackage.VARS__U:
-        setU((Vars)null);
+      case Langage_whilePackage.VARS__VS:
+        getVs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -306,31 +158,10 @@ public class VarsImpl extends MinimalEObjectImpl.Container implements Vars
   {
     switch (featureID)
     {
-      case Langage_whilePackage.VARS__A:
-        return A_EDEFAULT == null ? a != null : !A_EDEFAULT.equals(a);
-      case Langage_whilePackage.VARS__L:
-        return l != null;
-      case Langage_whilePackage.VARS__U:
-        return u != null;
+      case Langage_whilePackage.VARS__VS:
+        return vs != null && !vs.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (a: ");
-    result.append(a);
-    result.append(')');
-    return result.toString();
   }
 
 } //VarsImpl

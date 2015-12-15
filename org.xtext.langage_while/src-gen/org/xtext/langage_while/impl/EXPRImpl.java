@@ -11,53 +11,53 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.EXPR;
-import org.xtext.langage_while.EXPRAND;
-import org.xtext.langage_while.EXPRSIMPLE;
+import org.xtext.langage_while.Expr;
+import org.xtext.langage_while.ExprAnd;
+import org.xtext.langage_while.ExprSimple;
 import org.xtext.langage_while.Langage_whilePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EXPR</b></em>'.
+ * An implementation of the model object '<em><b>Expr</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.EXPRImpl#getE1 <em>E1</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRImpl#getEx <em>Ex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.ExprImpl#getExs <em>Exs</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.ExprImpl#getExa <em>Exa</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
+public class ExprImpl extends MinimalEObjectImpl.Container implements Expr
 {
   /**
-   * The cached value of the '{@link #getE1() <em>E1</em>}' containment reference.
+   * The cached value of the '{@link #getExs() <em>Exs</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE1()
+   * @see #getExs()
    * @generated
    * @ordered
    */
-  protected EXPRSIMPLE e1;
+  protected ExprSimple exs;
 
   /**
-   * The cached value of the '{@link #getEx() <em>Ex</em>}' containment reference.
+   * The cached value of the '{@link #getExa() <em>Exa</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEx()
+   * @see #getExa()
    * @generated
    * @ordered
    */
-  protected EXPRAND ex;
+  protected ExprAnd exa;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EXPRImpl()
+  protected ExprImpl()
   {
     super();
   }
@@ -78,9 +78,9 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRSIMPLE getE1()
+  public ExprSimple getExs()
   {
-    return e1;
+    return exs;
   }
 
   /**
@@ -88,13 +88,13 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE1(EXPRSIMPLE newE1, NotificationChain msgs)
+  public NotificationChain basicSetExs(ExprSimple newExs, NotificationChain msgs)
   {
-    EXPRSIMPLE oldE1 = e1;
-    e1 = newE1;
+    ExprSimple oldExs = exs;
+    exs = newExs;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__E1, oldE1, newE1);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EXS, oldExs, newExs);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -105,20 +105,20 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE1(EXPRSIMPLE newE1)
+  public void setExs(ExprSimple newExs)
   {
-    if (newE1 != e1)
+    if (newExs != exs)
     {
       NotificationChain msgs = null;
-      if (e1 != null)
-        msgs = ((InternalEObject)e1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__E1, null, msgs);
-      if (newE1 != null)
-        msgs = ((InternalEObject)newE1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__E1, null, msgs);
-      msgs = basicSetE1(newE1, msgs);
+      if (exs != null)
+        msgs = ((InternalEObject)exs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EXS, null, msgs);
+      if (newExs != null)
+        msgs = ((InternalEObject)newExs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EXS, null, msgs);
+      msgs = basicSetExs(newExs, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__E1, newE1, newE1));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EXS, newExs, newExs));
   }
 
   /**
@@ -126,9 +126,9 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPRAND getEx()
+  public ExprAnd getExa()
   {
-    return ex;
+    return exa;
   }
 
   /**
@@ -136,13 +136,13 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEx(EXPRAND newEx, NotificationChain msgs)
+  public NotificationChain basicSetExa(ExprAnd newExa, NotificationChain msgs)
   {
-    EXPRAND oldEx = ex;
-    ex = newEx;
+    ExprAnd oldExa = exa;
+    exa = newExa;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EX, oldEx, newEx);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EXA, oldExa, newExa);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -153,20 +153,20 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEx(EXPRAND newEx)
+  public void setExa(ExprAnd newExa)
   {
-    if (newEx != ex)
+    if (newExa != exa)
     {
       NotificationChain msgs = null;
-      if (ex != null)
-        msgs = ((InternalEObject)ex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EX, null, msgs);
-      if (newEx != null)
-        msgs = ((InternalEObject)newEx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EX, null, msgs);
-      msgs = basicSetEx(newEx, msgs);
+      if (exa != null)
+        msgs = ((InternalEObject)exa).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EXA, null, msgs);
+      if (newExa != null)
+        msgs = ((InternalEObject)newExa).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR__EXA, null, msgs);
+      msgs = basicSetExa(newExa, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EX, newEx, newEx));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR__EXA, newExa, newExa));
   }
 
   /**
@@ -179,10 +179,10 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPR__E1:
-        return basicSetE1(null, msgs);
-      case Langage_whilePackage.EXPR__EX:
-        return basicSetEx(null, msgs);
+      case Langage_whilePackage.EXPR__EXS:
+        return basicSetExs(null, msgs);
+      case Langage_whilePackage.EXPR__EXA:
+        return basicSetExa(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -197,10 +197,10 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPR__E1:
-        return getE1();
-      case Langage_whilePackage.EXPR__EX:
-        return getEx();
+      case Langage_whilePackage.EXPR__EXS:
+        return getExs();
+      case Langage_whilePackage.EXPR__EXA:
+        return getExa();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -215,11 +215,11 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPR__E1:
-        setE1((EXPRSIMPLE)newValue);
+      case Langage_whilePackage.EXPR__EXS:
+        setExs((ExprSimple)newValue);
         return;
-      case Langage_whilePackage.EXPR__EX:
-        setEx((EXPRAND)newValue);
+      case Langage_whilePackage.EXPR__EXA:
+        setExa((ExprAnd)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -235,11 +235,11 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPR__E1:
-        setE1((EXPRSIMPLE)null);
+      case Langage_whilePackage.EXPR__EXS:
+        setExs((ExprSimple)null);
         return;
-      case Langage_whilePackage.EXPR__EX:
-        setEx((EXPRAND)null);
+      case Langage_whilePackage.EXPR__EXA:
+        setExa((ExprAnd)null);
         return;
     }
     super.eUnset(featureID);
@@ -255,12 +255,12 @@ public class EXPRImpl extends MinimalEObjectImpl.Container implements EXPR
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPR__E1:
-        return e1 != null;
-      case Langage_whilePackage.EXPR__EX:
-        return ex != null;
+      case Langage_whilePackage.EXPR__EXS:
+        return exs != null;
+      case Langage_whilePackage.EXPR__EXA:
+        return exa != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //EXPRImpl
+} //ExprImpl

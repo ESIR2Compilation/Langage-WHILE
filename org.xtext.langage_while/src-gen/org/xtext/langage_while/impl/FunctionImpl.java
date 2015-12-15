@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.Def;
+import org.xtext.langage_while.Definition;
 import org.xtext.langage_while.Function;
-import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
+import org.xtext.langage_while.SYMB;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,8 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getN <em>N</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getNom <em>Nom</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getT <em>T</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getD <em>D</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getDef <em>Def</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,54 +33,24 @@ import org.xtext.langage_while.Langage_whilePackage;
 public class FunctionImpl extends MinimalEObjectImpl.Container implements Function
 {
   /**
-   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getN()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected LCs n;
+  protected SYMB name;
 
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getDef() <em>Def</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getDef()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNom()
-   * @generated
-   * @ordered
-   */
-  protected String nom = NOM_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getT() <em>T</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getT()
-   * @generated
-   * @ordered
-   */
-  protected LCs t;
-
-  /**
-   * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getD()
-   * @generated
-   * @ordered
-   */
-  protected Def d;
+  protected Definition def;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,9 +78,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public LCs getN()
+  public SYMB getName()
   {
-    return n;
+    return name;
   }
 
   /**
@@ -120,13 +88,13 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetN(LCs newN, NotificationChain msgs)
+  public NotificationChain basicSetName(SYMB newName, NotificationChain msgs)
   {
-    LCs oldN = n;
-    n = newN;
+    SYMB oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__N, oldN, newN);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -137,20 +105,20 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setN(LCs newN)
+  public void setName(SYMB newName)
   {
-    if (newN != n)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (n != null)
-        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__N, null, msgs);
-      if (newN != null)
-        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__N, null, msgs);
-      msgs = basicSetN(newN, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__N, newN, newN));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__NAME, newName, newName));
   }
 
   /**
@@ -158,9 +126,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNom()
+  public Definition getDef()
   {
-    return nom;
+    return def;
   }
 
   /**
@@ -168,36 +136,13 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNom(String newNom)
+  public NotificationChain basicSetDef(Definition newDef, NotificationChain msgs)
   {
-    String oldNom = nom;
-    nom = newNom;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__NOM, oldNom, nom));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getT()
-  {
-    return t;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetT(LCs newT, NotificationChain msgs)
-  {
-    LCs oldT = t;
-    t = newT;
+    Definition oldDef = def;
+    def = newDef;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__T, oldT, newT);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__DEF, oldDef, newDef);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -208,68 +153,20 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setT(LCs newT)
+  public void setDef(Definition newDef)
   {
-    if (newT != t)
+    if (newDef != def)
     {
       NotificationChain msgs = null;
-      if (t != null)
-        msgs = ((InternalEObject)t).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__T, null, msgs);
-      if (newT != null)
-        msgs = ((InternalEObject)newT).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__T, null, msgs);
-      msgs = basicSetT(newT, msgs);
+      if (def != null)
+        msgs = ((InternalEObject)def).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__DEF, null, msgs);
+      if (newDef != null)
+        msgs = ((InternalEObject)newDef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__DEF, null, msgs);
+      msgs = basicSetDef(newDef, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__T, newT, newT));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Def getD()
-  {
-    return d;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetD(Def newD, NotificationChain msgs)
-  {
-    Def oldD = d;
-    d = newD;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__D, oldD, newD);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setD(Def newD)
-  {
-    if (newD != d)
-    {
-      NotificationChain msgs = null;
-      if (d != null)
-        msgs = ((InternalEObject)d).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__D, null, msgs);
-      if (newD != null)
-        msgs = ((InternalEObject)newD).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.FUNCTION__D, null, msgs);
-      msgs = basicSetD(newD, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__D, newD, newD));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.FUNCTION__DEF, newDef, newDef));
   }
 
   /**
@@ -282,12 +179,10 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case Langage_whilePackage.FUNCTION__N:
-        return basicSetN(null, msgs);
-      case Langage_whilePackage.FUNCTION__T:
-        return basicSetT(null, msgs);
-      case Langage_whilePackage.FUNCTION__D:
-        return basicSetD(null, msgs);
+      case Langage_whilePackage.FUNCTION__NAME:
+        return basicSetName(null, msgs);
+      case Langage_whilePackage.FUNCTION__DEF:
+        return basicSetDef(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -302,14 +197,10 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case Langage_whilePackage.FUNCTION__N:
-        return getN();
-      case Langage_whilePackage.FUNCTION__NOM:
-        return getNom();
-      case Langage_whilePackage.FUNCTION__T:
-        return getT();
-      case Langage_whilePackage.FUNCTION__D:
-        return getD();
+      case Langage_whilePackage.FUNCTION__NAME:
+        return getName();
+      case Langage_whilePackage.FUNCTION__DEF:
+        return getDef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -324,17 +215,11 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case Langage_whilePackage.FUNCTION__N:
-        setN((LCs)newValue);
+      case Langage_whilePackage.FUNCTION__NAME:
+        setName((SYMB)newValue);
         return;
-      case Langage_whilePackage.FUNCTION__NOM:
-        setNom((String)newValue);
-        return;
-      case Langage_whilePackage.FUNCTION__T:
-        setT((LCs)newValue);
-        return;
-      case Langage_whilePackage.FUNCTION__D:
-        setD((Def)newValue);
+      case Langage_whilePackage.FUNCTION__DEF:
+        setDef((Definition)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -350,17 +235,11 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case Langage_whilePackage.FUNCTION__N:
-        setN((LCs)null);
+      case Langage_whilePackage.FUNCTION__NAME:
+        setName((SYMB)null);
         return;
-      case Langage_whilePackage.FUNCTION__NOM:
-        setNom(NOM_EDEFAULT);
-        return;
-      case Langage_whilePackage.FUNCTION__T:
-        setT((LCs)null);
-        return;
-      case Langage_whilePackage.FUNCTION__D:
-        setD((Def)null);
+      case Langage_whilePackage.FUNCTION__DEF:
+        setDef((Definition)null);
         return;
     }
     super.eUnset(featureID);
@@ -376,33 +255,12 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case Langage_whilePackage.FUNCTION__N:
-        return n != null;
-      case Langage_whilePackage.FUNCTION__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
-      case Langage_whilePackage.FUNCTION__T:
-        return t != null;
-      case Langage_whilePackage.FUNCTION__D:
-        return d != null;
+      case Langage_whilePackage.FUNCTION__NAME:
+        return name != null;
+      case Langage_whilePackage.FUNCTION__DEF:
+        return def != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
-    result.append(')');
-    return result.toString();
   }
 
 } //FunctionImpl

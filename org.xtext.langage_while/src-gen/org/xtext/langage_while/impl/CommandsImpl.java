@@ -2,18 +2,22 @@
  */
 package org.xtext.langage_while.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.langage_while.Command;
 import org.xtext.langage_while.Commands;
-import org.xtext.langage_while.LCs;
 import org.xtext.langage_while.Langage_whilePackage;
 
 /**
@@ -23,9 +27,7 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.CommandsImpl#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.CommandsImpl#getL <em>L</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.CommandsImpl#getS <em>S</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.CommandsImpl#getC <em>C</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,34 +36,14 @@ import org.xtext.langage_while.Langage_whilePackage;
 public class CommandsImpl extends MinimalEObjectImpl.Container implements Commands
 {
   /**
-   * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
+   * The cached value of the '{@link #getC() <em>C</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getA()
+   * @see #getC()
    * @generated
    * @ordered
    */
-  protected Command a;
-
-  /**
-   * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getL()
-   * @generated
-   * @ordered
-   */
-  protected LCs l;
-
-  /**
-   * The cached value of the '{@link #getS() <em>S</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getS()
-   * @generated
-   * @ordered
-   */
-  protected Commands s;
+  protected EList<Command> c;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,143 +71,13 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
    * <!-- end-user-doc -->
    * @generated
    */
-  public Command getA()
+  public EList<Command> getC()
   {
-    return a;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetA(Command newA, NotificationChain msgs)
-  {
-    Command oldA = a;
-    a = newA;
-    if (eNotificationRequired())
+    if (c == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__A, oldA, newA);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      c = new EObjectContainmentEList<Command>(Command.class, this, Langage_whilePackage.COMMANDS__C);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setA(Command newA)
-  {
-    if (newA != a)
-    {
-      NotificationChain msgs = null;
-      if (a != null)
-        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__A, null, msgs);
-      if (newA != null)
-        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__A, null, msgs);
-      msgs = basicSetA(newA, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__A, newA, newA));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getL()
-  {
-    return l;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetL(LCs newL, NotificationChain msgs)
-  {
-    LCs oldL = l;
-    l = newL;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__L, oldL, newL);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setL(LCs newL)
-  {
-    if (newL != l)
-    {
-      NotificationChain msgs = null;
-      if (l != null)
-        msgs = ((InternalEObject)l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__L, null, msgs);
-      if (newL != null)
-        msgs = ((InternalEObject)newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__L, null, msgs);
-      msgs = basicSetL(newL, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__L, newL, newL));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Commands getS()
-  {
-    return s;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetS(Commands newS, NotificationChain msgs)
-  {
-    Commands oldS = s;
-    s = newS;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__S, oldS, newS);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setS(Commands newS)
-  {
-    if (newS != s)
-    {
-      NotificationChain msgs = null;
-      if (s != null)
-        msgs = ((InternalEObject)s).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__S, null, msgs);
-      if (newS != null)
-        msgs = ((InternalEObject)newS).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMANDS__S, null, msgs);
-      msgs = basicSetS(newS, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMANDS__S, newS, newS));
+    return c;
   }
 
   /**
@@ -238,12 +90,8 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMANDS__A:
-        return basicSetA(null, msgs);
-      case Langage_whilePackage.COMMANDS__L:
-        return basicSetL(null, msgs);
-      case Langage_whilePackage.COMMANDS__S:
-        return basicSetS(null, msgs);
+      case Langage_whilePackage.COMMANDS__C:
+        return ((InternalEList<?>)getC()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -258,12 +106,8 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMANDS__A:
-        return getA();
-      case Langage_whilePackage.COMMANDS__L:
-        return getL();
-      case Langage_whilePackage.COMMANDS__S:
-        return getS();
+      case Langage_whilePackage.COMMANDS__C:
+        return getC();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -273,19 +117,15 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMANDS__A:
-        setA((Command)newValue);
-        return;
-      case Langage_whilePackage.COMMANDS__L:
-        setL((LCs)newValue);
-        return;
-      case Langage_whilePackage.COMMANDS__S:
-        setS((Commands)newValue);
+      case Langage_whilePackage.COMMANDS__C:
+        getC().clear();
+        getC().addAll((Collection<? extends Command>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -301,14 +141,8 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMANDS__A:
-        setA((Command)null);
-        return;
-      case Langage_whilePackage.COMMANDS__L:
-        setL((LCs)null);
-        return;
-      case Langage_whilePackage.COMMANDS__S:
-        setS((Commands)null);
+      case Langage_whilePackage.COMMANDS__C:
+        getC().clear();
         return;
     }
     super.eUnset(featureID);
@@ -324,12 +158,8 @@ public class CommandsImpl extends MinimalEObjectImpl.Container implements Comman
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMANDS__A:
-        return a != null;
-      case Langage_whilePackage.COMMANDS__L:
-        return l != null;
-      case Langage_whilePackage.COMMANDS__S:
-        return s != null;
+      case Langage_whilePackage.COMMANDS__C:
+        return c != null && !c.isEmpty();
     }
     return super.eIsSet(featureID);
   }

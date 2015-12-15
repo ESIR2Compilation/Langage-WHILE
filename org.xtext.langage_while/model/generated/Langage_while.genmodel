@@ -11,151 +11,103 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/prog"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Function">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/n"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Function/nom"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/t"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/d"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/def"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//Def">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/in"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/z"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/s"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/u"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Def/o"/>
+    <genClasses ecoreClass="Langage_while.ecore#//Definition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Definition/in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Definition/com"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Definition/out"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Input">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Input/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Input/z"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Input/in"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Input/y"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Input/v"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Output">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Output/n"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Output/q"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Output/o"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Output/s"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Output/v"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Commands">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Commands/a"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Commands/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Commands/s"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Commands/c"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Command">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Command/nop"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/affect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/assign"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/wh"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/forr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/for"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/if"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/fore"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/iff"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Command/ifc"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Assign">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/e"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/c"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/n"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/vs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Assign/ex"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//While">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/ll"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/ee"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/cc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/z"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/k"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/lc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/ex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//While/c"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//For">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/cc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/hh"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/tt"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/vv"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/c1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/ss"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/ex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//For/c"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//If">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/mm"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/jj"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/kk"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/hg"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/c2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/gg"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/ff"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/o"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/dd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/ex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/ct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//If/ce"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Foreach">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/sq"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/wx"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/lc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/lc2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/e1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/lc3"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/lc4"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/c3"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/lc5"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/ex1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/ex2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Foreach/c"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Ifconfort">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Ifconfort/ex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Ifconfort/c"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Vars">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Vars/a"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Vars/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Vars/u"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Vars/vs"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPRS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRS/f"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRS/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRS/e2"/>
+    <genClasses ecoreClass="Langage_while.ecore#//Exprs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Exprs/ex"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPR">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPR/e1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPR/ex"/>
+    <genClasses ecoreClass="Langage_while.ecore#//Expr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Expr/exs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Expr/exa"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPRSIMPLE">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/nil"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/v"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/sym"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//EXPRSIMPLE/mot"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/lex"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/l"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRSIMPLE/ex"/>
+    <genClasses ecoreClass="Langage_while.ecore#//ExprSimple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//ExprSimple/nil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprSimple/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprSimple/sym"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//ExprSimple/mot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprSimple/lex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprSimple/ex"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//LEXPR">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LEXPR/f"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LEXPR/n"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LEXPR/t"/>
+    <genClasses ecoreClass="Langage_while.ecore#//LExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LExpr/e"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPRAND">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRAND/f"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRAND/lc1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRAND/lc2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRAND/ee"/>
+    <genClasses ecoreClass="Langage_while.ecore#//ExprAnd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprAnd/exo1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprAnd/exo2"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPROR">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPROR/e1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPROR/lc1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPROR/lc2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPROR/e2"/>
+    <genClasses ecoreClass="Langage_while.ecore#//ExprOr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprOr/exn1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprOr/exn2"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPRNOT">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRNOT/lc1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPRNOT/e1"/>
+    <genClasses ecoreClass="Langage_while.ecore#//ExprNot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprNot/exQ1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprNot/exQ2"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//EXPREQ">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPREQ/e1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPREQ/ccc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPREQ/lc2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPREQ/w"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//EXPREQ/ex"/>
+    <genClasses ecoreClass="Langage_while.ecore#//ExprEq">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprEq/exS1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprEq/exS2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//ExprEq/ex"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//Variable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Variable/n"/>
+    <genClasses ecoreClass="Langage_while.ecore#//VAR">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//VAR/bv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//VAR/cf"/>
     </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//LCs">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//LCs/l"/>
-    </genClasses>
-    <genClasses ecoreClass="Langage_while.ecore#//LC">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//LC/a"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//LC/z"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//LC/e"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//LC/r"/>
+    <genClasses ecoreClass="Langage_while.ecore#//SYMB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//SYMB/bs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//SYMB/cf"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

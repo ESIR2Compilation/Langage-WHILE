@@ -6,129 +6,75 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EXPREQ</b></em>'.
+ * A representation of the model object '<em><b>Expr Eq</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.EXPREQ#getE1 <em>E1</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPREQ#getCcc <em>Ccc</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPREQ#getLc2 <em>Lc2</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPREQ#getW <em>W</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPREQ#getEx <em>Ex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprEq#getExS1 <em>Ex S1</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprEq#getExS2 <em>Ex S2</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprEq#getEx <em>Ex</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ()
+ * @see org.xtext.langage_while.Langage_whilePackage#getExprEq()
  * @model
  * @generated
  */
-public interface EXPREQ extends EObject
+public interface ExprEq extends EObject
 {
   /**
-   * Returns the value of the '<em><b>E1</b></em>' containment reference.
+   * Returns the value of the '<em><b>Ex S1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E1</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Ex S1</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E1</em>' containment reference.
-   * @see #setE1(EXPRSIMPLE)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ_E1()
+   * @return the value of the '<em>Ex S1</em>' containment reference.
+   * @see #setExS1(ExprSimple)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprEq_ExS1()
    * @model containment="true"
    * @generated
    */
-  EXPRSIMPLE getE1();
+  ExprSimple getExS1();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPREQ#getE1 <em>E1</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprEq#getExS1 <em>Ex S1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E1</em>' containment reference.
-   * @see #getE1()
+   * @param value the new value of the '<em>Ex S1</em>' containment reference.
+   * @see #getExS1()
    * @generated
    */
-  void setE1(EXPRSIMPLE value);
+  void setExS1(ExprSimple value);
 
   /**
-   * Returns the value of the '<em><b>Ccc</b></em>' containment reference.
+   * Returns the value of the '<em><b>Ex S2</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ccc</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Ex S2</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ccc</em>' containment reference.
-   * @see #setCcc(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ_Ccc()
+   * @return the value of the '<em>Ex S2</em>' containment reference.
+   * @see #setExS2(ExprSimple)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprEq_ExS2()
    * @model containment="true"
    * @generated
    */
-  LCs getCcc();
+  ExprSimple getExS2();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPREQ#getCcc <em>Ccc</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprEq#getExS2 <em>Ex S2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ccc</em>' containment reference.
-   * @see #getCcc()
+   * @param value the new value of the '<em>Ex S2</em>' containment reference.
+   * @see #getExS2()
    * @generated
    */
-  void setCcc(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>Lc2</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Lc2</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Lc2</em>' containment reference.
-   * @see #setLc2(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ_Lc2()
-   * @model containment="true"
-   * @generated
-   */
-  LCs getLc2();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPREQ#getLc2 <em>Lc2</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lc2</em>' containment reference.
-   * @see #getLc2()
-   * @generated
-   */
-  void setLc2(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>W</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>W</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>W</em>' containment reference.
-   * @see #setW(EXPRSIMPLE)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ_W()
-   * @model containment="true"
-   * @generated
-   */
-  EXPRSIMPLE getW();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPREQ#getW <em>W</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>W</em>' containment reference.
-   * @see #getW()
-   * @generated
-   */
-  void setW(EXPRSIMPLE value);
+  void setExS2(ExprSimple value);
 
   /**
    * Returns the value of the '<em><b>Ex</b></em>' containment reference.
@@ -139,21 +85,21 @@ public interface EXPREQ extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ex</em>' containment reference.
-   * @see #setEx(EXPR)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPREQ_Ex()
+   * @see #setEx(Expr)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprEq_Ex()
    * @model containment="true"
    * @generated
    */
-  EXPR getEx();
+  Expr getEx();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPREQ#getEx <em>Ex</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprEq#getEx <em>Ex</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Ex</em>' containment reference.
    * @see #getEx()
    * @generated
    */
-  void setEx(EXPR value);
+  void setEx(Expr value);
 
-} // EXPREQ
+} // ExprEq

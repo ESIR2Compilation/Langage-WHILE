@@ -2,18 +2,23 @@
  */
 package org.xtext.langage_while.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.LCs;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Output;
+import org.xtext.langage_while.VAR;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +27,7 @@ import org.xtext.langage_while.Output;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getN <em>N</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getQ <em>Q</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getO <em>O</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getS <em>S</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.OutputImpl#getV <em>V</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,64 +36,14 @@ import org.xtext.langage_while.Output;
 public class OutputImpl extends MinimalEObjectImpl.Container implements Output
 {
   /**
-   * The default value of the '{@link #getN() <em>N</em>}' attribute.
+   * The cached value of the '{@link #getV() <em>V</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getN()
+   * @see #getV()
    * @generated
    * @ordered
    */
-  protected static final String N_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getN() <em>N</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getN()
-   * @generated
-   * @ordered
-   */
-  protected String n = N_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getQ() <em>Q</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQ()
-   * @generated
-   * @ordered
-   */
-  protected LCs q;
-
-  /**
-   * The cached value of the '{@link #getO() <em>O</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getO()
-   * @generated
-   * @ordered
-   */
-  protected Output o;
-
-  /**
-   * The default value of the '{@link #getS() <em>S</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getS()
-   * @generated
-   * @ordered
-   */
-  protected static final String S_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getS() <em>S</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getS()
-   * @generated
-   * @ordered
-   */
-  protected String s = S_EDEFAULT;
+  protected EList<VAR> v;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,141 +71,13 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getN()
+  public EList<VAR> getV()
   {
-    return n;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setN(String newN)
-  {
-    String oldN = n;
-    n = newN;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__N, oldN, n));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getQ()
-  {
-    return q;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetQ(LCs newQ, NotificationChain msgs)
-  {
-    LCs oldQ = q;
-    q = newQ;
-    if (eNotificationRequired())
+    if (v == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__Q, oldQ, newQ);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      v = new EObjectContainmentEList<VAR>(VAR.class, this, Langage_whilePackage.OUTPUT__V);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setQ(LCs newQ)
-  {
-    if (newQ != q)
-    {
-      NotificationChain msgs = null;
-      if (q != null)
-        msgs = ((InternalEObject)q).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__Q, null, msgs);
-      if (newQ != null)
-        msgs = ((InternalEObject)newQ).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__Q, null, msgs);
-      msgs = basicSetQ(newQ, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__Q, newQ, newQ));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Output getO()
-  {
-    return o;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetO(Output newO, NotificationChain msgs)
-  {
-    Output oldO = o;
-    o = newO;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__O, oldO, newO);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setO(Output newO)
-  {
-    if (newO != o)
-    {
-      NotificationChain msgs = null;
-      if (o != null)
-        msgs = ((InternalEObject)o).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__O, null, msgs);
-      if (newO != null)
-        msgs = ((InternalEObject)newO).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.OUTPUT__O, null, msgs);
-      msgs = basicSetO(newO, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__O, newO, newO));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getS()
-  {
-    return s;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setS(String newS)
-  {
-    String oldS = s;
-    s = newS;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.OUTPUT__S, oldS, s));
+    return v;
   }
 
   /**
@@ -266,10 +90,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   {
     switch (featureID)
     {
-      case Langage_whilePackage.OUTPUT__Q:
-        return basicSetQ(null, msgs);
-      case Langage_whilePackage.OUTPUT__O:
-        return basicSetO(null, msgs);
+      case Langage_whilePackage.OUTPUT__V:
+        return ((InternalEList<?>)getV()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -284,14 +106,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   {
     switch (featureID)
     {
-      case Langage_whilePackage.OUTPUT__N:
-        return getN();
-      case Langage_whilePackage.OUTPUT__Q:
-        return getQ();
-      case Langage_whilePackage.OUTPUT__O:
-        return getO();
-      case Langage_whilePackage.OUTPUT__S:
-        return getS();
+      case Langage_whilePackage.OUTPUT__V:
+        return getV();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -301,22 +117,15 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Langage_whilePackage.OUTPUT__N:
-        setN((String)newValue);
-        return;
-      case Langage_whilePackage.OUTPUT__Q:
-        setQ((LCs)newValue);
-        return;
-      case Langage_whilePackage.OUTPUT__O:
-        setO((Output)newValue);
-        return;
-      case Langage_whilePackage.OUTPUT__S:
-        setS((String)newValue);
+      case Langage_whilePackage.OUTPUT__V:
+        getV().clear();
+        getV().addAll((Collection<? extends VAR>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -332,17 +141,8 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   {
     switch (featureID)
     {
-      case Langage_whilePackage.OUTPUT__N:
-        setN(N_EDEFAULT);
-        return;
-      case Langage_whilePackage.OUTPUT__Q:
-        setQ((LCs)null);
-        return;
-      case Langage_whilePackage.OUTPUT__O:
-        setO((Output)null);
-        return;
-      case Langage_whilePackage.OUTPUT__S:
-        setS(S_EDEFAULT);
+      case Langage_whilePackage.OUTPUT__V:
+        getV().clear();
         return;
     }
     super.eUnset(featureID);
@@ -358,35 +158,10 @@ public class OutputImpl extends MinimalEObjectImpl.Container implements Output
   {
     switch (featureID)
     {
-      case Langage_whilePackage.OUTPUT__N:
-        return N_EDEFAULT == null ? n != null : !N_EDEFAULT.equals(n);
-      case Langage_whilePackage.OUTPUT__Q:
-        return q != null;
-      case Langage_whilePackage.OUTPUT__O:
-        return o != null;
-      case Langage_whilePackage.OUTPUT__S:
-        return S_EDEFAULT == null ? s != null : !S_EDEFAULT.equals(s);
+      case Langage_whilePackage.OUTPUT__V:
+        return v != null && !v.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (n: ");
-    result.append(n);
-    result.append(", s: ");
-    result.append(s);
-    result.append(')');
-    return result.toString();
   }
 
 } //OutputImpl

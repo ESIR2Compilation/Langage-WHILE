@@ -85,9 +85,9 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
         return createFunctionAdapter();
       }
       @Override
-      public Adapter caseDef(Def object)
+      public Adapter caseDefinition(Definition object)
       {
-        return createDefAdapter();
+        return createDefinitionAdapter();
       }
       @Override
       public Adapter caseInput(Input object)
@@ -135,64 +135,64 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
         return createForeachAdapter();
       }
       @Override
+      public Adapter caseIfconfort(Ifconfort object)
+      {
+        return createIfconfortAdapter();
+      }
+      @Override
       public Adapter caseVars(Vars object)
       {
         return createVarsAdapter();
       }
       @Override
-      public Adapter caseEXPRS(EXPRS object)
+      public Adapter caseExprs(Exprs object)
       {
-        return createEXPRSAdapter();
+        return createExprsAdapter();
       }
       @Override
-      public Adapter caseEXPR(EXPR object)
+      public Adapter caseExpr(Expr object)
       {
-        return createEXPRAdapter();
+        return createExprAdapter();
       }
       @Override
-      public Adapter caseEXPRSIMPLE(EXPRSIMPLE object)
+      public Adapter caseExprSimple(ExprSimple object)
       {
-        return createEXPRSIMPLEAdapter();
+        return createExprSimpleAdapter();
       }
       @Override
-      public Adapter caseLEXPR(LEXPR object)
+      public Adapter caseLExpr(LExpr object)
       {
-        return createLEXPRAdapter();
+        return createLExprAdapter();
       }
       @Override
-      public Adapter caseEXPRAND(EXPRAND object)
+      public Adapter caseExprAnd(ExprAnd object)
       {
-        return createEXPRANDAdapter();
+        return createExprAndAdapter();
       }
       @Override
-      public Adapter caseEXPROR(EXPROR object)
+      public Adapter caseExprOr(ExprOr object)
       {
-        return createEXPRORAdapter();
+        return createExprOrAdapter();
       }
       @Override
-      public Adapter caseEXPRNOT(EXPRNOT object)
+      public Adapter caseExprNot(ExprNot object)
       {
-        return createEXPRNOTAdapter();
+        return createExprNotAdapter();
       }
       @Override
-      public Adapter caseEXPREQ(EXPREQ object)
+      public Adapter caseExprEq(ExprEq object)
       {
-        return createEXPREQAdapter();
+        return createExprEqAdapter();
       }
       @Override
-      public Adapter caseVariable(Variable object)
+      public Adapter caseVAR(VAR object)
       {
-        return createVariableAdapter();
+        return createVARAdapter();
       }
       @Override
-      public Adapter caseLCs(LCs object)
+      public Adapter caseSYMB(SYMB object)
       {
-        return createLCsAdapter();
-      }
-      @Override
-      public Adapter caseLC(LC object)
-      {
-        return createLCAdapter();
+        return createSYMBAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -247,16 +247,16 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Def <em>Def</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Definition <em>Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.Def
+   * @see org.xtext.langage_while.Definition
    * @generated
    */
-  public Adapter createDefAdapter()
+  public Adapter createDefinitionAdapter()
   {
     return null;
   }
@@ -397,6 +397,21 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Ifconfort <em>Ifconfort</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.langage_while.Ifconfort
+   * @generated
+   */
+  public Adapter createIfconfortAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Vars <em>Vars</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -412,166 +427,151 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPRS <em>EXPRS</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Exprs <em>Exprs</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPRS
+   * @see org.xtext.langage_while.Exprs
    * @generated
    */
-  public Adapter createEXPRSAdapter()
+  public Adapter createExprsAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPR <em>EXPR</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Expr <em>Expr</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPR
+   * @see org.xtext.langage_while.Expr
    * @generated
    */
-  public Adapter createEXPRAdapter()
+  public Adapter createExprAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPRSIMPLE <em>EXPRSIMPLE</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.ExprSimple <em>Expr Simple</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPRSIMPLE
+   * @see org.xtext.langage_while.ExprSimple
    * @generated
    */
-  public Adapter createEXPRSIMPLEAdapter()
+  public Adapter createExprSimpleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.LEXPR <em>LEXPR</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.LExpr <em>LExpr</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.LEXPR
+   * @see org.xtext.langage_while.LExpr
    * @generated
    */
-  public Adapter createLEXPRAdapter()
+  public Adapter createLExprAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPRAND <em>EXPRAND</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.ExprAnd <em>Expr And</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPRAND
+   * @see org.xtext.langage_while.ExprAnd
    * @generated
    */
-  public Adapter createEXPRANDAdapter()
+  public Adapter createExprAndAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPROR <em>EXPROR</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.ExprOr <em>Expr Or</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPROR
+   * @see org.xtext.langage_while.ExprOr
    * @generated
    */
-  public Adapter createEXPRORAdapter()
+  public Adapter createExprOrAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPRNOT <em>EXPRNOT</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.ExprNot <em>Expr Not</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPRNOT
+   * @see org.xtext.langage_while.ExprNot
    * @generated
    */
-  public Adapter createEXPRNOTAdapter()
+  public Adapter createExprNotAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.EXPREQ <em>EXPREQ</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.ExprEq <em>Expr Eq</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.EXPREQ
+   * @see org.xtext.langage_while.ExprEq
    * @generated
    */
-  public Adapter createEXPREQAdapter()
+  public Adapter createExprEqAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Variable <em>Variable</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.VAR <em>VAR</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.Variable
+   * @see org.xtext.langage_while.VAR
    * @generated
    */
-  public Adapter createVariableAdapter()
+  public Adapter createVARAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.LCs <em>LCs</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.SYMB <em>SYMB</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.langage_while.LCs
+   * @see org.xtext.langage_while.SYMB
    * @generated
    */
-  public Adapter createLCsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.LC <em>LC</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.langage_while.LC
-   * @generated
-   */
-  public Adapter createLCAdapter()
+  public Adapter createSYMBAdapter()
   {
     return null;
   }

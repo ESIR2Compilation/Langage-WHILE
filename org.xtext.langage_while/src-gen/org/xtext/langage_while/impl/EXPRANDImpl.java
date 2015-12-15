@@ -2,8 +2,12 @@
  */
 package org.xtext.langage_while.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,75 +15,55 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.langage_while.EXPRAND;
-import org.xtext.langage_while.EXPROR;
-import org.xtext.langage_while.LCs;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.xtext.langage_while.ExprAnd;
+import org.xtext.langage_while.ExprOr;
 import org.xtext.langage_while.Langage_whilePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EXPRAND</b></em>'.
+ * An implementation of the model object '<em><b>Expr And</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.EXPRANDImpl#getF <em>F</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRANDImpl#getLc1 <em>Lc1</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRANDImpl#getLc2 <em>Lc2</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.EXPRANDImpl#getEe <em>Ee</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.ExprAndImpl#getExo1 <em>Exo1</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.ExprAndImpl#getExo2 <em>Exo2</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
+public class ExprAndImpl extends MinimalEObjectImpl.Container implements ExprAnd
 {
   /**
-   * The cached value of the '{@link #getF() <em>F</em>}' containment reference.
+   * The cached value of the '{@link #getExo1() <em>Exo1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getF()
+   * @see #getExo1()
    * @generated
    * @ordered
    */
-  protected EXPROR f;
+  protected ExprOr exo1;
 
   /**
-   * The cached value of the '{@link #getLc1() <em>Lc1</em>}' containment reference.
+   * The cached value of the '{@link #getExo2() <em>Exo2</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLc1()
+   * @see #getExo2()
    * @generated
    * @ordered
    */
-  protected LCs lc1;
-
-  /**
-   * The cached value of the '{@link #getLc2() <em>Lc2</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLc2()
-   * @generated
-   * @ordered
-   */
-  protected LCs lc2;
-
-  /**
-   * The cached value of the '{@link #getEe() <em>Ee</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEe()
-   * @generated
-   * @ordered
-   */
-  protected EXPRAND ee;
+  protected EList<ExprOr> exo2;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EXPRANDImpl()
+  protected ExprAndImpl()
   {
     super();
   }
@@ -92,7 +76,7 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
   @Override
   protected EClass eStaticClass()
   {
-    return Langage_whilePackage.Literals.EXPRAND;
+    return Langage_whilePackage.Literals.EXPR_AND;
   }
 
   /**
@@ -100,9 +84,9 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
    * <!-- end-user-doc -->
    * @generated
    */
-  public EXPROR getF()
+  public ExprOr getExo1()
   {
-    return f;
+    return exo1;
   }
 
   /**
@@ -110,13 +94,13 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetF(EXPROR newF, NotificationChain msgs)
+  public NotificationChain basicSetExo1(ExprOr newExo1, NotificationChain msgs)
   {
-    EXPROR oldF = f;
-    f = newF;
+    ExprOr oldExo1 = exo1;
+    exo1 = newExo1;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__F, oldF, newF);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR_AND__EXO1, oldExo1, newExo1);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -127,20 +111,20 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setF(EXPROR newF)
+  public void setExo1(ExprOr newExo1)
   {
-    if (newF != f)
+    if (newExo1 != exo1)
     {
       NotificationChain msgs = null;
-      if (f != null)
-        msgs = ((InternalEObject)f).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__F, null, msgs);
-      if (newF != null)
-        msgs = ((InternalEObject)newF).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__F, null, msgs);
-      msgs = basicSetF(newF, msgs);
+      if (exo1 != null)
+        msgs = ((InternalEObject)exo1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR_AND__EXO1, null, msgs);
+      if (newExo1 != null)
+        msgs = ((InternalEObject)newExo1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPR_AND__EXO1, null, msgs);
+      msgs = basicSetExo1(newExo1, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__F, newF, newF));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPR_AND__EXO1, newExo1, newExo1));
   }
 
   /**
@@ -148,143 +132,13 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
    * <!-- end-user-doc -->
    * @generated
    */
-  public LCs getLc1()
+  public EList<ExprOr> getExo2()
   {
-    return lc1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLc1(LCs newLc1, NotificationChain msgs)
-  {
-    LCs oldLc1 = lc1;
-    lc1 = newLc1;
-    if (eNotificationRequired())
+    if (exo2 == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__LC1, oldLc1, newLc1);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      exo2 = new EObjectContainmentEList<ExprOr>(ExprOr.class, this, Langage_whilePackage.EXPR_AND__EXO2);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLc1(LCs newLc1)
-  {
-    if (newLc1 != lc1)
-    {
-      NotificationChain msgs = null;
-      if (lc1 != null)
-        msgs = ((InternalEObject)lc1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__LC1, null, msgs);
-      if (newLc1 != null)
-        msgs = ((InternalEObject)newLc1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__LC1, null, msgs);
-      msgs = basicSetLc1(newLc1, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__LC1, newLc1, newLc1));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getLc2()
-  {
-    return lc2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLc2(LCs newLc2, NotificationChain msgs)
-  {
-    LCs oldLc2 = lc2;
-    lc2 = newLc2;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__LC2, oldLc2, newLc2);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLc2(LCs newLc2)
-  {
-    if (newLc2 != lc2)
-    {
-      NotificationChain msgs = null;
-      if (lc2 != null)
-        msgs = ((InternalEObject)lc2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__LC2, null, msgs);
-      if (newLc2 != null)
-        msgs = ((InternalEObject)newLc2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__LC2, null, msgs);
-      msgs = basicSetLc2(newLc2, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__LC2, newLc2, newLc2));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EXPRAND getEe()
-  {
-    return ee;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetEe(EXPRAND newEe, NotificationChain msgs)
-  {
-    EXPRAND oldEe = ee;
-    ee = newEe;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__EE, oldEe, newEe);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEe(EXPRAND newEe)
-  {
-    if (newEe != ee)
-    {
-      NotificationChain msgs = null;
-      if (ee != null)
-        msgs = ((InternalEObject)ee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__EE, null, msgs);
-      if (newEe != null)
-        msgs = ((InternalEObject)newEe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.EXPRAND__EE, null, msgs);
-      msgs = basicSetEe(newEe, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.EXPRAND__EE, newEe, newEe));
+    return exo2;
   }
 
   /**
@@ -297,14 +151,10 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRAND__F:
-        return basicSetF(null, msgs);
-      case Langage_whilePackage.EXPRAND__LC1:
-        return basicSetLc1(null, msgs);
-      case Langage_whilePackage.EXPRAND__LC2:
-        return basicSetLc2(null, msgs);
-      case Langage_whilePackage.EXPRAND__EE:
-        return basicSetEe(null, msgs);
+      case Langage_whilePackage.EXPR_AND__EXO1:
+        return basicSetExo1(null, msgs);
+      case Langage_whilePackage.EXPR_AND__EXO2:
+        return ((InternalEList<?>)getExo2()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -319,14 +169,10 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRAND__F:
-        return getF();
-      case Langage_whilePackage.EXPRAND__LC1:
-        return getLc1();
-      case Langage_whilePackage.EXPRAND__LC2:
-        return getLc2();
-      case Langage_whilePackage.EXPRAND__EE:
-        return getEe();
+      case Langage_whilePackage.EXPR_AND__EXO1:
+        return getExo1();
+      case Langage_whilePackage.EXPR_AND__EXO2:
+        return getExo2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -336,22 +182,18 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRAND__F:
-        setF((EXPROR)newValue);
+      case Langage_whilePackage.EXPR_AND__EXO1:
+        setExo1((ExprOr)newValue);
         return;
-      case Langage_whilePackage.EXPRAND__LC1:
-        setLc1((LCs)newValue);
-        return;
-      case Langage_whilePackage.EXPRAND__LC2:
-        setLc2((LCs)newValue);
-        return;
-      case Langage_whilePackage.EXPRAND__EE:
-        setEe((EXPRAND)newValue);
+      case Langage_whilePackage.EXPR_AND__EXO2:
+        getExo2().clear();
+        getExo2().addAll((Collection<? extends ExprOr>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -367,17 +209,11 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRAND__F:
-        setF((EXPROR)null);
+      case Langage_whilePackage.EXPR_AND__EXO1:
+        setExo1((ExprOr)null);
         return;
-      case Langage_whilePackage.EXPRAND__LC1:
-        setLc1((LCs)null);
-        return;
-      case Langage_whilePackage.EXPRAND__LC2:
-        setLc2((LCs)null);
-        return;
-      case Langage_whilePackage.EXPRAND__EE:
-        setEe((EXPRAND)null);
+      case Langage_whilePackage.EXPR_AND__EXO2:
+        getExo2().clear();
         return;
     }
     super.eUnset(featureID);
@@ -393,16 +229,12 @@ public class EXPRANDImpl extends MinimalEObjectImpl.Container implements EXPRAND
   {
     switch (featureID)
     {
-      case Langage_whilePackage.EXPRAND__F:
-        return f != null;
-      case Langage_whilePackage.EXPRAND__LC1:
-        return lc1 != null;
-      case Langage_whilePackage.EXPRAND__LC2:
-        return lc2 != null;
-      case Langage_whilePackage.EXPRAND__EE:
-        return ee != null;
+      case Langage_whilePackage.EXPR_AND__EXO1:
+        return exo1 != null;
+      case Langage_whilePackage.EXPR_AND__EXO2:
+        return exo2 != null && !exo2.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //EXPRANDImpl
+} //ExprAndImpl

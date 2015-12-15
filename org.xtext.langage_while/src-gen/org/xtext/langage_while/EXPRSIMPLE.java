@@ -6,27 +6,26 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EXPRSIMPLE</b></em>'.
+ * A representation of the model object '<em><b>Expr Simple</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getNil <em>Nil</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getV <em>V</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getSym <em>Sym</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getMot <em>Mot</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getLex <em>Lex</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getL <em>L</em>}</li>
- *   <li>{@link org.xtext.langage_while.EXPRSIMPLE#getEx <em>Ex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getNil <em>Nil</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getV <em>V</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getSym <em>Sym</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getMot <em>Mot</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getLex <em>Lex</em>}</li>
+ *   <li>{@link org.xtext.langage_while.ExprSimple#getEx <em>Ex</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE()
+ * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple()
  * @model
  * @generated
  */
-public interface EXPRSIMPLE extends EObject
+public interface ExprSimple extends EObject
 {
   /**
    * Returns the value of the '<em><b>Nil</b></em>' attribute.
@@ -38,14 +37,14 @@ public interface EXPRSIMPLE extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Nil</em>' attribute.
    * @see #setNil(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_Nil()
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_Nil()
    * @model
    * @generated
    */
   String getNil();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getNil <em>Nil</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getNil <em>Nil</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Nil</em>' attribute.
@@ -55,56 +54,56 @@ public interface EXPRSIMPLE extends EObject
   void setNil(String value);
 
   /**
-   * Returns the value of the '<em><b>V</b></em>' attribute.
+   * Returns the value of the '<em><b>V</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>V</em>' attribute isn't clear,
+   * If the meaning of the '<em>V</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>V</em>' attribute.
-   * @see #setV(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_V()
-   * @model
+   * @return the value of the '<em>V</em>' containment reference.
+   * @see #setV(VAR)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_V()
+   * @model containment="true"
    * @generated
    */
-  String getV();
+  VAR getV();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getV <em>V</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getV <em>V</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>V</em>' attribute.
+   * @param value the new value of the '<em>V</em>' containment reference.
    * @see #getV()
    * @generated
    */
-  void setV(String value);
+  void setV(VAR value);
 
   /**
-   * Returns the value of the '<em><b>Sym</b></em>' attribute.
+   * Returns the value of the '<em><b>Sym</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sym</em>' attribute isn't clear,
+   * If the meaning of the '<em>Sym</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sym</em>' attribute.
-   * @see #setSym(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_Sym()
-   * @model
+   * @return the value of the '<em>Sym</em>' containment reference.
+   * @see #setSym(SYMB)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_Sym()
+   * @model containment="true"
    * @generated
    */
-  String getSym();
+  SYMB getSym();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getSym <em>Sym</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getSym <em>Sym</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Sym</em>' attribute.
+   * @param value the new value of the '<em>Sym</em>' containment reference.
    * @see #getSym()
    * @generated
    */
-  void setSym(String value);
+  void setSym(SYMB value);
 
   /**
    * Returns the value of the '<em><b>Mot</b></em>' attribute.
@@ -116,14 +115,14 @@ public interface EXPRSIMPLE extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Mot</em>' attribute.
    * @see #setMot(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_Mot()
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_Mot()
    * @model
    * @generated
    */
   String getMot();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getMot <em>Mot</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getMot <em>Mot</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Mot</em>' attribute.
@@ -141,48 +140,22 @@ public interface EXPRSIMPLE extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Lex</em>' containment reference.
-   * @see #setLex(LEXPR)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_Lex()
+   * @see #setLex(LExpr)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_Lex()
    * @model containment="true"
    * @generated
    */
-  LEXPR getLex();
+  LExpr getLex();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getLex <em>Lex</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getLex <em>Lex</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Lex</em>' containment reference.
    * @see #getLex()
    * @generated
    */
-  void setLex(LEXPR value);
-
-  /**
-   * Returns the value of the '<em><b>L</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>L</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>L</em>' containment reference.
-   * @see #setL(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_L()
-   * @model containment="true"
-   * @generated
-   */
-  LCs getL();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getL <em>L</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>L</em>' containment reference.
-   * @see #getL()
-   * @generated
-   */
-  void setL(LCs value);
+  void setLex(LExpr value);
 
   /**
    * Returns the value of the '<em><b>Ex</b></em>' containment reference.
@@ -193,21 +166,21 @@ public interface EXPRSIMPLE extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ex</em>' containment reference.
-   * @see #setEx(EXPR)
-   * @see org.xtext.langage_while.Langage_whilePackage#getEXPRSIMPLE_Ex()
+   * @see #setEx(Expr)
+   * @see org.xtext.langage_while.Langage_whilePackage#getExprSimple_Ex()
    * @model containment="true"
    * @generated
    */
-  EXPR getEx();
+  Expr getEx();
 
   /**
-   * Sets the value of the '{@link org.xtext.langage_while.EXPRSIMPLE#getEx <em>Ex</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.langage_while.ExprSimple#getEx <em>Ex</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Ex</em>' containment reference.
    * @see #getEx()
    * @generated
    */
-  void setEx(EXPR value);
+  void setEx(Expr value);
 
-} // EXPRSIMPLE
+} // ExprSimple

@@ -19,26 +19,26 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.xtext.langage_while.Assign;
 import org.xtext.langage_while.Command;
 import org.xtext.langage_while.Commands;
-import org.xtext.langage_while.Def;
-import org.xtext.langage_while.EXPR;
-import org.xtext.langage_while.EXPRAND;
-import org.xtext.langage_while.EXPREQ;
-import org.xtext.langage_while.EXPRNOT;
-import org.xtext.langage_while.EXPROR;
-import org.xtext.langage_while.EXPRS;
-import org.xtext.langage_while.EXPRSIMPLE;
+import org.xtext.langage_while.Definition;
+import org.xtext.langage_while.Expr;
+import org.xtext.langage_while.ExprAnd;
+import org.xtext.langage_while.ExprEq;
+import org.xtext.langage_while.ExprNot;
+import org.xtext.langage_while.ExprOr;
+import org.xtext.langage_while.ExprSimple;
+import org.xtext.langage_while.Exprs;
 import org.xtext.langage_while.For;
 import org.xtext.langage_while.Foreach;
 import org.xtext.langage_while.Function;
 import org.xtext.langage_while.If;
+import org.xtext.langage_while.Ifconfort;
 import org.xtext.langage_while.Input;
-import org.xtext.langage_while.LC;
-import org.xtext.langage_while.LCs;
-import org.xtext.langage_while.LEXPR;
+import org.xtext.langage_while.LExpr;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
-import org.xtext.langage_while.Variable;
+import org.xtext.langage_while.SYMB;
+import org.xtext.langage_while.VAR;
 import org.xtext.langage_while.Vars;
 import org.xtext.langage_while.While;
 import org.xtext.services.Langage_whileGrammarAccess;
@@ -61,29 +61,29 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 			case Langage_whilePackage.COMMANDS:
 				sequence_Commands(context, (Commands) semanticObject); 
 				return; 
-			case Langage_whilePackage.DEF:
-				sequence_Def(context, (Def) semanticObject); 
+			case Langage_whilePackage.DEFINITION:
+				sequence_Definition(context, (Definition) semanticObject); 
 				return; 
 			case Langage_whilePackage.EXPR:
-				sequence_EXPR(context, (EXPR) semanticObject); 
+				sequence_Expr(context, (Expr) semanticObject); 
 				return; 
-			case Langage_whilePackage.EXPRAND:
-				sequence_EXPRAND(context, (EXPRAND) semanticObject); 
+			case Langage_whilePackage.EXPR_AND:
+				sequence_ExprAnd(context, (ExprAnd) semanticObject); 
 				return; 
-			case Langage_whilePackage.EXPREQ:
-				sequence_EXPREQ(context, (EXPREQ) semanticObject); 
+			case Langage_whilePackage.EXPR_EQ:
+				sequence_ExprEq(context, (ExprEq) semanticObject); 
 				return; 
-			case Langage_whilePackage.EXPRNOT:
-				sequence_EXPRNOT(context, (EXPRNOT) semanticObject); 
+			case Langage_whilePackage.EXPR_NOT:
+				sequence_ExprNot(context, (ExprNot) semanticObject); 
 				return; 
-			case Langage_whilePackage.EXPROR:
-				sequence_EXPROR(context, (EXPROR) semanticObject); 
+			case Langage_whilePackage.EXPR_OR:
+				sequence_ExprOr(context, (ExprOr) semanticObject); 
+				return; 
+			case Langage_whilePackage.EXPR_SIMPLE:
+				sequence_ExprSimple(context, (ExprSimple) semanticObject); 
 				return; 
 			case Langage_whilePackage.EXPRS:
-				sequence_EXPRS(context, (EXPRS) semanticObject); 
-				return; 
-			case Langage_whilePackage.EXPRSIMPLE:
-				sequence_EXPRSIMPLE(context, (EXPRSIMPLE) semanticObject); 
+				sequence_Exprs(context, (Exprs) semanticObject); 
 				return; 
 			case Langage_whilePackage.FOR:
 				sequence_For(context, (For) semanticObject); 
@@ -97,17 +97,14 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 			case Langage_whilePackage.IF:
 				sequence_If(context, (If) semanticObject); 
 				return; 
+			case Langage_whilePackage.IFCONFORT:
+				sequence_Ifconfort(context, (Ifconfort) semanticObject); 
+				return; 
 			case Langage_whilePackage.INPUT:
 				sequence_Input(context, (Input) semanticObject); 
 				return; 
-			case Langage_whilePackage.LC:
-				sequence_LC(context, (LC) semanticObject); 
-				return; 
-			case Langage_whilePackage.LCS:
-				sequence_LCs(context, (LCs) semanticObject); 
-				return; 
 			case Langage_whilePackage.LEXPR:
-				sequence_LEXPR(context, (LEXPR) semanticObject); 
+				sequence_LExpr(context, (LExpr) semanticObject); 
 				return; 
 			case Langage_whilePackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -115,8 +112,11 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 			case Langage_whilePackage.OUTPUT:
 				sequence_Output(context, (Output) semanticObject); 
 				return; 
-			case Langage_whilePackage.VARIABLE:
-				sequence_Variable(context, (Variable) semanticObject); 
+			case Langage_whilePackage.SYMB:
+				sequence_SYMB(context, (SYMB) semanticObject); 
+				return; 
+			case Langage_whilePackage.VAR:
+				sequence_VAR(context, (VAR) semanticObject); 
 				return; 
 			case Langage_whilePackage.VARS:
 				sequence_Vars(context, (Vars) semanticObject); 
@@ -130,25 +130,19 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (e=Vars l=LCs c=LCs n=EXPRS)
+	 *     (vs=Vars ex=Exprs)
 	 */
 	protected void sequence_Assign(EObject context, Assign semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__E));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__L) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__L));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__C) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__C));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__N) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__N));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__VS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__VS));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.ASSIGN__EX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.ASSIGN__EX));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAssignAccess().getEVarsParserRuleCall_0_0(), semanticObject.getE());
-		feeder.accept(grammarAccess.getAssignAccess().getLLCsParserRuleCall_1_0(), semanticObject.getL());
-		feeder.accept(grammarAccess.getAssignAccess().getCLCsParserRuleCall_3_0(), semanticObject.getC());
-		feeder.accept(grammarAccess.getAssignAccess().getNEXPRSParserRuleCall_4_0(), semanticObject.getN());
+		feeder.accept(grammarAccess.getAssignAccess().getVsVarsParserRuleCall_0_0(), semanticObject.getVs());
+		feeder.accept(grammarAccess.getAssignAccess().getExExprsParserRuleCall_4_0(), semanticObject.getEx());
 		feeder.finish();
 	}
 	
@@ -156,12 +150,13 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	/**
 	 * Constraint:
 	 *     (
-	 *         nop=Nop | 
-	 *         affect=Assign | 
+	 *         nop='nop' | 
+	 *         assign=Assign | 
 	 *         wh=While | 
-	 *         forr=For | 
+	 *         for=For | 
+	 *         if=If | 
 	 *         fore=Foreach | 
-	 *         iff=If
+	 *         ifc=Ifconfort
 	 *     )
 	 */
 	protected void sequence_Command(EObject context, Command semanticObject) {
@@ -171,7 +166,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (a=Command (l=LCs s=Commands)?)
+	 *     (c+=Command c+=Command*)
 	 */
 	protected void sequence_Commands(EObject context, Commands semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -180,78 +175,58 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         l=LCs 
-	 *         in=Input 
-	 *         z=LCs 
-	 *         v=Commands 
-	 *         s=LCs 
-	 *         u=LCs 
-	 *         o=Output
-	 *     )
+	 *     (in=Input com=Commands out=Output)
 	 */
-	protected void sequence_Def(EObject context, Def semanticObject) {
+	protected void sequence_Definition(EObject context, Definition semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__L) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__L));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__IN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__IN));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__Z) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__Z));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__V) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__V));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__S) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__S));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__U) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__U));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEF__O) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEF__O));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEFINITION__IN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEFINITION__IN));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEFINITION__COM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEFINITION__COM));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.DEFINITION__OUT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.DEFINITION__OUT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDefAccess().getLLCsParserRuleCall_1_0(), semanticObject.getL());
-		feeder.accept(grammarAccess.getDefAccess().getInInputParserRuleCall_2_0(), semanticObject.getIn());
-		feeder.accept(grammarAccess.getDefAccess().getZLCsParserRuleCall_3_0(), semanticObject.getZ());
-		feeder.accept(grammarAccess.getDefAccess().getVCommandsParserRuleCall_5_0(), semanticObject.getV());
-		feeder.accept(grammarAccess.getDefAccess().getSLCsParserRuleCall_6_0(), semanticObject.getS());
-		feeder.accept(grammarAccess.getDefAccess().getULCsParserRuleCall_9_0(), semanticObject.getU());
-		feeder.accept(grammarAccess.getDefAccess().getOOutputParserRuleCall_10_0(), semanticObject.getO());
+		feeder.accept(grammarAccess.getDefinitionAccess().getInInputParserRuleCall_2_0(), semanticObject.getIn());
+		feeder.accept(grammarAccess.getDefinitionAccess().getComCommandsParserRuleCall_5_0(), semanticObject.getCom());
+		feeder.accept(grammarAccess.getDefinitionAccess().getOutOutputParserRuleCall_10_0(), semanticObject.getOut());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (f=EXPROR (lc1=LCs lc2=LCs ee=EXPRAND)?)
+	 *     (exo1=ExprOr exo2+=ExprOr*)
 	 */
-	protected void sequence_EXPRAND(EObject context, EXPRAND semanticObject) {
+	protected void sequence_ExprAnd(EObject context, ExprAnd semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((e1=EXPRSIMPLE ccc=LCs lc2=LCs w=EXPRSIMPLE) | ex=EXPR)
+	 *     ((exS1=ExprSimple exS2=ExprSimple) | ex=Expr)
 	 */
-	protected void sequence_EXPREQ(EObject context, EXPREQ semanticObject) {
+	protected void sequence_ExprEq(EObject context, ExprEq semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (lc1=LCs? e1=EXPREQ)
+	 *     (exQ1=ExprEq | exQ2=ExprEq)
 	 */
-	protected void sequence_EXPRNOT(EObject context, EXPRNOT semanticObject) {
+	protected void sequence_ExprNot(EObject context, ExprNot semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (e1=EXPRNOT (lc1=LCs lc2=LCs e2=EXPROR)?)
+	 *     (exn1=ExprNot exn2+=ExprNot*)
 	 */
-	protected void sequence_EXPROR(EObject context, EXPROR semanticObject) {
+	protected void sequence_ExprOr(EObject context, ExprOr semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -261,168 +236,139 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     (
 	 *         nil='nil' | 
 	 *         v=VAR | 
-	 *         sym=SYM | 
-	 *         ((mot='cons' | mot='list') lex=LEXPR) | 
-	 *         ((mot='hd' | mot='tl') l=LCs ex=EXPR) | 
-	 *         (sym=SYM lex=LEXPR)
+	 *         sym=SYMB | 
+	 *         ((mot='cons' | mot='list') lex=LExpr) | 
+	 *         ((mot='hd' | mot='tl') ex=Expr) | 
+	 *         (sym=SYMB lex=LExpr)
 	 *     )
 	 */
-	protected void sequence_EXPRSIMPLE(EObject context, EXPRSIMPLE semanticObject) {
+	protected void sequence_ExprSimple(EObject context, ExprSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (f=EXPR (l=LCs e2=EXPRS)?)
+	 *     (exs=ExprSimple | exa=ExprAnd)
 	 */
-	protected void sequence_EXPRS(EObject context, EXPRS semanticObject) {
+	protected void sequence_Expr(EObject context, Expr semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (e1=EXPRSIMPLE | ex=EXPRAND)
+	 *     (ex+=Expr ex+=Expr*)
 	 */
-	protected void sequence_EXPR(EObject context, EXPR semanticObject) {
+	protected void sequence_Exprs(EObject context, Exprs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         cc=LCs 
-	 *         hh=EXPR 
-	 *         tt=LCs 
-	 *         vv=LCs 
-	 *         c1=Commands 
-	 *         ss=LCs
-	 *     )
+	 *     (ex=Expr c=Commands)
 	 */
 	protected void sequence_For(EObject context, For semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__CC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__CC));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__HH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__HH));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__TT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__TT));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__VV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__VV));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__C1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__C1));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__SS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__SS));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__EX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__EX));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOR__C) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOR__C));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getForAccess().getCcLCsParserRuleCall_1_0(), semanticObject.getCc());
-		feeder.accept(grammarAccess.getForAccess().getHhEXPRParserRuleCall_2_0(), semanticObject.getHh());
-		feeder.accept(grammarAccess.getForAccess().getTtLCsParserRuleCall_3_0(), semanticObject.getTt());
-		feeder.accept(grammarAccess.getForAccess().getVvLCsParserRuleCall_5_0(), semanticObject.getVv());
-		feeder.accept(grammarAccess.getForAccess().getC1CommandsParserRuleCall_6_0(), semanticObject.getC1());
-		feeder.accept(grammarAccess.getForAccess().getSsLCsParserRuleCall_7_0(), semanticObject.getSs());
+		feeder.accept(grammarAccess.getForAccess().getExExprParserRuleCall_2_0(), semanticObject.getEx());
+		feeder.accept(grammarAccess.getForAccess().getCCommandsParserRuleCall_6_0(), semanticObject.getC());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         sq=LCs 
-	 *         wx=EXPR 
-	 *         lc=LCs 
-	 *         lc2=LCs 
-	 *         e1=EXPR 
-	 *         lc3=LCs 
-	 *         lc4=LCs 
-	 *         c3=Commands 
-	 *         lc5=LCs
-	 *     )
+	 *     (ex1=Expr ex2=Expr c=Commands)
 	 */
 	protected void sequence_Foreach(EObject context, Foreach semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__SQ) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__SQ));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__WX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__WX));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__LC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__LC));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__LC2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__LC2));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__E1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__E1));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__LC3) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__LC3));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__LC4) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__LC4));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__C3) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__C3));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__LC5) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__LC5));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__EX1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__EX1));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__EX2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__EX2));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FOREACH__C) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FOREACH__C));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getForeachAccess().getSqLCsParserRuleCall_1_0(), semanticObject.getSq());
-		feeder.accept(grammarAccess.getForeachAccess().getWxEXPRParserRuleCall_2_0(), semanticObject.getWx());
-		feeder.accept(grammarAccess.getForeachAccess().getLcLCsParserRuleCall_3_0(), semanticObject.getLc());
-		feeder.accept(grammarAccess.getForeachAccess().getLc2LCsParserRuleCall_5_0(), semanticObject.getLc2());
-		feeder.accept(grammarAccess.getForeachAccess().getE1EXPRParserRuleCall_6_0(), semanticObject.getE1());
-		feeder.accept(grammarAccess.getForeachAccess().getLc3LCsParserRuleCall_7_0(), semanticObject.getLc3());
-		feeder.accept(grammarAccess.getForeachAccess().getLc4LCsParserRuleCall_9_0(), semanticObject.getLc4());
-		feeder.accept(grammarAccess.getForeachAccess().getC3CommandsParserRuleCall_10_0(), semanticObject.getC3());
-		feeder.accept(grammarAccess.getForeachAccess().getLc5LCsParserRuleCall_11_0(), semanticObject.getLc5());
+		feeder.accept(grammarAccess.getForeachAccess().getEx1ExprParserRuleCall_2_0(), semanticObject.getEx1());
+		feeder.accept(grammarAccess.getForeachAccess().getEx2ExprParserRuleCall_6_0(), semanticObject.getEx2());
+		feeder.accept(grammarAccess.getForeachAccess().getCCommandsParserRuleCall_10_0(), semanticObject.getC());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (n=LCs nom=SYM t=LCs d=Def)
+	 *     (name=SYMB def=Definition)
 	 */
 	protected void sequence_Function(EObject context, Function semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__N) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__N));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__NOM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__NOM));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__T) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__T));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__D) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__D));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__NAME));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.FUNCTION__DEF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.FUNCTION__DEF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getFunctionAccess().getNLCsParserRuleCall_1_0(), semanticObject.getN());
-		feeder.accept(grammarAccess.getFunctionAccess().getNomSYMTerminalRuleCall_2_0(), semanticObject.getNom());
-		feeder.accept(grammarAccess.getFunctionAccess().getTLCsParserRuleCall_4_0(), semanticObject.getT());
-		feeder.accept(grammarAccess.getFunctionAccess().getDDefParserRuleCall_5_0(), semanticObject.getD());
+		feeder.accept(grammarAccess.getFunctionAccess().getNameSYMBParserRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFunctionAccess().getDefDefinitionParserRuleCall_5_0(), semanticObject.getDef());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         mm=LCs 
-	 *         jj=EXPR 
-	 *         kk=LCs 
-	 *         hg=LCs 
-	 *         c2=Commands 
-	 *         gg=LCs 
-	 *         (ff=LCs o=Commands dd=LCs)?
-	 *     )
+	 *     (ex=Expr ct=Commands ce=Commands)
 	 */
 	protected void sequence_If(EObject context, If semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.IF__EX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.IF__EX));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.IF__CT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.IF__CT));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.IF__CE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.IF__CE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIfAccess().getExExprParserRuleCall_2_0(), semanticObject.getEx());
+		feeder.accept(grammarAccess.getIfAccess().getCtCommandsParserRuleCall_6_0(), semanticObject.getCt());
+		feeder.accept(grammarAccess.getIfAccess().getCeCommandsParserRuleCall_10_0(), semanticObject.getCe());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((v=VAR z=LCs in=Input) | y=VAR)
+	 *     (ex=Expr c=Commands)
+	 */
+	protected void sequence_Ifconfort(EObject context, Ifconfort semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.IFCONFORT__EX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.IFCONFORT__EX));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.IFCONFORT__C) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.IFCONFORT__C));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIfconfortAccess().getExExprParserRuleCall_2_0(), semanticObject.getEx());
+		feeder.accept(grammarAccess.getIfconfortAccess().getCCommandsParserRuleCall_6_0(), semanticObject.getC());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (v+=VAR v+=VAR*)
 	 */
 	protected void sequence_Input(EObject context, Input semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -431,27 +377,9 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (a=SP | z=CR | e=TAB | r=LF)
+	 *     e+=Expr+
 	 */
-	protected void sequence_LC(EObject context, LC semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     l=LC?
-	 */
-	protected void sequence_LCs(EObject context, LCs semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (f=LCs n=EXPR t=LEXPR?)
-	 */
-	protected void sequence_LEXPR(EObject context, LEXPR semanticObject) {
+	protected void sequence_LExpr(EObject context, LExpr semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -467,7 +395,7 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     ((n=VAR q=LCs o=Output) | s=VAR)
+	 *     (v+=VAR v+=VAR*)
 	 */
 	protected void sequence_Output(EObject context, Output semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -476,23 +404,45 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     n=VAR
+	 *     (bs=BASESYMB cf=CONF)
 	 */
-	protected void sequence_Variable(EObject context, Variable semanticObject) {
+	protected void sequence_SYMB(EObject context, SYMB semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.VARIABLE__N) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.VARIABLE__N));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.SYMB__BS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.SYMB__BS));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.SYMB__CF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.SYMB__CF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVariableAccess().getNVARTerminalRuleCall_0(), semanticObject.getN());
+		feeder.accept(grammarAccess.getSYMBAccess().getBsBASESYMBTerminalRuleCall_0_0(), semanticObject.getBs());
+		feeder.accept(grammarAccess.getSYMBAccess().getCfCONFTerminalRuleCall_1_0(), semanticObject.getCf());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (a=VAR (l=LCs u=Vars)?)
+	 *     (bv=BASEVAR cf=CONF)
+	 */
+	protected void sequence_VAR(EObject context, VAR semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.VAR__BV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.VAR__BV));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.VAR__CF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.VAR__CF));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVARAccess().getBvBASEVARTerminalRuleCall_0_0(), semanticObject.getBv());
+		feeder.accept(grammarAccess.getVARAccess().getCfCONFTerminalRuleCall_1_0(), semanticObject.getCf());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (vs+=VAR vs+=VAR*)
 	 */
 	protected void sequence_Vars(EObject context, Vars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -501,38 +451,19 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         ll=LCs 
-	 *         ee=EXPR 
-	 *         cc=LCs 
-	 *         z=LCs 
-	 *         k=Commands 
-	 *         lc=LCs
-	 *     )
+	 *     (ex=Expr c=Commands)
 	 */
 	protected void sequence_While(EObject context, While semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__LL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__LL));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__EE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__EE));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__CC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__CC));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__Z) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__Z));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__K) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__K));
-			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__LC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__LC));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__EX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__EX));
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.WHILE__C) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.WHILE__C));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getWhileAccess().getLlLCsParserRuleCall_1_0(), semanticObject.getLl());
-		feeder.accept(grammarAccess.getWhileAccess().getEeEXPRParserRuleCall_2_0(), semanticObject.getEe());
-		feeder.accept(grammarAccess.getWhileAccess().getCcLCsParserRuleCall_3_0(), semanticObject.getCc());
-		feeder.accept(grammarAccess.getWhileAccess().getZLCsParserRuleCall_5_0(), semanticObject.getZ());
-		feeder.accept(grammarAccess.getWhileAccess().getKCommandsParserRuleCall_6_0(), semanticObject.getK());
-		feeder.accept(grammarAccess.getWhileAccess().getLcLCsParserRuleCall_7_0(), semanticObject.getLc());
+		feeder.accept(grammarAccess.getWhileAccess().getExExprParserRuleCall_2_0(), semanticObject.getEx());
+		feeder.accept(grammarAccess.getWhileAccess().getCCommandsParserRuleCall_6_0(), semanticObject.getC());
 		feeder.finish();
 	}
 }

@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.langage_while.Assign;
-import org.xtext.langage_while.EXPRS;
-import org.xtext.langage_while.LCs;
+import org.xtext.langage_while.Exprs;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Vars;
 
@@ -24,10 +23,8 @@ import org.xtext.langage_while.Vars;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getE <em>E</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getL <em>L</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getC <em>C</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getN <em>N</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getVs <em>Vs</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getEx <em>Ex</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,44 +33,24 @@ import org.xtext.langage_while.Vars;
 public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
 {
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getVs() <em>Vs</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getVs()
    * @generated
    * @ordered
    */
-  protected Vars e;
+  protected Vars vs;
 
   /**
-   * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
+   * The cached value of the '{@link #getEx() <em>Ex</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getL()
+   * @see #getEx()
    * @generated
    * @ordered
    */
-  protected LCs l;
-
-  /**
-   * The cached value of the '{@link #getC() <em>C</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getC()
-   * @generated
-   * @ordered
-   */
-  protected LCs c;
-
-  /**
-   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getN()
-   * @generated
-   * @ordered
-   */
-  protected EXPRS n;
+  protected Exprs ex;
 
   /**
    * <!-- begin-user-doc -->
@@ -101,9 +78,9 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public Vars getE()
+  public Vars getVs()
   {
-    return e;
+    return vs;
   }
 
   /**
@@ -111,13 +88,13 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(Vars newE, NotificationChain msgs)
+  public NotificationChain basicSetVs(Vars newVs, NotificationChain msgs)
   {
-    Vars oldE = e;
-    e = newE;
+    Vars oldVs = vs;
+    vs = newVs;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__VS, oldVs, newVs);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -128,20 +105,20 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(Vars newE)
+  public void setVs(Vars newVs)
   {
-    if (newE != e)
+    if (newVs != vs)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (vs != null)
+        msgs = ((InternalEObject)vs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__VS, null, msgs);
+      if (newVs != null)
+        msgs = ((InternalEObject)newVs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__VS, null, msgs);
+      msgs = basicSetVs(newVs, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__VS, newVs, newVs));
   }
 
   /**
@@ -149,9 +126,9 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public LCs getL()
+  public Exprs getEx()
   {
-    return l;
+    return ex;
   }
 
   /**
@@ -159,13 +136,13 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetL(LCs newL, NotificationChain msgs)
+  public NotificationChain basicSetEx(Exprs newEx, NotificationChain msgs)
   {
-    LCs oldL = l;
-    l = newL;
+    Exprs oldEx = ex;
+    ex = newEx;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__L, oldL, newL);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__EX, oldEx, newEx);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -176,116 +153,20 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setL(LCs newL)
+  public void setEx(Exprs newEx)
   {
-    if (newL != l)
+    if (newEx != ex)
     {
       NotificationChain msgs = null;
-      if (l != null)
-        msgs = ((InternalEObject)l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__L, null, msgs);
-      if (newL != null)
-        msgs = ((InternalEObject)newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__L, null, msgs);
-      msgs = basicSetL(newL, msgs);
+      if (ex != null)
+        msgs = ((InternalEObject)ex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__EX, null, msgs);
+      if (newEx != null)
+        msgs = ((InternalEObject)newEx).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__EX, null, msgs);
+      msgs = basicSetEx(newEx, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__L, newL, newL));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LCs getC()
-  {
-    return c;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetC(LCs newC, NotificationChain msgs)
-  {
-    LCs oldC = c;
-    c = newC;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__C, oldC, newC);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setC(LCs newC)
-  {
-    if (newC != c)
-    {
-      NotificationChain msgs = null;
-      if (c != null)
-        msgs = ((InternalEObject)c).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__C, null, msgs);
-      if (newC != null)
-        msgs = ((InternalEObject)newC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__C, null, msgs);
-      msgs = basicSetC(newC, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__C, newC, newC));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EXPRS getN()
-  {
-    return n;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetN(EXPRS newN, NotificationChain msgs)
-  {
-    EXPRS oldN = n;
-    n = newN;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__N, oldN, newN);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setN(EXPRS newN)
-  {
-    if (newN != n)
-    {
-      NotificationChain msgs = null;
-      if (n != null)
-        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__N, null, msgs);
-      if (newN != null)
-        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.ASSIGN__N, null, msgs);
-      msgs = basicSetN(newN, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__N, newN, newN));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.ASSIGN__EX, newEx, newEx));
   }
 
   /**
@@ -298,14 +179,10 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
   {
     switch (featureID)
     {
-      case Langage_whilePackage.ASSIGN__E:
-        return basicSetE(null, msgs);
-      case Langage_whilePackage.ASSIGN__L:
-        return basicSetL(null, msgs);
-      case Langage_whilePackage.ASSIGN__C:
-        return basicSetC(null, msgs);
-      case Langage_whilePackage.ASSIGN__N:
-        return basicSetN(null, msgs);
+      case Langage_whilePackage.ASSIGN__VS:
+        return basicSetVs(null, msgs);
+      case Langage_whilePackage.ASSIGN__EX:
+        return basicSetEx(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -320,14 +197,10 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
   {
     switch (featureID)
     {
-      case Langage_whilePackage.ASSIGN__E:
-        return getE();
-      case Langage_whilePackage.ASSIGN__L:
-        return getL();
-      case Langage_whilePackage.ASSIGN__C:
-        return getC();
-      case Langage_whilePackage.ASSIGN__N:
-        return getN();
+      case Langage_whilePackage.ASSIGN__VS:
+        return getVs();
+      case Langage_whilePackage.ASSIGN__EX:
+        return getEx();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -342,17 +215,11 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
   {
     switch (featureID)
     {
-      case Langage_whilePackage.ASSIGN__E:
-        setE((Vars)newValue);
+      case Langage_whilePackage.ASSIGN__VS:
+        setVs((Vars)newValue);
         return;
-      case Langage_whilePackage.ASSIGN__L:
-        setL((LCs)newValue);
-        return;
-      case Langage_whilePackage.ASSIGN__C:
-        setC((LCs)newValue);
-        return;
-      case Langage_whilePackage.ASSIGN__N:
-        setN((EXPRS)newValue);
+      case Langage_whilePackage.ASSIGN__EX:
+        setEx((Exprs)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -368,17 +235,11 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
   {
     switch (featureID)
     {
-      case Langage_whilePackage.ASSIGN__E:
-        setE((Vars)null);
+      case Langage_whilePackage.ASSIGN__VS:
+        setVs((Vars)null);
         return;
-      case Langage_whilePackage.ASSIGN__L:
-        setL((LCs)null);
-        return;
-      case Langage_whilePackage.ASSIGN__C:
-        setC((LCs)null);
-        return;
-      case Langage_whilePackage.ASSIGN__N:
-        setN((EXPRS)null);
+      case Langage_whilePackage.ASSIGN__EX:
+        setEx((Exprs)null);
         return;
     }
     super.eUnset(featureID);
@@ -394,14 +255,10 @@ public class AssignImpl extends MinimalEObjectImpl.Container implements Assign
   {
     switch (featureID)
     {
-      case Langage_whilePackage.ASSIGN__E:
-        return e != null;
-      case Langage_whilePackage.ASSIGN__L:
-        return l != null;
-      case Langage_whilePackage.ASSIGN__C:
-        return c != null;
-      case Langage_whilePackage.ASSIGN__N:
-        return n != null;
+      case Langage_whilePackage.ASSIGN__VS:
+        return vs != null;
+      case Langage_whilePackage.ASSIGN__EX:
+        return ex != null;
     }
     return super.eIsSet(featureID);
   }

@@ -2,6 +2,8 @@
  */
 package org.xtext.langage_while;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,10 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.langage_while.Output#getN <em>N</em>}</li>
- *   <li>{@link org.xtext.langage_while.Output#getQ <em>Q</em>}</li>
- *   <li>{@link org.xtext.langage_while.Output#getO <em>O</em>}</li>
- *   <li>{@link org.xtext.langage_while.Output#getS <em>S</em>}</li>
+ *   <li>{@link org.xtext.langage_while.Output#getV <em>V</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,107 +25,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Output extends EObject
 {
   /**
-   * Returns the value of the '<em><b>N</b></em>' attribute.
+   * Returns the value of the '<em><b>V</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.langage_while.VAR}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>N</em>' attribute isn't clear,
+   * If the meaning of the '<em>V</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>N</em>' attribute.
-   * @see #setN(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getOutput_N()
-   * @model
-   * @generated
-   */
-  String getN();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Output#getN <em>N</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>N</em>' attribute.
-   * @see #getN()
-   * @generated
-   */
-  void setN(String value);
-
-  /**
-   * Returns the value of the '<em><b>Q</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Q</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Q</em>' containment reference.
-   * @see #setQ(LCs)
-   * @see org.xtext.langage_while.Langage_whilePackage#getOutput_Q()
+   * @return the value of the '<em>V</em>' containment reference list.
+   * @see org.xtext.langage_while.Langage_whilePackage#getOutput_V()
    * @model containment="true"
    * @generated
    */
-  LCs getQ();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Output#getQ <em>Q</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Q</em>' containment reference.
-   * @see #getQ()
-   * @generated
-   */
-  void setQ(LCs value);
-
-  /**
-   * Returns the value of the '<em><b>O</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>O</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>O</em>' containment reference.
-   * @see #setO(Output)
-   * @see org.xtext.langage_while.Langage_whilePackage#getOutput_O()
-   * @model containment="true"
-   * @generated
-   */
-  Output getO();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Output#getO <em>O</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>O</em>' containment reference.
-   * @see #getO()
-   * @generated
-   */
-  void setO(Output value);
-
-  /**
-   * Returns the value of the '<em><b>S</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>S</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>S</em>' attribute.
-   * @see #setS(String)
-   * @see org.xtext.langage_while.Langage_whilePackage#getOutput_S()
-   * @model
-   * @generated
-   */
-  String getS();
-
-  /**
-   * Sets the value of the '{@link org.xtext.langage_while.Output#getS <em>S</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>S</em>' attribute.
-   * @see #getS()
-   * @generated
-   */
-  void setS(String value);
+  EList<VAR> getV();
 
 } // Output

@@ -16,6 +16,7 @@ import org.xtext.langage_while.Command;
 import org.xtext.langage_while.For;
 import org.xtext.langage_while.Foreach;
 import org.xtext.langage_while.If;
+import org.xtext.langage_while.Ifconfort;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.While;
 
@@ -27,11 +28,12 @@ import org.xtext.langage_while.While;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getNop <em>Nop</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getAffect <em>Affect</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getAssign <em>Assign</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getWh <em>Wh</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getForr <em>Forr</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getFor <em>For</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getIf <em>If</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getFore <em>Fore</em>}</li>
- *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getIff <em>Iff</em>}</li>
+ *   <li>{@link org.xtext.langage_while.impl.CommandImpl#getIfc <em>Ifc</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,14 +62,14 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
   protected String nop = NOP_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAffect() <em>Affect</em>}' containment reference.
+   * The cached value of the '{@link #getAssign() <em>Assign</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAffect()
+   * @see #getAssign()
    * @generated
    * @ordered
    */
-  protected Assign affect;
+  protected Assign assign;
 
   /**
    * The cached value of the '{@link #getWh() <em>Wh</em>}' containment reference.
@@ -80,14 +82,24 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
   protected While wh;
 
   /**
-   * The cached value of the '{@link #getForr() <em>Forr</em>}' containment reference.
+   * The cached value of the '{@link #getFor() <em>For</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getForr()
+   * @see #getFor()
    * @generated
    * @ordered
    */
-  protected For forr;
+  protected For for_;
+
+  /**
+   * The cached value of the '{@link #getIf() <em>If</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIf()
+   * @generated
+   * @ordered
+   */
+  protected If if_;
 
   /**
    * The cached value of the '{@link #getFore() <em>Fore</em>}' containment reference.
@@ -100,14 +112,14 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
   protected Foreach fore;
 
   /**
-   * The cached value of the '{@link #getIff() <em>Iff</em>}' containment reference.
+   * The cached value of the '{@link #getIfc() <em>Ifc</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIff()
+   * @see #getIfc()
    * @generated
    * @ordered
    */
-  protected If iff;
+  protected Ifconfort ifc;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,9 +170,9 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public Assign getAffect()
+  public Assign getAssign()
   {
-    return affect;
+    return assign;
   }
 
   /**
@@ -168,13 +180,13 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAffect(Assign newAffect, NotificationChain msgs)
+  public NotificationChain basicSetAssign(Assign newAssign, NotificationChain msgs)
   {
-    Assign oldAffect = affect;
-    affect = newAffect;
+    Assign oldAssign = assign;
+    assign = newAssign;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__AFFECT, oldAffect, newAffect);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__ASSIGN, oldAssign, newAssign);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -185,20 +197,20 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAffect(Assign newAffect)
+  public void setAssign(Assign newAssign)
   {
-    if (newAffect != affect)
+    if (newAssign != assign)
     {
       NotificationChain msgs = null;
-      if (affect != null)
-        msgs = ((InternalEObject)affect).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__AFFECT, null, msgs);
-      if (newAffect != null)
-        msgs = ((InternalEObject)newAffect).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__AFFECT, null, msgs);
-      msgs = basicSetAffect(newAffect, msgs);
+      if (assign != null)
+        msgs = ((InternalEObject)assign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__ASSIGN, null, msgs);
+      if (newAssign != null)
+        msgs = ((InternalEObject)newAssign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__ASSIGN, null, msgs);
+      msgs = basicSetAssign(newAssign, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__AFFECT, newAffect, newAffect));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__ASSIGN, newAssign, newAssign));
   }
 
   /**
@@ -254,9 +266,9 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public For getForr()
+  public For getFor()
   {
-    return forr;
+    return for_;
   }
 
   /**
@@ -264,13 +276,13 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetForr(For newForr, NotificationChain msgs)
+  public NotificationChain basicSetFor(For newFor, NotificationChain msgs)
   {
-    For oldForr = forr;
-    forr = newForr;
+    For oldFor = for_;
+    for_ = newFor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__FORR, oldForr, newForr);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__FOR, oldFor, newFor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -281,20 +293,68 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setForr(For newForr)
+  public void setFor(For newFor)
   {
-    if (newForr != forr)
+    if (newFor != for_)
     {
       NotificationChain msgs = null;
-      if (forr != null)
-        msgs = ((InternalEObject)forr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__FORR, null, msgs);
-      if (newForr != null)
-        msgs = ((InternalEObject)newForr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__FORR, null, msgs);
-      msgs = basicSetForr(newForr, msgs);
+      if (for_ != null)
+        msgs = ((InternalEObject)for_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__FOR, null, msgs);
+      if (newFor != null)
+        msgs = ((InternalEObject)newFor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__FOR, null, msgs);
+      msgs = basicSetFor(newFor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__FORR, newForr, newForr));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__FOR, newFor, newFor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public If getIf()
+  {
+    return if_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIf(If newIf, NotificationChain msgs)
+  {
+    If oldIf = if_;
+    if_ = newIf;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IF, oldIf, newIf);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIf(If newIf)
+  {
+    if (newIf != if_)
+    {
+      NotificationChain msgs = null;
+      if (if_ != null)
+        msgs = ((InternalEObject)if_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IF, null, msgs);
+      if (newIf != null)
+        msgs = ((InternalEObject)newIf).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IF, null, msgs);
+      msgs = basicSetIf(newIf, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IF, newIf, newIf));
   }
 
   /**
@@ -350,9 +410,9 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public If getIff()
+  public Ifconfort getIfc()
   {
-    return iff;
+    return ifc;
   }
 
   /**
@@ -360,13 +420,13 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIff(If newIff, NotificationChain msgs)
+  public NotificationChain basicSetIfc(Ifconfort newIfc, NotificationChain msgs)
   {
-    If oldIff = iff;
-    iff = newIff;
+    Ifconfort oldIfc = ifc;
+    ifc = newIfc;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IFF, oldIff, newIff);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IFC, oldIfc, newIfc);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -377,20 +437,20 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIff(If newIff)
+  public void setIfc(Ifconfort newIfc)
   {
-    if (newIff != iff)
+    if (newIfc != ifc)
     {
       NotificationChain msgs = null;
-      if (iff != null)
-        msgs = ((InternalEObject)iff).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IFF, null, msgs);
-      if (newIff != null)
-        msgs = ((InternalEObject)newIff).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IFF, null, msgs);
-      msgs = basicSetIff(newIff, msgs);
+      if (ifc != null)
+        msgs = ((InternalEObject)ifc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IFC, null, msgs);
+      if (newIfc != null)
+        msgs = ((InternalEObject)newIfc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Langage_whilePackage.COMMAND__IFC, null, msgs);
+      msgs = basicSetIfc(newIfc, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IFF, newIff, newIff));
+      eNotify(new ENotificationImpl(this, Notification.SET, Langage_whilePackage.COMMAND__IFC, newIfc, newIfc));
   }
 
   /**
@@ -403,16 +463,18 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
   {
     switch (featureID)
     {
-      case Langage_whilePackage.COMMAND__AFFECT:
-        return basicSetAffect(null, msgs);
+      case Langage_whilePackage.COMMAND__ASSIGN:
+        return basicSetAssign(null, msgs);
       case Langage_whilePackage.COMMAND__WH:
         return basicSetWh(null, msgs);
-      case Langage_whilePackage.COMMAND__FORR:
-        return basicSetForr(null, msgs);
+      case Langage_whilePackage.COMMAND__FOR:
+        return basicSetFor(null, msgs);
+      case Langage_whilePackage.COMMAND__IF:
+        return basicSetIf(null, msgs);
       case Langage_whilePackage.COMMAND__FORE:
         return basicSetFore(null, msgs);
-      case Langage_whilePackage.COMMAND__IFF:
-        return basicSetIff(null, msgs);
+      case Langage_whilePackage.COMMAND__IFC:
+        return basicSetIfc(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -429,16 +491,18 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
     {
       case Langage_whilePackage.COMMAND__NOP:
         return getNop();
-      case Langage_whilePackage.COMMAND__AFFECT:
-        return getAffect();
+      case Langage_whilePackage.COMMAND__ASSIGN:
+        return getAssign();
       case Langage_whilePackage.COMMAND__WH:
         return getWh();
-      case Langage_whilePackage.COMMAND__FORR:
-        return getForr();
+      case Langage_whilePackage.COMMAND__FOR:
+        return getFor();
+      case Langage_whilePackage.COMMAND__IF:
+        return getIf();
       case Langage_whilePackage.COMMAND__FORE:
         return getFore();
-      case Langage_whilePackage.COMMAND__IFF:
-        return getIff();
+      case Langage_whilePackage.COMMAND__IFC:
+        return getIfc();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -456,20 +520,23 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
       case Langage_whilePackage.COMMAND__NOP:
         setNop((String)newValue);
         return;
-      case Langage_whilePackage.COMMAND__AFFECT:
-        setAffect((Assign)newValue);
+      case Langage_whilePackage.COMMAND__ASSIGN:
+        setAssign((Assign)newValue);
         return;
       case Langage_whilePackage.COMMAND__WH:
         setWh((While)newValue);
         return;
-      case Langage_whilePackage.COMMAND__FORR:
-        setForr((For)newValue);
+      case Langage_whilePackage.COMMAND__FOR:
+        setFor((For)newValue);
+        return;
+      case Langage_whilePackage.COMMAND__IF:
+        setIf((If)newValue);
         return;
       case Langage_whilePackage.COMMAND__FORE:
         setFore((Foreach)newValue);
         return;
-      case Langage_whilePackage.COMMAND__IFF:
-        setIff((If)newValue);
+      case Langage_whilePackage.COMMAND__IFC:
+        setIfc((Ifconfort)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -488,20 +555,23 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
       case Langage_whilePackage.COMMAND__NOP:
         setNop(NOP_EDEFAULT);
         return;
-      case Langage_whilePackage.COMMAND__AFFECT:
-        setAffect((Assign)null);
+      case Langage_whilePackage.COMMAND__ASSIGN:
+        setAssign((Assign)null);
         return;
       case Langage_whilePackage.COMMAND__WH:
         setWh((While)null);
         return;
-      case Langage_whilePackage.COMMAND__FORR:
-        setForr((For)null);
+      case Langage_whilePackage.COMMAND__FOR:
+        setFor((For)null);
+        return;
+      case Langage_whilePackage.COMMAND__IF:
+        setIf((If)null);
         return;
       case Langage_whilePackage.COMMAND__FORE:
         setFore((Foreach)null);
         return;
-      case Langage_whilePackage.COMMAND__IFF:
-        setIff((If)null);
+      case Langage_whilePackage.COMMAND__IFC:
+        setIfc((Ifconfort)null);
         return;
     }
     super.eUnset(featureID);
@@ -519,16 +589,18 @@ public class CommandImpl extends MinimalEObjectImpl.Container implements Command
     {
       case Langage_whilePackage.COMMAND__NOP:
         return NOP_EDEFAULT == null ? nop != null : !NOP_EDEFAULT.equals(nop);
-      case Langage_whilePackage.COMMAND__AFFECT:
-        return affect != null;
+      case Langage_whilePackage.COMMAND__ASSIGN:
+        return assign != null;
       case Langage_whilePackage.COMMAND__WH:
         return wh != null;
-      case Langage_whilePackage.COMMAND__FORR:
-        return forr != null;
+      case Langage_whilePackage.COMMAND__FOR:
+        return for_ != null;
+      case Langage_whilePackage.COMMAND__IF:
+        return if_ != null;
       case Langage_whilePackage.COMMAND__FORE:
         return fore != null;
-      case Langage_whilePackage.COMMAND__IFF:
-        return iff != null;
+      case Langage_whilePackage.COMMAND__IFC:
+        return ifc != null;
     }
     return super.eIsSet(featureID);
   }

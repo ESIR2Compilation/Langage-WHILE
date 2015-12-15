@@ -1,73 +1,111 @@
 grammar org.xtext.Langage_while with org.eclipse.xtext.common.Terminals
 
+
+
 generate langage_while "http://www.xtext.org/Langage_while"
 
+
+
 Model:
-	(prog+= Function )*;
+
+	(prog+= Function LC?)*;
+
+
+
+Function: 'function' LC name=SYMB ':' LC def=Definition;
+
+Definition: 'read' LC in=Input LC '%' com=Commands LC '%' 'write' LC out=Output ;
+
+
+
+Input: v+=VAR (',' v+=VAR)*;
+
+Output: v+=VAR (',' v+=VAR)*;
+
+
+
+Commands: c+=Command (';' LC c+=Command)*;
+
+Command: (nop='nop' | assign=Assign | wh=While | for=For | if=If | fore=Foreach | ifc=Ifconfort);
+
+
+
+Assign: vs=Vars LC ':=' LC ex=Exprs;
+
+While: 'while' LC ex=Expr LC 'do' LC c=Commands LC 'od';
+
+For: 'for' LC ex=Expr LC 'do' LC c=Commands LC 'od';
+
+If: 'if' LC ex=Expr LC 'then' LC ct=Commands LC 'else' LC ce=Commands LC 'fi';
+
+Foreach: 'foreach' LC ex1=Expr LC 'in' LC ex2=Expr LC 'do' LC c=Commands LC 'od';
+
+Ifconfort: 'if' LC ex=Expr LC 'then' LC c=Commands LC 'fi';
+
+
+
+Vars: vs+=VAR (',' vs+=VAR)*;
+
+
+
+Exprs: ex+=Expr (',' ex+=Expr)*;
+
+
+
+Expr: exs=ExprSimple | exa=ExprAnd;
+
+ExprSimple: nil='nil' | v=VAR | sym=SYMB | '(' mot=('cons'|'list') lex=LExpr ')' | '(' mot=('hd'|'tl') LC ex=Expr ')' | '(' sym=SYMB lex=LExpr ')';
+
+LExpr: (LC e+=Expr)+;
+
+
+
+ExprAnd: exo1=ExprOr (LC 'and' LC exo2+=ExprOr)*;
+
+ExprOr: exn1=ExprNot (LC 'or' LC exn2+=ExprNot)*;
+
+ExprNot: ('not' LC exQ1=ExprEq) | exQ2=ExprEq;
+
+ExprEq: ( '('exS1=ExprSimple '=?' exS2=ExprSimple ')' ) | '(' ex=Expr ')';
+
+
+
+VAR: 
+
+	bv=BASEVAR cf=CONF;
+
+	terminal BASEVAR : ('A'..'Z')('0'..'9'|'a'..'z'|'A'..'Z')*;
+
 	
 
-	/* Intégrer def dans function pour l'interprétation du noeud
-	* Identificateur LC
-	* Donner des noms (command etc)
-	*/
+SYMB: 
+
+	bs=BASESYMB cf=CONF;
+
+	terminal BASESYMB : ('a'..'z')('0'..'9'|'a'..'z'|'A'..'Z')*;
 
 
-/* PROGRAM */
-Function : 'function' (n=LCs) (nom=SYM) ':' (t=LCs) (d=Def);
-Def : 'read' l=LCs (in=Input) z=LCs
-		'%' v=Commands s=LCs
-		'%' 'write' u=LCs o=Output;
-Input : ((v=VAR) ',' (z=LCs) (in=Input)) | (y=VAR);
-Output : (n=VAR ',' (q=LCs) (o=Output)) | s=VAR;
+
+terminal CONF : 
+
+	(('-'|'+'|'.'|'/'|"_"|'&'|"->")('0'..'9'|'a'..'z'|'A'..'Z')+)*('?'|'!')?;
 
 
-/* COMMANDES SIMPLES ET COMPLEXES */
-Commands : (a=Command) (';' l=LCs s=Commands)?;
 
-Command :nop=Nop|affect=Assign|wh=While|forr=For|fore=Foreach|iff=If;
-
-Nop:'nop';
-Assign:(e=Vars l=LCs ':=' c=LCs n=EXPRS);
-While: 'while' ll=LCs ee=EXPR cc=LCs 'do' (z=LCs) k=Commands lc=LCs 'od';
-For:'for' cc=LCs hh=EXPR tt=LCs 'do' vv=LCs c1=Commands ss=LCs 'od';
-If: 'if' mm=LCs jj=EXPR kk=LCs 'then' hg=LCs c2=Commands gg=LCs ('else' ff=LCs o=Commands dd=LCs)? 'fi';
-Foreach: 'foreach' sq=LCs wx=EXPR lc=LCs 'in' lc2=LCs e1=EXPR lc3=LCs 'do' lc4=LCs c3=Commands lc5=LCs 'od';
-
-Vars : (a=VAR) (',' (l=LCs) (u=Vars))?;
-EXPRS : f=EXPR (',' l=LCs e2=EXPRS)?;
+LC : LCs?;
 
 
-/* EXPRESSIONS SIMPLES */
-EXPR : e1=EXPRSIMPLE | ex=EXPRAND;
-EXPRSIMPLE: nil='nil' | v=VAR | sym=SYM | '(' mot=('cons'|'list') lex=LEXPR ')' | '(' mot=('hd'|'tl') l=LCs ex=EXPR ')' | '(' sym=SYM lex=LEXPR ')';
 
-			 
-LEXPR : (f=LCs) (n=EXPR) (t=LEXPR)?;
+LCs : 
 
-/* EXPRESSIONS LOGIQUES */
-EXPRAND: f=EXPROR (lc1=LCs 'and' lc2=LCs ee=EXPRAND)?;
-EXPROR: e1=EXPRNOT (lc1=LCs 'or' lc2=LCs e2=EXPROR)?;
-EXPRNOT: ('not' lc1=LCs)? e1=EXPREQ;
-EXPREQ: (e1=EXPRSIMPLE ccc=LCs '=?' lc2=LCs w=EXPRSIMPLE) | ('('ex=EXPR')');
+	SP | CR | TAB | LF ;
 
 
-/* UNITES LEXICALES */ 
-Variable : n=VAR; 
-terminal VAR : ('A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF;
 
-Symboles: SYM;
-terminal SYM : ('a'..'z')('a'..'z'|'A'..'Z'|'0'..'9')*CONF; 
+	terminal SP : ' ';
 
-Confort : CONF; 
-terminal CONF :  (('-'|'+'|'.'|'/'|'_'|'&'|"->")('a'..'z'|'A'..'Z'|'0'..'9')+)*('?'|'!'); 
+	terminal CR : '\n';
 
-//Ponctuation: PONCT;	
-//terminal PONCT : (','|';'|':'|'('|')'); 
+	terminal TAB : '\t';
 
-LCs : l=LC?;
-LC : a=SP|z=CR|e=TAB|r=LF; 
-
-terminal SP : ' '; 
-terminal CR : '\n'; 
-terminal TAB : '\t'; 
-terminal LF : '\r';
+	terminal LF : '\r';

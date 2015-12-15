@@ -41,13 +41,13 @@ public interface Langage_whileFactory extends EFactory
   Function createFunction();
 
   /**
-   * Returns a new object of class '<em>Def</em>'.
+   * Returns a new object of class '<em>Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Def</em>'.
+   * @return a new object of class '<em>Definition</em>'.
    * @generated
    */
-  Def createDef();
+  Definition createDefinition();
 
   /**
    * Returns a new object of class '<em>Input</em>'.
@@ -131,6 +131,15 @@ public interface Langage_whileFactory extends EFactory
   Foreach createForeach();
 
   /**
+   * Returns a new object of class '<em>Ifconfort</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ifconfort</em>'.
+   * @generated
+   */
+  Ifconfort createIfconfort();
+
+  /**
    * Returns a new object of class '<em>Vars</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -140,103 +149,94 @@ public interface Langage_whileFactory extends EFactory
   Vars createVars();
 
   /**
-   * Returns a new object of class '<em>EXPRS</em>'.
+   * Returns a new object of class '<em>Exprs</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPRS</em>'.
+   * @return a new object of class '<em>Exprs</em>'.
    * @generated
    */
-  EXPRS createEXPRS();
+  Exprs createExprs();
 
   /**
-   * Returns a new object of class '<em>EXPR</em>'.
+   * Returns a new object of class '<em>Expr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPR</em>'.
+   * @return a new object of class '<em>Expr</em>'.
    * @generated
    */
-  EXPR createEXPR();
+  Expr createExpr();
 
   /**
-   * Returns a new object of class '<em>EXPRSIMPLE</em>'.
+   * Returns a new object of class '<em>Expr Simple</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPRSIMPLE</em>'.
+   * @return a new object of class '<em>Expr Simple</em>'.
    * @generated
    */
-  EXPRSIMPLE createEXPRSIMPLE();
+  ExprSimple createExprSimple();
 
   /**
-   * Returns a new object of class '<em>LEXPR</em>'.
+   * Returns a new object of class '<em>LExpr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>LEXPR</em>'.
+   * @return a new object of class '<em>LExpr</em>'.
    * @generated
    */
-  LEXPR createLEXPR();
+  LExpr createLExpr();
 
   /**
-   * Returns a new object of class '<em>EXPRAND</em>'.
+   * Returns a new object of class '<em>Expr And</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPRAND</em>'.
+   * @return a new object of class '<em>Expr And</em>'.
    * @generated
    */
-  EXPRAND createEXPRAND();
+  ExprAnd createExprAnd();
 
   /**
-   * Returns a new object of class '<em>EXPROR</em>'.
+   * Returns a new object of class '<em>Expr Or</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPROR</em>'.
+   * @return a new object of class '<em>Expr Or</em>'.
    * @generated
    */
-  EXPROR createEXPROR();
+  ExprOr createExprOr();
 
   /**
-   * Returns a new object of class '<em>EXPRNOT</em>'.
+   * Returns a new object of class '<em>Expr Not</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPRNOT</em>'.
+   * @return a new object of class '<em>Expr Not</em>'.
    * @generated
    */
-  EXPRNOT createEXPRNOT();
+  ExprNot createExprNot();
 
   /**
-   * Returns a new object of class '<em>EXPREQ</em>'.
+   * Returns a new object of class '<em>Expr Eq</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EXPREQ</em>'.
+   * @return a new object of class '<em>Expr Eq</em>'.
    * @generated
    */
-  EXPREQ createEXPREQ();
+  ExprEq createExprEq();
 
   /**
-   * Returns a new object of class '<em>Variable</em>'.
+   * Returns a new object of class '<em>VAR</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Variable</em>'.
+   * @return a new object of class '<em>VAR</em>'.
    * @generated
    */
-  Variable createVariable();
+  VAR createVAR();
 
   /**
-   * Returns a new object of class '<em>LCs</em>'.
+   * Returns a new object of class '<em>SYMB</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>LCs</em>'.
+   * @return a new object of class '<em>SYMB</em>'.
    * @generated
    */
-  LCs createLCs();
-
-  /**
-   * Returns a new object of class '<em>LC</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>LC</em>'.
-   * @generated
-   */
-  LC createLC();
+  SYMB createSYMB();
 
   /**
    * Returns the package supported by this factory.

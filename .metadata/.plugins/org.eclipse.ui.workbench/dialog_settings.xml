@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="1077" key="dialogHeight"/>
-		<item value="1917" key="dialogWidth"/>
+		<item value="1259" key="dialogHeight"/>
+		<item value="1581" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -16,6 +16,17 @@
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="631" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="org.eclipse.xtext.xtext.ui.graph.view" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="573" key="DIALOG_HEIGHT"/>
+		<item value="1298" key="DIALOG_X_ORIGIN"/>
+		<item value="495" key="DIALOG_Y_ORIGIN"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.xtext.viewCategory"/>
 		</list>
 	</section>
 </section>
