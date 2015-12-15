@@ -45,7 +45,8 @@ public class Langage_whileParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExprNotAccess().getAlternatives(), "rule__ExprNot__Alternatives");
 					put(grammarAccess.getExprEqAccess().getAlternatives(), "rule__ExprEq__Alternatives");
 					put(grammarAccess.getLCsAccess().getAlternatives(), "rule__LCs__Alternatives");
-					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
+					put(grammarAccess.getProgramAccess().getGroup_1(), "rule__Program__Group_1__0");
 					put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getInputAccess().getGroup(), "rule__Input__Group__0");
@@ -77,7 +78,10 @@ public class Langage_whileParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExprEqAccess().getGroup_1(), "rule__ExprEq__Group_1__0");
 					put(grammarAccess.getVARAccess().getGroup(), "rule__VAR__Group__0");
 					put(grammarAccess.getSYMBAccess().getGroup(), "rule__SYMB__Group__0");
-					put(grammarAccess.getModelAccess().getProgAssignment_0(), "rule__Model__ProgAssignment_0");
+					put(grammarAccess.getModelAccess().getNnAssignment(), "rule__Model__NnAssignment");
+					put(grammarAccess.getProgramAccess().getFAssignment_0(), "rule__Program__FAssignment_0");
+					put(grammarAccess.getProgramAccess().getUAssignment_1_0(), "rule__Program__UAssignment_1_0");
+					put(grammarAccess.getProgramAccess().getPpAssignment_1_1(), "rule__Program__PpAssignment_1_1");
 					put(grammarAccess.getFunctionAccess().getNameAssignment_2(), "rule__Function__NameAssignment_2");
 					put(grammarAccess.getFunctionAccess().getDefAssignment_5(), "rule__Function__DefAssignment_5");
 					put(grammarAccess.getDefinitionAccess().getInAssignment_2(), "rule__Definition__InAssignment_2");

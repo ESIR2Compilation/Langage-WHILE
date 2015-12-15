@@ -37,6 +37,7 @@ import org.xtext.langage_while.LExpr;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
+import org.xtext.langage_while.Program;
 import org.xtext.langage_while.SYMB;
 import org.xtext.langage_while.VAR;
 import org.xtext.langage_while.Vars;
@@ -111,6 +112,9 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case Langage_whilePackage.OUTPUT:
 				sequence_Output(context, (Output) semanticObject); 
+				return; 
+			case Langage_whilePackage.PROGRAM:
+				sequence_Program(context, (Program) semanticObject); 
 				return; 
 			case Langage_whilePackage.SYMB:
 				sequence_SYMB(context, (SYMB) semanticObject); 
@@ -386,10 +390,17 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     prog+=Function*
+	 *     nn=Program
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Langage_whilePackage.Literals.MODEL__NN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Langage_whilePackage.Literals.MODEL__NN));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getModelAccess().getNnProgramParserRuleCall_0(), semanticObject.getNn());
+		feeder.finish();
 	}
 	
 	
@@ -398,6 +409,15 @@ public class Langage_whileSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     (v+=VAR v+=VAR*)
 	 */
 	protected void sequence_Output(EObject context, Output semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (f+=Function* (u=CR pp=Program)?)
+	 */
+	protected void sequence_Program(EObject context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -67,13 +67,13 @@ public interface Langage_whilePackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Prog</b></em>' containment reference list.
+   * The feature id for the '<em><b>Nn</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__PROG = 0;
+  int MODEL__NN = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -85,6 +85,52 @@ public interface Langage_whilePackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.langage_while.impl.ProgramImpl <em>Program</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.langage_while.impl.ProgramImpl
+   * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getProgram()
+   * @generated
+   */
+  int PROGRAM = 1;
+
+  /**
+   * The feature id for the '<em><b>F</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM__F = 0;
+
+  /**
+   * The feature id for the '<em><b>U</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM__U = 1;
+
+  /**
+   * The feature id for the '<em><b>Pp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM__PP = 2;
+
+  /**
+   * The number of structural features of the '<em>Program</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.langage_while.impl.FunctionImpl <em>Function</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -92,7 +138,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 1;
+  int FUNCTION = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -129,7 +175,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getDefinition()
    * @generated
    */
-  int DEFINITION = 2;
+  int DEFINITION = 3;
 
   /**
    * The feature id for the '<em><b>In</b></em>' containment reference.
@@ -175,7 +221,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getInput()
    * @generated
    */
-  int INPUT = 3;
+  int INPUT = 4;
 
   /**
    * The feature id for the '<em><b>V</b></em>' containment reference list.
@@ -203,7 +249,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getOutput()
    * @generated
    */
-  int OUTPUT = 4;
+  int OUTPUT = 5;
 
   /**
    * The feature id for the '<em><b>V</b></em>' containment reference list.
@@ -231,7 +277,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getCommands()
    * @generated
    */
-  int COMMANDS = 5;
+  int COMMANDS = 6;
 
   /**
    * The feature id for the '<em><b>C</b></em>' containment reference list.
@@ -259,7 +305,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getCommand()
    * @generated
    */
-  int COMMAND = 6;
+  int COMMAND = 7;
 
   /**
    * The feature id for the '<em><b>Nop</b></em>' attribute.
@@ -341,7 +387,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getAssign()
    * @generated
    */
-  int ASSIGN = 7;
+  int ASSIGN = 8;
 
   /**
    * The feature id for the '<em><b>Vs</b></em>' containment reference.
@@ -378,7 +424,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getWhile()
    * @generated
    */
-  int WHILE = 8;
+  int WHILE = 9;
 
   /**
    * The feature id for the '<em><b>Ex</b></em>' containment reference.
@@ -415,7 +461,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getFor()
    * @generated
    */
-  int FOR = 9;
+  int FOR = 10;
 
   /**
    * The feature id for the '<em><b>Ex</b></em>' containment reference.
@@ -452,7 +498,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getIf()
    * @generated
    */
-  int IF = 10;
+  int IF = 11;
 
   /**
    * The feature id for the '<em><b>Ex</b></em>' containment reference.
@@ -498,7 +544,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getForeach()
    * @generated
    */
-  int FOREACH = 11;
+  int FOREACH = 12;
 
   /**
    * The feature id for the '<em><b>Ex1</b></em>' containment reference.
@@ -544,7 +590,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getIfconfort()
    * @generated
    */
-  int IFCONFORT = 12;
+  int IFCONFORT = 13;
 
   /**
    * The feature id for the '<em><b>Ex</b></em>' containment reference.
@@ -581,7 +627,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVars()
    * @generated
    */
-  int VARS = 13;
+  int VARS = 14;
 
   /**
    * The feature id for the '<em><b>Vs</b></em>' containment reference list.
@@ -609,7 +655,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprs()
    * @generated
    */
-  int EXPRS = 14;
+  int EXPRS = 15;
 
   /**
    * The feature id for the '<em><b>Ex</b></em>' containment reference list.
@@ -637,7 +683,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExpr()
    * @generated
    */
-  int EXPR = 15;
+  int EXPR = 16;
 
   /**
    * The feature id for the '<em><b>Exs</b></em>' containment reference.
@@ -674,7 +720,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprSimple()
    * @generated
    */
-  int EXPR_SIMPLE = 16;
+  int EXPR_SIMPLE = 17;
 
   /**
    * The feature id for the '<em><b>Nil</b></em>' attribute.
@@ -747,7 +793,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getLExpr()
    * @generated
    */
-  int LEXPR = 17;
+  int LEXPR = 18;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference list.
@@ -775,7 +821,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprAnd()
    * @generated
    */
-  int EXPR_AND = 18;
+  int EXPR_AND = 19;
 
   /**
    * The feature id for the '<em><b>Exo1</b></em>' containment reference.
@@ -812,7 +858,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprOr()
    * @generated
    */
-  int EXPR_OR = 19;
+  int EXPR_OR = 20;
 
   /**
    * The feature id for the '<em><b>Exn1</b></em>' containment reference.
@@ -849,7 +895,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprNot()
    * @generated
    */
-  int EXPR_NOT = 20;
+  int EXPR_NOT = 21;
 
   /**
    * The feature id for the '<em><b>Ex Q1</b></em>' containment reference.
@@ -886,7 +932,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getExprEq()
    * @generated
    */
-  int EXPR_EQ = 21;
+  int EXPR_EQ = 22;
 
   /**
    * The feature id for the '<em><b>Ex S1</b></em>' containment reference.
@@ -932,7 +978,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getVAR()
    * @generated
    */
-  int VAR = 22;
+  int VAR = 23;
 
   /**
    * The feature id for the '<em><b>Bv</b></em>' attribute.
@@ -969,7 +1015,7 @@ public interface Langage_whilePackage extends EPackage
    * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getSYMB()
    * @generated
    */
-  int SYMB = 23;
+  int SYMB = 24;
 
   /**
    * The feature id for the '<em><b>Bs</b></em>' attribute.
@@ -1010,15 +1056,58 @@ public interface Langage_whilePackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.langage_while.Model#getProg <em>Prog</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Model#getNn <em>Nn</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Prog</em>'.
-   * @see org.xtext.langage_while.Model#getProg()
+   * @return the meta object for the containment reference '<em>Nn</em>'.
+   * @see org.xtext.langage_while.Model#getNn()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Prog();
+  EReference getModel_Nn();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.langage_while.Program <em>Program</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Program</em>'.
+   * @see org.xtext.langage_while.Program
+   * @generated
+   */
+  EClass getProgram();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.langage_while.Program#getF <em>F</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>F</em>'.
+   * @see org.xtext.langage_while.Program#getF()
+   * @see #getProgram()
+   * @generated
+   */
+  EReference getProgram_F();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.langage_while.Program#getU <em>U</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>U</em>'.
+   * @see org.xtext.langage_while.Program#getU()
+   * @see #getProgram()
+   * @generated
+   */
+  EAttribute getProgram_U();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.langage_while.Program#getPp <em>Pp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pp</em>'.
+   * @see org.xtext.langage_while.Program#getPp()
+   * @see #getProgram()
+   * @generated
+   */
+  EReference getProgram_Pp();
 
   /**
    * Returns the meta object for class '{@link org.xtext.langage_while.Function <em>Function</em>}'.
@@ -1867,12 +1956,46 @@ public interface Langage_whilePackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Prog</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Nn</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__PROG = eINSTANCE.getModel_Prog();
+    EReference MODEL__NN = eINSTANCE.getModel_Nn();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.langage_while.impl.ProgramImpl <em>Program</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.langage_while.impl.ProgramImpl
+     * @see org.xtext.langage_while.impl.Langage_whilePackageImpl#getProgram()
+     * @generated
+     */
+    EClass PROGRAM = eINSTANCE.getProgram();
+
+    /**
+     * The meta object literal for the '<em><b>F</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROGRAM__F = eINSTANCE.getProgram_F();
+
+    /**
+     * The meta object literal for the '<em><b>U</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROGRAM__U = eINSTANCE.getProgram_U();
+
+    /**
+     * The meta object literal for the '<em><b>Pp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROGRAM__PP = eINSTANCE.getProgram_Pp();
 
     /**
      * The meta object literal for the '{@link org.xtext.langage_while.impl.FunctionImpl <em>Function</em>}' class.

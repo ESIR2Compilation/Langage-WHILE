@@ -20,26 +20,58 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cProgAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cProgFunctionParserRuleCall_0_0 = (RuleCall)cProgAssignment_0.eContents().get(0);
-		private final RuleCall cLCParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNnAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNnProgramParserRuleCall_0 = (RuleCall)cNnAssignment.eContents().get(0);
 		
 		//Model:
-		//	(prog+=Function LC?)*;
+		//	nn=Program;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(prog+=Function LC?)*
+		//nn=Program
+		public Assignment getNnAssignment() { return cNnAssignment; }
+
+		//Program
+		public RuleCall getNnProgramParserRuleCall_0() { return cNnProgramParserRuleCall_0; }
+	}
+
+	public class ProgramElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Program");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cFAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cFFunctionParserRuleCall_0_0 = (RuleCall)cFAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cUAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cUCRTerminalRuleCall_1_0_0 = (RuleCall)cUAssignment_1_0.eContents().get(0);
+		private final Assignment cPpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPpProgramParserRuleCall_1_1_0 = (RuleCall)cPpAssignment_1_1.eContents().get(0);
+		
+		//Program:
+		//	f+=Function* (u=CR pp=Program)?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//f+=Function* (u=CR pp=Program)?
 		public Group getGroup() { return cGroup; }
 
-		//prog+=Function
-		public Assignment getProgAssignment_0() { return cProgAssignment_0; }
+		//f+=Function*
+		public Assignment getFAssignment_0() { return cFAssignment_0; }
 
 		//Function
-		public RuleCall getProgFunctionParserRuleCall_0_0() { return cProgFunctionParserRuleCall_0_0; }
+		public RuleCall getFFunctionParserRuleCall_0_0() { return cFFunctionParserRuleCall_0_0; }
 
-		//LC?
-		public RuleCall getLCParserRuleCall_1() { return cLCParserRuleCall_1; }
+		//(u=CR pp=Program)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//u=CR
+		public Assignment getUAssignment_1_0() { return cUAssignment_1_0; }
+
+		//CR
+		public RuleCall getUCRTerminalRuleCall_1_0_0() { return cUCRTerminalRuleCall_1_0_0; }
+
+		//pp=Program
+		public Assignment getPpAssignment_1_1() { return cPpAssignment_1_1; }
+
+		//Program
+		public RuleCall getPpProgramParserRuleCall_1_1_0() { return cPpProgramParserRuleCall_1_1_0; }
 	}
 
 	public class FunctionElements extends AbstractParserRuleElementFinder {
@@ -1250,6 +1282,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ModelElements pModel;
+	private final ProgramElements pProgram;
 	private final FunctionElements pFunction;
 	private final DefinitionElements pDefinition;
 	private final InputElements pInput;
@@ -1293,6 +1326,7 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
+		this.pProgram = new ProgramElements();
 		this.pFunction = new FunctionElements();
 		this.pDefinition = new DefinitionElements();
 		this.pInput = new InputElements();
@@ -1355,13 +1389,23 @@ public class Langage_whileGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	(prog+=Function LC?)*;
+	//	nn=Program;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
 	
 	public ParserRule getModelRule() {
 		return getModelAccess().getRule();
+	}
+
+	//Program:
+	//	f+=Function* (u=CR pp=Program)?;
+	public ProgramElements getProgramAccess() {
+		return pProgram;
+	}
+	
+	public ParserRule getProgramRule() {
+		return getProgramAccess().getRule();
 	}
 
 	//Function:

@@ -83,36 +83,100 @@ ruleModel returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getProgFunctionParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getNnProgramParserRuleCall_0()); 
 	    }
-		lv_prog_0_0=ruleFunction		{
+		lv_nn_0_0=ruleProgram		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
+       		set(
+       			$current, 
+       			"nn",
+        		lv_nn_0_0, 
+        		"Program");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+;
+
+
+
+
+
+// Entry rule entryRuleProgram
+entryRuleProgram returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getProgramRule()); }
+	 iv_ruleProgram=ruleProgram 
+	 { $current=$iv_ruleProgram.current; } 
+	 EOF 
+;
+
+// Rule Program
+ruleProgram returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getProgramAccess().getFFunctionParserRuleCall_0_0()); 
+	    }
+		lv_f_0_0=ruleFunction		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getProgramRule());
+	        }
        		add(
        			$current, 
-       			"prog",
-        		lv_prog_0_0, 
+       			"f",
+        		lv_f_0_0, 
         		"Function");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
+)*((
+(
+		lv_u_1_0=RULE_CR
+		{
+			newLeafNode(lv_u_1_0, grammarAccess.getProgramAccess().getUCRTerminalRuleCall_1_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProgramRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"u",
+        		lv_u_1_0, 
+        		"CR");
+	    }
+
+)
 )(
-	{ 
-	  /* */ 
-	}
-    { 
-        newCompositeNode(grammarAccess.getModelAccess().getLCParserRuleCall_1()); 
-    }
-ruleLC
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)?)*
+(
+		{ 
+	        newCompositeNode(grammarAccess.getProgramAccess().getPpProgramParserRuleCall_1_1_0()); 
+	    }
+		lv_pp_2_0=ruleProgram		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getProgramRule());
+	        }
+       		set(
+       			$current, 
+       			"pp",
+        		lv_pp_2_0, 
+        		"Program");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?)
 ;
 
 

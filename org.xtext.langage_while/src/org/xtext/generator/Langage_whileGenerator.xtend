@@ -81,8 +81,12 @@ import org.xtext.langage_while.While
 import tabSymb.Fonction
 
 import tabSymb.TabSymbole
-
-
+import java.util.List
+import Chevron.Chevron3a
+import java.util.ArrayList
+import java.util.Map
+import org.xtext.langage_while.Model
+import org.xtext.langage_while.Program
 
 class Langage_whileGenerator implements IGenerator {
 
@@ -95,7 +99,6 @@ class Langage_whileGenerator implements IGenerator {
 	{
 
 		val injector = new Langage_whileStandaloneSetup().createInjectorAndDoEMFRegistration();
-
 		val resourceSet = injector.getInstance(XtextResourceSet);
 
 		val uri = URI.createURI(path + file);
@@ -138,9 +141,10 @@ class Langage_whileGenerator implements IGenerator {
 
   			val buff = new BufferedWriter(fstream);
 
-  			for(p: xtextResource.allContents.toIterable.filter(Function))
+  			for(p: xtextResource.allContents.toIterable.filter(Program))
 
 				buff.write(p.compile().toString);
+		System.out.println("test test\n");
 
   				buff.close();
 
@@ -163,6 +167,10 @@ class Langage_whileGenerator implements IGenerator {
 		return  new Fonction("funct"+i);
 
 	}
+	
+	def List<Chevron3a> createList(){
+		return new ArrayList<Chevron3a>();
+	}
 
 	
 
@@ -173,12 +181,13 @@ class Langage_whileGenerator implements IGenerator {
 		TabSymbole tableS= new TabSymbole();
 
 		Fonction fonct;
-
 		int cpt=0;
+		List <Chevron3a> listChev; 
+		Map<String,List <Chevron3a> > code3a;
 
 
 
-	CharSequence currentFunction;
+		CharSequence currentFunction;
 
 	
 
@@ -200,7 +209,7 @@ class Langage_whileGenerator implements IGenerator {
 
 
 
-		for (f : resource.allContents.toIterable.filter(Function)) {
+		for (f : resource.allContents.toIterable.filter(Model)) {
 
 			output += f.compile + '\n'
 
@@ -228,35 +237,57 @@ class Langage_whileGenerator implements IGenerator {
 
 
 
-		for (f : resource.allContents.toIterable.filter(Function)) {
+		for (f : resource.allContents.toIterable.filter(Model)) {
 
 			output += f.compile + '\n'
 
 		}
 
 		fsa.generateFile(outputFile, output);
+		
 
 	}
 
 
-
+	def compile (Model ll)
+	'''
+	«ll.nn.compile»
+	«tableS.afficher»
+	'''
+	
+	def compile (Program p)
+	'''
+	
+	«cpt = 0»
+	«FOR f:p.f»
+	«f.compile»
+	«ENDFOR»
+	
+	'''
 	
 
-	def compile(Function f) '''«currentFunction = f.name.compile»
-
+	def compile(Function f) '''
+	«currentFunction = f.name.compile»
+		«tableS.addSymbole(f.name.bs+f.name.cf)»
+		«cpt++»
+		«fonct = createFonct(cpt) »
+		«tableS.addFonction((f.name.bs+f.name.cf),fonct)»
+	
+	//listChev = createList()
+	//code3a.put((f.name.bs+f.name.cf),listChev)
+	
 		function «f.name.compile» :
 
-		«f.def.compile»
-
+		«f.def.compile(f.name.bs+f.name.cf)»
 	'''
 
 
 
-	def compile(Definition d) 
+	def compile(Definition d, String a) 
 
 	''' 
 
-		read «d.in.compile»
+		read «d.in.compile(a)»
 
 		%
 
@@ -264,18 +295,23 @@ class Langage_whileGenerator implements IGenerator {
 
 		%
 
-		write «d.out.compile»
+		write «d.out.compile(a)»
 
 	'''
 
 
 
-	def compile(Input i) 
+	def compile(Input i, String a) 
 
 	'''
-
+		
 		«var int j = 0»«FOR va : i.v»«var v = va.compile»
-
+			
+			«fonct.incNbEntree()»
+			«fonct.addVariable(va.bv+va.cf)»
+			//listChev.add(new Chevron3a("read",(va.bv+va.cf),null,null))
+			
+			
 			«v»
 
 			«IF j++ < i.v.size-1»
@@ -324,7 +360,7 @@ class Langage_whileGenerator implements IGenerator {
 
 
 
-	def compile(Output o)
+	def compile(Output o, String a)
 
 	'''
 
@@ -333,7 +369,12 @@ class Langage_whileGenerator implements IGenerator {
 		«FOR va : o.v»
 
 			«var v = va.compile»
-
+			
+			«fonct.incNbEntree()»
+			«fonct.addVariable(va.bv+va.cf)»
+				//listChev.add(new Chevron3a("write",va.bv+va.cf,null,null))
+				
+			
 			«v»
 
 			«IF j++ < o.v.size-1»

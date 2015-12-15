@@ -1,0 +1,111 @@
+grammar org.xtext.Langage_while with org.eclipse.xtext.common.Terminals
+
+
+
+generate langage_while "http://www.xtext.org/Langage_while"
+
+
+
+Model:
+	greetings=(Program);
+	Program: (f+=Function)*  LC?;
+
+
+
+Function: 'function' LC name=SYMB ':' LC def=Definition;
+
+Definition: 'read' LC in=Input LC '%' com=Commands LC '%' 'write' LC out=Output ;
+
+
+
+Input: v+=VAR (',' v+=VAR)*;
+
+Output: v+=VAR (',' v+=VAR)*;
+
+
+
+Commands: c+=Command (';' LC c+=Command)*;
+
+Command: (nop='nop' | assign=Assign | wh=While | for=For | if=If | fore=Foreach | ifc=Ifconfort);
+
+
+
+Assign: vs=Vars LC ':=' LC ex=Exprs;
+
+While: 'while' LC ex=Expr LC 'do' LC c=Commands LC 'od';
+
+For: 'for' LC ex=Expr LC 'do' LC c=Commands LC 'od';
+
+If: 'if' LC ex=Expr LC 'then' LC ct=Commands LC 'else' LC ce=Commands LC 'fi';
+
+Foreach: 'foreach' LC ex1=Expr LC 'in' LC ex2=Expr LC 'do' LC c=Commands LC 'od';
+
+Ifconfort: 'if' LC ex=Expr LC 'then' LC c=Commands LC 'fi';
+
+
+
+Vars: vs+=VAR (',' vs+=VAR)*;
+
+
+
+Exprs: ex+=Expr (',' ex+=Expr)*;
+
+
+
+Expr: exs=ExprSimple | exa=ExprAnd;
+
+ExprSimple: nil='nil' | v=VAR | sym=SYMB | '(' mot=('cons'|'list') lex=LExpr ')' | '(' mot=('hd'|'tl') LC ex=Expr ')' | '(' sym=SYMB lex=LExpr ')';
+
+LExpr: (LC e+=Expr)+;
+
+
+
+ExprAnd: exo1=ExprOr (LC 'and' LC exo2+=ExprOr)*;
+
+ExprOr: exn1=ExprNot (LC 'or' LC exn2+=ExprNot)*;
+
+ExprNot: ('not' LC exQ1=ExprEq) | exQ2=ExprEq;
+
+ExprEq: ( '('exS1=ExprSimple '=?' exS2=ExprSimple ')' ) | '(' ex=Expr ')';
+
+
+
+VAR: 
+
+	bv=BASEVAR cf=CONF;
+
+	terminal BASEVAR : ('A'..'Z')('0'..'9'|'a'..'z'|'A'..'Z')*;
+
+	
+
+SYMB: 
+
+	bs=BASESYMB cf=CONF;
+
+	terminal BASESYMB : ('a'..'z')('0'..'9'|'a'..'z'|'A'..'Z')*;
+
+
+
+terminal CONF : 
+
+	(('-'|'+'|'.'|'/'|"_"|'&'|"->")('0'..'9'|'a'..'z'|'A'..'Z')+)*('?'|'!')?;
+
+
+
+LC : LCs?;
+
+
+
+LCs : 
+
+	SP | CR | TAB | LF ;
+
+
+
+	terminal SP : ' ';
+
+	terminal CR : '\n';
+
+	terminal TAB : '\t';
+
+	terminal LF : '\r';

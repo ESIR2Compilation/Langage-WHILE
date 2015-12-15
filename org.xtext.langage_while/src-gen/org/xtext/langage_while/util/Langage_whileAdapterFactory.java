@@ -80,6 +80,11 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseProgram(Program object)
+      {
+        return createProgramAdapter();
+      }
+      @Override
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
@@ -227,6 +232,21 @@ public class Langage_whileAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.langage_while.Program <em>Program</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.langage_while.Program
+   * @generated
+   */
+  public Adapter createProgramAdapter()
   {
     return null;
   }

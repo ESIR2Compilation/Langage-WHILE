@@ -7,8 +7,10 @@ generate langage_while "http://www.xtext.org/Langage_while"
 
 
 Model:
-
-	(prog+= Function LC?)*;
+	nn=(Program);
+	
+	
+	Program: (f+=Function)*  (u=CR (pp=Program))?;
 
 
 

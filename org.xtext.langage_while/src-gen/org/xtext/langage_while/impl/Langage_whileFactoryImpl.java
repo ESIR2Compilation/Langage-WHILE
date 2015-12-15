@@ -65,6 +65,7 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
     switch (eClass.getClassifierID())
     {
       case Langage_whilePackage.MODEL: return createModel();
+      case Langage_whilePackage.PROGRAM: return createProgram();
       case Langage_whilePackage.FUNCTION: return createFunction();
       case Langage_whilePackage.DEFINITION: return createDefinition();
       case Langage_whilePackage.INPUT: return createInput();
@@ -102,6 +103,17 @@ public class Langage_whileFactoryImpl extends EFactoryImpl implements Langage_wh
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Program createProgram()
+  {
+    ProgramImpl program = new ProgramImpl();
+    return program;
   }
 
   /**

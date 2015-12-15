@@ -31,6 +31,7 @@ import org.xtext.langage_while.Langage_whileFactory;
 import org.xtext.langage_while.Langage_whilePackage;
 import org.xtext.langage_while.Model;
 import org.xtext.langage_while.Output;
+import org.xtext.langage_while.Program;
 import org.xtext.langage_while.Vars;
 import org.xtext.langage_while.While;
 
@@ -48,6 +49,13 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
    * @generated
    */
   private EClass modelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass programEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -288,9 +296,49 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Prog()
+  public EReference getModel_Nn()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getProgram()
+  {
+    return programEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProgram_F()
+  {
+    return (EReference)programEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProgram_U()
+  {
+    return (EAttribute)programEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProgram_Pp()
+  {
+    return (EReference)programEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1084,7 +1132,12 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__PROG);
+    createEReference(modelEClass, MODEL__NN);
+
+    programEClass = createEClass(PROGRAM);
+    createEReference(programEClass, PROGRAM__F);
+    createEAttribute(programEClass, PROGRAM__U);
+    createEReference(programEClass, PROGRAM__PP);
 
     functionEClass = createEClass(FUNCTION);
     createEReference(functionEClass, FUNCTION__NAME);
@@ -1218,7 +1271,12 @@ public class Langage_whilePackageImpl extends EPackageImpl implements Langage_wh
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Prog(), this.getFunction(), null, "prog", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Nn(), this.getProgram(), null, "nn", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getProgram_F(), this.getFunction(), null, "f", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProgram_U(), ecorePackage.getEString(), "u", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProgram_Pp(), this.getProgram(), null, "pp", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFunction_Name(), this.getSYMB(), null, "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

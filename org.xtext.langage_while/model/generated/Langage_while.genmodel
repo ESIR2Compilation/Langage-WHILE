@@ -8,7 +8,12 @@
   <genPackages prefix="Langage_while" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="while" ecorePackage="Langage_while.ecore#/">
     <genClasses ecoreClass="Langage_while.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/prog"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Model/nn"/>
+    </genClasses>
+    <genClasses ecoreClass="Langage_while.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/f"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Langage_while.ecore#//Program/u"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Program/pp"/>
     </genClasses>
     <genClasses ecoreClass="Langage_while.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Langage_while.ecore#//Function/name"/>
