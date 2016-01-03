@@ -1,23 +1,22 @@
 package libWhile;
 
-public class While extends AbsInstruction {
+public class While extends AbsCommande {
 
 	private BinTree<String> exp;
-	private AbsInstruction commande;
+	private AbsCommande commande;
 	
-	public While(BinTree<String> exp, AbsInstruction commande) {
+	public While(BinTree<String> exp, AbsCommande commande) {
 		super();
 		this.exp = exp;
 		this.commande = commande;
 	}
 
-	public BinTree<String> evaluer() {
+	public void executer() {
 		while(!exp.isNil()){
-			commande.evaluer();
+			commande.executer();
 			exp=exp.getTl();
 		}
 		
-		return BinTree.NIL;
 	}
 
 }

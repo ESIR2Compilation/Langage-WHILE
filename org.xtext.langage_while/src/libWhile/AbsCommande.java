@@ -39,11 +39,11 @@ import java.util.TreeSet;
  *   Not
  */
 
-public abstract class AbsInstruction {
+public abstract class AbsCommande {
 
 	String code;
 
-	public AbsInstruction() {
+	public AbsCommande() {
 		super();
 		this.code = "";
 	}
@@ -57,10 +57,7 @@ public abstract class AbsInstruction {
 	 * @return
 
 	 */
-	public abstract BinTree<String> evaluer();
-	public String genererCode(){
-		evaluer();
-		return code;
-	}
+	public abstract void executer();
+
 
 }

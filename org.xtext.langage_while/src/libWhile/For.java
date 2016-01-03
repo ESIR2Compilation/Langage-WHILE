@@ -1,23 +1,22 @@
 package libWhile;
 
-public class For extends AbsInstruction{
+public class For extends AbsCommande{
 
 	private BinTree<String> expr;
-	private AbsInstruction commande;
+	private AbsCommande commande;
 	
-	public For(BinTree<String> expr, AbsInstruction commande) {
+	public For(BinTree<String> expr, AbsCommande commande) {
 		super();
 		this.expr = expr;
 		this.commande = commande;
 	}
 
-	public BinTree<String> evaluer() {
+	public void executer() {
 
 		final int cpt =expr.nbTl(); 
 		for(int i=0;i<cpt;i++){
-			commande.evaluer();
+			commande.executer();
 		}
-		return BinTree.NIL;
 	}
 
 }
