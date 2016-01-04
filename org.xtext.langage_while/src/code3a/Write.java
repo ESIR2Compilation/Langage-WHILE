@@ -11,4 +11,9 @@ public class Write extends SimpleCommande{
 	public String getVar(){
 		return this.variable;
 	}
+	
+	@Override
+	public String toString(){
+		return "<Write, " + variable + ">";
+	}
 }

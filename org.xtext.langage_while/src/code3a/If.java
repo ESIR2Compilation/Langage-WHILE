@@ -39,4 +39,9 @@ public class If implements Chevron{
 	public void addCommandElse(Chevron c){
 		elsec.add(c);
 	}
+	
+	@Override
+	public String toString(){
+		return "<If, C1, C2, "+ expression + ">";
+	}
 }

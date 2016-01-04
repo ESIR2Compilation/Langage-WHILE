@@ -11,4 +11,9 @@ public class Read extends SimpleCommande {
 	public String getVar(){
 		return this.variable;
 	}
+	
+	@Override
+	public String toString(){
+		return "<Read, " + variable + ">";
+	}
 }
