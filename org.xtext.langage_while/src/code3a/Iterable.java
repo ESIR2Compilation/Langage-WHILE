@@ -71,4 +71,8 @@ public  class Iterable implements Chevron {
 		this.commandes.add(cmd);
 	}
 
+	@Override
+	public String toString(){
+		return "<" + getName() + ", C, _, _, " + expr + ">";
+	}
 }
