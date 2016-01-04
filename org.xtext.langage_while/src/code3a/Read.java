@@ -1,6 +1,14 @@
 package code3a;
 
 public class Read extends SimpleCommande {
+
+	private String variable;
+
+	public Read(String var){
+		this.variable=var;
+	}
 	
-	private List<Che>
+	public String getVar(){
+		return this.variable;
+	}
 }
