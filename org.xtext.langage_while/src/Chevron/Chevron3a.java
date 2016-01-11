@@ -59,11 +59,4 @@ public class Chevron3a {
 	public void setRead2(List<Chevron3a> read2) {
 		Read2 = read2;
 	}
-
-
-
 }
-
-
-
-

@@ -1,25 +1,22 @@
 package code3a;
 
-public class Write extends Chevron {
-
+public class Nop extends Chevron {
 	private String opCode;
 	
-	public Write(String x) {
-		super("", x, "");
-		this.opCode="";
+	public Nop() {
+		super("", "", "");
+		this.opCode="Nop";
 		// TODO Auto-generated constructor stub
 	}
-
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "<Write,_,"+this.getRead1()+",_>";
+		return "<Nop,_,_,_>";
 	}
-
 	@Override
 	public String getCodeJava() {
 		// TODO Auto-generated method stub
-		return "res.add("+getRead1()+");";
+		return "System.out.println('Nop');";
 	}
 
 }

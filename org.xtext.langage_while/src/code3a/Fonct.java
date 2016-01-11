@@ -1,25 +1,24 @@
 package code3a;
 
-public class Write extends Chevron {
-
-	private String opCode;
+public class Fonct extends Chevron {
+	private String opcode;
 	
-	public Write(String x) {
-		super("", x, "");
-		this.opCode="";
+	public Fonct(String read1) {
+		super("", read1, "");
+		this.opcode="Funct";
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "<Write,_,"+this.getRead1()+",_>";
+		return "<Funct,_,"+getRead1()+",_>";
 	}
 
 	@Override
 	public String getCodeJava() {
 		// TODO Auto-generated method stub
-		return "res.add("+getRead1()+");";
+		return "public static List<BinTree> "+getRead1()+"(";
 	}
 
 }

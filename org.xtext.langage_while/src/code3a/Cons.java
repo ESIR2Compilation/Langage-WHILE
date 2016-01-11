@@ -1,27 +1,24 @@
 package code3a;
 
-import libWhile.BinTree;
+public class Cons extends Chevron {
+	private String opCode;
 
-public class Cons {
-	private String racine;
-	private BinTree<Chevron> arbrein1;
-	private BinTree<Chevron> arbrein2;
-
-	
-	private Cons(String r,BinTree<Chevron> a,BinTree<Chevron> b){
-		this.racine=r;
-		this.arbrein1=a;
-		this.arbrein2=b;
-
-	}
-	public BinTree<Chevron> getArbrein1(){
-		return arbrein1;
-	}
-	
-	public BinTree<Chevron> getArbrein2(){
-		return arbrein2;
+	public Cons(String write, String read1, String read2) {
+		super(write, read1, read2);
+		this.opCode="Cons";
+		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "<Cons,"+getWrite()+","+getRead1()+","+getRead2()+">";
+	}
 
-	
+	@Override
+	public String getCodeJava() {
+		String res="Cons "+getWrite()+" = new Cons("+getRead1()+","+getRead2()+");";
+		return res;
+	}
+
 }
