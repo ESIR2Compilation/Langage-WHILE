@@ -55,6 +55,8 @@ import code3a.EndFunct
 import code3a.Nil
 import code3a.Nop
 import code3a.CodeJava
+import code3a.Var
+import code3a.IfConf
 
 class Langage_whileGenerator implements IGenerator {
 
@@ -115,6 +117,10 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def code3a.If createIf(String expr){
 		return code3a.If.createIf(expr); 
+	}
+	
+	def IfConf createIfConf(String exp){
+		return IfConf.createIfConf(exp);
 	}
 	
 	def Iterabl createForeach(String expr,String x){
@@ -186,10 +192,12 @@ class Langage_whileGenerator implements IGenerator {
 					return new Cons("tmp"+cmpt,"X","Y"); //juste un test!!!!!	
 				}
 			} 
-			
-			return new Nil(); //Attention à finir
+			if(ex.exs.v!=null){
+				return new Var("V");
+			}
+			return new Cons("test1","X","Y"); //Attention à finir
 		}
-		else return new Nil();//A completer également
+		else return new Cons("tmp2","X","Y");//A completer également
 	}
 	
 	def void ajouterCodeCommandes(Commands cs,Iterabl opCode){
@@ -204,6 +212,12 @@ class Langage_whileGenerator implements IGenerator {
 		}
 		for(Command c: cs2.c){
 			opCode.addCommande2(getcode(c));
+		}
+	}
+	
+		def void ajouterCodeCommandesIfConf(Commands cs,IfConf opCode){
+		for(Command c: cs.c){
+			opCode.addCommande(getcode(c));
 		}
 	}
 	
@@ -276,6 +290,8 @@ class Langage_whileGenerator implements IGenerator {
 	def compile (Program p)
 	'''
 	«listChev=new ArrayList<Chevron>()»
+	«cptTmp=0
+	»
 	«cpt = 0»
 	«FOR f:p.f»
 	«chevLocal=createFnct("funct"+cpt) »
@@ -362,10 +378,10 @@ class Langage_whileGenerator implements IGenerator {
 			listChev.add(chevLocal)»
 		«ENDIF»
 		«IF c.^if != null»
-			«c.^if.compile(space)»
+			«c.^if.compile(space,a)»
 		«ENDIF»
 		«IF c.ifc != null»
-			«c.ifc.compile(space)»
+			«c.ifc.compile(space,a)»
 		«ENDIF»
 		«IF c.wh != null»
 			«c.wh.compile(space,a)»
@@ -374,7 +390,7 @@ class Langage_whileGenerator implements IGenerator {
 			«c.^for.compile(space,a)»
 		«ENDIF»
 		«IF c.fore != null»
-			«c.fore.compile(space)»
+			«c.fore.compile(space,a)»
 		«ENDIF»
 	'''
 
@@ -383,21 +399,41 @@ class Langage_whileGenerator implements IGenerator {
 		«space» «a.vs.compile» := «a.ex.compile»
 	'''
 
-	def compile(If i, String space) 
+	def compile(If i, String space,boolean b) 
 	'''
-		«space»if «i.ex.compile»
+		«space»if 
+		«cptTmp++»
+		«if(b) alpha=cptTmp»
+		« val Chevron chev=getCodeExpr(i.ex,cptTmp)»
+		« listChev.add(chev)»
+		«i.ex.compile»
 		«space»then
 		«i.ct.compile(space, false)»
 		«space»else
 		«i.ce.compile(space, false)»
+		«if(b){	cptTmp=alpha
+			val code3a.If ch=createIf(chev.write)
+			ajouterCodeCommandesIf(i.ct,i.ce,ch)
+			listChev.add(ch)
+		}»
 		«space»fi
 	'''
 
-	def compile(Ifconfort i, String space) 
+	def compile(Ifconfort i, String space,boolean b) 
 	'''
-		«space»if «i.ex.compile»
+		«space»if 
+		«cptTmp++»
+		«if(b) alpha=cptTmp»
+		« val Chevron chev=getCodeExpr(i.ex,cptTmp)»
+		« listChev.add(chev)»
+		«i.ex.compile»
 		«space»then
 		«i.c.compile(space, false)»
+		«if(b){	cptTmp=alpha
+			val IfConf ch=createIfConf(chev.write)
+			ajouterCodeCommandesIfConf(i.c,ch)
+			listChev.add(ch)
+		}»
 		«space»fi
 	'''
 
@@ -407,7 +443,6 @@ class Langage_whileGenerator implements IGenerator {
 		«cptTmp++»
 		«if(b) alpha=cptTmp»
 		« val Chevron chev=getCodeExpr(f.ex,cptTmp)»
-		
 		« listChev.add(chev)»
 		«f.ex.compile»
 		«space»do
@@ -420,11 +455,25 @@ class Langage_whileGenerator implements IGenerator {
 		«space»od
 	'''
 
-	def compile(Foreach f, String space) 
+	def compile(Foreach f, String space,boolean b) 
 	'''
-		«space»foreach «f.ex1.compile» in «f.ex2.compile»
+		«space»foreach 
+		«cptTmp++»
+		« val Chevron chev=getCodeExpr(f.ex1,cptTmp)»
+		« listChev.add(chev)»
+		«cptTmp++»
+		« val Chevron chev2=getCodeExpr(f.ex2,cptTmp)»
+		« listChev.add(chev2)»
+		«if(b) alpha=cptTmp»
+		«f.ex1.compile» in
+		«f.ex2.compile»
 		«space»do
 		«f.c.compile(space, false)»
+		«if(b){	cptTmp=alpha
+			val Iterabl chIt=createForeach(chev2.write,chev.write)
+			ajouterCodeCommandes(f.c,chIt)
+			listChev.add(chIt)
+		}»
 		«space»od
 	'''
 
