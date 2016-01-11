@@ -180,7 +180,7 @@ class Langage_whileGenerator implements IGenerator {
 			
 		}
 		
-		return new Read("test");
+		return new Nop();
 	}
 	
 	def Chevron getCodeExpr(Expr ex, int cmpt){

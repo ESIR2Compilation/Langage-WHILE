@@ -17,7 +17,9 @@ public class Cons extends Chevron {
 
 	@Override
 	public String getCodeJava() {
-		String res="Cons "+getWrite()+" = new Cons("+getRead1()+","+getRead2()+");";
+		String res="BinTree<String> "+getRead1()+" = new BinTree<String>('"+getRead1()+"'); \n";
+		 res+="BinTree<String> "+getRead2()+" = new BinTree<String>('"+getRead2()+"'); \n";
+		 res+="BinTree<String> "+getWrite()+" = new BinTree<String>("+getRead1()+","+getRead2()+");";
 		return res;
 	}
 

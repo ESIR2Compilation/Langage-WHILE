@@ -11,13 +11,11 @@ public class Fonct extends Chevron {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "<Funct,_,"+getRead1()+",_>";
 	}
 
 	@Override
 	public String getCodeJava() {
-		// TODO Auto-generated method stub
 		return "public static List<BinTree> "+getRead1()+"(";
 	}
 

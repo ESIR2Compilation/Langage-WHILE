@@ -56,7 +56,16 @@ public class If extends Chevron {
 
 	@Override
 	public String getCodeJava() {
-		return null;//"For f= new For("+getRead1()+getCommandes().get(0).getRead1()+")";
+		String code="if("+getRead1()+".isNill()){\n";
+		for(Chevron ch: commandes2){
+			code+="  "+ch.getCodeJava()+"\n";
+		}
+		code+="}\n else{\n";
+		for(Chevron ch: commandes1){
+			code+="  "+ch.getCodeJava()+"\n";
+		}
+		code+="}\n";
+		return code;//"For f= new For("+getRead1()+getCommandes().get(0).getRead1()+")";
 	}
 }
 

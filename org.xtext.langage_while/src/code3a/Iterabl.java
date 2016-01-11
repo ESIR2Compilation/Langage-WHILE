@@ -5,6 +5,7 @@ import java.util.*;
 public class Iterabl extends Chevron {
 	private List<Chevron> commandes;
 	private String type;
+	private static int cpt=0;
 	
 	private Iterabl(List<Chevron> commandes, String write, String read1, String read2,String type) {
 		super(write, read1, read2);
@@ -49,6 +50,31 @@ public class Iterabl extends Chevron {
 
 	@Override
 	public String getCodeJava() {
-		return "For f= new For("+getRead1()+getCommandes().get(0).getRead1()+")";
+		String code="";
+		if(type=="For"){
+			this.cpt++;
+			 code="final int cpt"+this.cpt+" ="+getRead1()+".nbTl()\n for(int i=0;i<cpt"+this.cpt+";i++){\n";
+			for(Chevron ch:commandes){
+				code+="  "+ch.getCodeJava()+"\n";
+			}
+			code+="}\n";
+		}
+		else if(type=="While"){
+			code="while( !"+getRead1()+".isNil() ){\n";
+			for(Chevron ch:commandes){
+				code+="  "+ch.getCodeJava()+"\n";
+			}
+			code+="}\n";
+		}
+		else{
+			 this.cpt++;
+			 code="final int cpt ="+getRead1()+".nbTl()\n for(int i=0;i<cpt"+this.cpt+";i++){\n";
+				for(Chevron ch:commandes){
+					code+="  "+ch.getCodeJava()+"\n";
+				}
+				code+="  "+getRead2()+"="+getRead1()+".getTl();\n}";
+		}
+		
+		return code;
 	}
 }

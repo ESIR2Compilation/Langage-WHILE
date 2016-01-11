@@ -31,10 +31,10 @@ public class Read extends Chevron{
 	}
 	
 	public String getCodeJava(int cpt){
-		String res="BinTree "+getWrite();
-		cpt++;
+		String res="BinTree<String> "+getWrite();
+		this.cpt++;
 		if(this.cpt >= cpt){
-			res+="){"+"res= new ArrayList<BinTree>();";
+			res+=")\n{\n"+"res= new ArrayList<BinTree<String>>();";
 			this.cpt=0;
 		}
 		else {

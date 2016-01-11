@@ -26,8 +26,12 @@ public class IfConf extends Chevron {
 
 	@Override
 	public String getCodeJava() {
-		// TODO Auto-generated method stub
-		return null;
+		String code="if(!"+getRead1()+".isNill()){\n";
+		for(Chevron ch: commandes){
+			code+=ch.getCodeJava()+"\n";
+		}
+		code+="}\n";
+		return code;
 	}
 
 }
