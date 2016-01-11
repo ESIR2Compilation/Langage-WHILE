@@ -5,35 +5,36 @@ public class BinTree<E> {
 	private E racine;
 	private BinTree<E> fg;
 	private BinTree<E> fd;
-	
+
 	//==========================constructeurs================================
 	public BinTree(int profondeur){
+		
 		this.fg=null;
 		this.fd=null;
-		for(int i=0;i<profondeur;i++){
+		for(int i = 0; i < profondeur; ++i){
 			BinTree<E> temp_fg=new BinTree<E>();
 			BinTree<E> temp_fd=new BinTree<E>();
-			this.addHd(temp_fd);
-			this.addTl(temp_fg);
-					}
+			fd.addHd(temp_fd);
+			fd.addTl(temp_fg);
+		}
 		this.addHd(fd);
 		this.addTl(fg);
 	}
-	
-	
-    public BinTree(E val){
-    	this.racine=val;
-    	this.fd=null;
-    	this.fg=null;
-    }
-    
-    
-    public BinTree(){
-    	this.racine=null;
-    	this.fd=null;
-    	this.fg=null;
-    }
-    
+
+
+	public BinTree(E val){
+		this.racine=val;
+		this.fd=null;
+		this.fg=null;
+	}
+
+
+	public BinTree(){
+		this.racine=null;
+		this.fd=null;
+		this.fg=null;
+	}
+
 	public BinTree(E racine, BinTree<E> fg, BinTree<E> fd) {
 		super();
 		this.racine = racine;
@@ -64,27 +65,27 @@ public class BinTree<E> {
 	public void setHd(BinTree<E> fd) {
 		this.fd = fd;
 	}
-	
+
 	//========================Méthodes pratiques================
 	public boolean estVide(){
 		return (this.racine==null && this.fd==null && this.fg==null );
 	}
-	
+
 	public boolean existHd(){
 		assert(!estVide()):" appel de existFd sur un arbre vide";
 		return (this.fd!=null && !this.fd.estVide());
 	}
-	
+
 	public boolean existTl(){
 		assert(!estVide()):"appel de existFg sur un arbre vide";
 		return (this.fg!=null && !this.fg.estVide());
 	}
-	
+
 	public boolean estFeuille(){
 		assert(!estVide());
 		return (!existTl()&& !existHd());
 	}
-	
+
 	public int taille(){
 		if(estVide()) return 0;
 		else{
@@ -94,21 +95,21 @@ public class BinTree<E> {
 			else return 1;
 		}
 	}
-	
+
 	public int nbTl(){
 		if(!existTl()) return 0;
 		else return 1+getTl().nbTl();
 	}
-	
+
 	public int nbHd(){
 		if(!existHd()) return 0;
 		else return 1+getHd().nbHd();
 	}
-	
+
 	public boolean isNil(){
 		return this==NIL;
 	}
-	
+
 	public void addTl(BinTree<E> b){
 		assert(!estVide()):"appel de addFg sur un arbre vide!!!";
 		if(!existTl()) this.setTl(b);
@@ -120,7 +121,7 @@ public class BinTree<E> {
 			tmp.setTl(b);
 		}
 	}
-	
+
 	public void addHd(BinTree<E> b){
 		assert(!estVide()):"appel de addFd sur un arbre vide!!!";
 		if(!existHd()) this.setHd(b);
@@ -132,24 +133,29 @@ public class BinTree<E> {
 			tmp.setHd(b);
 		}
 	}
-	
+
+	@Override
 	public String toString(){
 		return toString("\t");
 	}
 	public String toString(String indent){
 		if (this.fg!=null) {
-			
+
 			if (this.fd!=null) 
-			    return(indent+racine+"\n"+this.fg.toString(racine+"\t")+this.fd.toString(indent+"\t"));
+				return(indent+racine+"\n"+this.fg.toString(racine+"\t")+this.fd.toString(indent+"\t"));
 			else
-			    return(indent+racine+"\n"+this.fg.toString(indent+"\t")+"\n");
-		        }
+				return(indent+racine+"\n"+this.fg.toString(indent+"\t")+"\n");
+		}
 		else 
-		        	
+
 			if (this.fd!=null) 
-			    return(indent+racine+"\n\n"+this.fd.toString(indent+"\t"));
+				return(indent+racine+"\n\n"+this.fd.toString(indent+"\t"));
 			else
-			    return(indent+racine+"\n");
-		
+				return(indent+racine+"\n");
+
+	}
+	
+	public static void main(String[] args){
+		System.out.println(new BinTree<String>(2));
 	}
 }

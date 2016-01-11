@@ -53,6 +53,6 @@ public class Required {
 	public static void main(String[] args){
 		System.out.print(getPrelude());
 		System.out.print("\t// === le code source généré est ici === ");
-		System.out.print(getPostlude("function", 4));
+		System.out.print(getPostlude("yolo", 6));
 	}
 }
