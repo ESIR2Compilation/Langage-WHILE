@@ -4,26 +4,24 @@ import java.util.*;
 
 public class Iterabl extends Chevron {
 	private List<Chevron> commandes;
-	static String type;
+	private String type;
 	
-	private Iterabl(List<Chevron> commandes, String write, String read1, String read2) {
+	private Iterabl(List<Chevron> commandes, String write, String read1, String read2,String type) {
 		super(write, read1, read2);
 		this.commandes = commandes;
+		this.type=type;
 	}
 	
 	public static Iterabl createFor(String expr){
-		type ="For";
-		return new Iterabl(new ArrayList<Chevron>(), "_", expr, "_");
+		return new Iterabl(new ArrayList<Chevron>(), "_", expr, "_","For");
 	}
 	
 	public static Iterabl createWhile(String expr){
-		type ="While";
-		return new Iterabl(new ArrayList<Chevron>(), "_", expr, "_");
+		return new Iterabl(new ArrayList<Chevron>(), "_", expr, "_","While");
 	}
 	
 	public static Iterabl createForeach(String expr,String x){
-		type ="ForEach";
-		return new Iterabl(new ArrayList<Chevron>(), "_", expr, x);
+		return new Iterabl(new ArrayList<Chevron>(), "_", expr, x,"ForeEach");
 	}
 	
 	public List<Chevron> getCommandes() {

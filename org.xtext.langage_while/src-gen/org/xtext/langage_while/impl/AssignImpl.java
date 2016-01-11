@@ -22,11 +22,11 @@ import org.xtext.langage_while.Vars;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getVs <em>Vs</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.AssignImpl#getEx <em>Ex</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
