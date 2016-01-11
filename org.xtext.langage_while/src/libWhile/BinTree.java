@@ -7,6 +7,20 @@ public class BinTree<E> {
 	private BinTree<E> fd;
 	
 	//==========================constructeurs================================
+	public BinTree(int profondeur){
+		this.fg=null;
+		this.fd=null;
+		for(int i=0;i<profondeur;i++){
+			BinTree<E> temp_fg=new BinTree<E>();
+			BinTree<E> temp_fd=new BinTree<E>();
+			this.addHd(temp_fd);
+			this.addTl(temp_fg);
+					}
+		this.addHd(fd);
+		this.addTl(fg);
+	}
+	
+	
     public BinTree(E val){
     	this.racine=val;
     	this.fd=null;
@@ -118,5 +132,24 @@ public class BinTree<E> {
 			tmp.setHd(b);
 		}
 	}
-
+	
+	public String toString(){
+		return toString("\t");
+	}
+	public String toString(String indent){
+		if (this.fg!=null) {
+			
+			if (this.fd!=null) 
+			    return(indent+racine+"\n"+this.fg.toString(racine+"\t")+this.fd.toString(indent+"\t"));
+			else
+			    return(indent+racine+"\n"+this.fg.toString(indent+"\t")+"\n");
+		        }
+		else 
+		        	
+			if (this.fd!=null) 
+			    return(indent+racine+"\n\n"+this.fd.toString(indent+"\t"));
+			else
+			    return(indent+racine+"\n");
+		
+	}
 }
