@@ -111,6 +111,9 @@ class Langage_whileGenerator implements IGenerator {
 		return  new Fonction("funct"+i);
 	}
 	
+	def TabSymbole getTableSymbole(){
+		return tableS;
+	}
 	
 	def Iterabl createFor(String expr){
 		return code3a.Iterabl.createFor(expr); 
