@@ -57,6 +57,7 @@ import code3a.Nop
 import code3a.CodeJava
 import code3a.Var
 import code3a.IfConf
+import code3a.Affect
 
 class Langage_whileGenerator implements IGenerator {
 
@@ -147,6 +148,10 @@ class Langage_whileGenerator implements IGenerator {
 		return new EndFunct();
 	}
 	
+	def Affect createAffect(){
+		return Affect.createAffect();
+	}
+	
 	def Chevron getcode(Command c){
 		if(c.nop != null){
 			return new Nop();
@@ -193,7 +198,7 @@ class Langage_whileGenerator implements IGenerator {
 				}
 			} 
 			if(ex.exs.v!=null){
-				return new Var("V");
+				return new Var(ex.exs.v.bv+ex.exs.v.cf);
 			}
 			return new Cons("test1","X","Y"); //Attention à finir
 		}
@@ -221,9 +226,22 @@ class Langage_whileGenerator implements IGenerator {
 		}
 	}
 	
+	def void remplireAffect(Vars vars,Exprs exs,Affect aff){
+		for(VAR v:vars.vs){
+			//val int ind=f.tabVars.indexOf(v.bv+v.cf);
+			aff.addVars(new Var(v.bv+v.cf));
+		}
+		for(Expr ex : exs.ex){
+			if(ex.exs!=null && ex.exs.mot!=null) cptTmp++;
+			aff.addExpr(getCodeExpr(ex,cptTmp));
+		}
+	}
+	
 	def Chevron createNop(){
 		return new Nop();
 	}
+	
+	
 
 	  @Inject extension IQualifiedNameProvider
 	
