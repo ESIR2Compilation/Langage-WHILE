@@ -24,26 +24,26 @@ public class BinTree {
 		// -2 car la feuille et la racine est codé manuellement
 		for(int i = 0; i < (profondeur - 2); ++i){
 			tmp = cons(NIL, tmp);
-			tmp.setProfondeur(i);
+			tmp.setDepth(i);
 		}
 
-		setNom("cons(NIL " + tmp.getNom() + ")");
+		setName("cons(NIL " + tmp.getName() + ")");
 		setTl(NIL);
 		setHd(tmp);
-		setProfondeur(profondeur);
+		setDepth(profondeur);
 	}
 
 	private static BinTree cons(BinTree sag, BinTree sad){
-		BinTree res = new BinTree("cons(" + sag.getNom() + " " + sad.getNom() + ")");
+		BinTree res = new BinTree("cons(" + sag.getName() + " " + sad.getName() + ")");
 		res.setTl(sag);
 		res.setHd(sad);
-		res.setProfondeur(Math.max(sag.getProfondeur(), sad.getProfondeur()));
+		res.setDepth(Math.max(sag.getDepth(), sad.getDepth()));
 		return res;
 	}
 
 	private BinTree(String name){
 		super();
-		setNom(name);
+		setName(name);
 		setHd(fd);
 		setTl(fg);
 	}
@@ -81,15 +81,15 @@ public class BinTree {
 
 	@Override
 	public String toString(){
-		return getNom() + ", [DEPTH = " + getProfondeur() + "]";
+		return getName() + ", [DEPTH = " + getDepth() + "]";
 	}
 	
 	// =========== Accesseurs =========
-	public String getNom() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNom(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -109,11 +109,11 @@ public class BinTree {
 		this.fd = fd;
 	}
 	
-	private void setProfondeur(int depth) {
+	private void setDepth(int depth) {
 		this.depth = depth;
 	}
 
-	public int getProfondeur(){
+	public int getDepth(){
 		return depth;
 	}
 	
@@ -143,7 +143,7 @@ public class BinTree {
 	                    next.add(null);
 	                    next.add(null);
 	                } else {
-	                    String aa = n.getNom();
+	                    String aa = n.getName();
 	                    line.add(aa);
 	                    if (aa.length() > widest) widest = aa.length();
 
