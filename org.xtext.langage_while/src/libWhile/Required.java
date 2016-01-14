@@ -55,7 +55,7 @@ public class Required {
 		return st.toString();
 	}
 
-	public String indenter(String sourceCode){
+	public static String indenter(String sourceCode){
 		String[] instructions = sourceCode.split("\n");
 		StringBuilder st = new StringBuilder();
 		for(int i = 0; i < instructions.length; ++i)

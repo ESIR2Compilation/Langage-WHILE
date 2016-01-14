@@ -35,7 +35,7 @@ public class Compilateur {
 	private static String EnrichirFichierGenere(String content, TabSymbole ts){
 		// On ajoute le prélude et le postlude au code java nouvellement généré
 		StringBuilder st = new StringBuilder(Required.getPrelude(NOM_FICHIER));
-		st.append(content);
+		st.append(Required.indenter(content));
 
 		Object[] functions = ts.getTabFunct().keySet().toArray();
 		String function;
@@ -44,6 +44,7 @@ public class Compilateur {
 		if (functions.length != 0) {
 			function = (String) functions[functions.length - 1];
 			arguments = ts.getTabFunct().get(function).getNbEntree();
+			function = ts.getTabFunct().get(function).getNomCible();
 		}
 		else {
 			function = Required.CODE_ERREUR;
