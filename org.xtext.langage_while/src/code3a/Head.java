@@ -20,9 +20,9 @@ public class Head extends Chevron {
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		int ind2=tab.getFonction(idFonct).getTabVars().indexOf(getRead2());
-		String res="";//"BinTree<String> "+getRead1()+" = new BinTree<String>('"+getRead1()+"'); \n";
-		 //res+="BinTree<String> "+getRead2()+" = new BinTree<String>('"+getRead2()+"'); \n";
-		 res+="BinTree<String> "+getWrite()+" = new BinTree<String>( nil, var"+ind2+");";
+		String res="";//"BinTree "+getRead1()+" = new BinTree('"+getRead1()+"'); \n";
+		 //res+="BinTree "+getRead2()+" = new BinTree('"+getRead2()+"'); \n";
+		 res+="BinTree "+getWrite()+" = new BinTree(nil, var"+ind2+");";
 		return res;
 	}
 

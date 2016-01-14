@@ -59,8 +59,8 @@ import code3a.Var
 import code3a.IfConf
 import code3a.Affect
 import code3a.ListC
-import code3a.Teal
 import code3a.Head
+import code3a.Tail
 
 class Langage_whileGenerator implements IGenerator {
 
@@ -101,11 +101,13 @@ class Langage_whileGenerator implements IGenerator {
   			e.printStackTrace();
 
   		}
-
   		return null;
-
 	}
 		
+	def List<Chevron> getCodeAdresses(){
+		return listChev;
+	}
+	
 	def TabSymbole getTableSymbole(){
 		return tableS;
 	}
@@ -125,13 +127,12 @@ class Langage_whileGenerator implements IGenerator {
 		val xtextResource = resourceSet.getResource(uri, true);
 		EcoreUtil.resolveAll(xtextResource);
 		
-		//TODO A virer si tout fonctionne déjà /!\ ALi
   		for(p: xtextResource.allContents.toIterable.filter(Program))
 			p.compile();
 		
 		return CodeJava.genereCodeJava(listChev,tableS);
 	}
-
+	
 	def Fonction createFonct(int i){
 		return  new Fonction("funct"+i);
 	}
@@ -324,10 +325,10 @@ class Langage_whileGenerator implements IGenerator {
 
 					//gauche = getCodeExpr(ex.exs.lex.e.get(0)).toString;
 						if (test){ //cptTmp++;
-						return new Teal("tmp"+cmpt,X); //juste un test!!!!!
+						return new Tail("tmp"+cmpt,X); //juste un test!!!!!
 						}	
 						else { 
-							return new Teal("cptExpr"+cptExpr,X);
+							return new Tail("cptExpr"+cptExpr,X);
 						}
 			
 			}

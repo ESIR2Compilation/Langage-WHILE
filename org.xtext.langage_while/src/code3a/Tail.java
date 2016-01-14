@@ -2,12 +2,12 @@ package code3a;
 
 import tabSymb.TabSymbole;
 
-public class Teal extends Chevron {
+public class Tail extends Chevron {
 	private String opCode;
 
-	public Teal(String write, String read1) {
+	public Tail(String write, String read1) {
 		super(write, read1, "");
-		this.opCode="Teal";
+		this.opCode="Tail";
 		// TODO Auto-generated constructor stub
 	}
 
@@ -20,9 +20,9 @@ public class Teal extends Chevron {
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		int ind2=tab.getFonction(idFonct).getTabVars().indexOf(getRead2());
-		String res="";//"BinTree<String> "+getRead1()+" = new BinTree<String>('"+getRead1()+"'); \n";
-		 //res+="BinTree<String> "+getRead2()+" = new BinTree<String>('"+getRead2()+"'); \n";
-		 res+="BinTree<String> "+getWrite()+" = new BinTree<String>( var "+ind2+", nil);";
+		String res="";//"BinTree "+getRead1()+" = new BinTree('"+getRead1()+"'); \n";
+		 //res+="BinTree "+getRead2()+" = new BinTree('"+getRead2()+"'); \n";
+		 res+="BinTree "+getWrite()+" = new BinTree( var "+ind2+", nil);";
 		return res;
 	}
 

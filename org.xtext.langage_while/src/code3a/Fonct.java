@@ -19,7 +19,7 @@ public class Fonct extends Chevron {
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		String nom=tab.getFonction(getRead1()).getNomCible();
-		return "public static List< BinTree<String> > "+nom+"(";
+		return "public static List<BinTree> "+nom+"(";
 	}
 
 }

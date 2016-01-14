@@ -6,8 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 import libWhile.Required;
 import org.xtext.generator.Langage_whileGenerator;
+import code3a.Chevron;
 import com.sun.tools.javac.Main;
 import tabSymb.TabSymbole;
 
@@ -26,6 +28,9 @@ public class Compilateur {
 
 		//On enregistre le fichier java désormais complet
 		enregistrerFichierJava(contentJava);
+		
+		//On enregistre le code 3 adresses désormais complet
+		enregistrerCodeAdresses(generator.getCodeAdresses());
 
 		// Si la compilation s'est bien passée, on passe à l'exécution
 		if (compiler())
@@ -67,6 +72,19 @@ public class Compilateur {
 			e.printStackTrace();
 		}
 	}
+	
+	private static void enregistrerCodeAdresses(List<Chevron> codeAdresses) {
+		FileWriter fw;
+		try {
+			fw = new FileWriter("src/outputs/" + NOM_FICHIER + ".3ad", false);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(codeAdresses.toString());
+			bw.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	private static boolean compiler(){
 		String[] args = new String[] { "toCompile/" + NOM_FICHIER + ".java"};
@@ -74,6 +92,7 @@ public class Compilateur {
 	}
 	
 	private static boolean genererJar(){
+		//TODO
 		Runtime rt = Runtime.getRuntime();
 		try { 
 			Process p = rt.exec("java -cp \"toCompile\" " + NOM_FICHIER);

@@ -36,13 +36,13 @@ public class Affect extends Chevron {
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		cptvarTmp++;
-		String res=" //*********Affectation*******\n List<BinTree<String>> varTmp"+cptvarTmp+"=new ArrayList<BinTree<String>>(); \n";
+		String res=" //*********Affectation*******\n List<BinTree> varTmp"+cptvarTmp+"=new ArrayList<BinTree>(); \n";
 		for(String ex:exprs){
 			int i=tab.getFonction(idFonct).getTabVars().indexOf(ex);
 			if(i>=0) res+="   varTmp"+cptvarTmp+".add(var"+i+");\n";
 			else res+="   varTmp"+cptvarTmp+".add("+ex+");\n";
 		}
-		//res+="for(BinTree<String> x:varTmp){\n";
+		//res+="for(BinTree x:varTmp){\n";
 		res+="   int cmpt"+cptvarTmp+"=0;\n";
 		int cpt=0;
 		for(String v:vars){

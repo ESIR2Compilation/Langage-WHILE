@@ -23,12 +23,12 @@ public class Cons extends Chevron {
 		int ind2=tab.getFonction(idFonct).getTabVars().indexOf(getRead2());
 		String s1="";
 		String s2="";
-		String res="";//"BinTree<String> "+getRead1()+" = new BinTree<String>('"+getRead1()+"'); \n";
+		String res="";//"BinTree<String> "+getRead1()+" = new BinTree('"+getRead1()+"'); \n";
 		if(ind1>=0) s1="var"+ind1;
 		else s1=getRead1();
 		if(ind1>=0) s2="var"+ind2;
 		else s2=getRead2();
-		 res+="BinTree<String> "+getWrite()+" = new BinTree<String>(\" "+getWrite()+"\","+s1+", "+s2+");";
+		 res+="BinTree "+getWrite()+" = new BinTree(\" "+getWrite()+"\","+s1+", "+s2+");";
 		return res;
 	}
 

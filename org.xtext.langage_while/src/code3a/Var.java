@@ -20,7 +20,7 @@ public class Var extends Chevron {
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
 		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getWrite());
-		return "Bintree<Sttring> var"+ind1+" = new Bintree<String>();";
+		return "Bintree var"+ind1+" = Bintree.NIL;";
 	}
 
 }

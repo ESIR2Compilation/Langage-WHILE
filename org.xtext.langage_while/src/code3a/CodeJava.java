@@ -22,7 +22,7 @@ public class CodeJava {
 					int nbVar=tab.getFonction(s).getTabVars().size();
 					res+="\n";
 					for(int i=n;i<nbVar;i++){
-						res+="BinTree<String> var"+i+" = BinTree.NIL;\n";
+						res+="BinTree var"+i+" = BinTree.NIL;\n";
 					}
 					nbRead=0;
 				}
