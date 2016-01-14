@@ -8,7 +8,8 @@ public class Required {
 	private final static String AUTHORS = "\n/**" +
 										  "\n *" +
 										  "\n * @authors Steven, Ali, Ilyass, Othman" +
-										  "\n * @from XText, ESIR2Compilation, Groupe C" +
+										  "\n * @group C, ESIR2Compilation" +
+										  "\n * @teacher M.Ridoux - Compilation" +
 										  "\n *" +
 										  "\n **/\n";
 	private final static String CLASS = "\npublic class ";
