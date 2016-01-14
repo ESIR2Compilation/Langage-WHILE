@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Nil extends Chevron{
 	private String opCode;
 	
@@ -14,9 +16,9 @@ public class Nil extends Chevron{
 		return "<Nil,_,_,_>";
 	}
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
-		return null;
+		return "NIL";
 	}
 
 }

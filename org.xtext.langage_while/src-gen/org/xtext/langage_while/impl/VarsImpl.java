@@ -26,10 +26,10 @@ import org.xtext.langage_while.Vars;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.VarsImpl#getVs <em>Vs</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

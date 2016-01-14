@@ -58,13 +58,14 @@ import code3a.CodeJava
 import code3a.Var
 import code3a.IfConf
 import code3a.Affect
+import code3a.ListC
+import code3a.Teal
+import code3a.Head
 
 class Langage_whileGenerator implements IGenerator {
 
 	def public File generate(String path, String file)
-
 	{
-
 		val injector = new Langage_whileStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
 
@@ -104,16 +105,37 @@ class Langage_whileGenerator implements IGenerator {
   		return null;
 
 	}
-
+		
+	def TabSymbole getTableSymbole(){
+		return tableS;
+	}
 	
+	def String getSourceJava(String path, String file){
+		
+		val injector = new Langage_whileStandaloneSetup().createInjectorAndDoEMFRegistration();
+		val resourceSet = injector.getInstance(XtextResourceSet);
+
+		val uri = URI.createURI(path + file);
+		var pos = file.lastIndexOf(".");
+		var ext = file.substring(pos+1);
+
+		if (! ext.equals("while"))
+			return null;
+
+		val xtextResource = resourceSet.getResource(uri, true);
+		EcoreUtil.resolveAll(xtextResource);
+		
+		//TODO A virer si tout fonctionne déjà /!\ ALi
+  		for(p: xtextResource.allContents.toIterable.filter(Program))
+			p.compile();
+		
+		return CodeJava.genereCodeJava(listChev,tableS);
+	}
 
 	def Fonction createFonct(int i){
 		return  new Fonction("funct"+i);
 	}
 	
-	def TabSymbole getTableSymbole(){
-		return tableS;
-	}
 	
 	def Iterabl createFor(String expr){
 		return code3a.Iterabl.createFor(expr); 
@@ -160,29 +182,35 @@ class Langage_whileGenerator implements IGenerator {
 			return new Nop();
 		}
 		//faire la même chose pour toutes les autres commandes
-		if(c.^for!=null){ cptTmp++
-			val Iterabl res=createFor(getCodeExpr(c.^for.ex,cptTmp).write);
+		if(c.^for!=null){
+			if(c.^for.ex.exs!=null && c.^for.ex.exs.mot!=null) cptTmp++
+			val Iterabl res=createFor(getCodeExpr(c.^for.ex,cptTmp, true).write);
 			ajouterCodeCommandes(c.^for.c,res)
 			return res;
 		}
 		
-		if (c.wh!=null){ cptTmp++
-			val Iterabl res=createWhile(getCodeExpr(c.wh.ex,cptTmp).write);
+		if (c.wh!=null){ 
+			if(c.wh.ex.exs!=null && c.wh.ex.exs.mot!=null)cptTmp++
+			val Iterabl res=createWhile(getCodeExpr(c.wh.ex,cptTmp, true).write);
 			ajouterCodeCommandes(c.wh.c,res);
 			return res;
 		}
 		
-		if (c.assign!=null){
-			
+		if (c.assign!=null){ //cptTmp++;//pas très sûr
+			//val Affect aff=createAffect();
+			//remplireAffect(c.assign.vs,c.assign.ex,aff);
+			return getCodeAssign(c.assign);
 		}
-		if(c.fore!=null){ cptTmp++
-			val Iterabl res=createForeach(getCodeExpr(c.fore.ex2,cptTmp).write,getCodeExpr(c.fore.ex1,cptTmp).write);
+		if(c.fore!=null){ 
+			if(c.fore.ex2.exs!=null && c.fore.ex2.exs.mot!=null)cptTmp++
+			val Iterabl res=createForeach(getCodeExpr(c.fore.ex2,cptTmp, true).write,getCodeExpr(c.fore.ex1,cptTmp, true).write);
 			ajouterCodeCommandes(c.fore.c,res);
 			return res;
 		}
 		
-		if (c.^if!=null){ cptTmp++
-			val code3a.If res=createIf(getCodeExpr(c.^if.ex,cptTmp).write);
+		if (c.^if!=null){ 
+			if(c.^if.ex.exs!=null && c.^if.ex.exs.mot!=null)cptTmp++
+			val code3a.If res=createIf(getCodeExpr(c.^if.ex,cptTmp, true).write);
 			ajouterCodeCommandesIf(c.^if.ct,c.^if.ce,res);
 			return res;
 			
@@ -191,19 +219,154 @@ class Langage_whileGenerator implements IGenerator {
 		return new Nop();
 	}
 	
-	def Chevron getCodeExpr(Expr ex, int cmpt){
-		if(ex.exs!=null){
-			if(ex.exs.nil!=null) return new Nil();
+	def Chevron getCodeAssign(Assign a){
+		val Affect aff=createAffect();
+		remplireAffect(a.vs,a.ex,aff);
+			return aff;
+	}
+	
+	def Chevron getCodeExpr(Expr exint, int cmpt, boolean test){
+		if(exint.exs!=null){
+			if(exint.exs.nil!=null) return new Nil();
 			
-			if(ex.exs.mot=="cons"){
-				if(ex.exs.lex!=null){
-					return new Cons("tmp"+cmpt,"X","Y"); //juste un test!!!!!	
-				}
-			} 
-			if(ex.exs.v!=null){
-				return new Var(ex.exs.v.bv+ex.exs.v.cf);
+			// CONS ============================
+			if(exint.exs.mot=="cons" && exint.exs.lex != null){
+					//ajouterCodeLExpr(ex.exs.lex,cmpt);
+
+						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="cons")
+						{
+							cptExpr++;
+							
+							}
+
+					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
+					if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && exint.exs.lex.e.get(0).exs.mot!=null){
+											listChev.add(ii)
+						 }
+					val X = ii.write;
+
+					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(1).exs.mot=="cons"){
+											cptExpr++;
+											 }
+	
+					val jj = getCodeExpr(exint.exs.lex.e.get(1),cptExpr,false);
+					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(1).exs.mot=="cons"){
+											listChev.add(jj)
+											 }
+					
+					val Y = jj.write;
+
+					//gauche = getCodeExpr(ex.exs.lex.e.get(0)).toString;
+						if (test){ //cptTmp++;
+						return new Cons("tmp"+cmpt,X,Y); //juste un test!!!!!
+						}	
+						else { 
+							return new Cons("cptExpr"+cptExpr,X,Y);
+						}
+			
 			}
-			return new Cons("test1","X","Y"); //Attention à finir
+			
+			// List======================
+			
+			if(exint.exs.mot=="list" && exint.exs.lex != null){
+					//ajouterCodeLExpr(ex.exs.lex,cmpt);
+
+						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list")
+						{
+							cptExpr++;
+							
+							}
+
+					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
+					if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="list") ){
+											listChev.add(ii)
+											 }
+					val X = ii.write;
+
+					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list"){
+											cptExpr++;
+											 }
+	
+					val jj = getCodeExpr(exint.exs.lex.e.get(1),cptExpr,false);
+					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list"){
+											listChev.add(jj)
+											 }
+					
+					val Y = jj.write;
+
+					//gauche = getCodeExpr(ex.exs.lex.e.get(0)).toString;
+						if (test){ //cptTmp++;
+						return new ListC("tmp"+cmpt,X,Y); //juste un test!!!!!
+						}	
+						else { 
+							return new ListC("cptExpr"+cptExpr,X,Y);
+						}
+			
+			}
+			
+			// tl =====================
+			if(exint.exs.mot=="tl" && exint.exs.ex != null){
+					//ajouterCodeLExpr(ex.exs.lex,cmpt);
+
+						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="tl")
+						{
+							cptExpr++;
+							
+							}
+
+					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
+					if ( ((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="tl") ){
+											listChev.add(ii)
+											 }
+					val X = ii.write;
+
+					
+
+					//gauche = getCodeExpr(ex.exs.lex.e.get(0)).toString;
+						if (test){ //cptTmp++;
+						return new Teal("tmp"+cmpt,X); //juste un test!!!!!
+						}	
+						else { 
+							return new Teal("cptExpr"+cptExpr,X);
+						}
+			
+			}
+			
+			
+			//hd =====================
+			
+			if(exint.exs.mot=="hd" && exint.exs.ex != null){
+					//ajouterCodeLExpr(ex.exs.lex,cmpt);
+
+						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="hd")
+						{
+							cptExpr++;
+							
+							}
+
+					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
+					if ( ((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="hd") ){
+											listChev.add(ii)
+											 }
+					val X = ii.write;
+
+					
+
+					//gauche = getCodeExpr(ex.exs.lex.e.get(0)).toString;
+						if (test){ //cptTmp++;
+						return new Head("tmp"+cmpt,X); //juste un test!!!!!
+						}	
+						else { 
+							return new Head("cptExpr"+cptExpr,X);
+						}
+			
+			}			
+			
+			
+			if(exint.exs.v!=null){
+				return new Var(exint.exs.v.bv+exint.exs.v.cf);
+			}
+			//return new Cons("test1","X","Y"); //Attention à finir
 		}
 		else return new Cons("tmp2","X","Y");//A completer également
 	}
@@ -231,12 +394,13 @@ class Langage_whileGenerator implements IGenerator {
 	
 	def void remplireAffect(Vars vars,Exprs exs,Affect aff){
 		for(VAR v:vars.vs){
-			//val int ind=f.tabVars.indexOf(v.bv+v.cf);
-			aff.addVars(new Var(v.bv+v.cf));
+			aff.addVars(v.bv+v.cf);
 		}
 		for(Expr ex : exs.ex){
 			if(ex.exs!=null && ex.exs.mot!=null) cptTmp++;
-			aff.addExpr(getCodeExpr(ex,cptTmp));
+			val Chevron ch=getCodeExpr(ex,cptTmp,true);
+			//if(ex.exs!=null && ex.exs.mot!=null) listChev.add(ch);
+			aff.addExpr(ch.write);
 		}
 	}
 	
@@ -258,6 +422,7 @@ class Langage_whileGenerator implements IGenerator {
 		int i=0;
 		int alpha;
 		int cptTmp;
+		int cptExpr;
 		//Map<String,List <Chevron3a> > code3a;
 
 		CharSequence currentFunction;
@@ -305,7 +470,7 @@ class Langage_whileGenerator implements IGenerator {
 		i++;
 		System.out.println(i+""+ch.toString)
 	}»
-	« System.out.println("================Code java===============\n"+CodeJava.genereCodeJava(listChev))»
+	« System.out.println("================Code java===============\n"+CodeJava.genereCodeJava(listChev,tableS))»
 	'''
 	
 	def compile (Program p)
@@ -315,7 +480,7 @@ class Langage_whileGenerator implements IGenerator {
 	»
 	«cpt = 0»
 	«FOR f:p.f»
-	«chevLocal=createFnct("funct"+cpt) »
+	«chevLocal=createFnct(f.name.bs+f.name.cf) »
 	«listChev.add(chevLocal)»
 	«f.compile»
 	«chevLocal=createEndFnct() »
@@ -326,7 +491,6 @@ class Langage_whileGenerator implements IGenerator {
 
 	def compile(Function f) '''
 	«currentFunction = f.name.compile»
-		«tableS.addSymbole(f.name.bs+f.name.cf)»
 		
 		«cpt++»
 		«fonct = createFonct(cpt) »
@@ -346,7 +510,7 @@ class Langage_whileGenerator implements IGenerator {
 	'''
 		«var int j = 0»«FOR va : i.v»«var v = va.compile»
 			«fonct.incNbEntree()»
-			«fonct.addVariable(va.bv+va.cf)»«v»«IF j++ < i.v.size-1», «ENDIF»//tabSyb à modifier
+			«v»«IF j++ < i.v.size-1», «ENDIF»//tabSyb à modifier
 			«chevLocal =createRead(va.bv+va.cf) »
 			«listChev.add(chevLocal)»
 		«ENDFOR»
@@ -362,6 +526,7 @@ class Langage_whileGenerator implements IGenerator {
 
 	def compile(VAR v) 
 	'''
+		«fonct.addVariable(v.bv+v.cf)»
 		«var v2 = v.bv + v.cf»
 		«v2»
 	'''
@@ -390,7 +555,7 @@ class Langage_whileGenerator implements IGenerator {
 	def compile(Command c, String space, boolean a	)
 	'''
 		«IF c.assign != null»
-			«c.assign.compile(space)»
+			«c.assign.compile(space,a)»
 		«ENDIF»
 		«IF c.nop != null»
 			«space»nop
@@ -415,18 +580,33 @@ class Langage_whileGenerator implements IGenerator {
 		«ENDIF»
 	'''
 
-	def compile(Assign a, String space)
-	'''
+	def compile(Assign a, String space,boolean b)
+	''' 
+		«if(b) alpha=cptTmp»
+		«for(Expr e:a.ex.ex){
+			if(e.exs!=null && e.exs.mot!=null){ 
+				cptTmp++;
+			    val Chevron chev=getCodeExpr(e,cptTmp, true);
+				listChev.add(chev);
+			} 
+		}
+		»
 		«space» «a.vs.compile» := «a.ex.compile»
+		«if(b){
+			cptTmp=alpha;
+			listChev.add(getCodeAssign(a));
+		}»
 	'''
 
 	def compile(If i, String space,boolean b) 
 	'''
 		«space»if 
-		«cptTmp++»
+		« if(i.ex.exs!=null && i.ex.exs.mot!=null ) cptTmp++»
 		«if(b) alpha=cptTmp»
-		« val Chevron chev=getCodeExpr(i.ex,cptTmp)»
-		« listChev.add(chev)»
+		«val Chevron chev=getCodeExpr(i.ex,cptTmp, true)»
+		« if(i.ex.exs!=null && i.ex.exs.mot!=null ){
+			listChev.add(chev);
+		} »
 		«i.ex.compile»
 		«space»then
 		«i.ct.compile(space, false)»
@@ -443,10 +623,10 @@ class Langage_whileGenerator implements IGenerator {
 	def compile(Ifconfort i, String space,boolean b) 
 	'''
 		«space»if 
-		«cptTmp++»
+		«if(i.ex.exs!=null && i.ex.exs.mot!=null ) cptTmp++»
 		«if(b) alpha=cptTmp»
-		« val Chevron chev=getCodeExpr(i.ex,cptTmp)»
-		« listChev.add(chev)»
+		« val Chevron chev=getCodeExpr(i.ex,cptTmp, true)»
+		« if(i.ex.exs!=null && i.ex.exs.mot!=null ) listChev.add(chev)»
 		«i.ex.compile»
 		«space»then
 		«i.c.compile(space, false)»
@@ -461,10 +641,10 @@ class Langage_whileGenerator implements IGenerator {
 	def compile(For f, String space,boolean b) 
 	'''
 		«space»for 
-		«cptTmp++»
+		« if(f.ex.exs!=null && f.ex.exs.mot!=null ) cptTmp++»
 		«if(b) alpha=cptTmp»
-		« val Chevron chev=getCodeExpr(f.ex,cptTmp)»
-		« listChev.add(chev)»
+		« val Chevron chev=getCodeExpr(f.ex,cptTmp, true)»
+		« if(f.ex.exs!=null && f.ex.exs.mot!=null )listChev.add(chev)»
 		«f.ex.compile»
 		«space»do
 		«f.c.compile(space, false)»
@@ -479,12 +659,10 @@ class Langage_whileGenerator implements IGenerator {
 	def compile(Foreach f, String space,boolean b) 
 	'''
 		«space»foreach 
-		«cptTmp++»
-		« val Chevron chev=getCodeExpr(f.ex1,cptTmp)»
-		« listChev.add(chev)»
-		«cptTmp++»
-		« val Chevron chev2=getCodeExpr(f.ex2,cptTmp)»
-		« listChev.add(chev2)»
+		« val Chevron chev=getCodeExpr(f.ex1,cptTmp,true)»
+		« if(f.ex2.exs!=null && f.ex2.exs.mot!=null ) cptTmp++»
+		« val Chevron chev2=getCodeExpr(f.ex2,cptTmp,true)»
+		« if(f.ex2.exs!=null && f.ex2.exs.mot!=null ) listChev.add(chev2)»
 		«if(b) alpha=cptTmp»
 		«f.ex1.compile» in
 		«f.ex2.compile»
@@ -502,10 +680,10 @@ class Langage_whileGenerator implements IGenerator {
 	'''
 		«space»while 
 		«space»do
-		«cptTmp++»
+		«if(w.ex.exs!=null && w.ex.exs.mot!=null ) cptTmp++»
 		«if(b) alpha=cptTmp»
-		« val Chevron chev=getCodeExpr(w.ex,cptTmp)»
-		« listChev.add(chev)»
+		« val Chevron chev=getCodeExpr(w.ex,cptTmp,true)»
+		« if(w.ex.exs!=null && w.ex.exs.mot!=null ) listChev.add(chev)»
 		«w.ex.compile»
 		«w.c.compile(space, false)»
 		«if(b){	cptTmp=alpha
@@ -546,5 +724,5 @@ class Langage_whileGenerator implements IGenerator {
 
 	def compile( ExprSimple e ) '''«IF e.nil != null»nil«ENDIF»«IF e.v != null»«e.v.compile»«ENDIF»«IF e.sym != null && e.lex == null»«e.sym.compile»«ENDIF»«IF e.mot != null && e.lex != null »(«e.mot» «e.lex.compile»)«ENDIF»«IF e.mot != null && e.ex != null »(«e.mot» «e.ex.compile»)«ENDIF»«IF e.sym != null && e.lex != null »(«e.sym.compile» «e.lex.compile»)«ENDIF»'''
 
-	def compile(SYMB s) '''«s.bs»«s.cf»'''
+	def compile(SYMB s) '''«s.bs»«s.cf» «tableS.addSymbole(s.bs+s.cf)»'''
 }

@@ -2,6 +2,8 @@ package code3a;
 
 import java.util.*;
 
+import tabSymb.TabSymbole;
+
 public class Iterabl extends Chevron {
 	private List<Chevron> commandes;
 	private String type;
@@ -45,32 +47,42 @@ public class Iterabl extends Chevron {
 
 	@Override
 	public String toString() {
-		return  "<"+type+"{"+commandes.toString()+"},"+getWrite()+","+getRead1()+","+getRead2()+">";
+		return  "<"+type+"{"+commandes.toString()+"},"+getWrite()+","+getRead1()+","+getRead2()+">End"+type;
 	}
 
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getRead1());
 		String code="";
 		if(type=="For"){
 			this.cpt++;
-			 code="final int cpt"+this.cpt+" ="+getRead1()+".nbTl()\n for(int i=0;i<cpt"+this.cpt+";i++){\n";
+			String s="";
+			if(ind1>=0) s="var"+ind1;
+			else s=getRead1();
+			 code="final int cpt"+this.cpt+"="+s+".nbTl();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
 			for(Chevron ch:commandes){
-				code+="  "+ch.getCodeJava()+"\n";
+				code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 			}
 			code+="}\n";
 		}
 		else if(type=="While"){
-			code="while( !"+getRead1()+".isNil() ){\n";
+			String s="";
+			if(ind1>=0) s="var"+ind1;
+			else s=getRead1();
+			code="while( !"+s+".isNil() ){\n";
 			for(Chevron ch:commandes){
-				code+="  "+ch.getCodeJava()+"\n";
+				code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 			}
 			code+="}\n";
 		}
 		else{
 			 this.cpt++;
-			 code="final int cpt ="+getRead1()+".nbTl()\n for(int i=0;i<cpt"+this.cpt+";i++){\n";
+			 String s="";
+				if(ind1>=0) s="var"+ind1;
+				else s=getRead1();
+				 code="final int cpt"+this.cpt+"="+s+".nbTl();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
 				for(Chevron ch:commandes){
-					code+="  "+ch.getCodeJava()+"\n";
+					code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 				}
 				code+="  "+getRead2()+"="+getRead1()+".getTl();\n}";
 		}

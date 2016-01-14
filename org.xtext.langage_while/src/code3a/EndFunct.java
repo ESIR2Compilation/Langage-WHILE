@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class EndFunct extends Chevron {
 	private String opCode;
 	
@@ -15,7 +17,7 @@ public class EndFunct extends Chevron {
 	}
 
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
 		return "return res;\n"+"}";
 	}

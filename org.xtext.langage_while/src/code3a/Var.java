@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Var extends Chevron {
 	private String opcode;
 
@@ -11,14 +13,14 @@ public class Var extends Chevron {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "<Var,"+getWrite()+",_,_>";
 	}
 
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
-		return "Bintree<Sttring> "+getWrite()+" = new Bintree<String>();";
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getWrite());
+		return "Bintree<Sttring> var"+ind1+" = new Bintree<String>();";
 	}
 
 }

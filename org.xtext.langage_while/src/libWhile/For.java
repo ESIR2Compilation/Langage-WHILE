@@ -2,10 +2,10 @@ package libWhile;
 
 public class For extends AbsCommande{
 
-	private BinTree<String> expr;
+	private BinTree expr;
 	private AbsCommande commande;
 	
-	public For(BinTree<String> expr, AbsCommande commande) {
+	public For(BinTree expr, AbsCommande commande) {
 		super();
 		this.expr = expr;
 		this.commande = commande;

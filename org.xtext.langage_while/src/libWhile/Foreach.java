@@ -1,11 +1,11 @@
 package libWhile;
 
 public class Foreach extends AbsCommande{
-	private BinTree<String> expr;
-	private BinTree<String> x;
+	private BinTree expr;
+	private BinTree x;
 	private AbsCommande commande;
 	
-	public Foreach(BinTree<String> expr, BinTree<String> x, AbsCommande commande) {
+	public Foreach(BinTree expr, BinTree x, AbsCommande commande) {
 		super();
 		this.expr = expr;
 		this.x = x;

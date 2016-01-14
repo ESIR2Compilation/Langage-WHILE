@@ -4,7 +4,7 @@
     editorDirectory="/org.xtext.langage_while.editor/src" modelPluginID="org.xtext.langage_while"
     forceOverwrite="true" modelName="Langage_while" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.langage_while.edit"
-    editorPluginID="org.xtext.langage_while.editor" runtimeVersion="2.11">
+    editorPluginID="org.xtext.langage_while.editor" runtimeVersion="2.10">
   <genPackages prefix="Langage_while" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="while" ecorePackage="Langage_while.ecore#/">
     <genClasses ecoreClass="Langage_while.ecore#//Model">

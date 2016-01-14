@@ -1,17 +1,17 @@
 package libWhile;
 
 public class If extends AbsCommande{
-	private BinTree<String> expr;
+	private BinTree expr;
 	private AbsCommande commande1;
 	private AbsCommande commande2;
 	
-	public If(BinTree<String> exp, AbsCommande cmd){
+	public If(BinTree exp, AbsCommande cmd){
 		this.expr=exp;
 		this.commande1=cmd;
 		this.commande2=null;
 	}
 	
-	public If(BinTree<String> exp, AbsCommande cmd,AbsCommande cmd2){
+	public If(BinTree exp, AbsCommande cmd,AbsCommande cmd2){
 		this.expr=exp;
 		this.commande1=cmd;
 		this.commande2=cmd2;

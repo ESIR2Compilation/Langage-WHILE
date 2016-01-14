@@ -3,10 +3,10 @@ package libWhile;
 import java.util.*;
 
 public class Assign extends AbsCommande{
-	private List<BinTree<String>> vars;
-	private List<BinTree<String>> exprs;
+	private List<BinTree> vars;
+	private List<BinTree> exprs;
 	
-	public Assign(List<BinTree<String>> vras, List<BinTree<String>> exprs) {
+	public Assign(List<BinTree> vras, List<BinTree> exprs) {
 		super();
 		this.vars = vras;
 		this.exprs = exprs;
@@ -14,15 +14,18 @@ public class Assign extends AbsCommande{
 
 
 	public void executer() {
-		 List<BinTree<String>> tmp=new ArrayList<BinTree<String>>();
-		 for(BinTree<String> x:exprs){
+		 List<BinTree> tmp=new ArrayList<BinTree>();
+		 for(BinTree x:exprs){
 			 //x.evaluer();???
 			 tmp.add(x);
 		 }
 		 int i=0;
-		 for(BinTree<String> x:tmp){
+		 for(BinTree x:tmp){
+			 if(i>=vars.size())
 			 vars.set(i, x);
+			 i++;
 		 }
+		// ArrayList l={"n","b"}
 	}
 
 }

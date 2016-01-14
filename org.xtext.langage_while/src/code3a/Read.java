@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Read extends Chevron{
 	
 	private String opCode;
@@ -25,22 +27,24 @@ public class Read extends Chevron{
 	}
 
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
-		return getCodeJava(2);
+		return getCodeJava(2,tab,idFonct);
 	}
 	
-	public String getCodeJava(int cpt){
-		String res="BinTree<String> "+getWrite();
+	public String getCodeJava(int cpt,TabSymbole tab,String idFonct){
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getWrite());
+		String res="BinTree<String> var"+ind1;
 		this.cpt++;
 		if(this.cpt >= cpt){
-			res+=")\n{\n"+"res= new ArrayList<BinTree<String>>();";
+			res+=")\n{\n"+" ArrayList<BinTree<String>> res= new ArrayList<BinTree<String>>();";
 			this.cpt=0;
 		}
 		else {
 			res+=",";
 			this.cpt++;
 		}
+		
 		return res;
 	}
 

@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Write extends Chevron {
 
 	private String opCode;
@@ -17,9 +19,9 @@ public class Write extends Chevron {
 	}
 
 	@Override
-	public String getCodeJava() {
-		// TODO Auto-generated method stub
-		return "res.add("+getRead1()+");";
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getRead1());
+		return "res.add(var"+ind1+");";
 	}
 
 }

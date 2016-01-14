@@ -3,6 +3,8 @@ package code3a;
 import java.util.ArrayList;
 import java.util.List;
 
+import tabSymb.TabSymbole;
+
 public class If extends Chevron {
 	
 	private List<Chevron> commandes1;
@@ -11,7 +13,7 @@ public class If extends Chevron {
 	private If(List<Chevron> commandes1,List<Chevron> commandes2, String write, String read1, String read2) {
 		super(write, read1, read2);
 		this.commandes1 = commandes1;
-		this.commandes1 = commandes2;
+		this.commandes2 = commandes2;
 
 	}
 	
@@ -51,18 +53,22 @@ public class If extends Chevron {
 
 	@Override
 	public String toString() {
-		return  "<If"+"[C1{"+commandes1.toString()+"} C2{"+commandes2.toString()+"}] ,"+getWrite()+","+getRead1()+","+getRead2()+">";
+		return  "<If"+"[!  C1{"+commandes1.toString()+"} C2{"+commandes2.toString()+"}  !] ,"+getWrite()+","+getRead1()+","+getRead2()+">";
 	}
 
 	@Override
-	public String getCodeJava() {
-		String code="if("+getRead1()+".isNill()){\n";
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getRead1());
+		String s="";
+		if(ind1>=0) s="var"+ind1;
+		else s=getRead1();
+		String code="if( "+s+".isNill()){\n";
 		for(Chevron ch: commandes2){
-			code+="  "+ch.getCodeJava()+"\n";
+			code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 		}
 		code+="}\n else{\n";
 		for(Chevron ch: commandes1){
-			code+="  "+ch.getCodeJava()+"\n";
+			code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 		}
 		code+="}\n";
 		return code;//"For f= new For("+getRead1()+getCommandes().get(0).getRead1()+")";

@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Nop extends Chevron {
 	private String opCode;
 	
@@ -14,9 +16,9 @@ public class Nop extends Chevron {
 		return "<Nop,_,_,_>";
 	}
 	@Override
-	public String getCodeJava() {
+	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
-		return "System.out.println('Nop');";
+		return "System.out.println(\"Nop\");";
 	}
 
 }

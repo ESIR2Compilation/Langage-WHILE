@@ -3,6 +3,8 @@ package code3a;
 import java.util.ArrayList;
 import java.util.List;
 
+import tabSymb.TabSymbole;
+
 public class IfConf extends Chevron {
 	private List<Chevron> commandes;
 
@@ -25,10 +27,14 @@ public class IfConf extends Chevron {
 	}
 
 	@Override
-	public String getCodeJava() {
-		String code="if(!"+getRead1()+".isNill()){\n";
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		int ind1=tab.getFonction(idFonct).getTabVars().indexOf(getRead1());
+		String s="";
+		if(ind1>=0) s="var"+ind1;
+		else s=getRead1();
+		String code="if(!var"+s+".isNill()){\n";
 		for(Chevron ch: commandes){
-			code+=ch.getCodeJava()+"\n";
+			code+=ch.getCodeJava(tab,idFonct)+"\n";
 		}
 		code+="}\n";
 		return code;

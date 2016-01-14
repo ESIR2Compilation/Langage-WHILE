@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public class Fonct extends Chevron {
 	private String opcode;
 	
@@ -15,8 +17,9 @@ public class Fonct extends Chevron {
 	}
 
 	@Override
-	public String getCodeJava() {
-		return "public static List<BinTree> "+getRead1()+"(";
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		String nom=tab.getFonction(getRead1()).getNomCible();
+		return "public static List< BinTree<String> > "+nom+"(";
 	}
 
 }

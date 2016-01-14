@@ -8,7 +8,7 @@ public abstract class AbsExpression {
 		this.code = "";
 	}
 	
-	public abstract  BinTree<String> evaluer(); 
+	public abstract  BinTree evaluer(); 
 	
 
 }

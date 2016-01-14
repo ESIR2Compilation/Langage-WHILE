@@ -24,7 +24,6 @@ import org.xtext.langage_while.VAR;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ExprSimpleImpl#getNil <em>Nil</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ExprSimpleImpl#getV <em>V</em>}</li>
@@ -33,6 +32,7 @@ import org.xtext.langage_while.VAR;
  *   <li>{@link org.xtext.langage_while.impl.ExprSimpleImpl#getLex <em>Lex</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ExprSimpleImpl#getEx <em>Ex</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

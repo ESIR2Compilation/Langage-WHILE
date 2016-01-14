@@ -2,11 +2,15 @@ package code3a;
 
 import java.util.*;
 
-public class Affect extends Chevron {
-	private List<Chevron> vars;
-	private List<Chevron> exprs;
+import libWhile.BinTree;
+import tabSymb.TabSymbole;
 
-	private Affect(String write, String read1, String read2,List<Chevron> vars,List<Chevron> exprs ) {
+public class Affect extends Chevron {
+	private List<String> vars;
+	private List<String> exprs;
+	private static int cptvarTmp=0;
+
+	private Affect(String write, String read1, String read2,List<String> vars,List<String> exprs ) {
 		super(write, read1, read2);
 		this.exprs=exprs;
 		this.vars=vars;
@@ -14,25 +18,42 @@ public class Affect extends Chevron {
 	}
 	
 	public static Affect createAffect(){
-		return new Affect("_", "_", "_", new ArrayList<Chevron>(),  new ArrayList<Chevron>());
+		return new Affect("_", "_", "_", new ArrayList<String>(),  new ArrayList<String>());
 	}
 	
-   public void addVars(Chevron var){
+   public void addVars(String var){
 	   this.vars.add(var);
    }
    
-   public void addExpr(Chevron exp){
+   public void addExpr(String exp){
 	   exprs.add(exp);
    }
 	@Override
 	public String toString() {
-		return "<Assign"+"[Vars{"+vars.toString()+"} Exprs{"+exprs.toString()+"}] ,"+getWrite()+","+getRead1()+","+getRead2()+">";
+		return "<Assign"+"[!  Vars{"+vars.toString()+"} Exprs{"+exprs.toString()+"}  !] ,"+getWrite()+","+getRead1()+","+getRead2()+">";
 	}
 
 	@Override
-	public String getCodeJava() {
-		
-		return "Affectation non implémentée!!!!";
+	public String getCodeJava(TabSymbole tab,String idFonct) {
+		cptvarTmp++;
+		String res=" //*********Affectation*******\n List<BinTree<String>> varTmp"+cptvarTmp+"=new ArrayList<BinTree<String>>(); \n";
+		for(String ex:exprs){
+			int i=tab.getFonction(idFonct).getTabVars().indexOf(ex);
+			if(i>=0) res+="   varTmp"+cptvarTmp+".add(var"+i+");\n";
+			else res+="   varTmp"+cptvarTmp+".add("+ex+");\n";
+		}
+		//res+="for(BinTree<String> x:varTmp){\n";
+		res+="   int cmpt"+cptvarTmp+"=0;\n";
+		int cpt=0;
+		for(String v:vars){
+			if(cpt==exprs.size()) break;
+			int ind1=tab.getFonction(idFonct).getTabVars().indexOf(v);
+			res+="   var"+ind1+" = "+"varTmp"+cptvarTmp+".get(cmpt"+cptvarTmp+");\n cmpt"+cptvarTmp+"++;\n";
+			cpt++;
+			
+		}
+		res+="//******endAffectation*******\n";
+		return res;
 	}
 
 }

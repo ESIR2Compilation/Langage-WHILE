@@ -23,12 +23,12 @@ import org.xtext.langage_while.Output;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.DefinitionImpl#getIn <em>In</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.DefinitionImpl#getCom <em>Com</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.DefinitionImpl#getOut <em>Out</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

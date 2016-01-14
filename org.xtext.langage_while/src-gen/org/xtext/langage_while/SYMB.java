@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.SYMB#getBs <em>Bs</em>}</li>
  *   <li>{@link org.xtext.langage_while.SYMB#getCf <em>Cf</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getSYMB()
  * @model

@@ -1,161 +1,232 @@
 package libWhile;
 
-public class BinTree<E> {
-	public static final BinTree<String> NIL = new BinTree<String>("nil");
-	private E racine;
-	private BinTree<E> fg;
-	private BinTree<E> fd;
+import java.util.ArrayList;
+import java.util.List;
 
-	//==========================constructeurs================================
+
+/**
+ * @author steven
+ */
+
+public class BinTree {
+
+	public static final BinTree NIL = new BinTree("NIL");
+	private String name;
+	private BinTree fg;
+	private BinTree fd;
+	private int depth;
+
+	//========================== constructeurs ================================
+
 	public BinTree(int profondeur){
-		
-		this.fg=null;
-		this.fd=null;
-		for(int i = 0; i < profondeur; ++i){
-			BinTree<E> temp_fg=new BinTree<E>();
-			BinTree<E> temp_fd=new BinTree<E>();
-			fd.addHd(temp_fd);
-			fd.addTl(temp_fg);
+		BinTree tmp = new BinTree("cons(NIL NIL)", NIL, NIL);
+
+		// -2 car la feuille et la racine est codé manuellement
+		for(int i = 0; i < (profondeur - 2); ++i){
+			tmp = cons(NIL, tmp);
+			tmp.setProfondeur(i);
 		}
-		this.addHd(fd);
-		this.addTl(fg);
+
+		setNom("cons(NIL " + tmp.getNom() + ")");
+		setTl(NIL);
+		setHd(tmp);
+		setProfondeur(profondeur);
 	}
 
-
-	public BinTree(E val){
-		this.racine=val;
-		this.fd=null;
-		this.fg=null;
+	private static BinTree cons(BinTree sag, BinTree sad){
+		BinTree res = new BinTree("cons(" + sag.getNom() + " " + sad.getNom() + ")");
+		res.setTl(sag);
+		res.setHd(sad);
+		res.setProfondeur(Math.max(sag.getProfondeur(), sad.getProfondeur()));
+		return res;
 	}
 
-
-	public BinTree(){
-		this.racine=null;
-		this.fd=null;
-		this.fg=null;
-	}
-
-	public BinTree(E racine, BinTree<E> fg, BinTree<E> fd) {
+	private BinTree(String name){
 		super();
-		this.racine = racine;
+		setNom(name);
+		setHd(fd);
+		setTl(fg);
+	}
+
+	public BinTree(String name, BinTree fg, BinTree fd) {
+		this.name = name;
 		this.fg = fg;
-		this.fd = fd;
-	}
-
-	public E getRacine() {
-		return racine;
-	}
-
-	public void setRacine(E racine) {
-		this.racine = racine;
-	}
-
-	public BinTree<E> getTl() {
-		return fg;
-	}
-
-	public void setTl(BinTree<E> fg) {
-		this.fg = fg;
-	}
-
-	public BinTree<E> getHd() {
-		return fd;
-	}
-
-	public void setHd(BinTree<E> fd) {
 		this.fd = fd;
 	}
 
 	//========================Méthodes pratiques================
-	public boolean estVide(){
-		return (this.racine==null && this.fd==null && this.fg==null );
+	
+	
+	public boolean isNil(){
+		return this.equals(NIL);
 	}
 
 	public boolean existHd(){
-		assert(!estVide()):" appel de existFd sur un arbre vide";
-		return (this.fd!=null && !this.fd.estVide());
+		return ! (isNil() && getHd().isNil());
 	}
 
 	public boolean existTl(){
-		assert(!estVide()):"appel de existFg sur un arbre vide";
-		return (this.fg!=null && !this.fg.estVide());
-	}
-
-	public boolean estFeuille(){
-		assert(!estVide());
-		return (!existTl()&& !existHd());
-	}
-
-	public int taille(){
-		if(estVide()) return 0;
-		else{
-			if(existHd() && existTl()) return 1+getHd().taille()+getTl().taille();
-			else if(existHd()) return 1+getHd().taille();
-			else if(existTl()) return 1+getTl().taille();
-			else return 1;
-		}
+		return ! (isNil() && getTl().isNil());
 	}
 
 	public int nbTl(){
-		if(!existTl()) return 0;
-		else return 1+getTl().nbTl();
+		if(isNil()) return 0;
+		return 1 + getTl().nbTl();
 	}
 
 	public int nbHd(){
-		if(!existHd()) return 0;
-		else return 1+getHd().nbHd();
-	}
-
-	public boolean isNil(){
-		return this==NIL;
-	}
-
-	public void addTl(BinTree<E> b){
-		assert(!estVide()):"appel de addFg sur un arbre vide!!!";
-		if(!existTl()) this.setTl(b);
-		else{
-			BinTree<E> tmp=this.getTl();
-			while(tmp.existTl()){
-				tmp=tmp.getTl();
-			}
-			tmp.setTl(b);
-		}
-	}
-
-	public void addHd(BinTree<E> b){
-		assert(!estVide()):"appel de addFd sur un arbre vide!!!";
-		if(!existHd()) this.setHd(b);
-		else{
-			BinTree<E> tmp=this.getHd();
-			while(tmp.existHd()){
-				tmp=tmp.getHd();
-			}
-			tmp.setHd(b);
-		}
+		if(isNil()) return 0;
+		return 1 + getHd().nbHd();
 	}
 
 	@Override
 	public String toString(){
-		return toString("\t");
-	}
-	public String toString(String indent){
-		if (this.fg!=null) {
-
-			if (this.fd!=null) 
-				return(indent+racine+"\n"+this.fg.toString(racine+"\t")+this.fd.toString(indent+"\t"));
-			else
-				return(indent+racine+"\n"+this.fg.toString(indent+"\t")+"\n");
-		}
-		else 
-
-			if (this.fd!=null) 
-				return(indent+racine+"\n\n"+this.fd.toString(indent+"\t"));
-			else
-				return(indent+racine+"\n");
-
+		return getNom() + ", [DEPTH = " + getProfondeur() + "]";
 	}
 	
+	// =========== Accesseurs =========
+	public String getNom() {
+		return name;
+	}
+
+	public void setNom(String name) {
+		this.name = name;
+	}
+
+	public BinTree getTl() {
+		return fg;
+	}
+
+	public void setTl(BinTree fg) {
+		this.fg = fg;
+	}
+
+	public BinTree getHd() {
+		return fd;
+	}
+
+	public void setHd(BinTree fd) {
+		this.fd = fd;
+	}
+	
+	private void setProfondeur(int depth) {
+		this.depth = depth;
+	}
+
+	public int getProfondeur(){
+		return depth;
+	}
+	
+	// ======== Affichage ==========
+
+	 public static void print(BinTree root)
+	    {
+	        List<List<String>> lines = new ArrayList<List<String>>();
+
+	        List<BinTree> level = new ArrayList<BinTree>();
+	        List<BinTree> next = new ArrayList<BinTree>();
+
+	        level.add(root);
+	        int nn = 1;
+
+	        int widest = 0;
+
+	        while (nn != 0) {
+	            List<String> line = new ArrayList<String>();
+
+	            nn = 0;
+
+	            for (BinTree n : level) {
+	                if (n == null) {
+	                    line.add(null);
+
+	                    next.add(null);
+	                    next.add(null);
+	                } else {
+	                    String aa = n.getNom();
+	                    line.add(aa);
+	                    if (aa.length() > widest) widest = aa.length();
+
+	                    next.add(n.getTl());
+	                    next.add(n.getHd());
+
+	                    if (n.getTl() != null) nn++;
+	                    if (n.getHd() != null) nn++;
+	                }
+	            }
+
+	            if (widest % 2 == 1) widest++;
+
+	            lines.add(line);
+
+	            List<BinTree> tmp = level;
+	            level = next;
+	            next = tmp;
+	            next.clear();
+	        }
+
+	        int perpiece = lines.get(lines.size() - 1).size() * (widest + 4);
+	        for (int i = 0; i < lines.size(); i++) {
+	            List<String> line = lines.get(i);
+	            int hpw = (int) Math.floor(perpiece / 2f) - 1;
+
+	            if (i > 0) {
+	                for (int j = 0; j < line.size(); j++) {
+
+	                    // split node
+	                    char c = ' ';
+	                    if (j % 2 == 1) {
+	                        if (line.get(j - 1) != null) {
+	                            c = (line.get(j) != null) ? '┴' : '┘';
+	                        } else {
+	                            if (j < line.size() && line.get(j) != null) c = '└';
+	                        }
+	                    }
+	                    System.out.print(c);
+
+	                    // lines and spaces
+	                    if (line.get(j) == null) {
+	                        for (int k = 0; k < perpiece - 1; k++) {
+	                            System.out.print(" ");
+	                        }
+	                    } else {
+
+	                        for (int k = 0; k < hpw; k++) {
+	                            System.out.print(j % 2 == 0 ? " " : "─");
+	                        }
+	                        System.out.print(j % 2 == 0 ? "┌" : "┐");
+	                        for (int k = 0; k < hpw; k++) {
+	                            System.out.print(j % 2 == 0 ? "─" : " ");
+	                        }
+	                    }
+	                }
+	                System.out.println();
+	            }
+
+	            // print line of numbers
+	            for (int j = 0; j < line.size(); j++) {
+
+	                String f = line.get(j);
+	                if (f == null) f = "";
+	                int gap1 = (int) Math.ceil(perpiece / 2f - f.length() / 2f);
+	                int gap2 = (int) Math.floor(perpiece / 2f - f.length() / 2f);
+
+	                // a number
+	                for (int k = 0; k < gap1; k++) {
+	                    System.out.print(" ");
+	                }
+	                System.out.print(f);
+	                for (int k = 0; k < gap2; k++) {
+	                    System.out.print(" ");
+	                }
+	            }
+	            System.out.println();
+
+	            perpiece /= 2;
+	        }
+	    }
+	 
 	public static void main(String[] args){
-		System.out.println(new BinTree<String>(2));
+		print(new BinTree(2));
 	}
 }

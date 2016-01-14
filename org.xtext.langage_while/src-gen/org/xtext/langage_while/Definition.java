@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.Definition#getIn <em>In</em>}</li>
  *   <li>{@link org.xtext.langage_while.Definition#getCom <em>Com</em>}</li>
  *   <li>{@link org.xtext.langage_while.Definition#getOut <em>Out</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getDefinition()
  * @model

@@ -77,7 +77,7 @@ public class Fonction {
 	}
 
 	public void addVariable(String var){
-		tabVars.add(var);
+		if(!tabVars.contains(var)) tabVars.add(var);
 	}
 
 	public int nbVars(){

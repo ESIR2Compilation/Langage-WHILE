@@ -49,7 +49,12 @@ public class TabSymbole {
 		this.tabFunct.put(identifiant, valeur);
 	}
 	
+	public Fonction getFonction(String id){
+		return this.tabFunct.get(id);
+	}
+	
 	public void addSymbole(String identifiant){
+		if(!tabSymb.contains(identifiant))
 		tabSymb.add(identifiant);
 	}
 	

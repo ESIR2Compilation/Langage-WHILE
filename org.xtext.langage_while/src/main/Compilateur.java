@@ -13,13 +13,13 @@ import tabSymb.TabSymbole;
 
 public class Compilateur {
 
-	public final static String NOM_FICHIER = "TestSourceVide";
+	public final static String NOM_FICHIER = "dummy1";
 
 	public static void main(String[] args) {
 		Langage_whileGenerator generator = new Langage_whileGenerator();
 
-		//TODO à corriger avec Ali (generator)
-		String contentJava = "";
+		// La fonction getSourceJava génère le code source ainsi que la table des symboles
+		String contentJava = generator.getSourceJava("src/entries/", NOM_FICHIER + ".while");
 
 		// On enrichit le code généré d'un prélude et d'un postlude
 		contentJava = EnrichirFichierGenere(contentJava, generator.getTableSymbole());
@@ -70,6 +70,23 @@ public class Compilateur {
 	private static boolean compiler(){
 		String[] args = new String[] { "toCompile/" + NOM_FICHIER + ".java"};
 		return Main.compile(args) == 0;
+	}
+	
+	private static boolean genererJar(){
+		Runtime rt = Runtime.getRuntime();
+		try { 
+			Process p = rt.exec("java -cp \"toCompile\" " + NOM_FICHIER);
+
+			InputStream is = p.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader buff = new BufferedReader (isr);
+
+			String line;
+			while((line = buff.readLine()) != null)
+				System.out.println(line);
+
+		} catch (IOException e) { e.printStackTrace(); }
+		return false;
 	}
 
 	private static void executer(){

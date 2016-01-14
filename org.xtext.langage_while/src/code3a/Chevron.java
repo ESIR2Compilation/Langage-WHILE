@@ -1,5 +1,7 @@
 package code3a;
 
+import tabSymb.TabSymbole;
+
 public abstract class Chevron {
 
 	private String write;
@@ -38,7 +40,7 @@ public abstract class Chevron {
 	}
 	
 	public abstract String toString();
-	public abstract String getCodeJava();
+	public abstract String getCodeJava(TabSymbole tab,String idFonct);
 	
 	
 }
