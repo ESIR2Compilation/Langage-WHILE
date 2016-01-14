@@ -1,0 +1,4 @@
+function dummy2!:																		
+read X!
+%Y! := nil	
+%write Y!	
