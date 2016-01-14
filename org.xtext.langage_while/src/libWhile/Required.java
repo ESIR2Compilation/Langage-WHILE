@@ -56,10 +56,27 @@ public class Required {
 	}
 
 	public static String indenter(String sourceCode){
+		String indent = "\t";
 		String[] instructions = sourceCode.split("\n");
 		StringBuilder st = new StringBuilder();
-		for(int i = 0; i < instructions.length; ++i)
-			st.append("\t" + instructions[i] + "\n");
+		for(int i = 0; i < instructions.length; ++i){
+			if (instructions[i].contains("{")){
+				st.append(indent);
+				st.append(instructions[i]);
+				indent += "\t";
+			}
+			else if (instructions[i].contains("}")){
+				indent = indent.substring(0, indent.length() - 1);
+				st.append(indent);
+				st.append(instructions[i]);
+			}
+			else {
+				st.append(indent);
+				st.append(instructions[i]);
+			}
+			st.append("\n");
+		}
+			
 		return st.toString();
 	}
 

@@ -15,7 +15,7 @@ import tabSymb.TabSymbole;
 
 public class Compilateur {
 
-	public final static String NOM_FICHIER = "dummy1";
+	public final static String NOM_FICHIER = "dummy4";
 
 	public static void main(String[] args) {
 		Langage_whileGenerator generator = new Langage_whileGenerator();
@@ -112,7 +112,7 @@ public class Compilateur {
 	private static void executer(){
 		Runtime rt = Runtime.getRuntime();
 		try { 
-			Process p = rt.exec("java -cp \"toCompile\" " + NOM_FICHIER);
+			Process p = rt.exec("java -jar \"toExecute\" " + NOM_FICHIER + ".jar\"");
 
 			InputStream is = p.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is);
