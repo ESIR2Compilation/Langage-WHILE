@@ -33,8 +33,10 @@ public class Compilateur {
 		enregistrerCodeAdresses(generator.getCodeAdresses());
 
 		// Si la compilation s'est bien passée, on passe à l'exécution
-		if (compiler())
+		if (compiler()){
+			genererJar();
 			executer();
+		}
 	}
 
 	private static String EnrichirFichierGenere(String content, TabSymbole ts){
