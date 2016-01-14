@@ -61,6 +61,7 @@ import code3a.Affect
 import code3a.ListC
 import code3a.Head
 import code3a.Tail
+import code3a.Symbole
 
 class Langage_whileGenerator implements IGenerator {
 
@@ -366,6 +367,10 @@ class Langage_whileGenerator implements IGenerator {
 			
 			if(exint.exs.v!=null){
 				return new Var(exint.exs.v.bv+exint.exs.v.cf);
+			}
+			
+			if(exint.exs.sym !=null){
+				return new Symbole(exint.exs.sym.bs+exint.exs.sym.cf);
 			}
 			//return new Cons("test1","X","Y"); //Attention à finir
 		}

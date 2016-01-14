@@ -28,7 +28,8 @@ public class ListC extends Chevron {
 		else s1=getRead1();
 		if(ind1>=0) s2="var"+ind2;
 		else s2=getRead2();
-		 res+="BinTree "+getWrite()+" = new BinTree( "+s1+", var"+s2+");";
+		 res+="BinTree "+s1+" = new BinTree(\" "+getRead1()+"\", BinTree.NIL,"+s2+");";
+		 res+="BinTree "+getWrite()+" = new BinTree(\" "+getWrite()+"\", BinTree.NIL,"+s1+");";
 		return res;
 	}
 

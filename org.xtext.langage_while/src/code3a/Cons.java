@@ -25,9 +25,17 @@ public class Cons extends Chevron {
 		String s2="";
 		String res="";//"BinTree<String> "+getRead1()+" = new BinTree('"+getRead1()+"'); \n";
 		if(ind1>=0) s1="var"+ind1;
-		else s1=getRead1();
-		if(ind1>=0) s2="var"+ind2;
-		else s2=getRead2();
+		else {
+			ind1=tab.getTabSymb().indexOf(getWrite());
+			if(ind1>=0) s1="symb"+ind1;
+			else s1=getRead1();
+		}
+		if(ind2>=0) s2="var"+ind2;
+		else {
+			ind2=tab.getTabSymb().indexOf(getWrite());
+			if(ind2>=0) s2="symb"+ind2;
+			else s2=getRead2();
+		}
 		 res+="BinTree "+getWrite()+" = new BinTree(\" "+getWrite()+"\","+s1+", "+s2+");";
 		return res;
 	}
