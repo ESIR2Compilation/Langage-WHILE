@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.List;
 import libWhile.Required;
 import org.xtext.generator.Langage_whileGenerator;
@@ -28,7 +29,7 @@ public class Compilateur {
 
 		//On enregistre le fichier java désormais complet
 		enregistrerFichierJava(contentJava);
-		
+
 		//On enregistre le code 3 adresses désormais complet
 		enregistrerCodeAdresses(generator.getCodeAdresses());
 
@@ -74,7 +75,7 @@ public class Compilateur {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static void enregistrerCodeAdresses(List<Chevron> codeAdresses) {
 		FileWriter fw;
 		try {
@@ -89,25 +90,15 @@ public class Compilateur {
 	}
 
 	private static boolean compiler(){
-		String[] args = new String[] { "toCompile/" + NOM_FICHIER + ".java"};
-		return Main.compile(args) == 0;
+		String[] optionsAndSources = {
+                "-encoding", "UTF-8",
+                "-classpath", "src/libWhile", 
+                "toCompile/" + NOM_FICHIER + ".java"};
+		return Main.compile(optionsAndSources) == 0;
 	}
-	
+
 	private static boolean genererJar(){
 		//TODO
-		Runtime rt = Runtime.getRuntime();
-		try { 
-			Process p = rt.exec("java -cp \"toCompile\" " + NOM_FICHIER);
-
-			InputStream is = p.getInputStream();
-			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader buff = new BufferedReader (isr);
-
-			String line;
-			while((line = buff.readLine()) != null)
-				System.out.println(line);
-
-		} catch (IOException e) { e.printStackTrace(); }
 		return false;
 	}
 

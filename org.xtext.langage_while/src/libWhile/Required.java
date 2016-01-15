@@ -4,7 +4,8 @@ public class Required {
 
 	public final static String CODE_ERREUR = "[ERROR]";
 
-	private final static String IMPORT = "import java.util.ArrayList;\nimport java.util.List;\n";
+	private final static String IMPORT = "import java.util.ArrayList;\n" +
+										 "import java.util.List;\n";
 	private final static String AUTHORS = "\n/**" +
 										  "\n *" +
 										  "\n * @authors Steven, Ali, Ilyass, Othman" +
@@ -32,10 +33,13 @@ public class Required {
 			st.append("\t\t\tSystem.exit(1);\n");
 			st.append("\t\t}\n\n");
 
+			// On déclare toutes les variables nécessaires
+			for(int i = 0; i < args; ++i)
+				st.append("\t\tBinTree arg" + i + " = BinTree.NIL;\n");
 			// On check la malformation des paramètres, en parallèle de générer les paramètres de la callee while.
 			st.append("\t\ttry {\n");
 			for(int i = 0; i < args; ++i)
-				st.append("\t\t\tBinTree arg" + i + " = new BinTree(Integer.parseInt(args[" + i + "]));\n");
+				st.append("\t\t\targ" + i + " = new BinTree(Integer.parseInt(args[" + i + "]));\n");
 			st.append("\t\t} catch (Exception e) {\n");
 			st.append("\t\t\tSystem.err.println(\"[Erreur] Malformation d'un ou de plusieurs arguments.\");\n");
 			st.append("\t\t\tSystem.exit(1);\n");
@@ -79,12 +83,5 @@ public class Required {
 		}
 			
 		return st.toString();
-	}
-
-	// Fonction de test
-	public static void main(String[] args){
-		System.out.print(getPrelude("Main"));
-		System.out.print("\t// === le code source généré est ici === ");
-		System.out.print(getPostlude("yolo", 1));
 	}
 }

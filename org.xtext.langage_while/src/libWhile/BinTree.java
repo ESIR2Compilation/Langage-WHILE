@@ -18,8 +18,16 @@ public class BinTree {
 
 	//========================== constructeurs ================================
 
+	/**
+	 * @param profondeur profondeur de l'arbre créé
+	 * @warning valeur 0 refusé. préférez BinTree.NIL pour cela
+	 */
 	public BinTree(int profondeur){
-		BinTree tmp = new BinTree("cons(NIL NIL)", NIL, NIL);
+		BinTree tmp;
+		if (profondeur != 1)
+			tmp = new BinTree("cons(NIL NIL)", NIL, NIL);
+		else 
+			tmp = BinTree.NIL;
 
 		// -2 car la feuille et la racine est codé manuellement
 		for(int i = 0; i < (profondeur - 2); ++i){
