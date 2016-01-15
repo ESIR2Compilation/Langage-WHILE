@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.List;
 import libWhile.Required;
 import org.xtext.generator.Langage_whileGenerator;
@@ -97,15 +96,30 @@ public class Compilateur {
 		return Main.compile(optionsAndSources) == 0;
 	}
 
-	private static boolean genererJar(){
-		//TODO
-		return false;
-	}
+	private static void creerManifest(){
+		String content = "Main-Class: " + NOM_FICHIER + "\n";
+		
+		FileWriter fw;
+		try {
+			fw = new FileWriter("toCompile/MANIFEST.MF", false);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(content);
+			bw.close();
 
-	private static void executer(){
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void genererJar(){
+		creerManifest();
 		Runtime rt = Runtime.getRuntime();
 		try { 
-			Process p = rt.exec("java -jar \"toExecute\" " + NOM_FICHIER + ".jar\"");
+			Process p = rt.exec("jar cvmf " +
+								"toCompile/MANIFEST.MF " +
+								"toExecute/" + NOM_FICHIER + ".jar " +
+								"toCompile/" + NOM_FICHIER + ".class" +
+								"src/libWhile/BinTree.class");
 
 			InputStream is = p.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is);
@@ -115,6 +129,36 @@ public class Compilateur {
 			while((line = buff.readLine()) != null)
 				System.out.println(line);
 
+		} catch (IOException e) { e.printStackTrace(); }
+		
+		nettoyerClass();
+	}
+	
+	private static void nettoyerClass(){
+		//TODO supprime les .class de toCompile
+	}
+
+	private static void executer(){
+		Runtime rt = Runtime.getRuntime();
+		try { 
+			Process p = rt.exec("java -jar \"toExecute\\" + NOM_FICHIER + ".jar\"");
+
+			// REAL PROGRAM
+			InputStream is = p.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader buff = new BufferedReader (isr);
+
+			String line;
+			while((line = buff.readLine()) != null)
+				System.out.println(line);
+
+			//ERROR
+			is = p.getErrorStream();
+			isr = new InputStreamReader(is);
+			buff = new BufferedReader (isr);
+			while((line = buff.readLine()) != null)
+				System.err.println(line);
+			
 		} catch (IOException e) { e.printStackTrace(); }
 	}
 }
