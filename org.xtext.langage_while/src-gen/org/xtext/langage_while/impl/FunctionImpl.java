@@ -22,11 +22,11 @@ import org.xtext.langage_while.SYMB;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.FunctionImpl#getDef <em>Def</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

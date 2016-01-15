@@ -28,11 +28,11 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ExprAndImpl#getExo1 <em>Exo1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ExprAndImpl#getExo2 <em>Exo2</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

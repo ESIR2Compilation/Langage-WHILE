@@ -18,11 +18,11 @@ import org.xtext.langage_while.SYMB;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.SYMBImpl#getBs <em>Bs</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.SYMBImpl#getCf <em>Cf</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

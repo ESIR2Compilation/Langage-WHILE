@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.Foreach#getEx1 <em>Ex1</em>}</li>
  *   <li>{@link org.xtext.langage_while.Foreach#getEx2 <em>Ex2</em>}</li>
  *   <li>{@link org.xtext.langage_while.Foreach#getC <em>C</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.langage_while.Langage_whilePackage#getForeach()
  * @model

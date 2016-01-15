@@ -18,7 +18,7 @@ import tabSymb.TabSymbole;
 
 public class Compilateur {
 
-	public final static String NOM_FICHIER = "dummy4";
+	public final static String NOM_FICHIER = "addition";
 
 	public static void main(String[] args) {
 		Langage_whileGenerator generator = new Langage_whileGenerator();

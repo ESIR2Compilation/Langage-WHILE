@@ -21,10 +21,10 @@ import org.xtext.langage_while.Program;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ModelImpl#getNn <em>Nn</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

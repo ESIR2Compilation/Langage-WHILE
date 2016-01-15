@@ -7,7 +7,7 @@ public class Nil extends Chevron{
 	private String opCode;
 	
 	public Nil() {
-		super("","BinTree.NIL", "");
+		super("BinTree.NIL","BinTree.NIL", "");
 		this.opCode="Nil";
 		// TODO Auto-generated constructor stub
 	}

@@ -22,12 +22,12 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ForeachImpl#getEx1 <em>Ex1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ForeachImpl#getEx2 <em>Ex2</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ForeachImpl#getC <em>C</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

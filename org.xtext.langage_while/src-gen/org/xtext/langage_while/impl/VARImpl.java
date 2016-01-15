@@ -18,11 +18,11 @@ import org.xtext.langage_while.VAR;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.VARImpl#getBv <em>Bv</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.VARImpl#getCf <em>Cf</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

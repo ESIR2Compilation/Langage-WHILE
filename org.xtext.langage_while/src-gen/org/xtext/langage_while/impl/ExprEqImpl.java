@@ -22,12 +22,12 @@ import org.xtext.langage_while.Langage_whilePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.langage_while.impl.ExprEqImpl#getExS1 <em>Ex S1</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ExprEqImpl#getExS2 <em>Ex S2</em>}</li>
  *   <li>{@link org.xtext.langage_while.impl.ExprEqImpl#getEx <em>Ex</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

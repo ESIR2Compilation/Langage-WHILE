@@ -243,7 +243,7 @@ class Langage_whileGenerator implements IGenerator {
 
 					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
 					val String s=ii.class.simpleName;
-					System.out.println("chevron ii================ "+s+"   "+ii.toString);
+					System.out.println("chevron ii================ "+s+" read=======  "+ii.read1+" "+ii.toString);
 					//if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && exint.exs.lex.e.get(0).exs.mot!=null){
 					  if(s=="Cons"|| s=="Tail"||s=="Head" ||s=="ListC"){
 					  	System.out.println("======================****entree dans le IF chevron ii================ "+s+"   "+ii.toString);
