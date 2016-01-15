@@ -2,6 +2,9 @@ package main;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,6 +42,27 @@ public class Compilateur {
 		}
 	}
 
+	private static void copierFichierCompile(){
+		copyFile(new File("toCompile/" + NOM_FICHIER + ".class"), new File(NOM_FICHIER + ".class"));
+		copyFile(new File("src/libWhile/BinTree.class"), new File("BinTree.class"));
+	}
+
+	private static boolean copyFile(File source, File dest){
+		try{
+			FileInputStream sourceFile = new FileInputStream(source);
+			try{
+				FileOutputStream destinationFile = null;
+				try{
+					destinationFile = new FileOutputStream(dest);
+					byte buffer[] = new byte[512 * 1024];
+					int nbLecture;
+					while ((nbLecture = sourceFile.read(buffer)) != -1)
+						destinationFile.write(buffer, 0, nbLecture);
+				} finally { destinationFile.close(); }
+			} finally { sourceFile.close(); }
+		} catch (IOException e){ e.printStackTrace(); return false; }
+		return true;
+	} 
 	private static String EnrichirFichierGenere(String content, TabSymbole ts){
 		// On ajoute le prélude et le postlude au code java nouvellement généré
 		StringBuilder st = new StringBuilder(Required.getPrelude(NOM_FICHIER));
@@ -90,36 +114,22 @@ public class Compilateur {
 
 	private static boolean compiler(){
 		String[] optionsAndSources = {
-                "-encoding", "UTF-8",
-                "-classpath", "src/libWhile", 
-                "toCompile/" + NOM_FICHIER + ".java"};
+				"-encoding", "UTF-8",
+				"-classpath", "src/libWhile", 
+				"toCompile/" + NOM_FICHIER + ".java"};
 		return Main.compile(optionsAndSources) == 0;
 	}
 
-	private static void creerManifest(){
-		String content = "Main-Class: " + NOM_FICHIER + "\n";
-		
-		FileWriter fw;
-		try {
-			fw = new FileWriter("toCompile/MANIFEST.MF", false);
-			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(content);
-			bw.close();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	private static void genererJar(){
-		creerManifest();
+		copierFichierCompile();
+
 		Runtime rt = Runtime.getRuntime();
 		try { 
-			Process p = rt.exec("jar cvmf " +
-								"toCompile/MANIFEST.MF " +
-								"toExecute/" + NOM_FICHIER + ".jar " +
-								"toCompile/" + NOM_FICHIER + ".class" +
-								"src/libWhile/BinTree.class");
+			Process p = rt.exec("jar cvfe " +
+					"toExecute/" + NOM_FICHIER + ".jar " +
+					NOM_FICHIER + " " +
+					NOM_FICHIER + ".class " +
+					"BinTree.class");
 
 			InputStream is = p.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is);
@@ -130,12 +140,15 @@ public class Compilateur {
 				System.out.println(line);
 
 		} catch (IOException e) { e.printStackTrace(); }
-		
+
 		nettoyerClass();
 	}
-	
+
 	private static void nettoyerClass(){
-		//TODO supprime les .class de toCompile
+		File file = new File("BinTree.class");
+		file.delete();
+		file = new File(NOM_FICHIER + ".class");
+		file.delete();
 	}
 
 	private static void executer(){
@@ -158,7 +171,7 @@ public class Compilateur {
 			buff = new BufferedReader (isr);
 			while((line = buff.readLine()) != null)
 				System.err.println(line);
-			
+
 		} catch (IOException e) { e.printStackTrace(); }
 	}
 }
