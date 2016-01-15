@@ -1,12 +1,13 @@
 package code3a;
 
+import libWhile.BinTree;
 import tabSymb.TabSymbole;
 
 public class Nil extends Chevron{
 	private String opCode;
 	
 	public Nil() {
-		super("", "", "");
+		super("","BinTree.NIL", "");
 		this.opCode="Nil";
 		// TODO Auto-generated constructor stub
 	}
