@@ -14,15 +14,18 @@ public class Tail extends Chevron {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "<Teal,"+getWrite()+","+getRead2()+",_>";
+		return "<Tail,"+getWrite()+","+getRead1()+",_>";
 	}
 
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
-		int ind2=tab.getFonction(idFonct).getTabVars().indexOf(getRead2());
+		int ind2=tab.getFonction(idFonct).getTabVars().indexOf(getRead1());
 		String res="";//"BinTree "+getRead1()+" = new BinTree('"+getRead1()+"'); \n";
 		 //res+="BinTree "+getRead2()+" = new BinTree('"+getRead2()+"'); \n";
-		 res+="BinTree "+getWrite()+" = new BinTree( var "+ind2+", nil);";
+		String s="";
+		if(ind2>=0) s="var"+ind2;
+		else s=getRead1();
+		 res+="BinTree "+getWrite()+" ="+s+".getTl();\n";
 		return res;
 	}
 

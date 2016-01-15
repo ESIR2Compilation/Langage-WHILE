@@ -235,26 +235,34 @@ class Langage_whileGenerator implements IGenerator {
 			if(exint.exs.mot=="cons" && exint.exs.lex != null){
 					//ajouterCodeLExpr(ex.exs.lex,cmpt);
 
-						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="cons")
+						if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot!=null))
 						{
 							cptExpr++;
 							
 							}
 
 					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
-					if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && exint.exs.lex.e.get(0).exs.mot!=null){
+					val String s=ii.class.simpleName;
+					System.out.println("chevron ii================ "+s+"   "+ii.toString);
+					//if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && exint.exs.lex.e.get(0).exs.mot!=null){
+					  if(s=="Cons"|| s=="Tail"||s=="Head" ||s=="ListC"){
+					  	System.out.println("======================****entree dans le IF chevron ii================ "+s+"   "+ii.toString);
 											listChev.add(ii)
 						 }
 					val X = ii.write;
 
-					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(1).exs.mot=="cons"){
-											cptExpr++;
-											 }
+					if (((exint.exs.lex.e.get(1).exs.lex != null)||(exint.exs.lex.e.get(1).exs.ex != null)) && (exint.exs.lex.e.get(1).exs.mot!=null))
+						{
+							cptExpr++;
+							
+							}
 	
 					val jj = getCodeExpr(exint.exs.lex.e.get(1),cptExpr,false);
-					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(1).exs.mot=="cons"){
+					System.out.println("chevron jj================ " +jj.toString);
+					if (((exint.exs.lex.e.get(1).exs.lex != null)||(exint.exs.lex.e.get(1).exs.ex != null)) && (exint.exs.lex.e.get(1).exs.mot!=null)){
 											listChev.add(jj)
-											 }
+											System.out.println("entree dans le if du chevron jj================ " +jj.toString);
+						 }
 					
 					val Y = jj.write;
 
@@ -273,24 +281,27 @@ class Langage_whileGenerator implements IGenerator {
 			if(exint.exs.mot=="list" && exint.exs.lex != null){
 					//ajouterCodeLExpr(ex.exs.lex,cmpt);
 
-						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list")
+						if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot!=null))
 						{
 							cptExpr++;
 							
 							}
 
 					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
-					if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="list") ){
+					if (((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot!=null))
+					{
 											listChev.add(ii)
 											 }
 					val X = ii.write;
 
-					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list"){
+					if (((exint.exs.lex.e.get(1).exs.lex != null)||(exint.exs.lex.e.get(1).exs.ex != null)) && (exint.exs.lex.e.get(1).exs.mot!=null))
+					{
 											cptExpr++;
 											 }
 	
 					val jj = getCodeExpr(exint.exs.lex.e.get(1),cptExpr,false);
-					if (exint.exs.lex.e.get(1).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="list"){
+					if (((exint.exs.lex.e.get(1).exs.lex != null)||(exint.exs.lex.e.get(1).exs.ex != null)) && (exint.exs.lex.e.get(1).exs.mot!=null))
+					{
 											listChev.add(jj)
 											 }
 					
@@ -307,17 +318,32 @@ class Langage_whileGenerator implements IGenerator {
 			}
 			
 			// tl =====================
+			
+			
+			
+			
 			if(exint.exs.mot=="tl" && exint.exs.ex != null){
+				
+				
+				
 					//ajouterCodeLExpr(ex.exs.lex,cmpt);
 
-						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="tl")
+						//if (exint.exs.ex.exs.ex != null && exint.exs.ex.exs.mot=="tl")
+						
+			if (((exint.exs.ex.exs.lex != null)||(exint.exs.ex.exs.ex != null)) && (exint.exs.ex.exs.mot!=null))
+						
 						{
 							cptExpr++;
 							
 							}
 
-					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
-					if ( ((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="tl") ){
+					val ii = getCodeExpr(exint.exs.ex,cptExpr, false);
+					System.out.println("chevron TEAL ii================ " +ii.toString);
+					
+					if(((exint.exs.ex.exs.lex != null)||(exint.exs.ex.exs.ex != null)) && (exint.exs.ex.exs.mot!=null))
+					{
+											System.out.println("chevron TEAL ii================ ajout dans listchev ");
+						
 											listChev.add(ii)
 											 }
 					val X = ii.write;
@@ -338,16 +364,20 @@ class Langage_whileGenerator implements IGenerator {
 			//hd =====================
 			
 			if(exint.exs.mot=="hd" && exint.exs.ex != null){
+				
+				
+				
 					//ajouterCodeLExpr(ex.exs.lex,cmpt);
 
-						if (exint.exs.lex.e.get(0).exs.lex != null && exint.exs.lex.e.get(0).exs.mot=="hd")
+						if (((exint.exs.ex.exs.lex != null)||(exint.exs.ex.exs.ex != null)) && (exint.exs.ex.exs.mot!=null))
 						{
 							cptExpr++;
 							
 							}
 
-					val ii = getCodeExpr(exint.exs.lex.e.get(0),cptExpr, false);
-					if ( ((exint.exs.lex.e.get(0).exs.lex != null)||(exint.exs.lex.e.get(0).exs.ex != null)) && (exint.exs.lex.e.get(0).exs.mot=="hd") ){
+					val ii = getCodeExpr(exint.exs.ex,cptExpr, false);
+					if (((exint.exs.ex.exs.lex != null)||(exint.exs.ex.exs.ex != null)) && (exint.exs.ex.exs.mot!=null))
+					{
 											listChev.add(ii)
 											 }
 					val X = ii.write;
