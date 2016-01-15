@@ -52,14 +52,14 @@ public class BinTree {
 	private BinTree(String name){
 		super();
 		setName(name);
-		setHd(fd);
-		setTl(fg);
+		setHd(null);
+		setTl(null);
 	}
 
 	public BinTree(String name, BinTree fg, BinTree fd) {
-		this.name = name;
-		this.fg = fg;
-		this.fd = fd;
+		setName(name);
+		setHd(fg);
+		setTl(fd);
 	}
 
 	//========================Méthodes pratiques================
