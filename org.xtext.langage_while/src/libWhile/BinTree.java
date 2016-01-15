@@ -45,7 +45,7 @@ public class BinTree {
 		BinTree res = new BinTree("cons(" + sag.getName() + " " + sad.getName() + ")");
 		res.setTl(sag);
 		res.setHd(sad);
-		res.setDepth(Math.max(sag.getDepth(), sad.getDepth()));
+		res.setDepth(1 + Math.max(sag.getDepth(), sad.getDepth()));
 		return res;
 	}
 
@@ -58,8 +58,9 @@ public class BinTree {
 
 	public BinTree(String name, BinTree fg, BinTree fd) {
 		setName(name);
-		setHd(fg);
-		setTl(fd);
+		setHd(fd);
+		setTl(fg);
+		setDepth(1 + Math.max(fd.getDepth(), fg.getDepth()));
 	}
 
 	//========================Méthodes pratiques================

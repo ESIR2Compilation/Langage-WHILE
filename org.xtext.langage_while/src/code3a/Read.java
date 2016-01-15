@@ -29,7 +29,7 @@ public class Read extends Chevron{
 	@Override
 	public String getCodeJava(TabSymbole tab,String idFonct) {
 		// TODO Auto-generated method stub
-		return getCodeJava(2,tab,idFonct);
+		return getCodeJava(3,tab,idFonct);
 	}
 	
 	public String getCodeJava(int cpt,TabSymbole tab,String idFonct){
@@ -42,7 +42,7 @@ public class Read extends Chevron{
 		}
 		else {
 			res+=",";
-			this.cpt++;
+			//this.cpt++;
 		}
 		
 		return res;

@@ -16,6 +16,7 @@ public class CodeJava {
 			}
 			if(ch.getClass().getName().substring(ind+1).equals("Read")){
 				int n=tab.getFonction(s).getNbEntree();
+				System.out.println("************************* nombre de param=="+ n);
 				res+=((Read)ch).getCodeJava(n,tab, s);
 				nbRead++;
 				if(nbRead==n) {

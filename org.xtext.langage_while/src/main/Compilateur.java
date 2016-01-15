@@ -18,22 +18,31 @@ import tabSymb.TabSymbole;
 
 public class Compilateur {
 
-	public final static String NOM_FICHIER = "addition";
-
+	public static String NOM_FICHIER = "dummy6";
+	public final static boolean DEBUG = false;
+	
 	public static void main(String[] args) {
+		if (args.length != 0)
+			NOM_FICHIER = args[0];
+		
 		Langage_whileGenerator generator = new Langage_whileGenerator();
 
 		// La fonction getSourceJava génère le code source ainsi que la table des symboles
-		String contentJava = generator.getSourceJava("src/entries/", NOM_FICHIER + ".while");
+		String contentJava;
+		if (! DEBUG)
+			contentJava = generator.getSourceJava("src/entries/", NOM_FICHIER + ".while");
 
 		// On enrichit le code généré d'un prélude et d'un postlude
-		contentJava = EnrichirFichierGenere(contentJava, generator.getTableSymbole());
+		if (! DEBUG)
+			contentJava = EnrichirFichierGenere(contentJava, generator.getTableSymbole());
 
 		//On enregistre le fichier java désormais complet
-		enregistrerFichierJava(contentJava);
+		if (! DEBUG)
+			enregistrerFichierJava(contentJava);
 
 		//On enregistre le code 3 adresses désormais complet
-		enregistrerCodeAdresses(generator.getCodeAdresses());
+		if (! DEBUG)
+			enregistrerCodeAdresses(generator.getCodeAdresses());
 
 		// Si la compilation s'est bien passée, on passe à l'exécution
 		if (compiler()){
