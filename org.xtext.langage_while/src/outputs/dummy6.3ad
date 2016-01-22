@@ -1,0 +1,9 @@
+<Funct,_,dummy6!,_>
+<Read,X!,_,_>
+<Read,Y!,_,_>
+<Read,Z!,_,_>
+<Assign[!  Vars{[X!, Y!, Z!]} Exprs{[Y!, Z!, X!]}  !] ,_,_,_>
+<Write,_,X!,_>
+<Write,_,Y!,_>
+<Write,_,Z!,_>
+<EndFunct,_,_,_>

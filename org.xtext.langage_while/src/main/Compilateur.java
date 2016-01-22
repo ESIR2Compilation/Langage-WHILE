@@ -18,7 +18,7 @@ import tabSymb.TabSymbole;
 
 public class Compilateur {
 
-	public static String NOM_FICHIER = "dummy6";
+	public static String NOM_FICHIER = "cons";
 	public final static boolean DEBUG = false;
 	
 	public static void main(String[] args) {
@@ -110,10 +110,14 @@ public class Compilateur {
 
 	private static void enregistrerCodeAdresses(List<Chevron> codeAdresses) {
 		FileWriter fw;
+		StringBuilder st = new StringBuilder();
+		for(Chevron c : codeAdresses)
+			st.append(c + "\n");
+		
 		try {
 			fw = new FileWriter("src/outputs/" + NOM_FICHIER + ".3ad", false);
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(codeAdresses.toString());
+			bw.write(st.toString());
 			bw.close();
 
 		} catch (IOException e) {

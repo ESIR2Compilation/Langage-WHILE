@@ -1,0 +1,7 @@
+function addition!:
+	read X!,Y!
+	%for Y! do
+		X! := (cons nil X!);
+		Y! := (hd Y!)
+	od
+	%write X!

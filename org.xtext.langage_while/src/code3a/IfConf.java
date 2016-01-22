@@ -32,7 +32,7 @@ public class IfConf extends Chevron {
 		String s="";
 		if(ind1>=0) s="var"+ind1;
 		else s=getRead1();
-		String code="if(!var"+s+".isNill()){\n";
+		String code="if(!var"+s+".isNil()){\n";
 		for(Chevron ch: commandes){
 			code+=ch.getCodeJava(tab,idFonct)+"\n";
 		}

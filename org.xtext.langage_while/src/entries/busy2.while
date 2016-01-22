@@ -1,10 +1,10 @@
 function	busy2!:			
 read X!		
-%for X!
+%while X!
 do	
 for	X!
 do	
-X!:=(cons	nil	(cons	nil	X!))	
+X! := (cons nil X!)
 od	
 od	
 %write	X!	

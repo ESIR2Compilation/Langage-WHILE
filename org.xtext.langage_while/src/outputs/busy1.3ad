@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+<Funct,_,busy1!,_>
+<Read,X!,_,_>
+<Cons,cptExpr1,BinTree.NIL,X!>
+<Cons,tmp1,BinTree.NIL,cptExpr1>
+<Cons,cptExpr2,BinTree.NIL,X!>
+<For{[<Nop,_,_,_>, <Assign[!  Vars{[X!]} Exprs{[tmp1]}  !] ,_,_,_>]},_,X!,_>EndFor
+<Write,_,X!,_>
+<EndFunct,_,_,_>

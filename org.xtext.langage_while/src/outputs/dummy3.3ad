@@ -1,0 +1,7 @@
+<Funct,_,dummy3!,_>
+<Read,X!,_,_>
+<Cons,tmp1,BinTree.NIL,X!>
+<Assign[!  Vars{[Y!]} Exprs{[tmp1]}  !] ,_,_,_>
+<Write,_,X!,_>
+<Write,_,Y!,_>
+<EndFunct,_,_,_>

@@ -1,0 +1,9 @@
+function constif!:
+read X!,Y!
+%X! := (cons nil X!);
+if Y! then
+X! := (cons nil X!)
+else
+nop
+fi
+%write X!

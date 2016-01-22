@@ -1,0 +1,1 @@
+[<Funct,_,addition!,_>, <Read,X!,_,_>, <Read,Y!,_,_>, <Cons,tmp1,BinTree.NIL,X!>, <Head,tmp2,_,Y!>, <For{[<Assign[!  Vars{[X!]} Exprs{[tmp1]}  !] ,_,_,_>, <Assign[!  Vars{[Y!]} Exprs{[tmp2]}  !] ,_,_,_>]},_,Y!,_>EndFor, <Write,_,X!,_>, <EndFunct,_,_,_>]

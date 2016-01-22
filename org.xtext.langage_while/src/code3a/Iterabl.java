@@ -59,7 +59,7 @@ public class Iterabl extends Chevron {
 			String s="";
 			if(ind1>=0) s="var"+ind1;
 			else s=getRead1();
-			 code="final int cpt"+this.cpt+"="+s+".nbTl();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
+			 code="final int cpt"+this.cpt+"="+s+".nbHd();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
 			for(Chevron ch:commandes){
 				code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 			}
@@ -80,11 +80,11 @@ public class Iterabl extends Chevron {
 			 String s="";
 				if(ind1>=0) s="var"+ind1;
 				else s=getRead1();
-				 code="final int cpt"+this.cpt+"="+s+".nbTl();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
+				 code="final int cpt"+this.cpt+"="+s+".nbHd();\n for(int i"+this.cpt+"=0;i"+this.cpt+"<cpt"+this.cpt+";i"+this.cpt+"++){\n";
 				for(Chevron ch:commandes){
 					code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 				}
-				code+="  "+getRead2()+"="+getRead1()+".getTl();\n}";
+				code+="  "+getRead2()+"="+getRead1()+".getHd();\n}";
 		}
 		
 		return code;

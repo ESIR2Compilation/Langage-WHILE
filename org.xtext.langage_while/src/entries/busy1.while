@@ -1,6 +1,7 @@
 function	busy1!:			
 read	X!	
 %for X!	do	
+nop;
 X!:=(cons	nil	(cons	nil	X!))	
 od	
 %write	X!		

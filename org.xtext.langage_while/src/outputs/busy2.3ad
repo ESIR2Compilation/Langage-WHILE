@@ -1,0 +1,6 @@
+<Funct,_,busy2!,_>
+<Read,X!,_,_>
+<Cons,tmp1,BinTree.NIL,X!>
+<While{[<For{[<Assign[!  Vars{[X!]} Exprs{[tmp1]}  !] ,_,_,_>]},_,X!,_>EndFor]},_,X!,_>EndWhile
+<Write,_,X!,_>
+<EndFunct,_,_,_>

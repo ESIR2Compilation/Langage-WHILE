@@ -1,5 +1,0 @@
-
-function test!:
-read A!,B!
-%A!:= (cons A! B!)
-%write A!

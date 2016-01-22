@@ -1,0 +1,4 @@
+function addition1!:																																															
+read X!,Y!,Z!	
+%X!,Y!,Z!:=Y!,Z!,(cons X! Y!)
+%write X!,Y!,Z!

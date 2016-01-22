@@ -1,4 +1,4 @@
-package libWhile;
+package debug;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,8 +90,7 @@ public class BinTree {
 
 	@Override
 	public String toString(){
-		print(this);
-		return "\n[DEPTH = " + getDepth() + "]";
+		return getName() + ", [DEPTH = " + getDepth() + "]";
 	}
 	
 	// =========== Accesseurs =========

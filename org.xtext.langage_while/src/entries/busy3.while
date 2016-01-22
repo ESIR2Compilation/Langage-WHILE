@@ -2,7 +2,8 @@ function busy3!:
 read X!	
 %for X!	do	
 for	X!	do	
-for	X!	do	
+for	X!	do
+nop;
 X!:=(cons	nil	(cons	nil	X!))	
 od	
 od	

@@ -62,7 +62,7 @@ public class If extends Chevron {
 		String s="";
 		if(ind1>=0) s="var"+ind1;
 		else s=getRead1();
-		String code="if( "+s+".isNill()){\n";
+		String code="if( "+s+".isNil()){\n";
 		for(Chevron ch: commandes2){
 			code+="  "+ch.getCodeJava(tab,idFonct)+"\n";
 		}
